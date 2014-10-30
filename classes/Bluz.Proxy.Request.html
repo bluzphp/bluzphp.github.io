@@ -1,0 +1,2781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Bluz</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Bluz</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Bluz.html">\Bluz</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1723762299"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1723762299" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1657895709"></a>
+                                <a href="../namespaces/Bluz.html" style="margin-left: 30px; padding-left: 0">Bluz</a>
+            </div>
+            <div id="namespace-1657895709" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1513262092"></a>
+                                <a href="../namespaces/Bluz.Acl.html" style="margin-left: 30px; padding-left: 0">Acl</a>
+            </div>
+            <div id="namespace-1513262092" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Acl.Acl.html">Acl</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Acl.AclException.html">AclException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-285548900"></a>
+                                <a href="../namespaces/Bluz.Application.html" style="margin-left: 30px; padding-left: 0">Application</a>
+            </div>
+            <div id="namespace-285548900" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-137291354"></a>
+                                <a href="../namespaces/Bluz.Application.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-137291354" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ApplicationException.html">ApplicationException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.BadRequestException.html">BadRequestException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ForbiddenException.html">ForbiddenException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.NotFoundException.html">NotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.NotImplementedException.html">NotImplementedException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.RedirectException.html">RedirectException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ReloadException.html">ReloadException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.UnauthorizedException.html">UnauthorizedException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Application.Application.html">Application</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-745960921"></a>
+                                <a href="../namespaces/Bluz.Auth.html" style="margin-left: 30px; padding-left: 0">Auth</a>
+            </div>
+            <div id="namespace-745960921" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Bluz.Auth.EntityInterface.html">EntityInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractRow.html">AbstractRow</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractRowEntity.html">AbstractRowEntity</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractTable.html">AbstractTable</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.Auth.html">Auth</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.AuthException.html">AuthException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1340698479"></a>
+                                <a href="../namespaces/Bluz.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-1340698479" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1989419280"></a>
+                                <a href="../namespaces/Bluz.Cache.Adapter.html" style="margin-left: 30px; padding-left: 0">Adapter</a>
+            </div>
+            <div id="namespace-1989419280" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html">AbstractAdapter</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Apc.html">Apc</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.FileBase.html">FileBase</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Memcached.html">Memcached</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.PhpFile.html">PhpFile</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Predis.html">Predis</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Redis.html">Redis</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Bluz.Cache.CacheInterface.html">CacheInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Bluz.Cache.TagableInterface.html">TagableInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Cache.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.CacheException.html">CacheException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.InvalidArgumentException.html">InvalidArgumentException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-465509362"></a>
+                                <a href="../namespaces/Bluz.Cli.html" style="margin-left: 30px; padding-left: 0">Cli</a>
+            </div>
+            <div id="namespace-465509362" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Cli.Colorize.html">Colorize</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cli.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cli.Response.html">Response</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1491988352"></a>
+                                <a href="../namespaces/Bluz.Common.html" style="margin-left: 30px; padding-left: 0">Common</a>
+            </div>
+            <div id="namespace-1491988352" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-129842845"></a>
+                                <a href="../namespaces/Bluz.Common.Container.html" style="margin-left: 30px; padding-left: 0">Container</a>
+            </div>
+            <div id="namespace-129842845" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Common.Container.ArrayAccess.html">ArrayAccess</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.Container.html">Container</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.JsonSerialize.html">JsonSerialize</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.MagicAccess.html">MagicAccess</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.RegularAccess.html">RegularAccess</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-191892243"></a>
+                                <a href="../namespaces/Bluz.Common.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-191892243" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.CommonException.html">CommonException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.ComponentException.html">ComponentException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.ConfigurationException.html">ConfigurationException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Common.Helper.html">Helper</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Options.html">Options</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Singleton.html">Singleton</a></li>
+                                                                            <li class="class"><a href="../classes/Bluz.Common.Nil.html">Nil</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1085542208"></a>
+                                <a href="../namespaces/Bluz.Config.html" style="margin-left: 30px; padding-left: 0">Config</a>
+            </div>
+            <div id="namespace-1085542208" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Config.Config.html">Config</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Config.ConfigException.html">ConfigException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1019000726"></a>
+                                <a href="../namespaces/Bluz.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1019000726" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Controller.AbstractController.html">AbstractController</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Controller.Crud.html">Crud</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Controller.Reflection.html">Reflection</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Controller.Rest.html">Rest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-407169310"></a>
+                                <a href="../namespaces/Bluz.Crud.html" style="margin-left: 30px; padding-left: 0">Crud</a>
+            </div>
+            <div id="namespace-407169310" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Crud.AbstractCrud.html">AbstractCrud</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Crud.CrudException.html">CrudException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Crud.Table.html">Table</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1386044380"></a>
+                                <a href="../namespaces/Bluz.Db.html" style="margin-left: 30px; padding-left: 0">Db</a>
+            </div>
+            <div id="namespace-1386044380" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-656031037"></a>
+                                <a href="../namespaces/Bluz.Db.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-656031037" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.DbException.html">DbException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.InvalidPrimaryKeyException.html">InvalidPrimaryKeyException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.RelationNotFoundException.html">RelationNotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.TableNotFoundException.html">TableNotFoundException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-255003078"></a>
+                                <a href="../namespaces/Bluz.Db.Query.html" style="margin-left: 30px; padding-left: 0">Query</a>
+            </div>
+            <div id="namespace-255003078" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1136595027"></a>
+                                <a href="../namespaces/Bluz.Db.Query.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-1136595027" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.From.html">From</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Limit.html">Limit</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Order.html">Order</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Set.html">Set</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Where.html">Where</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Query.AbstractBuilder.html">AbstractBuilder</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.CompositeBuilder.html">CompositeBuilder</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Delete.html">Delete</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Insert.html">Insert</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Select.html">Select</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Update.html">Update</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Db.html">Db</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Relations.html">Relations</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Row.html">Row</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Table.html">Table</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1245744492"></a>
+                                <a href="../namespaces/Bluz.EventManager.html" style="margin-left: 30px; padding-left: 0">EventManager</a>
+            </div>
+            <div id="namespace-1245744492" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.EventManager.Event.html">Event</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.EventManager.EventException.html">EventException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.EventManager.EventManager.html">EventManager</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2020259480"></a>
+                                <a href="../namespaces/Bluz.Grid.html" style="margin-left: 30px; padding-left: 0">Grid</a>
+            </div>
+            <div id="namespace-2020259480" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2040253276"></a>
+                                <a href="../namespaces/Bluz.Grid.Source.html" style="margin-left: 30px; padding-left: 0">Source</a>
+            </div>
+            <div id="namespace-2040253276" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.AbstractSource.html">AbstractSource</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.ArraySource.html">ArraySource</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.SelectSource.html">SelectSource</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.SqlSource.html">SqlSource</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Grid.Data.html">Data</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Grid.html">Grid</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.GridException.html">GridException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1091245594"></a>
+                                <a href="../namespaces/Bluz.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
+            </div>
+            <div id="namespace-1091245594" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Http.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Http.FileUpload.html">FileUpload</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Http.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Http.Response.html">Response</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1212848215"></a>
+                                <a href="../namespaces/Bluz.Layout.html" style="margin-left: 30px; padding-left: 0">Layout</a>
+            </div>
+            <div id="namespace-1212848215" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Layout.Layout.html">Layout</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-955014206"></a>
+                                <a href="../namespaces/Bluz.Logger.html" style="margin-left: 30px; padding-left: 0">Logger</a>
+            </div>
+            <div id="namespace-955014206" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Logger.Logger.html">Logger</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-333651601"></a>
+                                <a href="../namespaces/Bluz.Mailer.html" style="margin-left: 30px; padding-left: 0">Mailer</a>
+            </div>
+            <div id="namespace-333651601" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Mailer.Mailer.html">Mailer</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Mailer.MailerException.html">MailerException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1541400384"></a>
+                                <a href="../namespaces/Bluz.Messages.html" style="margin-left: 30px; padding-left: 0">Messages</a>
+            </div>
+            <div id="namespace-1541400384" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Messages.Messages.html">Messages</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1885200839"></a>
+                                <a href="../namespaces/Bluz.Proxy.html" style="margin-left: 30px; padding-left: 0">Proxy</a>
+            </div>
+            <div id="namespace-1885200839" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Proxy.AbstractProxy.html">AbstractProxy</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Acl.html">Acl</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Auth.html">Auth</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Config.html">Config</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Db.html">Db</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.EventManager.html">EventManager</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Layout.html">Layout</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Logger.html">Logger</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Mailer.html">Mailer</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Messages.html">Messages</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Registry.html">Registry</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Response.html">Response</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Router.html">Router</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Session.html">Session</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Translator.html">Translator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-951892040"></a>
+                                <a href="../namespaces/Bluz.Registry.html" style="margin-left: 30px; padding-left: 0">Registry</a>
+            </div>
+            <div id="namespace-951892040" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Registry.Registry.html">Registry</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1750989312"></a>
+                                <a href="../namespaces/Bluz.Request.html" style="margin-left: 30px; padding-left: 0">Request</a>
+            </div>
+            <div id="namespace-1750989312" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Request.AbstractRequest.html">AbstractRequest</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Request.RequestException.html">RequestException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-942150439"></a>
+                                <a href="../namespaces/Bluz.Response.html" style="margin-left: 30px; padding-left: 0">Response</a>
+            </div>
+            <div id="namespace-942150439" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Response.AbstractResponse.html">AbstractResponse</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Response.ResponseException.html">ResponseException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-405836377"></a>
+                                <a href="../namespaces/Bluz.Router.html" style="margin-left: 30px; padding-left: 0">Router</a>
+            </div>
+            <div id="namespace-405836377" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Router.Router.html">Router</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Router.RouterException.html">RouterException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2138564602"></a>
+                                <a href="../namespaces/Bluz.Session.html" style="margin-left: 30px; padding-left: 0">Session</a>
+            </div>
+            <div id="namespace-2138564602" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1700818390"></a>
+                                <a href="../namespaces/Bluz.Session.Adapter.html" style="margin-left: 30px; padding-left: 0">Adapter</a>
+            </div>
+            <div id="namespace-1700818390" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html">AbstractAdapter</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.Redis.html">Redis</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Session.Session.html">Session</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Session.SessionException.html">SessionException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-309546093"></a>
+                                <a href="../namespaces/Bluz.Translator.html" style="margin-left: 30px; padding-left: 0">Translator</a>
+            </div>
+            <div id="namespace-309546093" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Translator.Translator.html">Translator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1959492273"></a>
+                                <a href="../namespaces/Bluz.Validator.html" style="margin-left: 30px; padding-left: 0">Validator</a>
+            </div>
+            <div id="namespace-1959492273" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-456841811"></a>
+                                <a href="../namespaces/Bluz.Validator.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-456841811" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Exception.ComponentException.html">ComponentException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Exception.ValidatorException.html">ValidatorException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1039837923"></a>
+                                <a href="../namespaces/Bluz.Validator.Rule.html" style="margin-left: 30px; padding-left: 0">Rule</a>
+            </div>
+            <div id="namespace-1039837923" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractCompareRule.html">AbstractCompareRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractCtypeRule.html">AbstractCtypeRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractFilterRule.html">AbstractFilterRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractRule.html">AbstractRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Alpha.html">Alpha</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AlphaNumeric.html">AlphaNumeric</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.ArrayInput.html">ArrayInput</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Between.html">Between</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Callback.html">Callback</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Condition.html">Condition</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Contains.html">Contains</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.CountryCode.html">CountryCode</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.CreditCard.html">CreditCard</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Date.html">Date</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Domain.html">Domain</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Email.html">Email</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Equals.html">Equals</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Float.html">Float</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.In.html">In</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Integer.html">Integer</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Ip.html">Ip</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Json.html">Json</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Latin.html">Latin</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.LatinNumeric.html">LatinNumeric</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Length.html">Length</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Max.html">Max</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Min.html">Min</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Negative.html">Negative</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.NotEmpty.html">NotEmpty</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.NoWhitespace.html">NoWhitespace</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Numeric.html">Numeric</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Positive.html">Positive</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Regexp.html">Regexp</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Required.html">Required</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Slug.html">Slug</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.String.html">String</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Version.html">Version</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1619680373"></a>
+                                <a href="../namespaces/Bluz.Validator.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-1619680373" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Validator.Traits.Validator.html">Validator</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Validator.html">Validator</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.ValidatorBuilder.html">ValidatorBuilder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1942037342"></a>
+                                <a href="../namespaces/Bluz.View.html" style="margin-left: 30px; padding-left: 0">View</a>
+            </div>
+            <div id="namespace-1942037342" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Bluz.View.ViewInterface.html">ViewInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Bluz.View.View.html">View</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.View.ViewException.html">ViewException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Bluz.Proxy.html">\Bluz\Proxy</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Bluz\Proxy</small>Request</h1>
+                    <p><em>Proxy to Request</em></p>
+                    <p>Example of usage</p>
+<pre><code>use Bluz\Proxy\Request;
+
+Request::getParam('foo');</code></pre>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Proxy.AbstractProxy.html#method_getInstance" class="">getInstance()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.AbstractProxy.html#method_setInstance" class="">setInstance()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getInstance" class="">getInstance()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getMethod" class="">getMethod()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setMethod" class="">setMethod()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getBaseUrl" class="">getBaseUrl()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setBaseUrl" class="">setBaseUrl()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getRequestUri" class="">getRequestUri()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setRequestUri" class="">setRequestUri()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getCleanUri" class="">getCleanUri()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getParam" class="">getParam()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setParam" class="">setParam()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getParams" class="">getParams()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getAllParams" class="">getAllParams()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setParams" class="">setParams()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getRawParams" class="">getRawParams()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setRawParams" class="">setRawParams()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isCli" class="">isCli()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isHttp" class="">isHttp()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isGet" class="">isGet()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isPost" class="">isPost()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isPut" class="">isPut()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isDelete" class="">isDelete()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getServer" class="">getServer()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getEnv" class="">getEnv()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getModule" class="">getModule()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setModule" class="">setModule()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getController" class="">getController()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setController" class="">setController()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getQuery" class="">getQuery()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getPost" class="">getPost()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getCookie" class="">getCookie()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getHttpHost" class="">getHttpHost()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getScheme" class="">getScheme()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_getFileUpload" class="">getFileUpload()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_setFileUpload" class="">setFileUpload()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isXmlHttpRequest" class="">isXmlHttpRequest()</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_isFlashRequest" class="">isFlashRequest()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_OPTIONS" class="">METHOD_OPTIONS</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_GET" class="">METHOD_GET</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_HEAD" class="">METHOD_HEAD</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_PATCH" class="">METHOD_PATCH</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_POST" class="">METHOD_POST</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_PUT" class="">METHOD_PUT</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_DELETE" class="">METHOD_DELETE</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_TRACE" class="">METHOD_TRACE</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_CONNECT" class="">METHOD_CONNECT</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_CLI" class="">METHOD_CLI</a><br />
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#constant_METHOD_HTTP" class="">METHOD_HTTP</a><br />
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Proxy.Request.html#method_initInstance" class="">initInstance()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Proxy.AbstractProxy.html#property_instances" class="">$instances</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Proxy.Request.html"><div class="path-wrapper">Proxy/Request.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Bluz\Proxy</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper"><a href="../classes/Bluz.Proxy.AbstractProxy.html">\Bluz\Proxy\AbstractProxy</a></div>
+                                                                                                    <div class="namespace-wrapper">\Bluz\Proxy\Request</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                    <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                        <dd><a href=""><div class="namespace-wrapper"></div></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Anton Shevchuk</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                created
+                            </th>
+                            <td>
+                                                                    <p>29.09.2014 12:15</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                                    <a id="constants" name="constants"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Constants</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_OPTIONS" name="constant_METHOD_OPTIONS" class="anchor"></a>
+            <article id="constant_METHOD_OPTIONS" class="constant">
+                <h3 class="">METHOD_OPTIONS</h3>
+                <pre class="signature">METHOD_OPTIONS</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            const
+                        </th>
+                        <td>
+                                                            <p>string HTTP METHOD constant names</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_GET" name="constant_METHOD_GET" class="anchor"></a>
+            <article id="constant_METHOD_GET" class="constant">
+                <h3 class="">METHOD_GET</h3>
+                <pre class="signature">METHOD_GET</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_HEAD" name="constant_METHOD_HEAD" class="anchor"></a>
+            <article id="constant_METHOD_HEAD" class="constant">
+                <h3 class="">METHOD_HEAD</h3>
+                <pre class="signature">METHOD_HEAD</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_PATCH" name="constant_METHOD_PATCH" class="anchor"></a>
+            <article id="constant_METHOD_PATCH" class="constant">
+                <h3 class="">METHOD_PATCH</h3>
+                <pre class="signature">METHOD_PATCH</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_POST" name="constant_METHOD_POST" class="anchor"></a>
+            <article id="constant_METHOD_POST" class="constant">
+                <h3 class="">METHOD_POST</h3>
+                <pre class="signature">METHOD_POST</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_PUT" name="constant_METHOD_PUT" class="anchor"></a>
+            <article id="constant_METHOD_PUT" class="constant">
+                <h3 class="">METHOD_PUT</h3>
+                <pre class="signature">METHOD_PUT</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_DELETE" name="constant_METHOD_DELETE" class="anchor"></a>
+            <article id="constant_METHOD_DELETE" class="constant">
+                <h3 class="">METHOD_DELETE</h3>
+                <pre class="signature">METHOD_DELETE</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_TRACE" name="constant_METHOD_TRACE" class="anchor"></a>
+            <article id="constant_METHOD_TRACE" class="constant">
+                <h3 class="">METHOD_TRACE</h3>
+                <pre class="signature">METHOD_TRACE</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_CONNECT" name="constant_METHOD_CONNECT" class="anchor"></a>
+            <article id="constant_METHOD_CONNECT" class="constant">
+                <h3 class="">METHOD_CONNECT</h3>
+                <pre class="signature">METHOD_CONNECT</pre>
+                <p><em></em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_CLI" name="constant_METHOD_CLI" class="anchor"></a>
+            <article id="constant_METHOD_CLI" class="constant">
+                <h3 class="">METHOD_CLI</h3>
+                <pre class="signature">METHOD_CLI</pre>
+                <p><em>Command line request</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_METHOD_HTTP" name="constant_METHOD_HTTP" class="anchor"></a>
+            <article id="constant_METHOD_HTTP" class="constant">
+                <h3 class="">METHOD_HTTP</h3>
+                <pre class="signature">METHOD_HTTP</pre>
+                <p><em>HTTP Request</em></p>
+                
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_instances" name="property_instances" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$instances</h3>
+                <pre class="signature">$instances : array</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array
+                &mdash; Instances of classes                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Bluz.Proxy.AbstractProxy.html"><div class="path-wrapper">\Bluz\Proxy\AbstractProxy</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInstance" name="method_getInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInstance() : mixed</pre>
+                <p><em>Get class instance</em></p>
+                
+
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Bluz\Common\Exception\ComponentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Bluz.Proxy.AbstractProxy.html"><div class="path-wrapper">\Bluz\Proxy\AbstractProxy</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setInstance" name="method_setInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setInstance(mixed  <span class="argument">$instance</span>) : void</pre>
+                <p><em>Set or replace instance</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$instance </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Bluz.Proxy.AbstractProxy.html"><div class="path-wrapper">\Bluz\Proxy\AbstractProxy</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInstance" name="method_getInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInstance() : \Bluz\Request\AbstractRequest</pre>
+                <p><em>Get class instance</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Request\AbstractRequest
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getMethod" name="method_getMethod" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getMethod()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getMethod() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setMethod" name="method_setMethod" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setMethod()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setMethod(mixed  <span class="argument">$method</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$method </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getBaseUrl" name="method_getBaseUrl" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getBaseUrl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getBaseUrl() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setBaseUrl" name="method_setBaseUrl" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setBaseUrl()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setBaseUrl(mixed  <span class="argument">$baseUrl</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$baseUrl </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRequestUri" name="method_getRequestUri" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRequestUri()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRequestUri() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setRequestUri" name="method_setRequestUri" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setRequestUri()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setRequestUri(mixed  <span class="argument">$requestUri</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$requestUri </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCleanUri" name="method_getCleanUri" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCleanUri()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCleanUri() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getParam" name="method_getParam" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getParam()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getParam(mixed  <span class="argument">$key</span>, \=  <span class="argument">$default</span>) : mixed</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    mixed
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setParam" name="method_setParam" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setParam()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setParam(mixed  <span class="argument">$key</span>, mixed  <span class="argument">$value</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$value </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getParams" name="method_getParams" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getParams()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getParams() : array</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAllParams" name="method_getAllParams" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAllParams()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAllParams() : array</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setParams" name="method_setParams" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setParams()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setParams(array  <span class="argument">$params</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$params </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getRawParams" name="method_getRawParams" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getRawParams()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getRawParams() : array</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setRawParams" name="method_setRawParams" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setRawParams()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setRawParams(array  <span class="argument">$params</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$params </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isCli" name="method_isCli" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isCli()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isCli() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isHttp" name="method_isHttp" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isHttp()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isHttp() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isGet" name="method_isGet" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isGet()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isGet() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isPost" name="method_isPost" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isPost()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isPost() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isPut" name="method_isPut" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isPut()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isPut() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isDelete" name="method_isDelete" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isDelete()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isDelete() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getServer" name="method_getServer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getServer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getServer(\=  <span class="argument">$key</span>, \=  <span class="argument">$default</span>) : string</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getEnv" name="method_getEnv" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getEnv()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getEnv(\=  <span class="argument">$key</span>, \=  <span class="argument">$default</span>) : string</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getModule" name="method_getModule" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getModule()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getModule() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setModule" name="method_setModule" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setModule()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setModule(mixed  <span class="argument">$name</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getController" name="method_getController" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getController()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getController() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setController" name="method_setController" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setController()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setController(mixed  <span class="argument">$name</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getQuery" name="method_getQuery" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getQuery()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getQuery(\=  <span class="argument">$key</span>, \=  <span class="argument">$default</span>) : string|array</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string|array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPost" name="method_getPost" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPost()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPost(\=  <span class="argument">$key</span>, \=  <span class="argument">$default</span>) : string|array</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string|array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCookie" name="method_getCookie" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getCookie()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCookie(\=  <span class="argument">$key</span>, \=  <span class="argument">$default</span>) : string|array</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$key </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$default </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string|array
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHttpHost" name="method_getHttpHost" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getHttpHost()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHttpHost() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getScheme" name="method_getScheme" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getScheme()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getScheme() : string</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFileUpload" name="method_getFileUpload" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFileUpload()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFileUpload() : \Bluz\Http\FileUpload</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Http\FileUpload
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setFileUpload" name="method_setFileUpload" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setFileUpload()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setFileUpload(\FileUpload  <span class="argument">$fileUpload</span>) : void</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\FileUpload</td>
+                                <td>$fileUpload </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isXmlHttpRequest" name="method_isXmlHttpRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isXmlHttpRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isXmlHttpRequest() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isFlashRequest" name="method_isFlashRequest" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isFlashRequest()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isFlashRequest() : boolean</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_initInstance" name="method_initInstance" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">initInstance()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">initInstance() : \Bluz\Request\AbstractRequest</pre>
+                <p><em>Init instance</em></p>
+                
+
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Bluz\Common\Exception\ComponentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Bluz.Request.AbstractRequest.html">\Bluz\Request\AbstractRequest</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Request.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Proxy/Request.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Bluz.html">\Bluz</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on October 30th, 2014 at 11:52.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

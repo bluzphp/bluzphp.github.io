@@ -1,0 +1,2885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Bluz</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Bluz</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Bluz.html">\Bluz</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1882366325"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1882366325" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-802539402"></a>
+                                <a href="../namespaces/Bluz.html" style="margin-left: 30px; padding-left: 0">Bluz</a>
+            </div>
+            <div id="namespace-802539402" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1376424497"></a>
+                                <a href="../namespaces/Bluz.Acl.html" style="margin-left: 30px; padding-left: 0">Acl</a>
+            </div>
+            <div id="namespace-1376424497" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Acl.Acl.html">Acl</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Acl.AclException.html">AclException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1690389569"></a>
+                                <a href="../namespaces/Bluz.Application.html" style="margin-left: 30px; padding-left: 0">Application</a>
+            </div>
+            <div id="namespace-1690389569" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1051261620"></a>
+                                <a href="../namespaces/Bluz.Application.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1051261620" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ApplicationException.html">ApplicationException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.BadRequestException.html">BadRequestException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ForbiddenException.html">ForbiddenException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.NotFoundException.html">NotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.NotImplementedException.html">NotImplementedException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.RedirectException.html">RedirectException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ReloadException.html">ReloadException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.UnauthorizedException.html">UnauthorizedException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Application.Application.html">Application</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-419118159"></a>
+                                <a href="../namespaces/Bluz.Auth.html" style="margin-left: 30px; padding-left: 0">Auth</a>
+            </div>
+            <div id="namespace-419118159" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Bluz.Auth.EntityInterface.html">EntityInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractRow.html">AbstractRow</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractRowEntity.html">AbstractRowEntity</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractTable.html">AbstractTable</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.Auth.html">Auth</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Auth.AuthException.html">AuthException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-491678744"></a>
+                                <a href="../namespaces/Bluz.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
+            </div>
+            <div id="namespace-491678744" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2092015283"></a>
+                                <a href="../namespaces/Bluz.Cache.Adapter.html" style="margin-left: 30px; padding-left: 0">Adapter</a>
+            </div>
+            <div id="namespace-2092015283" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html">AbstractAdapter</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Apc.html">Apc</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.FileBase.html">FileBase</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Memcached.html">Memcached</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.PhpFile.html">PhpFile</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Predis.html">Predis</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Redis.html">Redis</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Bluz.Cache.CacheInterface.html">CacheInterface</a></li>
+                                                    <li class="interface"><a href="../classes/Bluz.Cache.TagableInterface.html">TagableInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Cache.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.CacheException.html">CacheException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cache.InvalidArgumentException.html">InvalidArgumentException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1052504099"></a>
+                                <a href="../namespaces/Bluz.Cli.html" style="margin-left: 30px; padding-left: 0">Cli</a>
+            </div>
+            <div id="namespace-1052504099" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Cli.Colorize.html">Colorize</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cli.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Cli.Response.html">Response</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1726828276"></a>
+                                <a href="../namespaces/Bluz.Common.html" style="margin-left: 30px; padding-left: 0">Common</a>
+            </div>
+            <div id="namespace-1726828276" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1382040156"></a>
+                                <a href="../namespaces/Bluz.Common.Container.html" style="margin-left: 30px; padding-left: 0">Container</a>
+            </div>
+            <div id="namespace-1382040156" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Common.Container.ArrayAccess.html">ArrayAccess</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.Container.html">Container</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.JsonSerialize.html">JsonSerialize</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.MagicAccess.html">MagicAccess</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.RegularAccess.html">RegularAccess</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-849500796"></a>
+                                <a href="../namespaces/Bluz.Common.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-849500796" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.CommonException.html">CommonException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.ComponentException.html">ComponentException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.ConfigurationException.html">ConfigurationException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Common.Helper.html">Helper</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Options.html">Options</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Common.Singleton.html">Singleton</a></li>
+                                                                            <li class="class"><a href="../classes/Bluz.Common.Nil.html">Nil</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-829006847"></a>
+                                <a href="../namespaces/Bluz.Config.html" style="margin-left: 30px; padding-left: 0">Config</a>
+            </div>
+            <div id="namespace-829006847" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Config.Config.html">Config</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Config.ConfigException.html">ConfigException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1768773458"></a>
+                                <a href="../namespaces/Bluz.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
+            </div>
+            <div id="namespace-1768773458" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Controller.AbstractController.html">AbstractController</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Controller.Crud.html">Crud</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Controller.Reflection.html">Reflection</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Controller.Rest.html">Rest</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1985998871"></a>
+                                <a href="../namespaces/Bluz.Crud.html" style="margin-left: 30px; padding-left: 0">Crud</a>
+            </div>
+            <div id="namespace-1985998871" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Crud.AbstractCrud.html">AbstractCrud</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Crud.CrudException.html">CrudException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Crud.Table.html">Table</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2121039945"></a>
+                                <a href="../namespaces/Bluz.Db.html" style="margin-left: 30px; padding-left: 0">Db</a>
+            </div>
+            <div id="namespace-2121039945" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-533033051"></a>
+                                <a href="../namespaces/Bluz.Db.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-533033051" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.DbException.html">DbException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.InvalidPrimaryKeyException.html">InvalidPrimaryKeyException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.RelationNotFoundException.html">RelationNotFoundException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.TableNotFoundException.html">TableNotFoundException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1590689672"></a>
+                                <a href="../namespaces/Bluz.Db.Query.html" style="margin-left: 30px; padding-left: 0">Query</a>
+            </div>
+            <div id="namespace-1590689672" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1560633322"></a>
+                                <a href="../namespaces/Bluz.Db.Query.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-1560633322" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.From.html">From</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Limit.html">Limit</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Order.html">Order</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Set.html">Set</a></li>
+                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Where.html">Where</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Query.AbstractBuilder.html">AbstractBuilder</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.CompositeBuilder.html">CompositeBuilder</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Delete.html">Delete</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Insert.html">Insert</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Select.html">Select</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Update.html">Update</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Db.html">Db</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Relations.html">Relations</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Row.html">Row</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Db.Table.html">Table</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-333564239"></a>
+                                <a href="../namespaces/Bluz.EventManager.html" style="margin-left: 30px; padding-left: 0">EventManager</a>
+            </div>
+            <div id="namespace-333564239" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.EventManager.Event.html">Event</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.EventManager.EventException.html">EventException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.EventManager.EventManager.html">EventManager</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-958489420"></a>
+                                <a href="../namespaces/Bluz.Grid.html" style="margin-left: 30px; padding-left: 0">Grid</a>
+            </div>
+            <div id="namespace-958489420" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-574635408"></a>
+                                <a href="../namespaces/Bluz.Grid.Source.html" style="margin-left: 30px; padding-left: 0">Source</a>
+            </div>
+            <div id="namespace-574635408" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.AbstractSource.html">AbstractSource</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.ArraySource.html">ArraySource</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.SelectSource.html">SelectSource</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.SqlSource.html">SqlSource</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Grid.Data.html">Data</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.Grid.html">Grid</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Grid.GridException.html">GridException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1357502292"></a>
+                                <a href="../namespaces/Bluz.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
+            </div>
+            <div id="namespace-1357502292" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Http.File.html">File</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Http.FileUpload.html">FileUpload</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Http.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Http.Response.html">Response</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-233248053"></a>
+                                <a href="../namespaces/Bluz.Layout.html" style="margin-left: 30px; padding-left: 0">Layout</a>
+            </div>
+            <div id="namespace-233248053" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Layout.Layout.html">Layout</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1431457855"></a>
+                                <a href="../namespaces/Bluz.Logger.html" style="margin-left: 30px; padding-left: 0">Logger</a>
+            </div>
+            <div id="namespace-1431457855" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Logger.Logger.html">Logger</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-540608283"></a>
+                                <a href="../namespaces/Bluz.Mailer.html" style="margin-left: 30px; padding-left: 0">Mailer</a>
+            </div>
+            <div id="namespace-540608283" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Mailer.Mailer.html">Mailer</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Mailer.MailerException.html">MailerException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-910755187"></a>
+                                <a href="../namespaces/Bluz.Messages.html" style="margin-left: 30px; padding-left: 0">Messages</a>
+            </div>
+            <div id="namespace-910755187" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Messages.Messages.html">Messages</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1152796834"></a>
+                                <a href="../namespaces/Bluz.Proxy.html" style="margin-left: 30px; padding-left: 0">Proxy</a>
+            </div>
+            <div id="namespace-1152796834" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Proxy.AbstractProxy.html">AbstractProxy</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Acl.html">Acl</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Auth.html">Auth</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Config.html">Config</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Db.html">Db</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.EventManager.html">EventManager</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Layout.html">Layout</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Logger.html">Logger</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Mailer.html">Mailer</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Messages.html">Messages</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Registry.html">Registry</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Request.html">Request</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Response.html">Response</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Router.html">Router</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Session.html">Session</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Proxy.Translator.html">Translator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-306601373"></a>
+                                <a href="../namespaces/Bluz.Registry.html" style="margin-left: 30px; padding-left: 0">Registry</a>
+            </div>
+            <div id="namespace-306601373" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Registry.Registry.html">Registry</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1378686798"></a>
+                                <a href="../namespaces/Bluz.Request.html" style="margin-left: 30px; padding-left: 0">Request</a>
+            </div>
+            <div id="namespace-1378686798" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Request.AbstractRequest.html">AbstractRequest</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Request.RequestException.html">RequestException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-738456251"></a>
+                                <a href="../namespaces/Bluz.Response.html" style="margin-left: 30px; padding-left: 0">Response</a>
+            </div>
+            <div id="namespace-738456251" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Response.AbstractResponse.html">AbstractResponse</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Response.ResponseException.html">ResponseException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1377342433"></a>
+                                <a href="../namespaces/Bluz.Router.html" style="margin-left: 30px; padding-left: 0">Router</a>
+            </div>
+            <div id="namespace-1377342433" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Router.Router.html">Router</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Router.RouterException.html">RouterException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1375094242"></a>
+                                <a href="../namespaces/Bluz.Session.html" style="margin-left: 30px; padding-left: 0">Session</a>
+            </div>
+            <div id="namespace-1375094242" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-812146587"></a>
+                                <a href="../namespaces/Bluz.Session.Adapter.html" style="margin-left: 30px; padding-left: 0">Adapter</a>
+            </div>
+            <div id="namespace-812146587" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html">AbstractAdapter</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.Cache.html">Cache</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.Redis.html">Redis</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Session.Session.html">Session</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Session.SessionException.html">SessionException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1763976539"></a>
+                                <a href="../namespaces/Bluz.Translator.html" style="margin-left: 30px; padding-left: 0">Translator</a>
+            </div>
+            <div id="namespace-1763976539" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Translator.Translator.html">Translator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-365576245"></a>
+                                <a href="../namespaces/Bluz.Validator.html" style="margin-left: 30px; padding-left: 0">Validator</a>
+            </div>
+            <div id="namespace-365576245" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-512532501"></a>
+                                <a href="../namespaces/Bluz.Validator.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-512532501" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Exception.ComponentException.html">ComponentException</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Exception.ValidatorException.html">ValidatorException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1586698910"></a>
+                                <a href="../namespaces/Bluz.Validator.Rule.html" style="margin-left: 30px; padding-left: 0">Rule</a>
+            </div>
+            <div id="namespace-1586698910" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractCompareRule.html">AbstractCompareRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractCtypeRule.html">AbstractCtypeRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractFilterRule.html">AbstractFilterRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractRule.html">AbstractRule</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Alpha.html">Alpha</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AlphaNumeric.html">AlphaNumeric</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.ArrayInput.html">ArrayInput</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Between.html">Between</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Callback.html">Callback</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Condition.html">Condition</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Contains.html">Contains</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.CountryCode.html">CountryCode</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.CreditCard.html">CreditCard</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Date.html">Date</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Domain.html">Domain</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Email.html">Email</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Equals.html">Equals</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Float.html">Float</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.In.html">In</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Integer.html">Integer</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Ip.html">Ip</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Json.html">Json</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Latin.html">Latin</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.LatinNumeric.html">LatinNumeric</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Length.html">Length</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Max.html">Max</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Min.html">Min</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Negative.html">Negative</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.NotEmpty.html">NotEmpty</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.NoWhitespace.html">NoWhitespace</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Numeric.html">Numeric</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Positive.html">Positive</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Regexp.html">Regexp</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Required.html">Required</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Slug.html">Slug</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.String.html">String</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Version.html">Version</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-31704426"></a>
+                                <a href="../namespaces/Bluz.Validator.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-31704426" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Bluz.Validator.Traits.Validator.html">Validator</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Validator.html">Validator</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.Validator.ValidatorBuilder.html">ValidatorBuilder</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-462167890"></a>
+                                <a href="../namespaces/Bluz.View.html" style="margin-left: 30px; padding-left: 0">View</a>
+            </div>
+            <div id="namespace-462167890" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/Bluz.View.ViewInterface.html">ViewInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/Bluz.View.View.html">View</a></li>
+                                                    <li class="class"><a href="../classes/Bluz.View.ViewException.html">ViewException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Bluz.Validator.html">\Bluz\Validator</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Bluz\Validator</small>Validator</h1>
+                    <p><em>Validator</em></p>
+                    
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_create" class="">create()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method___callStatic" class="">__callStatic()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method___call" class="">__call()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_isRequired" class="">isRequired()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_setName" class="">setName()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_getName" class="">getName()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_getInput" class="">getInput()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method___invoke" class="">__invoke()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_validate" class="">validate()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_assert" class="">assert()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_setError" class="">setError()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_getError" class="">getError()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_getErrors" class="">getErrors()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method___toString" class="">__toString()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_alpha" class="">alpha()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_alphaNumeric" class="">alphaNumeric()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_arrayInput" class="">arrayInput()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_between" class="">between()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_callback" class="">callback()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_condition" class="">condition()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_contains" class="">contains()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_countryCode" class="">countryCode()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_creditCard" class="">creditCard()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_date" class="">date()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_domain" class="">domain()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_email" class="">email()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_equals" class="">equals()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_float" class="">float()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_in" class="">in()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_integer" class="">integer()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_ip" class="">ip()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_json" class="">json()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_latin" class="">latin()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_latinNumeric" class="">latinNumeric()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_length" class="">length()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_max" class="">max()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_min" class="">min()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_notEmpty" class="">notEmpty()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_noWhitespace" class="">noWhitespace()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_numeric" class="">numeric()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_required" class="">required()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_regexp" class="">regexp()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_slug" class="">slug()</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_string" class="">string()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#method_prepareError" class="">prepareError()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#property_rules" class="">$rules</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#property_invalid" class="">$invalid</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#property_name" class="">$name</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#property_input" class="">$input</a><br />
+                                                                    <a href="../classes/Bluz.Validator.Validator.html#property_error" class="">$error</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Validator.Validator.html"><div class="path-wrapper">Validator/Validator.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Bluz\Validator</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Bluz\Validator\Validator</div>
+                            </dd>
+
+                        
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                    <dd><a href="https://github.com/Respect/Validation"><div class="namespace-wrapper">https://github.com/Respect/Validation</div></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Anton Shevchuk</p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                created
+                            </th>
+                            <td>
+                                                                    <p>30.05.2014 10:03</p>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_rules" name="property_rules" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$rules</h3>
+                <pre class="signature">$rules : array&lt;mixed,\Bluz\Validator\Rule\AbstractRule&gt;</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array&lt;mixed,<a href="../classes/Bluz.Validator.Rule.AbstractRule.html">\Bluz\Validator\Rule\AbstractRule</a>&gt;
+                &mdash; Stack of validation rules                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_invalid" name="property_invalid" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$invalid</h3>
+                <pre class="signature">$invalid : array&lt;mixed,\Bluz\Validator\Rule\AbstractRule&gt;</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                array&lt;mixed,<a href="../classes/Bluz.Validator.Rule.AbstractRule.html">\Bluz\Validator\Rule\AbstractRule</a>&gt;
+                &mdash; Stack of invalid rules                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_name" name="property_name" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$name</h3>
+                <pre class="signature">$name : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; Field name                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_input" name="property_input" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$input</h3>
+                <pre class="signature">$input : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; Input data                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_error" name="property_error" class="anchor"></a>
+            <article class="property">
+                <h3 class="protected ">$error</h3>
+                <pre class="signature">$error : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; Error text                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_create" name="method_create" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">create()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">create() : \Bluz\Validator\Validator</pre>
+                <p><em>Create new instance if Validator</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Bluz.Validator.Validator.html">\Bluz\Validator\Validator</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___callStatic" name="method___callStatic" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__callStatic()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__callStatic(string  <span class="argument">$ruleName</span>, array  <span class="argument">$arguments</span>) : \Bluz\Validator\Validator</pre>
+                <p><em>Magic static call for create instance of Validator</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$ruleName </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$arguments </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Bluz.Validator.Validator.html">\Bluz\Validator\Validator</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___call" name="method___call" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__call()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__call(string  <span class="argument">$ruleName</span>, array  <span class="argument">$arguments</span>) : \Bluz\Validator\Validator</pre>
+                <p><em>Magic call for create new rule</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$ruleName </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$arguments </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Bluz\Validator\Exception\ComponentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Bluz.Validator.Validator.html">\Bluz\Validator\Validator</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isRequired" name="method_isRequired" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isRequired()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isRequired() : boolean</pre>
+                <p><em>Get required flag</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setName" name="method_setName" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setName()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setName(string  <span class="argument">$name</span>) : \Bluz\Validator\Validator</pre>
+                <p><em>Set field Title</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$name </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Bluz.Validator.Validator.html">\Bluz\Validator\Validator</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getName" name="method_getName" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getName()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getName() : string</pre>
+                <p><em>Get field Title</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getInput" name="method_getInput" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getInput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getInput() : string</pre>
+                <p><em>Get input data</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___invoke" name="method___invoke" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__invoke()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__invoke(mixed  <span class="argument">$input</span>) : boolean</pre>
+                <p><em>Callable</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$input </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_validate" name="method_validate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">validate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">validate(mixed  <span class="argument">$input</span>, boolean  <span class="argument">$all = false</span>) : boolean</pre>
+                <p><em>Validate chain of rules</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$input </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$all </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_assert" name="method_assert" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">assert()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">assert(mixed  <span class="argument">$input</span>) : boolean</pre>
+                <p><em>Assert</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$input </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\Bluz\Validator\Exception\ValidatorException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setError" name="method_setError" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setError()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setError(string  <span class="argument">$message</span>) : \Bluz\Validator\Validator</pre>
+                <p><em>Set error template for complex rule</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$message </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/Bluz.Validator.Validator.html">\Bluz\Validator\Validator</a>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getError" name="method_getError" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getError()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getError() : false|string</pre>
+                <p><em>Get error message</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    false|string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getErrors" name="method_getErrors" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getErrors()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getErrors() : array&lt;mixed,string&gt;</pre>
+                <p><em>getErrors</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array&lt;mixed,string&gt;
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___toString" name="method___toString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__toString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__toString() : string</pre>
+                <p><em>Cast to string</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_alpha" name="method_alpha" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">alpha()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">alpha(\=  <span class="argument">$additionalCharacters</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$additionalCharacters </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_alphaNumeric" name="method_alphaNumeric" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">alphaNumeric()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">alphaNumeric(\=  <span class="argument">$additionalCharacters</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$additionalCharacters </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_arrayInput" name="method_arrayInput" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">arrayInput()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">arrayInput(mixed  <span class="argument">$callback</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$callback </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_between" name="method_between" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">between()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">between(mixed  <span class="argument">$min</span>, mixed  <span class="argument">$max</span>, \=  <span class="argument">$inclusive</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$min </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$max </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$inclusive </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_callback" name="method_callback" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">callback()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">callback(mixed  <span class="argument">$callback</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$callback </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_condition" name="method_condition" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">condition()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">condition(mixed  <span class="argument">$condition</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$condition </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_contains" name="method_contains" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">contains()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">contains(mixed  <span class="argument">$containsValue</span>, \=  <span class="argument">$identical</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$containsValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$identical </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_countryCode" name="method_countryCode" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">countryCode()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">countryCode() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_creditCard" name="method_creditCard" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">creditCard()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">creditCard() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_date" name="method_date" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">date()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">date(mixed  <span class="argument">$format</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$format </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_domain" name="method_domain" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">domain()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">domain(\=  <span class="argument">$checkDns</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$checkDns </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_email" name="method_email" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">email()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">email(\=  <span class="argument">$checkDns</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$checkDns </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_equals" name="method_equals" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">equals()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">equals(mixed  <span class="argument">$compareTo</span>, \=  <span class="argument">$identical</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$compareTo </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$identical </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_float" name="method_float" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">float()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">float() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_in" name="method_in" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">in()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">in(mixed  <span class="argument">$haystack</span>, \=  <span class="argument">$identical</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$haystack </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$identical </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_integer" name="method_integer" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">integer()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">integer() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_ip" name="method_ip" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">ip()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">ip(\=  <span class="argument">$options</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$options </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_json" name="method_json" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">json()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">json() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_latin" name="method_latin" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">latin()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">latin(\=  <span class="argument">$additionalCharacters</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$additionalCharacters </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_latinNumeric" name="method_latinNumeric" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">latinNumeric()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">latinNumeric(\=  <span class="argument">$additionalCharacters</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$additionalCharacters </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_length" name="method_length" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">length()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">length(\=  <span class="argument">$min</span>, \=  <span class="argument">$max</span>, \=  <span class="argument">$inclusive</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$min </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$max </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$inclusive </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_max" name="method_max" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">max()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">max(mixed  <span class="argument">$maxValue</span>, \=  <span class="argument">$inclusive</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$maxValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$inclusive </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_min" name="method_min" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">min()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">min(mixed  <span class="argument">$minValue</span>, \=  <span class="argument">$inclusive</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$minValue </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td>\=</td>
+                                <td>$inclusive </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_notEmpty" name="method_notEmpty" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">notEmpty()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">notEmpty() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_noWhitespace" name="method_noWhitespace" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">noWhitespace()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">noWhitespace() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_numeric" name="method_numeric" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">numeric()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">numeric() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_required" name="method_required" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">required()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">required() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_regexp" name="method_regexp" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">regexp()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">regexp(mixed  <span class="argument">$expression</span>) : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>mixed</td>
+                                <td>$expression </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_slug" name="method_slug" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">slug()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">slug() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_string" name="method_string" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">string()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">string() : \Bluz\Validator\Validator</pre>
+                <p><em></em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    \Bluz\Validator\Validator
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_prepareError" name="method_prepareError" class="anchor"></a>
+            <article class="method">
+                <h3 class="protected ">prepareError()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">prepareError(string  <span class="argument">$message</span>) : string</pre>
+                <p><em>Prepare error message for output</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$message </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">Validator.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Validator/Validator.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Bluz.html">\Bluz</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on October 30th, 2014 at 11:52.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
