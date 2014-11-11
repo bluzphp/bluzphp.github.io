@@ -180,6 +180,12 @@
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_getPresentation" title="getPresentation :: Get Presentation">
+            <span class="description">Get Presentation</span><pre>getPresentation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_getProtocolVersion" title="getProtocolVersion :: Gets the HTTP protocol version as a string.">
             <span class="description">Gets the HTTP protocol version as a string.</span><pre>getProtocolVersion</pre>
         </a>
@@ -260,6 +266,12 @@ same case-insensitive name.</span><pre>setHeader</pre>
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_setPresentation" title="setPresentation :: Set Presentation">
+            <span class="description">Set Presentation</span><pre>setPresentation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_setReasonPhrase" title="setReasonPhrase :: Sets the Reason-Phrase of the response.">
             <span class="description">Sets the Reason-Phrase of the response.</span><pre>setReasonPhrase</pre>
         </a>
@@ -280,7 +292,7 @@ same case-insensitive name.</span><pre>setHeader</pre>
                                 <span class="description">Check options in package</span><pre>checkOptions</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method protected inherited">
                             <a href="#method_initOptions" title="initOptions :: Initialization for options">
                                 <span class="description">Initialization for options</span><pre>initOptions</pre>
                             </a>
@@ -295,16 +307,16 @@ same case-insensitive name.</span><pre>setHeader</pre>
                                 <span class="description">Send messages to client</span><pre>sendHeaders</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="method private inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method private inherited">
                             <a href="#method_normalizeKey" title="normalizeKey :: Normalize key name">
                                 <span class="description">Normalize key name</span><pre>normalizeKey</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -695,6 +707,35 @@ foreach ($message-&gt;getHeaders() as $name =&gt; $values) {
                                     
                                                                             <h3>Response</h3>
                                         <code>array</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getPresentation"></a>
+                        <div class="element clickable method public  method_getPresentation inherited" data-toggle="collapse" data-target=".method_getPresentation .collapse">
+                            <h2>Get Presentation</h2>
+                            <pre>getPresentation() : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1195,6 +1236,31 @@ string or an array of strings.</p></div>
                             </div>
 
                         </div>
+                                            <a id="method_setPresentation"></a>
+                        <div class="element clickable method public  method_setPresentation inherited" data-toggle="collapse" data-target=".method_setPresentation .collapse">
+                            <h2>Set Presentation</h2>
+                            <pre>setPresentation( $presentation) : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$presentation</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_setReasonPhrase"></a>
                         <div class="element clickable method public  method_setReasonPhrase inherited" data-toggle="collapse" data-target=".method_setReasonPhrase .collapse">
                             <h2>Sets the Reason-Phrase of the response.</h2>
@@ -1412,6 +1478,32 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_presentation"> </a>
+                            <div class="element clickable property  protected property_presentation inherited" data-toggle="collapse" data-target=".property_presentation .collapse">
+                                <h2>Support JSON, XML, CLI</h2>
+                                <pre>presentation : string|\Bluz\Response\Presentation\AbstractPresentation</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Support JSON, XML, CLI</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string|<a href="../classes/Bluz.Response.Presentation.AbstractPresentation.html">\Bluz\Response\Presentation\AbstractPresentation</a></code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                     <a id="property_options"> </a>
                             <div class="element clickable property  protected property_options inherited" data-toggle="collapse" data-target=".property_options .collapse">
                                 <h2>Options store</h2>
@@ -1458,7 +1550,7 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 05 Nov 2014 13:40:57 +0200.<br/>
+            generated on Tue, 11 Nov 2014 16:40:23 +0200.<br/>
     </footer>
     </body>
 </html>

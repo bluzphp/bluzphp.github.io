@@ -215,6 +215,12 @@
         </a>
     </li>
 
+                                                                                                        <li class="method public">
+        <a href="#method_isXml" title="isXml :: Check XML flag">
+            <span class="description">Check XML flag</span><pre>isXml</pre>
+        </a>
+    </li>
+
                                                                                                                                                                                                                         <li class="method public">
         <a href="#method_process" title="process :: Process application">
             <span class="description">Process application</span><pre>process</pre>
@@ -276,6 +282,12 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_useXml" title="useXml :: Set XML flag">
+            <span class="description">Set XML flag</span><pre>useXml</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_widget" title="widget :: Widget call">
             <span class="description">Widget call</span><pre>widget</pre>
         </a>
@@ -325,7 +337,7 @@
                                 <span class="description">Initial Response instance</span><pre>initResponse</pre>
                             </a>
                         </li>
-                                                                                                                                                                                            <li class="method protected">
+                                                                                                                                                                                                                                <li class="method protected">
                             <a href="#method_postDispatch" title="postDispatch :: Post dispatch mount point">
                                 <span class="description">Post dispatch mount point</span><pre>postDispatch</pre>
                             </a>
@@ -335,11 +347,11 @@
                                 <span class="description">Pre dispatch mount point</span><pre>preDispatch</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -369,6 +381,15 @@
                                     <td>
                                                                                     
                                                                                 <p>Bluz\Application</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        link
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p><a href="https://github.com/bluzphp/framework/wiki/Application">https://github.com/bluzphp/framework/wiki/Application</a></p>
                                     </td>
                                 </tr>
                                                                                                                                                                     <tr>
@@ -591,7 +612,7 @@
                                             <a id="method_dispatch"></a>
                         <div class="element clickable method public  method_dispatch" data-toggle="collapse" data-target=".method_dispatch .collapse">
                             <h2>Dispatch controller with params</h2>
-                            <pre>dispatch(string $module, string $controller, array $params = array()) : \Bluz\View\View|string</pre>
+                            <pre>dispatch(string $module, string $controller, array $params = array()) : \Bluz\View\View|callable</pre>
                             <div class="labels">
                                                                                                                                                                 <span class="label label-info">api</span>                            </div>
 
@@ -628,7 +649,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a>|string</code><p></p>
+                                        <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a>|callable</code><p></p>
                                                                     </div>
                             </div>
 
@@ -636,7 +657,7 @@
                                             <a id="method_doDispatch"></a>
                         <div class="element clickable method protected  method_doDispatch" data-toggle="collapse" data-target=".method_doDispatch .collapse">
                             <h2>Do dispatch</h2>
-                            <pre>doDispatch(string $module, string $controller, array $params = array()) : \Bluz\View\View|string|callable</pre>
+                            <pre>doDispatch(string $module, string $controller, array $params = array()) : \Bluz\View\View|callable</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -672,7 +693,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a>|string|callable</code><p></p>
+                                        <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a>|callable</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1184,6 +1205,35 @@
                             </div>
 
                         </div>
+                                            <a id="method_isXml"></a>
+                        <div class="element clickable method public  method_isXml" data-toggle="collapse" data-target=".method_isXml .collapse">
+                            <h2>Check XML flag</h2>
+                            <pre>isXml() : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_postDispatch"></a>
                         <div class="element clickable method protected  method_postDispatch" data-toggle="collapse" data-target=".method_postDispatch .collapse">
                             <h2>Post dispatch mount point</h2>
@@ -1534,6 +1584,33 @@
                             </div>
 
                         </div>
+                                            <a id="method_useXml"></a>
+                        <div class="element clickable method public  method_useXml" data-toggle="collapse" data-target=".method_useXml .collapse">
+                            <h2>Set XML flag</h2>
+                            <pre>useXml(boolean $flag = true) : \Bluz\Application\Application</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$flag</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Bluz.Application.Application.html">\Bluz\Application\Application</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_widget"></a>
                         <div class="element clickable method public  method_widget" data-toggle="collapse" data-target=".method_widget .collapse">
                             <h2>Widget call</h2>
@@ -1712,6 +1789,32 @@
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_xmlFlag"> </a>
+                            <div class="element clickable property  protected property_xmlFlag" data-toggle="collapse" data-target=".property_xmlFlag .collapse">
+                                <h2>XML response flag</h2>
+                                <pre>xmlFlag : boolean</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>XML response flag</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>boolean</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                     <a id="property_widgets"> </a>
                             <div class="element clickable property  protected property_widgets" data-toggle="collapse" data-target=".property_widgets .collapse">
                                 <h2>Stack of widgets closures</h2>
@@ -1862,7 +1965,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 05 Nov 2014 13:40:58 +0200.<br/>
+            generated on Tue, 11 Nov 2014 16:40:25 +0200.<br/>
     </footer>
     </body>
 </html>
