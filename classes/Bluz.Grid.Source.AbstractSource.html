@@ -3,1291 +3,325 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>Bluz</title>
+    <title>    Bluz &raquo; \Bluz\Grid\Source\AbstractSource
+</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
-    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" media="all"/>
-    <link href="../css/template.css" rel="stylesheet" media="all"/>
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
     
-    <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <![endif]-->
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/prism.min.js"></script>
-    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-    <script type="text/javascript">
-    function loadExternalCodeSnippets() {
-        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-            var src = pre.getAttribute('data-src');
-            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-            var language = 'php';
-
-            var code = document.createElement('code');
-            code.className = 'language-' + language;
-
-            pre.textContent = '';
-
-            code.textContent = 'Loading…';
-
-            pre.appendChild(code);
-
-            var xhr = new XMLHttpRequest();
-
-            xhr.open('GET', src, true);
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
-
-                    if (xhr.status < 400 && xhr.responseText) {
-                        code.textContent = xhr.responseText;
-
-                        Prism.highlightElement(code);
-                    }
-                    else if (xhr.status >= 400) {
-                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                    }
-                    else {
-                        code.textContent = '✖ Error: File does not exist or is empty';
-                    }
-                }
-            };
-
-            xhr.send(null);
-        });
-    }
-
-    $(document).ready(function(){
-        loadExternalCodeSnippets();
-    });
-    $('#source-view').on('shown', function () {
-        loadExternalCodeSnippets();
-    })
-</script>
-
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-</head>
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-ellipsis-vertical"></i>
-            </a>
-            <a class="brand" href="../index.html">Bluz</a>
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">Bluz</a>
 
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                                        <li class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
-                            API Documentation <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                                                        <li><a href="../namespaces/Bluz.html">\Bluz</a></li>
-                                                    </ul>
-                    </li>
-                                        <li class="dropdown" id="charts-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Charts <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../graphs/class.html">
-                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" id="reports-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reports <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">3</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/deprecated.html">
-                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--<div class="go_to_top">-->
-    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
-    <!--</div>-->
-</div>
-
-<div id="___" class="container-fluid">
-        <section class="row-fluid">
-        <div class="span2 sidebar">
-                                <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1656642252"></a>
-                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
-            </div>
-            <div id="namespace-1656642252" class="accordion-body collapse in">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1288832145"></a>
-                                <a href="../namespaces/Bluz.html" style="margin-left: 30px; padding-left: 0">Bluz</a>
-            </div>
-            <div id="namespace-1288832145" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1150796304"></a>
-                                <a href="../namespaces/Bluz.Acl.html" style="margin-left: 30px; padding-left: 0">Acl</a>
-            </div>
-            <div id="namespace-1150796304" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Acl.Acl.html">Acl</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Acl.AclException.html">AclException</a></li>
-                                            </ul>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Bluz.html">Bluz</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1885069804"></a>
-                                <a href="../namespaces/Bluz.Application.html" style="margin-left: 30px; padding-left: 0">Application</a>
-            </div>
-            <div id="namespace-1885069804" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-452533908"></a>
-                                <a href="../namespaces/Bluz.Application.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
-            </div>
-            <div id="namespace-452533908" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ApplicationException.html">ApplicationException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.BadRequestException.html">BadRequestException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ForbiddenException.html">ForbiddenException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.NotFoundException.html">NotFoundException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.NotImplementedException.html">NotImplementedException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.RedirectException.html">RedirectException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.ReloadException.html">ReloadException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Application.Exception.UnauthorizedException.html">UnauthorizedException</a></li>
-                                            </ul>
-                </div>
-            </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
         </div>
     </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Application.Application.html">Application</a></li>
-                                            </ul>
-                </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
             </div>
-        </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
     </div>
 
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1758617564"></a>
-                                <a href="../namespaces/Bluz.Auth.html" style="margin-left: 30px; padding-left: 0">Auth</a>
-            </div>
-            <div id="namespace-1758617564" class="accordion-body collapse ">
-                <div class="accordion-inner">
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method_process" title="process :: Process source">
+            <span class="description">Process source</span><pre>process</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setSource" title="setSource :: Setup adapter source">
+            <span class="description">Setup adapter source</span><pre>setSource</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                    </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                    </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
 
-                    
-                    <ul>
-                                                    <li class="interface"><a href="../classes/Bluz.Auth.EntityInterface.html">EntityInterface</a></li>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractRow.html">AbstractRow</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractRowEntity.html">AbstractRowEntity</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Auth.AbstractTable.html">AbstractTable</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Auth.Auth.html">Auth</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Auth.AuthException.html">AuthException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1467130444"></a>
-                                <a href="../namespaces/Bluz.Cache.html" style="margin-left: 30px; padding-left: 0">Cache</a>
-            </div>
-            <div id="namespace-1467130444" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-687457139"></a>
-                                <a href="../namespaces/Bluz.Cache.Adapter.html" style="margin-left: 30px; padding-left: 0">Adapter</a>
-            </div>
-            <div id="namespace-687457139" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html">AbstractAdapter</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Apc.html">Apc</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.FileBase.html">FileBase</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Memcached.html">Memcached</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.PhpFile.html">PhpFile</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Predis.html">Predis</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.Adapter.Redis.html">Redis</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                    <li class="interface"><a href="../classes/Bluz.Cache.CacheInterface.html">CacheInterface</a></li>
-                                                    <li class="interface"><a href="../classes/Bluz.Cache.TagableInterface.html">TagableInterface</a></li>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Cache.Cache.html">Cache</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.CacheException.html">CacheException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cache.InvalidArgumentException.html">InvalidArgumentException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1431716948"></a>
-                                <a href="../namespaces/Bluz.Cli.html" style="margin-left: 30px; padding-left: 0">Cli</a>
-            </div>
-            <div id="namespace-1431716948" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Cli.Colorize.html">Colorize</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cli.Request.html">Request</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Cli.Response.html">Response</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2146363091"></a>
-                                <a href="../namespaces/Bluz.Common.html" style="margin-left: 30px; padding-left: 0">Common</a>
-            </div>
-            <div id="namespace-2146363091" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2079728212"></a>
-                                <a href="../namespaces/Bluz.Common.Container.html" style="margin-left: 30px; padding-left: 0">Container</a>
-            </div>
-            <div id="namespace-2079728212" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                            <li class="trait"><a href="../classes/Bluz.Common.Container.ArrayAccess.html">ArrayAccess</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.Container.html">Container</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.JsonSerialize.html">JsonSerialize</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.MagicAccess.html">MagicAccess</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Common.Container.RegularAccess.html">RegularAccess</a></li>
-                                                                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-517979934"></a>
-                                <a href="../namespaces/Bluz.Common.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
-            </div>
-            <div id="namespace-517979934" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.CommonException.html">CommonException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.ComponentException.html">ComponentException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Common.Exception.ConfigurationException.html">ConfigurationException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                            <li class="trait"><a href="../classes/Bluz.Common.Helper.html">Helper</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Common.Options.html">Options</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Common.Singleton.html">Singleton</a></li>
-                                                                            <li class="class"><a href="../classes/Bluz.Common.Nil.html">Nil</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1652379093"></a>
-                                <a href="../namespaces/Bluz.Config.html" style="margin-left: 30px; padding-left: 0">Config</a>
-            </div>
-            <div id="namespace-1652379093" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Config.Config.html">Config</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Config.ConfigException.html">ConfigException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1362207740"></a>
-                                <a href="../namespaces/Bluz.Controller.html" style="margin-left: 30px; padding-left: 0">Controller</a>
-            </div>
-            <div id="namespace-1362207740" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Controller.AbstractController.html">AbstractController</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Controller.Crud.html">Crud</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Controller.Reflection.html">Reflection</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Controller.Rest.html">Rest</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-877982842"></a>
-                                <a href="../namespaces/Bluz.Crud.html" style="margin-left: 30px; padding-left: 0">Crud</a>
-            </div>
-            <div id="namespace-877982842" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Crud.AbstractCrud.html">AbstractCrud</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Crud.CrudException.html">CrudException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Crud.Table.html">Table</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1423248458"></a>
-                                <a href="../namespaces/Bluz.Db.html" style="margin-left: 30px; padding-left: 0">Db</a>
-            </div>
-            <div id="namespace-1423248458" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-663359613"></a>
-                                <a href="../namespaces/Bluz.Db.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
-            </div>
-            <div id="namespace-663359613" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.DbException.html">DbException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.InvalidPrimaryKeyException.html">InvalidPrimaryKeyException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.RelationNotFoundException.html">RelationNotFoundException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Exception.TableNotFoundException.html">TableNotFoundException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-767217588"></a>
-                                <a href="../namespaces/Bluz.Db.Query.html" style="margin-left: 30px; padding-left: 0">Query</a>
-            </div>
-            <div id="namespace-767217588" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1217693712"></a>
-                                <a href="../namespaces/Bluz.Db.Query.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
-            </div>
-            <div id="namespace-1217693712" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                            <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.From.html">From</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Limit.html">Limit</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Order.html">Order</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Set.html">Set</a></li>
-                                                    <li class="trait"><a href="../classes/Bluz.Db.Query.Traits.Where.html">Where</a></li>
-                                                                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Query.AbstractBuilder.html">AbstractBuilder</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Query.CompositeBuilder.html">CompositeBuilder</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Delete.html">Delete</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Insert.html">Insert</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Select.html">Select</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Query.Update.html">Update</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Db.Db.html">Db</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Relations.html">Relations</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Row.html">Row</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Db.Table.html">Table</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1798828214"></a>
-                                <a href="../namespaces/Bluz.EventManager.html" style="margin-left: 30px; padding-left: 0">EventManager</a>
-            </div>
-            <div id="namespace-1798828214" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.EventManager.Event.html">Event</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.EventManager.EventException.html">EventException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.EventManager.EventManager.html">EventManager</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-153443323"></a>
-                                <a href="../namespaces/Bluz.Grid.html" style="margin-left: 30px; padding-left: 0">Grid</a>
-            </div>
-            <div id="namespace-153443323" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-254160800"></a>
-                                <a href="../namespaces/Bluz.Grid.Source.html" style="margin-left: 30px; padding-left: 0">Source</a>
-            </div>
-            <div id="namespace-254160800" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.AbstractSource.html">AbstractSource</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.ArraySource.html">ArraySource</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.SelectSource.html">SelectSource</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Grid.Source.SqlSource.html">SqlSource</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Grid.Data.html">Data</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Grid.Grid.html">Grid</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Grid.GridException.html">GridException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1530521236"></a>
-                                <a href="../namespaces/Bluz.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
-            </div>
-            <div id="namespace-1530521236" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Http.File.html">File</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Http.FileUpload.html">FileUpload</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Http.Request.html">Request</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Http.Response.html">Response</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1058067223"></a>
-                                <a href="../namespaces/Bluz.Layout.html" style="margin-left: 30px; padding-left: 0">Layout</a>
-            </div>
-            <div id="namespace-1058067223" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Layout.Layout.html">Layout</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-774835458"></a>
-                                <a href="../namespaces/Bluz.Logger.html" style="margin-left: 30px; padding-left: 0">Logger</a>
-            </div>
-            <div id="namespace-774835458" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Logger.Logger.html">Logger</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1667314623"></a>
-                                <a href="../namespaces/Bluz.Mailer.html" style="margin-left: 30px; padding-left: 0">Mailer</a>
-            </div>
-            <div id="namespace-1667314623" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Mailer.Mailer.html">Mailer</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Mailer.MailerException.html">MailerException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1034428061"></a>
-                                <a href="../namespaces/Bluz.Messages.html" style="margin-left: 30px; padding-left: 0">Messages</a>
-            </div>
-            <div id="namespace-1034428061" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Messages.Messages.html">Messages</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1934761524"></a>
-                                <a href="../namespaces/Bluz.Proxy.html" style="margin-left: 30px; padding-left: 0">Proxy</a>
-            </div>
-            <div id="namespace-1934761524" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Proxy.AbstractProxy.html">AbstractProxy</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Acl.html">Acl</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Auth.html">Auth</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Cache.html">Cache</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Config.html">Config</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Db.html">Db</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.EventManager.html">EventManager</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Layout.html">Layout</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Logger.html">Logger</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Mailer.html">Mailer</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Messages.html">Messages</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Registry.html">Registry</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Request.html">Request</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Response.html">Response</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Router.html">Router</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Session.html">Session</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Proxy.Translator.html">Translator</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-213968325"></a>
-                                <a href="../namespaces/Bluz.Registry.html" style="margin-left: 30px; padding-left: 0">Registry</a>
-            </div>
-            <div id="namespace-213968325" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Registry.Registry.html">Registry</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-178143714"></a>
-                                <a href="../namespaces/Bluz.Request.html" style="margin-left: 30px; padding-left: 0">Request</a>
-            </div>
-            <div id="namespace-178143714" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Request.AbstractRequest.html">AbstractRequest</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Request.RequestException.html">RequestException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-205649268"></a>
-                                <a href="../namespaces/Bluz.Response.html" style="margin-left: 30px; padding-left: 0">Response</a>
-            </div>
-            <div id="namespace-205649268" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Response.AbstractResponse.html">AbstractResponse</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Response.ResponseException.html">ResponseException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-93792083"></a>
-                                <a href="../namespaces/Bluz.Router.html" style="margin-left: 30px; padding-left: 0">Router</a>
-            </div>
-            <div id="namespace-93792083" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Router.Router.html">Router</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Router.RouterException.html">RouterException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-505433083"></a>
-                                <a href="../namespaces/Bluz.Session.html" style="margin-left: 30px; padding-left: 0">Session</a>
-            </div>
-            <div id="namespace-505433083" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-906456960"></a>
-                                <a href="../namespaces/Bluz.Session.Adapter.html" style="margin-left: 30px; padding-left: 0">Adapter</a>
-            </div>
-            <div id="namespace-906456960" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html">AbstractAdapter</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.Cache.html">Cache</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Session.Adapter.Redis.html">Redis</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Session.Session.html">Session</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Session.SessionException.html">SessionException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-732647082"></a>
-                                <a href="../namespaces/Bluz.Translator.html" style="margin-left: 30px; padding-left: 0">Translator</a>
-            </div>
-            <div id="namespace-732647082" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Translator.Translator.html">Translator</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1897055223"></a>
-                                <a href="../namespaces/Bluz.Validator.html" style="margin-left: 30px; padding-left: 0">Validator</a>
-            </div>
-            <div id="namespace-1897055223" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1962941174"></a>
-                                <a href="../namespaces/Bluz.Validator.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
-            </div>
-            <div id="namespace-1962941174" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Exception.ComponentException.html">ComponentException</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Exception.ValidatorException.html">ValidatorException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1332056989"></a>
-                                <a href="../namespaces/Bluz.Validator.Rule.html" style="margin-left: 30px; padding-left: 0">Rule</a>
-            </div>
-            <div id="namespace-1332056989" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractCompareRule.html">AbstractCompareRule</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractCtypeRule.html">AbstractCtypeRule</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractFilterRule.html">AbstractFilterRule</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AbstractRule.html">AbstractRule</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Alpha.html">Alpha</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.AlphaNumeric.html">AlphaNumeric</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.ArrayInput.html">ArrayInput</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Between.html">Between</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Callback.html">Callback</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Condition.html">Condition</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Contains.html">Contains</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.CountryCode.html">CountryCode</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.CreditCard.html">CreditCard</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Date.html">Date</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Domain.html">Domain</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Email.html">Email</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Equals.html">Equals</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Float.html">Float</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.In.html">In</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Integer.html">Integer</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Ip.html">Ip</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Json.html">Json</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Latin.html">Latin</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.LatinNumeric.html">LatinNumeric</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Length.html">Length</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Max.html">Max</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Min.html">Min</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Negative.html">Negative</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.NotEmpty.html">NotEmpty</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.NoWhitespace.html">NoWhitespace</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Numeric.html">Numeric</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Positive.html">Positive</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Regexp.html">Regexp</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Required.html">Required</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Slug.html">Slug</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.String.html">String</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.Rule.Version.html">Version</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2098564711"></a>
-                                <a href="../namespaces/Bluz.Validator.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
-            </div>
-            <div id="namespace-2098564711" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                            <li class="trait"><a href="../classes/Bluz.Validator.Traits.Validator.html">Validator</a></li>
-                                                                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                                    <li class="class"><a href="../classes/Bluz.Validator.Validator.html">Validator</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.Validator.ValidatorBuilder.html">ValidatorBuilder</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                                                    <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1644525967"></a>
-                                <a href="../namespaces/Bluz.View.html" style="margin-left: 30px; padding-left: 0">View</a>
-            </div>
-            <div id="namespace-1644525967" class="accordion-body collapse ">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                    <li class="interface"><a href="../classes/Bluz.View.ViewInterface.html">ViewInterface</a></li>
-                                                                                                    <li class="class"><a href="../classes/Bluz.View.View.html">View</a></li>
-                                                    <li class="class"><a href="../classes/Bluz.View.ViewException.html">ViewException</a></li>
-                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
         </div>
-    </section>
-    <section class="row-fluid">
-        <div class="span10 offset2">
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <nav>
-                                                <a href="../namespaces/Bluz.Grid.Source.html">\Bluz\Grid\Source</a> <i class="icon-level-up"></i>
-                                            </nav>
-                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
-                    <h1><small>\Bluz\Grid\Source</small>AbstractSource</h1>
-                    <p><em>Adapter</em></p>
-                    
-                    
-                                        
-                    <section id="summary">
-                        <h2>Summary</h2>
-                        <section class="row-fluid heading">
-                            <section class="span4">
-                                <a href="#methods">Methods</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#properties">Properties</a>
-                            </section>
-                            <section class="span4">
-                                <a href="#constants">Constants</a>
-                            </section>
-                        </section>
-                        <section class="row-fluid public">
-                            <section class="span4">
-                                                                    <a href="../classes/Bluz.Grid.Source.AbstractSource.html#method_setSource" class="">setSource()</a><br />
-                                                                    <a href="../classes/Bluz.Grid.Source.AbstractSource.html#method_process" class="">process()</a><br />
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No public properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No constants found</em>
-                                                            </section>
-                        </section>
-                        <section class="row-fluid protected">
-                            <section class="span4">
-                                                                    <em>No protected methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <a href="../classes/Bluz.Grid.Source.AbstractSource.html#property_source" class="">$source</a><br />
-                                                                    <a href="../classes/Bluz.Grid.Source.AbstractSource.html#property_filters" class="">$filters</a><br />
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                        <section class="row-fluid private">
-                            <section class="span4">
-                                                                    <em>No private methods found</em>
-                                                            </section>
-                            <section class="span4">
-                                                                    <em>No private properties found</em>
-                                                            </section>
-                            <section class="span4">
-                                <em>N/A</em>
-                            </section>
-                        </section>
-                    </section>
-                </div>
-                <aside class="span4 detailsbar">
-                                            <span class="label label-info">abstract</span>
-                                        
-                    
-                    <dl>
-                        <dt>File</dt>
-                            <dd><a href="../files/Grid.Source.AbstractSource.html"><div class="path-wrapper">Grid/Source/AbstractSource.php</div></a></dd>
-                                                <dt>Package</dt>
-                            <dd><div class="namespace-wrapper">Bluz\Grid</div></dd>
-                                                <dt>Class hierarchy</dt>
-                            <dd class="hierarchy">
-                                                                                                                                                                    <div class="namespace-wrapper">\Bluz\Grid\Source\AbstractSource</div>
-                            </dd>
-
+        <div class="span8">
+            <div class="element class">
+                <h1>AbstractSource</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Adapter</p>
+                <div class="details">
+                    <div class="long_description">
                         
-                        
-                        
-                        
-                                                                        </dl>
-                    <h2>Tags</h2>
-                    <table class="table table-condensed">
-                                            <tr>
-                            <th>
-                                author
-                            </th>
-                            <td>
-                                                                    <p>Anton Shevchuk</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                created
-                            </th>
-                            <td>
-                                                                    <p>15.08.12 11:52</p>
-                                                            </td>
-                        </tr>
-                                        </table>
-                </aside>
-            </div>
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Bluz\Grid</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Anton Shevchuk</p>
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        created
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>15.08.12 11:52</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                                                                                                                                                                            </table>
 
-                        
-                                    <a id="properties" name="properties"></a>
-            <div class="row-fluid">
-                <div class="span8 content class">
-                    <h2>Properties</h2>
-                </div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_process"></a>
+                        <div class="element clickable method public  method_process" data-toggle="collapse" data-target=".method_process .collapse">
+                            <h2>Process source</h2>
+                            <pre>process(array $settings = array()) : \Bluz\Grid\Data</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
 
-                                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_source" name="property_source" class="anchor"></a>
-            <article class="property">
-                <h3 class="protected ">$source</h3>
-                <pre class="signature">$source : mixed</pre>
-                <p><em>Source for build grid</em></p>
-                
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
 
-                                <h4>Type</h4>
-                mixed
-                                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
+                                    <table class="table">
+                                                                            </table>
 
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="property_filters" name="property_filters" class="anchor"></a>
-            <article class="property">
-                <h3 class="protected ">$filters</h3>
-                <pre class="signature">$filters : array</pre>
-                <p><em>Available filters</em></p>
-                
-
-                                <h4>Type</h4>
-                array
-                                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                        <dl>
-                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                            
-                                    <a id="methods" name="methods"></a>
-            <div class="row-fluid">
-                <div class="span8 content class"><h2>Methods</h2></div>
-                <aside class="span4 detailsbar"></aside>
-            </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_setSource" name="method_setSource" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">setSource()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">setSource(mixed  <span class="argument">$source</span>) : self</pre>
-                <p><em>Setup adapter source</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>mixed</td>
-                                <td>$source </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    self
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                        <span class="label label-info">abstract</span>
-                                                <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
-                                    <div class="row-fluid">
-        <div class="span8 content class">
-            <a id="method_process" name="method_process" class="anchor"></a>
-            <article class="method">
-                <h3 class="public ">process()</h3>
-                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">process(array  <span class="argument">$settings = array()</span>) : \Bluz\Grid\Data</pre>
-                <p><em>Process source</em></p>
-                
-
-                                    <h4>Parameters</h4>
-                    <table class="table table-condensed table-hover">
-                                                    <tr>
-                                <td>array</td>
-                                <td>$settings </td>
-                                <td></td>
-                            </tr>
-                                            </table>
-                
-                
-                                    <h4>Returns</h4>
-                    <a href="../classes/Bluz.Grid.Data.html">\Bluz\Grid\Data</a>
-                                    				
-                            </article>
-        </div>
-        <aside class="span4 detailsbar">
-            <h1><i class="icon-arrow-down"></i></h1>
-                                        <span class="label label-info">abstract</span>
-                                                <dl>
-                                                                            </dl>
-            <h2>Tags</h2>
-            <table class="table table-condensed">
-                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                            </table>
-        </aside>
-    </div>
-
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$settings</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Bluz.Grid.Data.html">\Bluz\Grid\Data</a></code><p></p>
                                                                     </div>
-    </section>
+                            </div>
 
-    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label">AbstractSource.php</h3>
-        </div>
-        <div class="modal-body">
-            <pre data-src="../files/Grid/Source/AbstractSource.php.txt" class="language-php line-numbers"></pre>
+                        </div>
+                                            <a id="method_setSource"></a>
+                        <div class="element clickable method public  method_setSource" data-toggle="collapse" data-target=".method_setSource .collapse">
+                            <h2>Setup adapter source</h2>
+                            <pre>setSource(mixed $source) : self</pre>
+                            <div class="labels">
+                                                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$source</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_source"> </a>
+                            <div class="element clickable property  protected property_source" data-toggle="collapse" data-target=".property_source .collapse">
+                                <h2>Source for build grid</h2>
+                                <pre>source : mixed</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>mixed</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_filters"> </a>
+                            <div class="element clickable property  protected property_filters" data-toggle="collapse" data-target=".property_filters .collapse">
+                                <h2>Available filters</h2>
+                                <pre>filters : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Bluz\Grid\Source\AbstractSource"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Bluz.Grid.Source.html">Source</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Bluz.Grid.Source.AbstractSource.html">AbstractSource</a></li>
+            </ul>
         </div>
     </div>
 
-    <footer class="row-fluid">
-        <section class="span10 offset2">
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <section class="row-fluid footer-sections">
-                        <section class="span4">
-                                                        <h1><i class="icon-code"></i></h1>
-                            <div>
-                                <ul>
-                                                                            <li><a href="../namespaces/Bluz.html">\Bluz</a></li>
-                                                                    </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-bar-chart"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-pushpin"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../reports/errors.html">Errors</a></li>
-                                    <li><a href="../reports/markers.html">Markers</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </section>
-                </section>
-            </section>
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <hr />
-                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on October 30th, 2014 at 11:52.
-                </section>
-            </section>
-        </section>
-    </footer>
-</div>
+    </div>
 
-</body>
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Wed, 05 Nov 2014 13:40:58 +0200.<br/>
+    </footer>
+    </body>
 </html>
