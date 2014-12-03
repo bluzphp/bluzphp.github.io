@@ -149,7 +149,7 @@
         </a>
     </li>
 
-                                                                                                                                                                <li class="method public">
+                                                                                                                                                                                                                        <li class="method public">
         <a href="#method_finish" title="finish :: Finally method">
             <span class="description">Finally method</span><pre>finish</pre>
         </a>
@@ -221,7 +221,7 @@
         </a>
     </li>
 
-                                                                                                                                                                                                                        <li class="method public">
+                                                                                                                                                                                                                                                                                                                                        <li class="method public">
         <a href="#method_process" title="process :: Process application">
             <span class="description">Process application</span><pre>process</pre>
         </a>
@@ -264,8 +264,14 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_useJson" title="useJson :: Set Json flag">
-            <span class="description">Set Json flag</span><pre>useJson</pre>
+        <a href="#method_useJson" title="useJson :: Set JSON presentation">
+            <span class="description">Set JSON presentation</span><pre>useJson</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_useJsonp" title="useJsonp :: Set JSONP presentation">
+            <span class="description">Set JSONP presentation</span><pre>useJsonp</pre>
         </a>
     </li>
 
@@ -282,8 +288,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_useXml" title="useXml :: Set XML flag">
-            <span class="description">Set XML flag</span><pre>useXml</pre>
+        <a href="#method_useXml" title="useXml :: Set XML presentation">
+            <span class="description">Set XML presentation</span><pre>useXml</pre>
         </a>
     </li>
 
@@ -310,6 +316,11 @@
                                                                                                                                                                                                                                 <li class="method protected">
                             <a href="#method_doDispatch" title="doDispatch :: Do dispatch">
                                 <span class="description">Do dispatch</span><pre>doDispatch</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_doProcess" title="doProcess :: Do process">
+                                <span class="description">Do process</span><pre>doProcess</pre>
                             </a>
                         </li>
                                                                                                                     <li class="method protected">
@@ -343,15 +354,25 @@
                             </a>
                         </li>
                                                                                 <li class="method protected">
+                            <a href="#method_postProcess" title="postProcess :: Post process">
+                                <span class="description">Post process</span><pre>postProcess</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
                             <a href="#method_preDispatch" title="preDispatch :: Pre dispatch mount point">
                                 <span class="description">Pre dispatch mount point</span><pre>preDispatch</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                                                <li class="method protected">
+                            <a href="#method_preProcess" title="preProcess :: Pre process">
+                                <span class="description">Pre process</span><pre>preProcess</pre>
+                            </a>
+                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -694,6 +715,33 @@
                                                                             
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a>|callable</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_doProcess"></a>
+                        <div class="element clickable method protected  method_doProcess" data-toggle="collapse" data-target=".method_doProcess .collapse">
+                            <h2>Do process</h2>
+                            <pre>doProcess() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
                                                                     </div>
                             </div>
 
@@ -1177,7 +1225,7 @@
 
                         </div>
                                             <a id="method_isJson"></a>
-                        <div class="element clickable method public  method_isJson" data-toggle="collapse" data-target=".method_isJson .collapse">
+                        <div class="element clickable method public deprecated method_isJson" data-toggle="collapse" data-target=".method_isJson .collapse">
                             <h2>Check Json flag</h2>
                             <pre>isJson() : boolean</pre>
                             <div class="labels">
@@ -1189,6 +1237,15 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 0.9</p>
+                                                                                                    </td>
+                                            </tr>
                                                                                     <tr>
                                                 <th>
                                                     
@@ -1206,7 +1263,7 @@
 
                         </div>
                                             <a id="method_isXml"></a>
-                        <div class="element clickable method public  method_isXml" data-toggle="collapse" data-target=".method_isXml .collapse">
+                        <div class="element clickable method public deprecated method_isXml" data-toggle="collapse" data-target=".method_isXml .collapse">
                             <h2>Check XML flag</h2>
                             <pre>isXml() : boolean</pre>
                             <div class="labels">
@@ -1218,6 +1275,15 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    deprecated
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>since 0.9</p>
+                                                                                                    </td>
+                                            </tr>
                                                                                     <tr>
                                                 <th>
                                                     
@@ -1267,6 +1333,33 @@
                             </div>
 
                         </div>
+                                            <a id="method_postProcess"></a>
+                        <div class="element clickable method protected  method_postProcess" data-toggle="collapse" data-target=".method_postProcess .collapse">
+                            <h2>Post process</h2>
+                            <pre>postProcess() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_preDispatch"></a>
                         <div class="element clickable method protected  method_preDispatch" data-toggle="collapse" data-target=".method_preDispatch .collapse">
                             <h2>Pre dispatch mount point</h2>
@@ -1296,6 +1389,42 @@
                                                 <code>array</code><p></p>
                                             </div>
                                                                             
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_preProcess"></a>
+                        <div class="element clickable method protected  method_preProcess" data-toggle="collapse" data-target=".method_preProcess .collapse">
+                            <h2>Pre process</h2>
+                            <pre>preProcess() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
                                                                     </div>
                             </div>
 
@@ -1510,8 +1639,8 @@
                         </div>
                                             <a id="method_useJson"></a>
                         <div class="element clickable method public  method_useJson" data-toggle="collapse" data-target=".method_useJson .collapse">
-                            <h2>Set Json flag</h2>
-                            <pre>useJson(boolean $flag = true) : \Bluz\Application\Application</pre>
+                            <h2>Set JSON presentation</h2>
+                            <pre>useJson() : void</pre>
                             <div class="labels">
                                                                                                                                                                 <span class="label label-info">api</span>                            </div>
 
@@ -1521,16 +1650,43 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$flag</h4>
-                                                <code>boolean</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Application.Application.html">\Bluz\Application\Application</a></code><p></p>
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_useJsonp"></a>
+                        <div class="element clickable method public  method_useJsonp" data-toggle="collapse" data-target=".method_useJsonp .collapse">
+                            <h2>Set JSONP presentation</h2>
+                            <pre>useJsonp() : void</pre>
+                            <div class="labels">
+                                                                                                                                                                <span class="label label-info">api</span>                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
                                                                     </div>
                             </div>
 
@@ -1538,7 +1694,7 @@
                                             <a id="method_useLayout"></a>
                         <div class="element clickable method public  method_useLayout" data-toggle="collapse" data-target=".method_useLayout .collapse">
                             <h2>Set Layout template and/or flag</h2>
-                            <pre>useLayout(boolean|string $flag = true) : \Bluz\Application\Application</pre>
+                            <pre>useLayout(boolean|string $flag = true) : void</pre>
                             <div class="labels">
                                                                                                                                                                 <span class="label label-info">api</span>                            </div>
 
@@ -1556,8 +1712,6 @@
                                                 <code>boolean|string</code><p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Application.Application.html">\Bluz\Application\Application</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -1586,8 +1740,8 @@
                         </div>
                                             <a id="method_useXml"></a>
                         <div class="element clickable method public  method_useXml" data-toggle="collapse" data-target=".method_useXml .collapse">
-                            <h2>Set XML flag</h2>
-                            <pre>useXml(boolean $flag = true) : \Bluz\Application\Application</pre>
+                            <h2>Set XML presentation</h2>
+                            <pre>useXml() : void</pre>
                             <div class="labels">
                                                                                                                                                                 <span class="label label-info">api</span>                            </div>
 
@@ -1597,16 +1751,16 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$flag</h4>
-                                                <code>boolean</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Application.Application.html">\Bluz\Application\Application</a></code><p></p>
+                                    
                                                                     </div>
                             </div>
 
@@ -1965,7 +2119,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 11 Nov 2014 16:40:25 +0200.<br/>
+            generated on Wed, 03 Dec 2014 10:34:55 +0200.<br/>
     </footer>
     </body>
 </html>

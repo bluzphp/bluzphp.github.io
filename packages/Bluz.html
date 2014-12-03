@@ -479,7 +479,7 @@
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Registry.html">Registry</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Proxy.html">Proxy</a>
     </li>
 
     </ul>
@@ -491,210 +491,199 @@
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="Registry" class="element ajax clickable class">
-        <h1>Registry<a href="../classes/Bluz.Registry.Registry.html">¶</a></h1>
-        <p class="short_description">Registry</p>
+                                        <div id="AbstractProxy" class="element ajax clickable class">
+        <h1>AbstractProxy<a href="../classes/Bluz.Proxy.AbstractProxy.html">¶</a></h1>
+        <p class="short_description">Abstract Proxy</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Registry.Registry.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Proxy.AbstractProxy.html" class="more">« More »</a>
     </div>
 
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
+                                        <div id="Acl" class="element ajax clickable class">
+        <h1>Acl<a href="../classes/Bluz.Proxy.Acl.html">¶</a></h1>
+        <p class="short_description">Proxy to Acl</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Acl;
 
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.EventManager.html">EventManager</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Event" class="element ajax clickable class">
-        <h1>Event<a href="../classes/Bluz.EventManager.Event.html">¶</a></h1>
-        <p class="short_description">Representation of an event</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.EventManager.Event.html" class="more">« More »</a>
+    if (!Acl::isAllowed(&#039;users&#039;, &#039;profile&#039;)) {
+         throw new Exception(&#039;You do not have permission to access user profiles&#039;);
+    }</div>
+        <a href="../classes/Bluz.Proxy.Acl.html" class="more">« More »</a>
     </div>
 
-                                        <div id="EventException" class="element ajax clickable class">
-        <h1>EventException<a href="../classes/Bluz.EventManager.EventException.html">¶</a></h1>
-        <p class="short_description">Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.EventManager.EventException.html" class="more">« More »</a>
+                                        <div id="Auth" class="element ajax clickable class">
+        <h1>Auth<a href="../classes/Bluz.Proxy.Auth.html">¶</a></h1>
+        <p class="short_description">Proxy to Auth</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Auth;
+
+    $user = Auth::getIdentity();</div>
+        <a href="../classes/Bluz.Proxy.Auth.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Cache" class="element ajax clickable class">
+        <h1>Cache<a href="../classes/Bluz.Proxy.Cache.html">¶</a></h1>
+        <p class="short_description">Proxy to Cache</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Cache;
+
+    if (!$result = Cache::get(&#039;some unique id&#039;)) {
+         $result = 2*2;
+         Cache::set(&#039;some unique id&#039;, $result);
+    }</div>
+        <a href="../classes/Bluz.Proxy.Cache.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Config" class="element ajax clickable class">
+        <h1>Config<a href="../classes/Bluz.Proxy.Config.html">¶</a></h1>
+        <p class="short_description">Proxy to Config</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Config;
+
+    if (!Config::getData(&#039;db&#039;)) {
+         throw new Exception(&#039;Configuration for `db` is missed&#039;);
+    }</div>
+        <a href="../classes/Bluz.Proxy.Config.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Db" class="element ajax clickable class">
+        <h1>Db<a href="../classes/Bluz.Proxy.Db.html">¶</a></h1>
+        <p class="short_description">Proxy to Db</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Db;
+
+    Db::fetchAll(&#039;SELECT * FROM users&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Db.html" class="more">« More »</a>
     </div>
 
                                         <div id="EventManager" class="element ajax clickable class">
-        <h1>EventManager<a href="../classes/Bluz.EventManager.EventManager.html">¶</a></h1>
-        <p class="short_description">Event manager</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.EventManager.EventManager.html" class="more">« More »</a>
+        <h1>EventManager<a href="../classes/Bluz.Proxy.EventManager.html">¶</a></h1>
+        <p class="short_description">Proxy to EventManager</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\EventManager;
+
+    EvenManager::attach(&#039;event name&#039;, function() {
+        // ... some logic
+    });
+
+    EventManager::trigger(&#039;event name&#039;);</div>
+        <a href="../classes/Bluz.Proxy.EventManager.html" class="more">« More »</a>
     </div>
 
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Grid.html">Grid</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="AbstractSource" class="element ajax clickable class">
-        <h1>AbstractSource<a href="../classes/Bluz.Grid.Source.AbstractSource.html">¶</a></h1>
-        <p class="short_description">Adapter</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.Source.AbstractSource.html" class="more">« More »</a>
+                                        <div id="HttpCacheControl" class="element ajax clickable class">
+        <h1>HttpCacheControl<a href="../classes/Bluz.Proxy.HttpCacheControl.html">¶</a></h1>
+        <p class="short_description">Proxy to Http\CacheControl</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\HttpCacheControl;</div>
+        <a href="../classes/Bluz.Proxy.HttpCacheControl.html" class="more">« More »</a>
     </div>
 
-                                        <div id="ArraySource" class="element ajax clickable class">
-        <h1>ArraySource<a href="../classes/Bluz.Grid.Source.ArraySource.html">¶</a></h1>
-        <p class="short_description">Array Source Adapter for Grid package</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.Source.ArraySource.html" class="more">« More »</a>
+                                        <div id="Layout" class="element ajax clickable class">
+        <h1>Layout<a href="../classes/Bluz.Proxy.Layout.html">¶</a></h1>
+        <p class="short_description">Proxy to Layout</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Layout;
+
+    Layout::title(&#039;Homepage&#039;);
+    Layout::set(&#039;description&#039;, &#039;some page description&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Layout.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Data" class="element ajax clickable class">
-        <h1>Data<a href="../classes/Bluz.Grid.Data.html">¶</a></h1>
-        <p class="short_description">Data</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.Data.html" class="more">« More »</a>
+                                        <div id="Logger" class="element ajax clickable class">
+        <h1>Logger<a href="../classes/Bluz.Proxy.Logger.html">¶</a></h1>
+        <p class="short_description">Proxy to Logger</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Logger;
+
+    Logger::error(&#039;Configuration not found&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Logger.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Grid" class="element ajax clickable class">
-        <h1>Grid<a href="../classes/Bluz.Grid.Grid.html">¶</a></h1>
-        <p class="short_description">Grid</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.Grid.html" class="more">« More »</a>
+                                        <div id="Mailer" class="element ajax clickable class">
+        <h1>Mailer<a href="../classes/Bluz.Proxy.Mailer.html">¶</a></h1>
+        <p class="short_description">Proxy to Mailer</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Mailer;
+
+    $mail = Mailer::create();
+    $mail-&gt;From = &#039;from@example.com&#039;;
+    $mail-&gt;Subject = &#039;Here is the subject&#039;;
+    // ...
+    Mailer::send($mail);</div>
+        <a href="../classes/Bluz.Proxy.Mailer.html" class="more">« More »</a>
     </div>
 
-                                        <div id="GridException" class="element ajax clickable class">
-        <h1>GridException<a href="../classes/Bluz.Grid.GridException.html">¶</a></h1>
-        <p class="short_description">Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.GridException.html" class="more">« More »</a>
+                                        <div id="Messages" class="element ajax clickable class">
+        <h1>Messages<a href="../classes/Bluz.Proxy.Messages.html">¶</a></h1>
+        <p class="short_description">Proxy to Messages</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Messages;
+
+    Messages::addSuccess(&#039;All Ok!&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Messages.html" class="more">« More »</a>
     </div>
 
-                                        <div id="SelectSource" class="element ajax clickable class">
-        <h1>SelectSource<a href="../classes/Bluz.Grid.Source.SelectSource.html">¶</a></h1>
-        <p class="short_description">SQL Source Adapter for Grid package</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.Source.SelectSource.html" class="more">« More »</a>
+                                        <div id="Registry" class="element ajax clickable class">
+        <h1>Registry<a href="../classes/Bluz.Proxy.Registry.html">¶</a></h1>
+        <p class="short_description">Proxy to Registry</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Registry;
+
+    Registry::set(&#039;key&#039;, &#039;value&#039;);
+    Registry::get(&#039;key&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Registry.html" class="more">« More »</a>
     </div>
 
-                                        <div id="SqlSource" class="element ajax clickable class">
-        <h1>SqlSource<a href="../classes/Bluz.Grid.Source.SqlSource.html">¶</a></h1>
-        <p class="short_description">SQL Source Adapter for Grid package</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Grid.Source.SqlSource.html" class="more">« More »</a>
+                                        <div id="Request" class="element ajax clickable class">
+        <h1>Request<a href="../classes/Bluz.Proxy.Request.html">¶</a></h1>
+        <p class="short_description">Proxy to Request</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Request;
+
+    Request::getParam(&#039;foo&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Request.html" class="more">« More »</a>
     </div>
 
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
+                                        <div id="Response" class="element ajax clickable class">
+        <h1>Response<a href="../classes/Bluz.Proxy.Response.html">¶</a></h1>
+        <p class="short_description">Proxy to Response</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Response;
 
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Translator.html">Translator</a>
-    </li>
+    Response::setStatusCode(304);
+    Response::setHeader(&#039;Location&#039;, &#039;/index/index&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Response.html" class="more">« More »</a>
+    </div>
 
-    </ul>
+                                        <div id="Router" class="element ajax clickable class">
+        <h1>Router<a href="../classes/Bluz.Proxy.Router.html">¶</a></h1>
+        <p class="short_description">Proxy to Router</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Router;
 
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
+    Router::getUrl(&#039;pages&#039;, &#039;index&#039;, [&#039;alias&#039; =&gt; &#039;about&#039;]); // for skeleton application is `/about.html`</div>
+        <a href="../classes/Bluz.Proxy.Router.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Session" class="element ajax clickable class">
+        <h1>Session<a href="../classes/Bluz.Proxy.Session.html">¶</a></h1>
+        <p class="short_description">Proxy to Session</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Session;
+
+    // lazy session loading
+    Session::set(&#039;some key in session&#039;, &#039;value example&#039;);
+    Session::get(&#039;some key in session&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Session.html" class="more">« More »</a>
+    </div>
+
                                         <div id="Translator" class="element ajax clickable class">
-        <h1>Translator<a href="../classes/Bluz.Translator.Translator.html">¶</a></h1>
-        <p class="short_description">Translator based on gettext library</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Translator.Translator.html" class="more">« More »</a>
-    </div>
+        <h1>Translator<a href="../classes/Bluz.Proxy.Translator.html">¶</a></h1>
+        <p class="short_description">Proxy to Translator</p>
+        <div class="details collapse">Example of usage
+    use Bluz\Proxy\Translator;
 
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Acl.html">Acl</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Acl" class="element ajax clickable class">
-        <h1>Acl<a href="../classes/Bluz.Acl.Acl.html">¶</a></h1>
-        <p class="short_description">Acl</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Acl.Acl.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="AclException" class="element ajax clickable class">
-        <h1>AclException<a href="../classes/Bluz.Acl.AclException.html">¶</a></h1>
-        <p class="short_description">Acl Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Acl.AclException.html" class="more">« More »</a>
+    echo Translator::translate(&#039;message id&#039;);</div>
+        <a href="../classes/Bluz.Proxy.Translator.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1145,47 +1134,6 @@
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Mailer.html">Mailer</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Mailer" class="element ajax clickable class">
-        <h1>Mailer<a href="../classes/Bluz.Mailer.Mailer.html">¶</a></h1>
-        <p class="short_description">Wrapper over PHPMailer</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Mailer.Mailer.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="MailerException" class="element ajax clickable class">
-        <h1>MailerException<a href="../classes/Bluz.Mailer.MailerException.html">¶</a></h1>
-        <p class="short_description">Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Mailer.MailerException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
         <span class="divider">\</span><a href="../packages/Bluz.Logger.html">Logger</a>
     </li>
 
@@ -1220,7 +1168,74 @@
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Controller.html">Controller</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Cache.html">Cache</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="CacheInterface" class="element ajax clickable interface">
+        <h1>CacheInterface<a href="../classes/Bluz.Cache.CacheInterface.html">¶</a></h1>
+        <p class="short_description">Bluz cache driver interface</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cache.CacheInterface.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="TagableInterface" class="element ajax clickable interface">
+        <h1>TagableInterface<a href="../classes/Bluz.Cache.TagableInterface.html">¶</a></h1>
+        <p class="short_description">Interface for Tagable classes</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cache.TagableInterface.html" class="more">« More »</a>
+    </div>
+
+                
+                                        <div id="Cache" class="element ajax clickable class">
+        <h1>Cache<a href="../classes/Bluz.Cache.Cache.html">¶</a></h1>
+        <p class="short_description">Cache Frontend for Bluz\Cache system</p>
+        <div class="details collapse">Configuration
+    &#039;enabled&#039; =&gt; true,           // Boolean,optional, true by default
+    &#039;cacheAdapter&#039; =&gt; &#039;redis&#039;,   // Required if option &#039;enabled&#039; set to true
+    &#039;tagAdapter&#039; =&gt; &#039;memcached&#039;, // Optional
+    &#039;settings&#039; =&gt; [
+        &#039;redis&#039; =&gt; [],           // Settings for setup Instance of Bluz\Cache\CacheInterface.
+        &#039;memcached&#039; =&gt; [],       // Settings for another cache adapter
+    ]</div>
+        <a href="../classes/Bluz.Cache.Cache.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="CacheException" class="element ajax clickable class">
+        <h1>CacheException<a href="../classes/Bluz.Cache.CacheException.html">¶</a></h1>
+        <p class="short_description">Cache Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cache.CacheException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Cache.html">Cache</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Cache.Adapter.html">Adapter</a>
     </li>
 
     </ul>
@@ -1232,32 +1247,343 @@
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="AbstractController" class="element ajax clickable class">
-        <h1>AbstractController<a href="../classes/Bluz.Controller.AbstractController.html">¶</a></h1>
-        <p class="short_description">AbstractController</p>
+                                        <div id="AbstractAdapter" class="element ajax clickable class">
+        <h1>AbstractAdapter<a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html">¶</a></h1>
+        <p class="short_description">Base class for all cache adapters within Bluz\Cache package</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Controller.AbstractController.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Crud" class="element ajax clickable class">
-        <h1>Crud<a href="../classes/Bluz.Controller.Crud.html">¶</a></h1>
-        <p class="short_description">Crud controller</p>
+                                        <div id="Apc" class="element ajax clickable class">
+        <h1>Apc<a href="../classes/Bluz.Cache.Adapter.Apc.html">¶</a></h1>
+        <p class="short_description">APC cache adapter</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Controller.Crud.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Cache.Adapter.Apc.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Reflection" class="element ajax clickable class">
-        <h1>Reflection<a href="../classes/Bluz.Controller.Reflection.html">¶</a></h1>
-        <p class="short_description">Reflection</p>
+                                        <div id="FileBase" class="element ajax clickable class">
+        <h1>FileBase<a href="../classes/Bluz.Cache.Adapter.FileBase.html">¶</a></h1>
+        <p class="short_description">Base class for all filesystem-based cache adapters</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Controller.Reflection.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Cache.Adapter.FileBase.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Rest" class="element ajax clickable class">
-        <h1>Rest<a href="../classes/Bluz.Controller.Rest.html">¶</a></h1>
-        <p class="short_description">Controller</p>
+                                        <div id="Memcached" class="element ajax clickable class">
+        <h1>Memcached<a href="../classes/Bluz.Cache.Adapter.Memcached.html">¶</a></h1>
+        <p class="short_description">Class Memcached</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Controller.Rest.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Cache.Adapter.Memcached.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="PhpFile" class="element ajax clickable class">
+        <h1>PhpFile<a href="../classes/Bluz.Cache.Adapter.PhpFile.html">¶</a></h1>
+        <p class="short_description">Adapter that caches data into php array.</p>
+        <div class="details collapse">It can cache data that support var_export.
+This adapter very fast and cacheable by opcode cachers but it have some limitations related to var_export.
+It&#039;s best to use for scalar data caching</div>
+        <a href="../classes/Bluz.Cache.Adapter.PhpFile.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Predis" class="element ajax clickable class">
+        <h1>Predis<a href="../classes/Bluz.Cache.Adapter.Predis.html">¶</a></h1>
+        <p class="short_description">Redis cache adapter over Predis library</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cache.Adapter.Predis.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Redis" class="element ajax clickable class">
+        <h1>Redis<a href="../classes/Bluz.Cache.Adapter.Redis.html">¶</a></h1>
+        <p class="short_description">Redis cache adapter</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cache.Adapter.Redis.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Response.html">Response</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AbstractResponse" class="element ajax clickable class">
+        <h1>AbstractResponse<a href="../classes/Bluz.Response.AbstractResponse.html">¶</a></h1>
+        <p class="short_description">AbstractResponse</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.AbstractResponse.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Response" class="element ajax clickable class">
+        <h1>Response<a href="../classes/Bluz.Http.Response.html">¶</a></h1>
+        <p class="short_description">Response</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Http.Response.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ResponseException" class="element ajax clickable class">
+        <h1>ResponseException<a href="../classes/Bluz.Response.ResponseException.html">¶</a></h1>
+        <p class="short_description">ResponseException</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.ResponseException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Response.html">Response</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Response.Presentation.html">Presentation</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AbstractPresentation" class="element ajax clickable class">
+        <h1>AbstractPresentation<a href="../classes/Bluz.Response.Presentation.AbstractPresentation.html">¶</a></h1>
+        <p class="short_description">AbstractPresentation</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.Presentation.AbstractPresentation.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Cli" class="element ajax clickable class">
+        <h1>Cli<a href="../classes/Bluz.Response.Presentation.Cli.html">¶</a></h1>
+        <p class="short_description">Json</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.Presentation.Cli.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Json" class="element ajax clickable class">
+        <h1>Json<a href="../classes/Bluz.Response.Presentation.Json.html">¶</a></h1>
+        <p class="short_description">Json</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.Presentation.Json.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Jsonp" class="element ajax clickable class">
+        <h1>Jsonp<a href="../classes/Bluz.Response.Presentation.Jsonp.html">¶</a></h1>
+        <p class="short_description">JSONP presentation</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.Presentation.Jsonp.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Xml" class="element ajax clickable class">
+        <h1>Xml<a href="../classes/Bluz.Response.Presentation.Xml.html">¶</a></h1>
+        <p class="short_description">Xml</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Response.Presentation.Xml.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Application.html">Application</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Application" class="element ajax clickable class">
+        <h1>Application<a href="../classes/Bluz.Application.Application.html">¶</a></h1>
+        <p class="short_description">Application</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Application.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Application.html">Application</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Application.Exception.html">Exception</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="ApplicationException" class="element ajax clickable class">
+        <h1>ApplicationException<a href="../classes/Bluz.Application.Exception.ApplicationException.html">¶</a></h1>
+        <p class="short_description">Application Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.ApplicationException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="BadRequestException" class="element ajax clickable class">
+        <h1>BadRequestException<a href="../classes/Bluz.Application.Exception.BadRequestException.html">¶</a></h1>
+        <p class="short_description">BadRequest Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.BadRequestException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ForbiddenException" class="element ajax clickable class">
+        <h1>ForbiddenException<a href="../classes/Bluz.Application.Exception.ForbiddenException.html">¶</a></h1>
+        <p class="short_description">Forbidden Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.ForbiddenException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="NotAcceptableException" class="element ajax clickable class">
+        <h1>NotAcceptableException<a href="../classes/Bluz.Application.Exception.NotAcceptableException.html">¶</a></h1>
+        <p class="short_description">Not Acceptable Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.NotAcceptableException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="NotAllowedException" class="element ajax clickable class">
+        <h1>NotAllowedException<a href="../classes/Bluz.Application.Exception.NotAllowedException.html">¶</a></h1>
+        <p class="short_description">Not Allowed Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.NotAllowedException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="NotFoundException" class="element ajax clickable class">
+        <h1>NotFoundException<a href="../classes/Bluz.Application.Exception.NotFoundException.html">¶</a></h1>
+        <p class="short_description">NotFound Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.NotFoundException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="NotImplementedException" class="element ajax clickable class">
+        <h1>NotImplementedException<a href="../classes/Bluz.Application.Exception.NotImplementedException.html">¶</a></h1>
+        <p class="short_description">NotImplemented Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.NotImplementedException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="RedirectException" class="element ajax clickable class">
+        <h1>RedirectException<a href="../classes/Bluz.Application.Exception.RedirectException.html">¶</a></h1>
+        <p class="short_description">Redirect Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.RedirectException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ReloadException" class="element ajax clickable class">
+        <h1>ReloadException<a href="../classes/Bluz.Application.Exception.ReloadException.html">¶</a></h1>
+        <p class="short_description">Reload Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.ReloadException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="UnauthorizedException" class="element ajax clickable class">
+        <h1>UnauthorizedException<a href="../classes/Bluz.Application.Exception.UnauthorizedException.html">¶</a></h1>
+        <p class="short_description">Unauthorized Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Application.Exception.UnauthorizedException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Messages.html">Messages</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Messages" class="element ajax clickable class">
+        <h1>Messages<a href="../classes/Bluz.Messages.Messages.html">¶</a></h1>
+        <p class="short_description">Realization of Flash Messages</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Messages.Messages.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1275,7 +1601,7 @@
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.View.html">View</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Auth.html">Auth</a>
     </li>
 
     </ul>
@@ -1286,26 +1612,141 @@
                     <div class="package-indent">
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
-                                        <div id="ViewInterface" class="element ajax clickable interface">
-        <h1>ViewInterface<a href="../classes/Bluz.View.ViewInterface.html">¶</a></h1>
-        <p class="short_description">ViewInterface</p>
+                                        <div id="EntityInterface" class="element ajax clickable interface">
+        <h1>EntityInterface<a href="../classes/Bluz.Auth.EntityInterface.html">¶</a></h1>
+        <p class="short_description">Interface EntityInterface</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.View.ViewInterface.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Auth.EntityInterface.html" class="more">« More »</a>
     </div>
 
                 
-                                        <div id="View" class="element ajax clickable class">
-        <h1>View<a href="../classes/Bluz.View.View.html">¶</a></h1>
-        <p class="short_description">View - simple template engine with native PHP syntax</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.View.View.html" class="more">« More »</a>
+                                        <div id="AbstractRow" class="element ajax clickable class">
+        <h1>AbstractRow<a href="../classes/Bluz.Auth.AbstractRow.html">¶</a></h1>
+        <p class="short_description">Abstract class for Auth\Row</p>
+        <div class="details collapse">Example of Users\Row
+    namespace Application\Users;
+    class Row extends \Bluz\Db\Row
+    {
+       public function beforeInsert()
+       {
+           $this-&gt;created = gmdate(&#039;Y-m-d H:i:s&#039;);
+       }
+
+       public function beforeUpdate()
+       {
+           $this-&gt;updated = gmdate(&#039;Y-m-d H:i:s&#039;);
+       }
+    }
+
+    $userRow = new \Application\Users\Row();
+    $userRow -&gt; login = &#039;username&#039;;
+    $userRow -&gt; save();</div>
+        <a href="../classes/Bluz.Auth.AbstractRow.html" class="more">« More »</a>
     </div>
 
-                                        <div id="ViewException" class="element ajax clickable class">
-        <h1>ViewException<a href="../classes/Bluz.View.ViewException.html">¶</a></h1>
+                                        <div id="AbstractRowEntity" class="element ajax clickable class">
+        <h1>AbstractRowEntity<a href="../classes/Bluz.Auth.AbstractRowEntity.html">¶</a></h1>
+        <p class="short_description">Abstract class for Users\Row</p>
+        <div class="details collapse">Example of Users\Row
+    namespace Application\Users;
+    class Row extends \Bluz\Db\Row
+    {
+       public function beforeInsert()
+       {
+           $this-&gt;created = gmdate(&#039;Y-m-d H:i:s&#039;);
+       }
+
+       public function beforeUpdate()
+       {
+           $this-&gt;updated = gmdate(&#039;Y-m-d H:i:s&#039;);
+       }
+    }
+
+    $userRow = new \Application\Users\Row();
+    $userRow -&gt; login = &#039;username&#039;;
+    $userRow -&gt; save();</div>
+        <a href="../classes/Bluz.Auth.AbstractRowEntity.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="AbstractTable" class="element ajax clickable class">
+        <h1>AbstractTable<a href="../classes/Bluz.Auth.AbstractTable.html">¶</a></h1>
+        <p class="short_description">Abstract class for Auth\Table</p>
+        <div class="details collapse">Example of Users\Table
+    namespace Application\Users;
+    class Table extends \Bluz\Db\Table
+    {
+       protected $table = &#039;users&#039;;
+       protected $primary = array(&#039;id&#039;);
+    }
+
+    $userRows = \Application\Users\Table::find(1,2,3,4,5);
+    foreach ($userRows as $userRow) {
+       $userRow -&gt; description = &#039;In first 5&#039;;
+       $userRow -&gt; save();
+    }</div>
+        <a href="../classes/Bluz.Auth.AbstractTable.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Auth" class="element ajax clickable class">
+        <h1>Auth<a href="../classes/Bluz.Auth.Auth.html">¶</a></h1>
+        <p class="short_description">Auth class</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Auth.Auth.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="AuthException" class="element ajax clickable class">
+        <h1>AuthException<a href="../classes/Bluz.Auth.AuthException.html">¶</a></h1>
+        <p class="short_description">Auth Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Auth.AuthException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.EventManager.html">EventManager</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Event" class="element ajax clickable class">
+        <h1>Event<a href="../classes/Bluz.EventManager.Event.html">¶</a></h1>
+        <p class="short_description">Representation of an event</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.EventManager.Event.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="EventException" class="element ajax clickable class">
+        <h1>EventException<a href="../classes/Bluz.EventManager.EventException.html">¶</a></h1>
         <p class="short_description">Exception</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.View.ViewException.html" class="more">« More »</a>
+        <a href="../classes/Bluz.EventManager.EventException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="EventManager" class="element ajax clickable class">
+        <h1>EventManager<a href="../classes/Bluz.EventManager.EventManager.html">¶</a></h1>
+        <p class="short_description">Event manager</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.EventManager.EventManager.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1631,7 +2072,7 @@ Based on Doctrine QueryBuilder code</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Layout.html">Layout</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Registry.html">Registry</a>
     </li>
 
     </ul>
@@ -1643,11 +2084,11 @@ Based on Doctrine QueryBuilder code</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="Layout" class="element ajax clickable class">
-        <h1>Layout<a href="../classes/Bluz.Layout.Layout.html">¶</a></h1>
-        <p class="short_description">Layout</p>
+                                        <div id="Registry" class="element ajax clickable class">
+        <h1>Registry<a href="../classes/Bluz.Registry.Registry.html">¶</a></h1>
+        <p class="short_description">Registry</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Layout.Layout.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Registry.Registry.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1665,7 +2106,7 @@ Based on Doctrine QueryBuilder code</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Messages.html">Messages</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Session.html">Session</a>
     </li>
 
     </ul>
@@ -1677,15 +2118,76 @@ Based on Doctrine QueryBuilder code</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="Messages" class="element ajax clickable class">
-        <h1>Messages<a href="../classes/Bluz.Messages.Messages.html">¶</a></h1>
-        <p class="short_description">Realization of Flash Messages</p>
+                                        <div id="Session" class="element ajax clickable class">
+        <h1>Session<a href="../classes/Bluz.Session.Session.html">¶</a></h1>
+        <p class="short_description">Session</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Messages.Messages.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Session.Session.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SessionException" class="element ajax clickable class">
+        <h1>SessionException<a href="../classes/Bluz.Session.SessionException.html">¶</a></h1>
+        <p class="short_description">Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Session.SessionException.html" class="more">« More »</a>
     </div>
 
                             </div>
             
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Session.html">Session</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Session.Adapter.html">Adapter</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AbstractAdapter" class="element ajax clickable class">
+        <h1>AbstractAdapter<a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html">¶</a></h1>
+        <p class="short_description">Abstract session handler</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Cache" class="element ajax clickable class">
+        <h1>Cache<a href="../classes/Bluz.Session.Adapter.Cache.html">¶</a></h1>
+        <p class="short_description">Cache session handler</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Session.Adapter.Cache.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Redis" class="element ajax clickable class">
+        <h1>Redis<a href="../classes/Bluz.Session.Adapter.Redis.html">¶</a></h1>
+        <p class="short_description">Redis session handler</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Session.Adapter.Redis.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
     
                 
     <ul class="breadcrumb">
@@ -1699,7 +2201,7 @@ Based on Doctrine QueryBuilder code</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Config.html">Config</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Http.html">Http</a>
     </li>
 
     </ul>
@@ -1711,66 +2213,195 @@ Based on Doctrine QueryBuilder code</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="Config" class="element ajax clickable class">
-        <h1>Config<a href="../classes/Bluz.Config.Config.html">¶</a></h1>
-        <p class="short_description">Config</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Config.Config.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="ConfigException" class="element ajax clickable class">
-        <h1>ConfigException<a href="../classes/Bluz.Config.ConfigException.html">¶</a></h1>
-        <p class="short_description">Config Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Config.ConfigException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Cli.html">Cli</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Colorize" class="element ajax clickable class">
-        <h1>Colorize<a href="../classes/Bluz.Cli.Colorize.html">¶</a></h1>
-        <p class="short_description">Colorize text for CLI</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cli.Colorize.html" class="more">« More »</a>
+                                        <div id="CacheControl" class="element ajax clickable class">
+        <h1>CacheControl<a href="../classes/Bluz.Http.CacheControl.html">¶</a></h1>
+        <p class="short_description">HTTP Cache Control</p>
+        <div class="details collapse">Wrapper for working with HTTP headers
+    - Cache-Control
+    - Last-Modified
+    - Expires
+    - ETag
+    - Age</div>
+        <a href="../classes/Bluz.Http.CacheControl.html" class="more">« More »</a>
     </div>
 
                                         <div id="Request" class="element ajax clickable class">
-        <h1>Request<a href="../classes/Bluz.Cli.Request.html">¶</a></h1>
-        <p class="short_description">CLI Request</p>
+        <h1>Request<a href="../classes/Bluz.Http.Request.html">¶</a></h1>
+        <p class="short_description">HTTP Request</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cli.Request.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Http.Request.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Response" class="element ajax clickable class">
-        <h1>Response<a href="../classes/Bluz.Cli.Response.html">¶</a></h1>
-        <p class="short_description">Response</p>
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Crud.html">Crud</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AbstractCrud" class="element ajax clickable class">
+        <h1>AbstractCrud<a href="../classes/Bluz.Crud.AbstractCrud.html">¶</a></h1>
+        <p class="short_description">Crud</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cli.Response.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Crud.AbstractCrud.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="CrudException" class="element ajax clickable class">
+        <h1>CrudException<a href="../classes/Bluz.Crud.CrudException.html">¶</a></h1>
+        <p class="short_description">CRUD Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Crud.CrudException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Table" class="element ajax clickable class">
+        <h1>Table<a href="../classes/Bluz.Crud.Table.html">¶</a></h1>
+        <p class="short_description">Crud Table</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Crud.Table.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.View.html">View</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                                        <div id="ViewInterface" class="element ajax clickable interface">
+        <h1>ViewInterface<a href="../classes/Bluz.View.ViewInterface.html">¶</a></h1>
+        <p class="short_description">ViewInterface</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.View.ViewInterface.html" class="more">« More »</a>
+    </div>
+
+                
+                                        <div id="View" class="element ajax clickable class">
+        <h1>View<a href="../classes/Bluz.View.View.html">¶</a></h1>
+        <p class="short_description">View - simple template engine with native PHP syntax</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.View.View.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ViewException" class="element ajax clickable class">
+        <h1>ViewException<a href="../classes/Bluz.View.ViewException.html">¶</a></h1>
+        <p class="short_description">Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.View.ViewException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Grid.html">Grid</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AbstractSource" class="element ajax clickable class">
+        <h1>AbstractSource<a href="../classes/Bluz.Grid.Source.AbstractSource.html">¶</a></h1>
+        <p class="short_description">Adapter</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.Source.AbstractSource.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ArraySource" class="element ajax clickable class">
+        <h1>ArraySource<a href="../classes/Bluz.Grid.Source.ArraySource.html">¶</a></h1>
+        <p class="short_description">Array Source Adapter for Grid package</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.Source.ArraySource.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Data" class="element ajax clickable class">
+        <h1>Data<a href="../classes/Bluz.Grid.Data.html">¶</a></h1>
+        <p class="short_description">Data</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.Data.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Grid" class="element ajax clickable class">
+        <h1>Grid<a href="../classes/Bluz.Grid.Grid.html">¶</a></h1>
+        <p class="short_description">Grid</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.Grid.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="GridException" class="element ajax clickable class">
+        <h1>GridException<a href="../classes/Bluz.Grid.GridException.html">¶</a></h1>
+        <p class="short_description">Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.GridException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SelectSource" class="element ajax clickable class">
+        <h1>SelectSource<a href="../classes/Bluz.Grid.Source.SelectSource.html">¶</a></h1>
+        <p class="short_description">SQL Source Adapter for Grid package</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.Source.SelectSource.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="SqlSource" class="element ajax clickable class">
+        <h1>SqlSource<a href="../classes/Bluz.Grid.Source.SqlSource.html">¶</a></h1>
+        <p class="short_description">SQL Source Adapter for Grid package</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Grid.Source.SqlSource.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -1826,54 +2457,6 @@ Based on Doctrine QueryBuilder code</p>
         <p class="short_description">RequestException</p>
         <div class="details collapse"></div>
         <a href="../classes/Bluz.Request.RequestException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Crud.html">Crud</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="AbstractCrud" class="element ajax clickable class">
-        <h1>AbstractCrud<a href="../classes/Bluz.Crud.AbstractCrud.html">¶</a></h1>
-        <p class="short_description">Crud</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Crud.AbstractCrud.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="CrudException" class="element ajax clickable class">
-        <h1>CrudException<a href="../classes/Bluz.Crud.CrudException.html">¶</a></h1>
-        <p class="short_description">CRUD Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Crud.CrudException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Table" class="element ajax clickable class">
-        <h1>Table<a href="../classes/Bluz.Crud.Table.html">¶</a></h1>
-        <p class="short_description">Crud Table</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Crud.Table.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -2054,7 +2637,7 @@ Based on Doctrine QueryBuilder code</p>
 
     
     <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Response.html">Response</a>
+        <span class="divider">\</span><a href="../packages/Bluz.Mailer.html">Mailer</a>
     </li>
 
     </ul>
@@ -2066,844 +2649,22 @@ Based on Doctrine QueryBuilder code</p>
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="AbstractResponse" class="element ajax clickable class">
-        <h1>AbstractResponse<a href="../classes/Bluz.Response.AbstractResponse.html">¶</a></h1>
-        <p class="short_description">AbstractResponse</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Response.AbstractResponse.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Response" class="element ajax clickable class">
-        <h1>Response<a href="../classes/Bluz.Http.Response.html">¶</a></h1>
-        <p class="short_description">Response</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Http.Response.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="ResponseException" class="element ajax clickable class">
-        <h1>ResponseException<a href="../classes/Bluz.Response.ResponseException.html">¶</a></h1>
-        <p class="short_description">ResponseException</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Response.ResponseException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Response.html">Response</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Response.Presentation.html">Presentation</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="AbstractPresentation" class="element ajax clickable class">
-        <h1>AbstractPresentation<a href="../classes/Bluz.Response.Presentation.AbstractPresentation.html">¶</a></h1>
-        <p class="short_description">AbstractPresentation</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Response.Presentation.AbstractPresentation.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Cli" class="element ajax clickable class">
-        <h1>Cli<a href="../classes/Bluz.Response.Presentation.Cli.html">¶</a></h1>
-        <p class="short_description">Json</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Response.Presentation.Cli.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Json" class="element ajax clickable class">
-        <h1>Json<a href="../classes/Bluz.Response.Presentation.Json.html">¶</a></h1>
-        <p class="short_description">Json</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Response.Presentation.Json.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Xml" class="element ajax clickable class">
-        <h1>Xml<a href="../classes/Bluz.Response.Presentation.Xml.html">¶</a></h1>
-        <p class="short_description">Xml</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Response.Presentation.Xml.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Http.html">Http</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="CacheControl" class="element ajax clickable class">
-        <h1>CacheControl<a href="../classes/Bluz.Http.CacheControl.html">¶</a></h1>
-        <p class="short_description">HTTP Cache Control</p>
-        <div class="details collapse">Wrapper for working with HTTP headers
-    - Cache-Control
-    - Last-Modified
-    - Expires
-    - ETag
-    - Age</div>
-        <a href="../classes/Bluz.Http.CacheControl.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Request" class="element ajax clickable class">
-        <h1>Request<a href="../classes/Bluz.Http.Request.html">¶</a></h1>
-        <p class="short_description">HTTP Request</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Http.Request.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Cache.html">Cache</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                                        <div id="CacheInterface" class="element ajax clickable interface">
-        <h1>CacheInterface<a href="../classes/Bluz.Cache.CacheInterface.html">¶</a></h1>
-        <p class="short_description">Bluz cache driver interface</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.CacheInterface.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="TagableInterface" class="element ajax clickable interface">
-        <h1>TagableInterface<a href="../classes/Bluz.Cache.TagableInterface.html">¶</a></h1>
-        <p class="short_description">Interface for Tagable classes</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.TagableInterface.html" class="more">« More »</a>
-    </div>
-
-                
-                                        <div id="Cache" class="element ajax clickable class">
-        <h1>Cache<a href="../classes/Bluz.Cache.Cache.html">¶</a></h1>
-        <p class="short_description">Cache Frontend for Bluz\Cache system</p>
-        <div class="details collapse">Configuration
-    &#039;enabled&#039; =&gt; true,           // Boolean,optional, true by default
-    &#039;cacheAdapter&#039; =&gt; &#039;redis&#039;,   // Required if option &#039;enabled&#039; set to true
-    &#039;tagAdapter&#039; =&gt; &#039;memcached&#039;, // Optional
-    &#039;settings&#039; =&gt; [
-        &#039;redis&#039; =&gt; [],           // Settings for setup Instance of Bluz\Cache\CacheInterface.
-        &#039;memcached&#039; =&gt; [],       // Settings for another cache adapter
-    ]</div>
-        <a href="../classes/Bluz.Cache.Cache.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="CacheException" class="element ajax clickable class">
-        <h1>CacheException<a href="../classes/Bluz.Cache.CacheException.html">¶</a></h1>
-        <p class="short_description">Cache Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.CacheException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="InvalidArgumentException" class="element ajax clickable class">
-        <h1>InvalidArgumentException<a href="../classes/Bluz.Cache.InvalidArgumentException.html">¶</a></h1>
-        <p class="short_description">Invalid Argument Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.InvalidArgumentException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Cache.html">Cache</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Cache.Adapter.html">Adapter</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="AbstractAdapter" class="element ajax clickable class">
-        <h1>AbstractAdapter<a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html">¶</a></h1>
-        <p class="short_description">Base class for all cache adapters within Bluz\Cache package</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.Adapter.AbstractAdapter.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Apc" class="element ajax clickable class">
-        <h1>Apc<a href="../classes/Bluz.Cache.Adapter.Apc.html">¶</a></h1>
-        <p class="short_description">APC cache adapter</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.Adapter.Apc.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="FileBase" class="element ajax clickable class">
-        <h1>FileBase<a href="../classes/Bluz.Cache.Adapter.FileBase.html">¶</a></h1>
-        <p class="short_description">Base class for all filesystem-based cache adapters</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.Adapter.FileBase.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Memcached" class="element ajax clickable class">
-        <h1>Memcached<a href="../classes/Bluz.Cache.Adapter.Memcached.html">¶</a></h1>
-        <p class="short_description">Class Memcached</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.Adapter.Memcached.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="PhpFile" class="element ajax clickable class">
-        <h1>PhpFile<a href="../classes/Bluz.Cache.Adapter.PhpFile.html">¶</a></h1>
-        <p class="short_description">Adapter that caches data into php array.</p>
-        <div class="details collapse">It can cache data that support var_export.
-This adapter very fast and cacheable by opcode cachers but it have some limitations related to var_export.
-It&#039;s best to use for scalar data caching</div>
-        <a href="../classes/Bluz.Cache.Adapter.PhpFile.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Predis" class="element ajax clickable class">
-        <h1>Predis<a href="../classes/Bluz.Cache.Adapter.Predis.html">¶</a></h1>
-        <p class="short_description">Redis cache adapter over Predis library</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.Adapter.Predis.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Redis" class="element ajax clickable class">
-        <h1>Redis<a href="../classes/Bluz.Cache.Adapter.Redis.html">¶</a></h1>
-        <p class="short_description">Redis cache adapter</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Cache.Adapter.Redis.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Proxy.html">Proxy</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="AbstractProxy" class="element ajax clickable class">
-        <h1>AbstractProxy<a href="../classes/Bluz.Proxy.AbstractProxy.html">¶</a></h1>
-        <p class="short_description">Abstract Proxy</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Proxy.AbstractProxy.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Acl" class="element ajax clickable class">
-        <h1>Acl<a href="../classes/Bluz.Proxy.Acl.html">¶</a></h1>
-        <p class="short_description">Proxy to Acl</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Acl;
-
-    if (!Acl::isAllowed(&#039;users&#039;, &#039;profile&#039;)) {
-         throw new Exception(&#039;You do not have permission to access user profiles&#039;);
-    }</div>
-        <a href="../classes/Bluz.Proxy.Acl.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Auth" class="element ajax clickable class">
-        <h1>Auth<a href="../classes/Bluz.Proxy.Auth.html">¶</a></h1>
-        <p class="short_description">Proxy to Auth</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Auth;
-
-    $user = Auth::getIdentity();</div>
-        <a href="../classes/Bluz.Proxy.Auth.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Cache" class="element ajax clickable class">
-        <h1>Cache<a href="../classes/Bluz.Proxy.Cache.html">¶</a></h1>
-        <p class="short_description">Proxy to Cache</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Cache;
-
-    if (!$result = Cache::get(&#039;some unique id&#039;)) {
-         $result = 2*2;
-         Cache::set(&#039;some unique id&#039;, $result);
-    }</div>
-        <a href="../classes/Bluz.Proxy.Cache.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Config" class="element ajax clickable class">
-        <h1>Config<a href="../classes/Bluz.Proxy.Config.html">¶</a></h1>
-        <p class="short_description">Proxy to Config</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Config;
-
-    if (!Config::getData(&#039;db&#039;)) {
-         throw new Exception(&#039;Configuration for `db` is missed&#039;);
-    }</div>
-        <a href="../classes/Bluz.Proxy.Config.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Db" class="element ajax clickable class">
-        <h1>Db<a href="../classes/Bluz.Proxy.Db.html">¶</a></h1>
-        <p class="short_description">Proxy to Db</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Db;
-
-    Db::fetchAll(&#039;SELECT * FROM users&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Db.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="EventManager" class="element ajax clickable class">
-        <h1>EventManager<a href="../classes/Bluz.Proxy.EventManager.html">¶</a></h1>
-        <p class="short_description">Proxy to EventManager</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\EventManager;
-
-    EvenManager::attach(&#039;event name&#039;, function() {
-        // ... some logic
-    });
-
-    EventManager::trigger(&#039;event name&#039;);</div>
-        <a href="../classes/Bluz.Proxy.EventManager.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="HttpCacheControl" class="element ajax clickable class">
-        <h1>HttpCacheControl<a href="../classes/Bluz.Proxy.HttpCacheControl.html">¶</a></h1>
-        <p class="short_description">Proxy to Http\CacheControl</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\HttpCacheControl;</div>
-        <a href="../classes/Bluz.Proxy.HttpCacheControl.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Layout" class="element ajax clickable class">
-        <h1>Layout<a href="../classes/Bluz.Proxy.Layout.html">¶</a></h1>
-        <p class="short_description">Proxy to Layout</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Layout;
-
-    Layout::title(&#039;Homepage&#039;);
-    Layout::set(&#039;description&#039;, &#039;some page description&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Layout.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Logger" class="element ajax clickable class">
-        <h1>Logger<a href="../classes/Bluz.Proxy.Logger.html">¶</a></h1>
-        <p class="short_description">Proxy to Logger</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Logger;
-
-    Logger::error(&#039;Configuration not found&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Logger.html" class="more">« More »</a>
-    </div>
-
                                         <div id="Mailer" class="element ajax clickable class">
-        <h1>Mailer<a href="../classes/Bluz.Proxy.Mailer.html">¶</a></h1>
-        <p class="short_description">Proxy to Mailer</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Mailer;
-
-    $mail = Mailer::create();
-    $mail-&gt;From = &#039;from@example.com&#039;;
-    $mail-&gt;Subject = &#039;Here is the subject&#039;;
-    // ...
-    Mailer::send($mail);</div>
-        <a href="../classes/Bluz.Proxy.Mailer.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Messages" class="element ajax clickable class">
-        <h1>Messages<a href="../classes/Bluz.Proxy.Messages.html">¶</a></h1>
-        <p class="short_description">Proxy to Messages</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Messages;
-
-    Messages::addSuccess(&#039;All Ok!&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Messages.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Registry" class="element ajax clickable class">
-        <h1>Registry<a href="../classes/Bluz.Proxy.Registry.html">¶</a></h1>
-        <p class="short_description">Proxy to Registry</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Registry;
-
-    Registry::set(&#039;key&#039;, &#039;value&#039;);
-    Registry::get(&#039;key&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Registry.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Request" class="element ajax clickable class">
-        <h1>Request<a href="../classes/Bluz.Proxy.Request.html">¶</a></h1>
-        <p class="short_description">Proxy to Request</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Request;
-
-    Request::getParam(&#039;foo&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Request.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Response" class="element ajax clickable class">
-        <h1>Response<a href="../classes/Bluz.Proxy.Response.html">¶</a></h1>
-        <p class="short_description">Proxy to Response</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Response;
-
-    Response::setStatusCode(304);
-    Response::setHeader(&#039;Location&#039;, &#039;/index/index&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Response.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Router" class="element ajax clickable class">
-        <h1>Router<a href="../classes/Bluz.Proxy.Router.html">¶</a></h1>
-        <p class="short_description">Proxy to Router</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Router;
-
-    Router::getUrl(&#039;pages&#039;, &#039;index&#039;, [&#039;alias&#039; =&gt; &#039;about&#039;]); // for skeleton application is `/about.html`</div>
-        <a href="../classes/Bluz.Proxy.Router.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Session" class="element ajax clickable class">
-        <h1>Session<a href="../classes/Bluz.Proxy.Session.html">¶</a></h1>
-        <p class="short_description">Proxy to Session</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Session;
-
-    // lazy session loading
-    Session::set(&#039;some key in session&#039;, &#039;value example&#039;);
-    Session::get(&#039;some key in session&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Session.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Translator" class="element ajax clickable class">
-        <h1>Translator<a href="../classes/Bluz.Proxy.Translator.html">¶</a></h1>
-        <p class="short_description">Proxy to Translator</p>
-        <div class="details collapse">Example of usage
-    use Bluz\Proxy\Translator;
-
-    echo Translator::translate(&#039;message id&#039;);</div>
-        <a href="../classes/Bluz.Proxy.Translator.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Auth.html">Auth</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                                        <div id="EntityInterface" class="element ajax clickable interface">
-        <h1>EntityInterface<a href="../classes/Bluz.Auth.EntityInterface.html">¶</a></h1>
-        <p class="short_description">Interface EntityInterface</p>
+        <h1>Mailer<a href="../classes/Bluz.Mailer.Mailer.html">¶</a></h1>
+        <p class="short_description">Wrapper over PHPMailer</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Auth.EntityInterface.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Mailer.Mailer.html" class="more">« More »</a>
     </div>
 
-                
-                                        <div id="AbstractRow" class="element ajax clickable class">
-        <h1>AbstractRow<a href="../classes/Bluz.Auth.AbstractRow.html">¶</a></h1>
-        <p class="short_description">Abstract class for Auth\Row</p>
-        <div class="details collapse">Example of Users\Row
-    namespace Application\Users;
-    class Row extends \Bluz\Db\Row
-    {
-       public function beforeInsert()
-       {
-           $this-&gt;created = gmdate(&#039;Y-m-d H:i:s&#039;);
-       }
-
-       public function beforeUpdate()
-       {
-           $this-&gt;updated = gmdate(&#039;Y-m-d H:i:s&#039;);
-       }
-    }
-
-    $userRow = new \Application\Users\Row();
-    $userRow -&gt; login = &#039;username&#039;;
-    $userRow -&gt; save();</div>
-        <a href="../classes/Bluz.Auth.AbstractRow.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="AbstractRowEntity" class="element ajax clickable class">
-        <h1>AbstractRowEntity<a href="../classes/Bluz.Auth.AbstractRowEntity.html">¶</a></h1>
-        <p class="short_description">Abstract class for Users\Row</p>
-        <div class="details collapse">Example of Users\Row
-    namespace Application\Users;
-    class Row extends \Bluz\Db\Row
-    {
-       public function beforeInsert()
-       {
-           $this-&gt;created = gmdate(&#039;Y-m-d H:i:s&#039;);
-       }
-
-       public function beforeUpdate()
-       {
-           $this-&gt;updated = gmdate(&#039;Y-m-d H:i:s&#039;);
-       }
-    }
-
-    $userRow = new \Application\Users\Row();
-    $userRow -&gt; login = &#039;username&#039;;
-    $userRow -&gt; save();</div>
-        <a href="../classes/Bluz.Auth.AbstractRowEntity.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="AbstractTable" class="element ajax clickable class">
-        <h1>AbstractTable<a href="../classes/Bluz.Auth.AbstractTable.html">¶</a></h1>
-        <p class="short_description">Abstract class for Auth\Table</p>
-        <div class="details collapse">Example of Users\Table
-    namespace Application\Users;
-    class Table extends \Bluz\Db\Table
-    {
-       protected $table = &#039;users&#039;;
-       protected $primary = array(&#039;id&#039;);
-    }
-
-    $userRows = \Application\Users\Table::find(1,2,3,4,5);
-    foreach ($userRows as $userRow) {
-       $userRow -&gt; description = &#039;In first 5&#039;;
-       $userRow -&gt; save();
-    }</div>
-        <a href="../classes/Bluz.Auth.AbstractTable.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Auth" class="element ajax clickable class">
-        <h1>Auth<a href="../classes/Bluz.Auth.Auth.html">¶</a></h1>
-        <p class="short_description">Auth class</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Auth.Auth.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="AuthException" class="element ajax clickable class">
-        <h1>AuthException<a href="../classes/Bluz.Auth.AuthException.html">¶</a></h1>
-        <p class="short_description">Auth Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Auth.AuthException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Application.html">Application</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Application" class="element ajax clickable class">
-        <h1>Application<a href="../classes/Bluz.Application.Application.html">¶</a></h1>
-        <p class="short_description">Application</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Application.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Application.html">Application</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Application.Exception.html">Exception</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="ApplicationException" class="element ajax clickable class">
-        <h1>ApplicationException<a href="../classes/Bluz.Application.Exception.ApplicationException.html">¶</a></h1>
-        <p class="short_description">Application Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.ApplicationException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="BadRequestException" class="element ajax clickable class">
-        <h1>BadRequestException<a href="../classes/Bluz.Application.Exception.BadRequestException.html">¶</a></h1>
-        <p class="short_description">BadRequest Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.BadRequestException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="ForbiddenException" class="element ajax clickable class">
-        <h1>ForbiddenException<a href="../classes/Bluz.Application.Exception.ForbiddenException.html">¶</a></h1>
-        <p class="short_description">Forbidden Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.ForbiddenException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="NotFoundException" class="element ajax clickable class">
-        <h1>NotFoundException<a href="../classes/Bluz.Application.Exception.NotFoundException.html">¶</a></h1>
-        <p class="short_description">NotFound Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.NotFoundException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="NotImplementedException" class="element ajax clickable class">
-        <h1>NotImplementedException<a href="../classes/Bluz.Application.Exception.NotImplementedException.html">¶</a></h1>
-        <p class="short_description">NotImplemented Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.NotImplementedException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="RedirectException" class="element ajax clickable class">
-        <h1>RedirectException<a href="../classes/Bluz.Application.Exception.RedirectException.html">¶</a></h1>
-        <p class="short_description">Redirect Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.RedirectException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="ReloadException" class="element ajax clickable class">
-        <h1>ReloadException<a href="../classes/Bluz.Application.Exception.ReloadException.html">¶</a></h1>
-        <p class="short_description">Reload Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.ReloadException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="UnauthorizedException" class="element ajax clickable class">
-        <h1>UnauthorizedException<a href="../classes/Bluz.Application.Exception.UnauthorizedException.html">¶</a></h1>
-        <p class="short_description">Unauthorized Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Application.Exception.UnauthorizedException.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Session.html">Session</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="Session" class="element ajax clickable class">
-        <h1>Session<a href="../classes/Bluz.Session.Session.html">¶</a></h1>
-        <p class="short_description">Session</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Session.Session.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="SessionException" class="element ajax clickable class">
-        <h1>SessionException<a href="../classes/Bluz.Session.SessionException.html">¶</a></h1>
+                                        <div id="MailerException" class="element ajax clickable class">
+        <h1>MailerException<a href="../classes/Bluz.Mailer.MailerException.html">¶</a></h1>
         <p class="short_description">Exception</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Session.SessionException.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Mailer.MailerException.html" class="more">« More »</a>
     </div>
 
                             </div>
             
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Session.html">Session</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Session.Adapter.html">Adapter</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="AbstractAdapter" class="element ajax clickable class">
-        <h1>AbstractAdapter<a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html">¶</a></h1>
-        <p class="short_description">Abstract session handler</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Session.Adapter.AbstractAdapter.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Cache" class="element ajax clickable class">
-        <h1>Cache<a href="../classes/Bluz.Session.Adapter.Cache.html">¶</a></h1>
-        <p class="short_description">Cache session handler</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Session.Adapter.Cache.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="Redis" class="element ajax clickable class">
-        <h1>Redis<a href="../classes/Bluz.Session.Adapter.Redis.html">¶</a></h1>
-        <p class="short_description">Redis session handler</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Session.Adapter.Redis.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
     
                 
     <ul class="breadcrumb">
@@ -2946,6 +2707,259 @@ It&#039;s best to use for scalar data caching</div>
                             </div>
             
     
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Acl.html">Acl</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Acl" class="element ajax clickable class">
+        <h1>Acl<a href="../classes/Bluz.Acl.Acl.html">¶</a></h1>
+        <p class="short_description">Acl</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Acl.Acl.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="AclException" class="element ajax clickable class">
+        <h1>AclException<a href="../classes/Bluz.Acl.AclException.html">¶</a></h1>
+        <p class="short_description">Acl Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Acl.AclException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Config.html">Config</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Config" class="element ajax clickable class">
+        <h1>Config<a href="../classes/Bluz.Config.Config.html">¶</a></h1>
+        <p class="short_description">Config</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Config.Config.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ConfigException" class="element ajax clickable class">
+        <h1>ConfigException<a href="../classes/Bluz.Config.ConfigException.html">¶</a></h1>
+        <p class="short_description">Config Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Config.ConfigException.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Controller.html">Controller</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AbstractController" class="element ajax clickable class">
+        <h1>AbstractController<a href="../classes/Bluz.Controller.AbstractController.html">¶</a></h1>
+        <p class="short_description">AbstractController</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Controller.AbstractController.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Crud" class="element ajax clickable class">
+        <h1>Crud<a href="../classes/Bluz.Controller.Crud.html">¶</a></h1>
+        <p class="short_description">Crud controller</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Controller.Crud.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Reflection" class="element ajax clickable class">
+        <h1>Reflection<a href="../classes/Bluz.Controller.Reflection.html">¶</a></h1>
+        <p class="short_description">Reflection</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Controller.Reflection.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Rest" class="element ajax clickable class">
+        <h1>Rest<a href="../classes/Bluz.Controller.Rest.html">¶</a></h1>
+        <p class="short_description">Controller</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Controller.Rest.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Translator.html">Translator</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Translator" class="element ajax clickable class">
+        <h1>Translator<a href="../classes/Bluz.Translator.Translator.html">¶</a></h1>
+        <p class="short_description">Translator based on gettext library</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Translator.Translator.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Cli.html">Cli</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Colorize" class="element ajax clickable class">
+        <h1>Colorize<a href="../classes/Bluz.Cli.Colorize.html">¶</a></h1>
+        <p class="short_description">Colorize text for CLI</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cli.Colorize.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Request" class="element ajax clickable class">
+        <h1>Request<a href="../classes/Bluz.Cli.Request.html">¶</a></h1>
+        <p class="short_description">CLI Request</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cli.Request.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Response" class="element ajax clickable class">
+        <h1>Response<a href="../classes/Bluz.Cli.Response.html">¶</a></h1>
+        <p class="short_description">Response</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Cli.Response.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Layout.html">Layout</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Layout" class="element ajax clickable class">
+        <h1>Layout<a href="../classes/Bluz.Layout.Layout.html">¶</a></h1>
+        <p class="short_description">Layout</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Layout.Layout.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
     
         </div>
     </div>
@@ -2955,7 +2969,7 @@ It&#039;s best to use for scalar data caching</div>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 11 Nov 2014 16:40:21 +0200.<br/>
+            generated on Wed, 03 Dec 2014 10:34:52 +0200.<br/>
     </footer>
     </body>
 </html>

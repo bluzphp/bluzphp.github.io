@@ -144,6 +144,12 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_getCookie" title="getCookie :: Get Cookie by name">
+            <span class="description">Get Cookie by name</span><pre>getCookie</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_getException" title="getException :: Get Exception">
             <span class="description">Get Exception</span><pre>getException</pre>
         </a>
@@ -234,6 +240,12 @@
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_setCookie" title="setCookie :: Set Cookie">
+            <span class="description">Set Cookie</span><pre>setCookie</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_setException" title="setException :: Set Exception">
             <span class="description">Set Exception</span><pre>setException</pre>
         </a>
@@ -292,7 +304,7 @@ same case-insensitive name.</span><pre>setHeader</pre>
                                 <span class="description">Check options in package</span><pre>checkOptions</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method protected inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
                             <a href="#method_initOptions" title="initOptions :: Initialization for options">
                                 <span class="description">Initialization for options</span><pre>initOptions</pre>
                             </a>
@@ -307,16 +319,16 @@ same case-insensitive name.</span><pre>setHeader</pre>
                                 <span class="description">Send messages to client</span><pre>sendHeaders</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method private inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method private inherited">
                             <a href="#method_normalizeKey" title="normalizeKey :: Normalize key name">
                                 <span class="description">Normalize key name</span><pre>normalizeKey</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -527,6 +539,33 @@ header is added.</p></div>
                                     
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getCookie"></a>
+                        <div class="element clickable method public  method_getCookie" data-toggle="collapse" data-target=".method_getCookie .collapse">
+                            <h2>Get Cookie by name</h2>
+                            <pre>getCookie(string $name) : array|null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array|null</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1071,7 +1110,7 @@ no matching header name is found in the message.</code></pre></p>
                                             <a id="method_setBody"></a>
                         <div class="element clickable method public  method_setBody" data-toggle="collapse" data-target=".method_setBody .collapse">
                             <h2>Set response body</h2>
-                            <pre>setBody(\Bluz\View\View|string $body) : void</pre>
+                            <pre>setBody(mixed $body) : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1086,7 +1125,56 @@ no matching header name is found in the message.</code></pre></p>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$body</h4>
-                                                <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a>|string</code><p></p>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setCookie"></a>
+                        <div class="element clickable method public  method_setCookie" data-toggle="collapse" data-target=".method_setCookie .collapse">
+                            <h2>Set Cookie</h2>
+                            <pre>setCookie(string $name, string $value = null, integer|string|\DateTime $expire, string $path = &#039;/&#039;, string $domain = null, boolean $secure = false, boolean $httpOnly = true) : void</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$name</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$value</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$expire</h4>
+                                                <code>integer|string|\DateTime</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$domain</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$secure</h4>
+                                                <code>boolean</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$httpOnly</h4>
+                                                <code>boolean</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -1238,7 +1326,7 @@ string or an array of strings.</p></div>
                                             <a id="method_setPresentation"></a>
                         <div class="element clickable method public  method_setPresentation" data-toggle="collapse" data-target=".method_setPresentation .collapse">
                             <h2>Set Presentation</h2>
-                            <pre>setPresentation( $presentation) : void</pre>
+                            <pre>setPresentation(string $presentation) : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1253,7 +1341,7 @@ string or an array of strings.</p></div>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$presentation</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -1425,10 +1513,36 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
                                                                             </div>
                                 </div>
                             </div>
+                                                    <a id="property_cookies"> </a>
+                            <div class="element clickable property  protected property_cookies" data-toggle="collapse" data-target=".property_cookies .collapse">
+                                <h2>Stack of cookies</h2>
+                                <pre>cookies : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>Stack of cookies</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
                                                     <a id="property_body"> </a>
                             <div class="element clickable property  protected property_body" data-toggle="collapse" data-target=".property_body .collapse">
                                 <h2>Result can be View|object|function</h2>
-                                <pre>body : \Bluz\View\View</pre>
+                                <pre>body : mixed</pre>
                                 <div class="labels">
                                                                                                         </div>
                                 <div class="row collapse">
@@ -1447,7 +1561,7 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code><a href="../classes/Bluz.View.View.html">\Bluz\View\View</a></code>
+                                            <code>mixed</code>
                                                                             </div>
                                 </div>
                             </div>
@@ -1479,7 +1593,7 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
                             </div>
                                                     <a id="property_presentation"> </a>
                             <div class="element clickable property  protected property_presentation" data-toggle="collapse" data-target=".property_presentation .collapse">
-                                <h2>Support JSON, XML, CLI</h2>
+                                <h2>Support JSON, JSONP, XML, CLI</h2>
                                 <pre>presentation : string|\Bluz\Response\Presentation\AbstractPresentation</pre>
                                 <div class="labels">
                                                                                                         </div>
@@ -1493,7 +1607,7 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    <p>Support JSON, XML, CLI</p>
+                                                                                                                    <p>Support JSON, JSONP, XML, CLI</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
@@ -1549,7 +1663,7 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 11 Nov 2014 16:40:25 +0200.<br/>
+            generated on Wed, 03 Dec 2014 10:34:55 +0200.<br/>
     </footer>
     </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    Bluz &raquo; \Bluz\Common\Exception\ComponentException
+    <title>    Bluz &raquo; \Bluz\Response\Presentation\Jsonp
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -119,15 +119,27 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                                            </ul>
+                                                                                                    <li class="method public inherited">
+        <a href="#method___construct" title="__construct :: Create instance">
+            <span class="description">Create instance</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_process" title="process :: Process for change response">
+            <span class="description">Process for change response</span><pre>process</pre>
+        </a>
+    </li>
+
+                                                </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                            </ul>
+                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                            </ul>
+                                                                                                                    </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -141,11 +153,11 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>ComponentException</h1>
+                <h1>Jsonp</h1>
                 <small style="display: block; text-align: right">
-                                            Extends <a href="../classes/Bluz.Common.Exception.CommonException.html">\Bluz\Common\Exception\CommonException</a>
+                                            Extends <a href="../classes/Bluz.Response.Presentation.AbstractPresentation.html">\Bluz\Response\Presentation\AbstractPresentation</a>
                                                         </small>
-                <p class="short_description">Exception throws by component for wrong requirements</p>
+                <p class="short_description">JSONP presentation</p>
                 <div class="details">
                     <div class="long_description">
                         
@@ -157,7 +169,7 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Bluz\Common\Exception</p>
+                                                                                <p>Bluz\Response\Presentation</p>
                                     </td>
                                 </tr>
                                                                                                                 <tr>
@@ -175,19 +187,78 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>26.09.14 11:17</p>
+                                                                                <p>17.11.2014 13:47</p>
                                     </td>
                                 </tr>
-                                                                                                                                                                                                                                                                                                                                            </table>
+                                                                                                                                                                                </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                        
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Create instance</h2>
+                            <pre>__construct(\Bluz\Response\AbstractResponse $response) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$response</h4>
+                                                <code><a href="../classes/Bluz.Response.AbstractResponse.html">\Bluz\Response\AbstractResponse</a></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_process"></a>
+                        <div class="element clickable method public  method_process inherited" data-toggle="collapse" data-target=".method_process .collapse">
+                            <h2>Process for change response</h2>
+                            <pre>process() : void</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                <span class="label">abstract</span>                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
                     
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_code"> </a>
-                            <div class="element clickable property  protected property_code inherited" data-toggle="collapse" data-target=".property_code .collapse">
-                                <h2>Used as default HTTP code for exceptions</h2>
-                                <pre>code : integer</pre>
+                                                    <a id="property_response"> </a>
+                            <div class="element clickable property  protected property_response inherited" data-toggle="collapse" data-target=".property_response .collapse">
+                                <h2>Instance</h2>
+                                <pre>response : \Bluz\Response\AbstractResponse</pre>
                                 <div class="labels">
                                     <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
@@ -200,26 +271,26 @@
                                                         var
                                                     </th>
                                                     <td>
-                                                                                                                    <p>Used as default HTTP code for exceptions</p>
+                                                                                                                    <p>Instance</p>
                                                                                                             </td>
                                                 </tr>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code>integer</code>
+                                            <code><a href="../classes/Bluz.Response.AbstractResponse.html">\Bluz\Response\AbstractResponse</a></code>
                                                                             </div>
                                 </div>
                             </div>
                                                             </div>
             </div>
-            <a id="\Bluz\Common\Exception\ComponentException"></a>
+            <a id="\Bluz\Response\Presentation\Jsonp"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/Bluz.Common.Exception.html">Exception</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Bluz.Response.Presentation.html">Presentation</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/Bluz.Common.Exception.ComponentException.html">ComponentException</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Bluz.Response.Presentation.Jsonp.html">Jsonp</a></li>
             </ul>
         </div>
     </div>
