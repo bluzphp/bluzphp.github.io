@@ -161,7 +161,7 @@
         </a>
     </li>
 
-                                                </ul>
+                                                                                                        </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
@@ -212,11 +212,16 @@ Actual  work for \Bluz\Cache\CacheInterface::set() goes here</span><pre>doSet</p
                                 <span class="description">Generate path to cache file based on cache entry id</span><pre>getFilename</pre>
                             </a>
                         </li>
-                                                                                    </ul>
+                                                                                                                    <li class="method protected inherited">
+                            <a href="#method_writeFile" title="writeFile :: Write string to the file in an atomic way">
+                                <span class="description">Write string to the file in an atomic way</span><pre>writeFile</pre>
+                            </a>
+                        </li>
+                                                </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -340,15 +345,15 @@ It's best to use for scalar data caching</p>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$id</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>cache entry identifier</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$data</h4>
-                                                <code>mixed</code><p></p>
+                                                <code>mixed</code><p><p>data to cache</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$ttl</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Time To Live in seconds 0 == infinity</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -384,7 +389,7 @@ It's best to use for scalar data caching</p>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$id</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>cache entry identifier</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -731,7 +736,7 @@ Actual  work for \Bluz\Cache\CacheInterface::set() goes here</h2>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$id</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>cache entry identifier</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -794,19 +799,50 @@ Actual  work for \Bluz\Cache\CacheInterface::set() goes here</h2>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$id</h4>
-                                                <code>string</code><p></p>
+                                                <code>string</code><p><p>cache entry identifier</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$data</h4>
-                                                <code>mixed</code><p></p>
+                                                <code>mixed</code><p><p>data to cache</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$ttl</h4>
-                                                <code>integer</code><p></p>
+                                                <code>integer</code><p><p>Time To Live in seconds 0 == infinity</p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
                                         <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_writeFile"></a>
+                        <div class="element clickable method protected  method_writeFile inherited" data-toggle="collapse" data-target=".method_writeFile .collapse">
+                            <h2>Write string to the file in an atomic way</h2>
+                            <pre>writeFile(string $fileName, string $content) : boolean|integer</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fileName</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean|integer</code><p><p>The number of bytes that were written to the file, or false on failure</p></p>
                                                                     </div>
                             </div>
 
@@ -938,7 +974,7 @@ Actual  work for \Bluz\Cache\CacheInterface::set() goes here</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:54 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:48 +0300.<br/>
     </footer>
     </body>
 </html>

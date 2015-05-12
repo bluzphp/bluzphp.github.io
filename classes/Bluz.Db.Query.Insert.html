@@ -328,7 +328,7 @@ the final SQL query being constructed.</h2>
                                             <a id="method_execute"></a>
                         <div class="element clickable method public  method_execute inherited" data-toggle="collapse" data-target=".method_execute .collapse">
                             <h2>Execute this query using the bound parameters and their types</h2>
-                            <pre>execute() : mixed</pre>
+                            <pre>execute() : integer|string|array</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -349,7 +349,7 @@ the final SQL query being constructed.</h2>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>mixed</code><p></p>
+                                        <code>integer|string|array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -420,13 +420,13 @@ the final SQL query being constructed.</h2>
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('User', 'u')
-    -&gt;where('id = ?', 42);
-echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = "42"</code></pre></div>
+-&gt;select('u')
+-&gt;from('User', 'u')
+-&gt;where('id = ?', 42);
+echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = &quot;42&quot;</p></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -482,12 +482,12 @@ echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = "42"</code></pre></d
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('User', 'u');
-echo $qb-&gt;getSQL(); // SELECT u FROM User u</code></pre></div>
+-&gt;select('u')
+-&gt;from('User', 'u');
+echo $qb-&gt;getSQL(); // SELECT u FROM User u</p></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -517,12 +517,12 @@ a certain table</h2>
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$ib = new InsertBuilder();
+                                    <div class="long_description"><p>Example
+$ib = new InsertBuilder();
 $ib
-    -&gt;insert('users')
-    -&gt;set('name', 'username')
-    -&gt;set('password', md5('password'));</code></pre></div>
+-&gt;insert('users')
+-&gt;set('name', 'username')
+-&gt;set('password', md5('password'));</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -603,12 +603,12 @@ $ib
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Sets a new value for a column in a insert/update query</p>
-<pre><code>$ub = new UpdateBuilder();
+                                    <div class="long_description"><p>Sets a new value for a column in a insert/update query
+$ub = new UpdateBuilder();
 $ub
-    -&gt;update('users')
-    -&gt;set('password', md5('password'))
-    -&gt;where('id = ?');</code></pre></div>
+-&gt;update('users')
+-&gt;set('password', md5('password'))
+-&gt;where('id = ?');</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -639,16 +639,16 @@ $ub
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p><code></p>
-<pre><code>$ub = new UpdateBuilder();
+                                    <div class="long_description"><p><code>
+$ub = new UpdateBuilder();
 $ub
-    -&gt;update('users')
-    -&gt;setArray([
-         'password' =&gt; md5('password')
-         'updated' =&gt; date('Y-m-d H:i:s')
-     ])
-    -&gt;where('u.id = ?');</code></pre>
-<p></code></p></div>
+-&gt;update('users')
+-&gt;setArray([
+'password' =&gt; md5('password')
+'updated' =&gt; date('Y-m-d H:i:s')
+])
+-&gt;where('u.id = ?');
+</code></p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -702,13 +702,13 @@ $ub
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('users', 'u')
-    -&gt;where('u.id = :user_id')
-    -&gt;setParameter(':user_id', 1);</code></pre></div>
+-&gt;select('u')
+-&gt;from('users', 'u')
+-&gt;where('u.id = :user_id')
+-&gt;setParameter(':user_id', 1);</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -743,16 +743,16 @@ $sb
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('users', 'u')
-    -&gt;where('u.id = :user_id1 OR u.id = :user_id2')
-    -&gt;setParameters(array(
-        ':user_id1' =&gt; 1,
-        ':user_id2' =&gt; 2
-    ));</code></pre></div>
+-&gt;select('u')
+-&gt;from('users', 'u')
+-&gt;where('u.id = :user_id1 OR u.id = :user_id2')
+-&gt;setParameters(array(
+':user_id1' =&gt; 1,
+':user_id2' =&gt; 2
+));</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -926,7 +926,7 @@ $sb
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:53 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:50 +0300.<br/>
     </footer>
     </body>
 </html>

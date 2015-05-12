@@ -144,14 +144,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getInstance" title="getInstance :: Get class instance">
-            <span class="description">Get class instance</span><pre>getInstance</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_getInstance" title="getInstance :: Get class instance">
-            <span class="description">Get class instance</span><pre>getInstance</pre>
+        <a href="#method_getInstance" title="getInstance :: ">
+            <span class="description"></span><pre>getInstance</pre>
         </a>
     </li>
 
@@ -173,26 +167,20 @@
         </a>
     </li>
 
-                                                                                                        <li class="method public inherited">
-        <a href="#method_setInstance" title="setInstance :: Set or replace instance">
-            <span class="description">Set or replace instance</span><pre>setInstance</pre>
-        </a>
-    </li>
-
                                                 </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                    <li class="method protected">
+                                                                                                                                                                                                                                                                <li class="method protected">
                             <a href="#method_initInstance" title="initInstance :: Init instance">
                                 <span class="description">Init instance</span><pre>initInstance</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                </ul>
+                                                                                                                                                            </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -208,15 +196,14 @@
             <div class="element class">
                 <h1>Messages</h1>
                 <small style="display: block; text-align: right">
-                                            Extends <a href="../classes/Bluz.Proxy.AbstractProxy.html">\Bluz\Proxy\AbstractProxy</a>
+                                            Extends \Bluz\Proxy\AbstractProxy
                                                         </small>
                 <p class="short_description">Proxy to Messages</p>
                 <div class="details">
                     <div class="long_description">
-                        <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Messages;
-
-Messages::addSuccess('All Ok!');</code></pre>
+                        <p>Example of usage
+use Bluz\Proxy\Messages;</p>
+<pre><code>Messages::addSuccess('All Ok!');</code></pre>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -315,7 +302,7 @@ Messages::addSuccess('All Ok!');</code></pre>
                                                                 <a id="method_addError"></a>
                         <div class="element clickable method public  method_addError" data-toggle="collapse" data-target=".method_addError .collapse">
                             <h2>addError</h2>
-                            <pre>addError(mixed $text) : \Bluz\Proxy\Messages</pre>
+                            <pre>addError(mixed $message, mixed $...$text) : \Bluz\Proxy\Messages</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -329,7 +316,11 @@ Messages::addSuccess('All Ok!');</code></pre>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$text</h4>
+                                                <h4>$message</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$...$text</h4>
                                                 <code>mixed</code><p></p>
                                             </div>
                                                                             
@@ -342,7 +333,7 @@ Messages::addSuccess('All Ok!');</code></pre>
                                             <a id="method_addNotice"></a>
                         <div class="element clickable method public  method_addNotice" data-toggle="collapse" data-target=".method_addNotice .collapse">
                             <h2>addNotice</h2>
-                            <pre>addNotice(mixed $text) : \Bluz\Proxy\Messages</pre>
+                            <pre>addNotice(mixed $message, mixed $...$text) : \Bluz\Proxy\Messages</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -356,7 +347,11 @@ Messages::addSuccess('All Ok!');</code></pre>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$text</h4>
+                                                <h4>$message</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$...$text</h4>
                                                 <code>mixed</code><p></p>
                                             </div>
                                                                             
@@ -369,7 +364,7 @@ Messages::addSuccess('All Ok!');</code></pre>
                                             <a id="method_addSuccess"></a>
                         <div class="element clickable method public  method_addSuccess" data-toggle="collapse" data-target=".method_addSuccess .collapse">
                             <h2>addSuccess</h2>
-                            <pre>addSuccess(mixed $text) : \Bluz\Proxy\Messages</pre>
+                            <pre>addSuccess(mixed $message, mixed $...$text) : \Bluz\Proxy\Messages</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -383,7 +378,11 @@ Messages::addSuccess('All Ok!');</code></pre>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$text</h4>
+                                                <h4>$message</h4>
+                                                <code>mixed</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$...$text</h4>
                                                 <code>mixed</code><p></p>
                                             </div>
                                                                             
@@ -417,7 +416,7 @@ Messages::addSuccess('All Ok!');</code></pre>
                         </div>
                                             <a id="method_getInstance"></a>
                         <div class="element clickable method public  method_getInstance" data-toggle="collapse" data-target=".method_getInstance .collapse">
-                            <h2>Get class instance</h2>
+                            <h2>getInstance</h2>
                             <pre>getInstance() : \Bluz\Messages\Messages</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -433,44 +432,6 @@ Messages::addSuccess('All Ok!');</code></pre>
                                     
                                                                             <h3>Response</h3>
                                         <code>\Bluz\Messages\Messages</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_getInstance"></a>
-                        <div class="element clickable method public  method_getInstance inherited" data-toggle="collapse" data-target=".method_getInstance .collapse">
-                            <h2>Get class instance</h2>
-                            <pre>getInstance() : mixed</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>mixed</code><p></p>
                                                                     </div>
                             </div>
 
@@ -499,7 +460,7 @@ Messages::addSuccess('All Ok!');</code></pre>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Messages.Messages.html">\Bluz\Messages\Messages</a></code><p></p>
+                                        <code>\Bluz\Messages\Messages</code><p></p>
                                                                     </div>
                             </div>
 
@@ -573,61 +534,9 @@ Messages::addSuccess('All Ok!');</code></pre>
                             </div>
 
                         </div>
-                                            <a id="method_setInstance"></a>
-                        <div class="element clickable method public  method_setInstance inherited" data-toggle="collapse" data-target=".method_setInstance .collapse">
-                            <h2>Set or replace instance</h2>
-                            <pre>setInstance(mixed $instance) : void</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$instance</h4>
-                                                <code>mixed</code><p></p>
-                                            </div>
-                                                                            
-                                                                    </div>
-                            </div>
-
-                        </div>
                     
                     
-                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_instances"> </a>
-                            <div class="element clickable property  protected property_instances inherited" data-toggle="collapse" data-target=".property_instances .collapse">
-                                <h2>Instances of classes</h2>
-                                <pre>instances : array</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                    <span class="label">static</span>                                </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Instances of classes</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
-                                                            </div>
+                                                        </div>
             </div>
             <a id="\Bluz\Proxy\Messages"></a>
             <ul class="breadcrumb">
@@ -647,7 +556,7 @@ Messages::addSuccess('All Ok!');</code></pre>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:54 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:49 +0300.<br/>
     </footer>
     </body>
 </html>

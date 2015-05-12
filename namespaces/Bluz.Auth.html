@@ -158,16 +158,15 @@
         <h1>AbstractRow<a href="../classes/Bluz.Auth.AbstractRow.html">¶</a></h1>
         <p class="short_description">Abstract class for Auth\Row</p>
         <div class="details collapse">
-                            <p>Example of Users\Row</p>
-<pre><code>namespace Application\Users;
+                            <p>Example of Users\Row
+namespace Application\Users;
 class Row extends \Bluz\Db\Row
 {
-   public function beforeInsert()
-   {
-       $this-&gt;created = gmdate('Y-m-d H:i:s');
-   }
-
-   public function beforeUpdate()
+public function beforeInsert()
+{
+$this-&gt;created = gmdate('Y-m-d H:i:s');
+}</p>
+<pre><code>   public function beforeUpdate()
    {
        $this-&gt;updated = gmdate('Y-m-d H:i:s');
    }
@@ -183,16 +182,15 @@ $userRow -&gt; save();</code></pre>
         <h1>AbstractRowEntity<a href="../classes/Bluz.Auth.AbstractRowEntity.html">¶</a></h1>
         <p class="short_description">Abstract class for Users\Row</p>
         <div class="details collapse">
-                            <p>Example of Users\Row</p>
-<pre><code>namespace Application\Users;
+                            <p>Example of Users\Row
+namespace Application\Users;
 class Row extends \Bluz\Db\Row
 {
-   public function beforeInsert()
-   {
-       $this-&gt;created = gmdate('Y-m-d H:i:s');
-   }
-
-   public function beforeUpdate()
+public function beforeInsert()
+{
+$this-&gt;created = gmdate('Y-m-d H:i:s');
+}</p>
+<pre><code>   public function beforeUpdate()
    {
        $this-&gt;updated = gmdate('Y-m-d H:i:s');
    }
@@ -208,19 +206,7 @@ $userRow -&gt; save();</code></pre>
         <h1>AbstractTable<a href="../classes/Bluz.Auth.AbstractTable.html">¶</a></h1>
         <p class="short_description">Abstract class for Auth\Table</p>
         <div class="details collapse">
-                            <p>Example of Users\Table</p>
-<pre><code>namespace Application\Users;
-class Table extends \Bluz\Db\Table
-{
-   protected $table = 'users';
-   protected $primary = array('id');
-}
-
-$userRows = \Application\Users\Table::find(1,2,3,4,5);
-foreach ($userRows as $userRow) {
-   $userRow -&gt; description = 'In first 5';
-   $userRow -&gt; save();
-}</code></pre>
+                            
                     </div>
         <a href="../classes/Bluz.Auth.AbstractTable.html" class="more">« More »</a>    </div>
 
@@ -251,7 +237,7 @@ foreach ($userRows as $userRow) {
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:52 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:44 +0300.<br/>
     </footer>
     </body>
 </html>

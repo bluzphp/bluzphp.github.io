@@ -134,15 +134,6 @@
     
         </ul>
     </li>
-        <li>
-        <a href="../packages/Bluz.Validator.Traits.html" title="Traits">
-            <i class="icon-th"></i> Traits
-        </a>
-        <ul class="nav nav-list nav-packages">
-                
-    
-        </ul>
-    </li>
     
                 </ul>
             </ul>
@@ -180,15 +171,55 @@
         <a href="../classes/Bluz.Validator.Validator.html" class="more">« More »</a>
     </div>
 
-                                        <div id="ValidatorBuilder" class="element ajax clickable class">
-        <h1>ValidatorBuilder<a href="../classes/Bluz.Validator.ValidatorBuilder.html">¶</a></h1>
-        <p class="short_description">Validator Builder</p>
+                            </div>
+            
+                
+    <ul class="breadcrumb">
+        <li><a href="../index.html"><i class="icon-th"></i></a></li>
+            
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Validator.html">Validator</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Bluz.Validator.Exception.html">Exception</a>
+    </li>
+
+    </ul>
+
+    
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="ComponentException" class="element ajax clickable class">
+        <h1>ComponentException<a href="../classes/Bluz.Validator.Exception.ComponentException.html">¶</a></h1>
+        <p class="short_description">Component Exception</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Validator.ValidatorBuilder.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Validator.Exception.ComponentException.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ValidatorException" class="element ajax clickable class">
+        <h1>ValidatorException<a href="../classes/Bluz.Validator.Exception.ValidatorException.html">¶</a></h1>
+        <p class="short_description">Validator Exception</p>
+        <div class="details collapse"></div>
+        <a href="../classes/Bluz.Validator.Exception.ValidatorException.html" class="more">« More »</a>
     </div>
 
                             </div>
             
+    
                 
     <ul class="breadcrumb">
         <li><a href="../index.html"><i class="icon-th"></i></a></li>
@@ -338,11 +369,11 @@
         <a href="../classes/Bluz.Validator.Rule.Equals.html" class="more">« More »</a>
     </div>
 
-                                        <div id="Float" class="element ajax clickable class">
-        <h1>Float<a href="../classes/Bluz.Validator.Rule.Float.html">¶</a></h1>
+                                        <div id="FloatRule" class="element ajax clickable class">
+        <h1>FloatRule<a href="../classes/Bluz.Validator.Rule.FloatRule.html">¶</a></h1>
         <p class="short_description">Class Float</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Validator.Rule.Float.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Validator.Rule.FloatRule.html" class="more">« More »</a>
     </div>
 
                                         <div id="In" class="element ajax clickable class">
@@ -464,11 +495,11 @@
         <a href="../classes/Bluz.Validator.Rule.Slug.html" class="more">« More »</a>
     </div>
 
-                                        <div id="String" class="element ajax clickable class">
-        <h1>String<a href="../classes/Bluz.Validator.Rule.String.html">¶</a></h1>
+                                        <div id="StringRule" class="element ajax clickable class">
+        <h1>StringRule<a href="../classes/Bluz.Validator.Rule.StringRule.html">¶</a></h1>
         <p class="short_description">Class String</p>
         <div class="details collapse"></div>
-        <a href="../classes/Bluz.Validator.Rule.String.html" class="more">« More »</a>
+        <a href="../classes/Bluz.Validator.Rule.StringRule.html" class="more">« More »</a>
     </div>
 
                                         <div id="Version" class="element ajax clickable class">
@@ -476,106 +507,6 @@
         <p class="short_description">Class Version</p>
         <div class="details collapse"></div>
         <a href="../classes/Bluz.Validator.Rule.Version.html" class="more">« More »</a>
-    </div>
-
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Validator.html">Validator</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Validator.Traits.html">Traits</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                                        <div id="Validator" class="element ajax clickable trait">
-        <h1>Validator<a href="../classes/Bluz.Validator.Traits.Validator.html">¶</a></h1>
-        <p class="short_description">Validator trait</p>
-        <div class="details collapse">Example of usage
-   use Bluz\Validator\Traits\Validator;
-   use Bluz\Validator\Validator as v;
-
-   class Row extends Db\Row {
-       use Validator;
-       function beforeSave()
-       {
-            $this-&gt;addValidator(
-                &#039;login&#039;,
-                v::required()-&gt;latin()-&gt;length(3, 255)
-            );
-       }
-   }</div>
-        <a href="../classes/Bluz.Validator.Traits.Validator.html" class="more">« More »</a>
-    </div>
-
-                
-                
-                            </div>
-            
-    
-                
-    <ul class="breadcrumb">
-        <li><a href="../index.html"><i class="icon-th"></i></a></li>
-            
-                
-                
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.html">Bluz</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Validator.html">Validator</a>
-    </li>
-
-    
-    <li>
-        <span class="divider">\</span><a href="../packages/Bluz.Validator.Exception.html">Exception</a>
-    </li>
-
-    </ul>
-
-    
-        
-        
-                    <div class="package-indent">
-                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
-                
-                
-                                        <div id="ComponentException" class="element ajax clickable class">
-        <h1>ComponentException<a href="../classes/Bluz.Validator.Exception.ComponentException.html">¶</a></h1>
-        <p class="short_description">Component Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Validator.Exception.ComponentException.html" class="more">« More »</a>
-    </div>
-
-                                        <div id="ValidatorException" class="element ajax clickable class">
-        <h1>ValidatorException<a href="../classes/Bluz.Validator.Exception.ValidatorException.html">¶</a></h1>
-        <p class="short_description">Validator Exception</p>
-        <div class="details collapse"></div>
-        <a href="../classes/Bluz.Validator.Exception.ValidatorException.html" class="more">« More »</a>
     </div>
 
                             </div>
@@ -590,7 +521,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:52 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:45 +0300.<br/>
     </footer>
     </body>
 </html>

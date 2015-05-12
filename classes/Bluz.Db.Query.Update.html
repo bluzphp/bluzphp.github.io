@@ -134,12 +134,6 @@ the final SQL query being constructed.</span><pre>__toString</pre>
     </li>
 
                                                                                                                                                                 <li class="method public inherited">
-        <a href="#method_andWhere" title="andWhere :: Add WHERE .">
-            <span class="description">Add WHERE .</span><pre>andWhere</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
         <a href="#method_execute" title="execute :: Execute this query using the bound parameters and their types">
             <span class="description">Execute this query using the bound parameters and their types</span><pre>execute</pre>
         </a>
@@ -189,12 +183,6 @@ Replaces any previously specified orderings, if any</span><pre>orderBy</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public inherited">
-        <a href="#method_orWhere" title="orWhere :: Add WHERE .">
-            <span class="description">Add WHERE .</span><pre>orWhere</pre>
-        </a>
-    </li>
-
                                                                                                                                                                                                                         <li class="method public inherited">
         <a href="#method_set" title="set :: Set key-value pair">
             <span class="description">Set key-value pair</span><pre>set</pre>
@@ -239,12 +227,6 @@ a certain table</span><pre>update</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public inherited">
-        <a href="#method_where" title="where :: Set WHERE condition">
-            <span class="description">Set WHERE condition</span><pre>where</pre>
-        </a>
-    </li>
-
                                                 </ul>
         </li>
         <li class="nav-header protected">» Protected
@@ -254,7 +236,7 @@ a certain table</span><pre>update</pre>
                                 <span class="description">Either appends to or replaces a single, generic query part</span><pre>addQueryPart</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
+                                                                                                                                                                                                                                                                                                                                                                                <li class="method protected inherited">
                             <a href="#method_prepareCondition" title="prepareCondition :: Prepare condition">
                                 <span class="description">Prepare condition</span><pre>prepareCondition</pre>
                             </a>
@@ -269,11 +251,11 @@ a certain table</span><pre>update</pre>
                                 <span class="description">setFromQueryPart</span><pre>setFromQueryPart</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -365,7 +347,7 @@ the final SQL query being constructed.</h2>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
+                                        <code>\Bluz\Db\Query\Select|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -406,40 +388,10 @@ the final SQL query being constructed.</h2>
                             </div>
 
                         </div>
-                                            <a id="method_andWhere"></a>
-                        <div class="element clickable method public  method_andWhere inherited" data-toggle="collapse" data-target=".method_andWhere .collapse">
-                            <h2>Add WHERE .</h2>
-                            <pre>andWhere() : \Bluz\Db\Query\Select|\Bluz\Db\Query\Update|\Bluz\Db\Query\Delete</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"><p>. AND .. condition</p>
-<p>Adds one or more restrictions to the query results, forming a logical
-conjunction with any previously specified restrictions.</p>
-<pre><code>$sb = new SelectBuilder();
-$sb
-    -&gt;select('u')
-    -&gt;from('users', 'u')
-    -&gt;where('u.username LIKE ?', '%Smith%')
-    -&gt;andWhere('u.is_active = ?', 1);</code></pre></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
                                             <a id="method_execute"></a>
                         <div class="element clickable method public  method_execute inherited" data-toggle="collapse" data-target=".method_execute .collapse">
                             <h2>Execute this query using the bound parameters and their types</h2>
-                            <pre>execute() : mixed</pre>
+                            <pre>execute() : integer|string|array</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -460,7 +412,7 @@ $sb
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>mixed</code><p></p>
+                                        <code>integer|string|array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -531,13 +483,13 @@ $sb
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('User', 'u')
-    -&gt;where('id = ?', 42);
-echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = "42"</code></pre></div>
+-&gt;select('u')
+-&gt;from('User', 'u')
+-&gt;where('id = ?', 42);
+echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = &quot;42&quot;</p></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -593,12 +545,12 @@ echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = "42"</code></pre></d
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('User', 'u');
-echo $qb-&gt;getSQL(); // SELECT u FROM User u</code></pre></div>
+-&gt;select('u')
+-&gt;from('User', 'u');
+echo $qb-&gt;getSQL(); // SELECT u FROM User u</p></div>
 
                                     <table class="table">
                                                                                     <tr>
@@ -643,7 +595,7 @@ echo $qb-&gt;getSQL(); // SELECT u FROM User u</code></pre></div>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
+                                        <code>\Bluz\Db\Query\Select|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -675,37 +627,7 @@ Replaces any previously specified orderings, if any</h2>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_orWhere"></a>
-                        <div class="element clickable method public  method_orWhere inherited" data-toggle="collapse" data-target=".method_orWhere .collapse">
-                            <h2>Add WHERE .</h2>
-                            <pre>orWhere() : \Bluz\Db\Query\Select|\Bluz\Db\Query\Update|\Bluz\Db\Query\Delete</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"><p>. OR .. condition</p>
-<p>Adds one or more restrictions to the query results, forming a logical
-disjunction with any previously specified restrictions.</p>
-<pre><code>$sb = new SelectBuilder();
-$sb
-    -&gt;select('u.name')
-    -&gt;from('users', 'u')
-    -&gt;where('u.id = 1')
-    -&gt;orWhere('u.id = ?', 2);</code></pre></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
+                                        <code>\Bluz\Db\Query\Select|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -774,12 +696,12 @@ $sb
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Sets a new value for a column in a insert/update query</p>
-<pre><code>$ub = new UpdateBuilder();
+                                    <div class="long_description"><p>Sets a new value for a column in a insert/update query
+$ub = new UpdateBuilder();
 $ub
-    -&gt;update('users')
-    -&gt;set('password', md5('password'))
-    -&gt;where('id = ?');</code></pre></div>
+-&gt;update('users')
+-&gt;set('password', md5('password'))
+-&gt;where('id = ?');</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -810,16 +732,16 @@ $ub
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p><code></p>
-<pre><code>$ub = new UpdateBuilder();
+                                    <div class="long_description"><p><code>
+$ub = new UpdateBuilder();
 $ub
-    -&gt;update('users')
-    -&gt;setArray([
-         'password' =&gt; md5('password')
-         'updated' =&gt; date('Y-m-d H:i:s')
-     ])
-    -&gt;where('u.id = ?');</code></pre>
-<p></code></p></div>
+-&gt;update('users')
+-&gt;setArray([
+'password' =&gt; md5('password')
+'updated' =&gt; date('Y-m-d H:i:s')
+])
+-&gt;where('u.id = ?');
+</code></p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -885,7 +807,7 @@ $ub
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
+                                        <code>\Bluz\Db\Query\Select|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -912,7 +834,7 @@ $ub
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
+                                        <code>\Bluz\Db\Query\Select|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -927,13 +849,13 @@ $ub
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('users', 'u')
-    -&gt;where('u.id = :user_id')
-    -&gt;setParameter(':user_id', 1);</code></pre></div>
+-&gt;select('u')
+-&gt;from('users', 'u')
+-&gt;where('u.id = :user_id')
+-&gt;setParameter(':user_id', 1);</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -968,16 +890,16 @@ $sb
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$sb = new SelectBuilder();
+                                    <div class="long_description"><p>Example
+$sb = new SelectBuilder();
 $sb
-    -&gt;select('u')
-    -&gt;from('users', 'u')
-    -&gt;where('u.id = :user_id1 OR u.id = :user_id2')
-    -&gt;setParameters(array(
-        ':user_id1' =&gt; 1,
-        ':user_id2' =&gt; 2
-    ));</code></pre></div>
+-&gt;select('u')
+-&gt;from('users', 'u')
+-&gt;where('u.id = :user_id1 OR u.id = :user_id2')
+-&gt;setParameters(array(
+':user_id1' =&gt; 1,
+':user_id2' =&gt; 2
+));</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -1009,12 +931,12 @@ a certain table</h2>
                             
                             <div class="row collapse">
                                 <div class="detail-description">
-                                    <div class="long_description"><p>Example</p>
-<pre><code>$ub = new UpdateBuilder();
+                                    <div class="long_description"><p>Example
+$ub = new UpdateBuilder();
 $ub
-    -&gt;update('users')
-    -&gt;set('password', md5('password'))
-    -&gt;where('id = ?');</code></pre></div>
+-&gt;update('users')
+-&gt;set('password', md5('password'))
+-&gt;where('id = ?');</p></div>
 
                                     <table class="table">
                                                                             </table>
@@ -1027,35 +949,6 @@ $ub
                                                                             
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a></code><p><p>instance</p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_where"></a>
-                        <div class="element clickable method public  method_where inherited" data-toggle="collapse" data-target=".method_where .collapse">
-                            <h2>Set WHERE condition</h2>
-                            <pre>where() : \Bluz\Db\Query\Select|\Bluz\Db\Query\Update|\Bluz\Db\Query\Delete</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"><p>Specifies one or more restrictions to the query result
-Replaces any previously specified restrictions, if any</p>
-<pre><code>$sb = new SelectBuilder();
-$sb
-    -&gt;select('u.name')
-    -&gt;from('users', 'u')
-    -&gt;where('u.id = ?', $id)
- ;</code></pre></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Query.Select.html">\Bluz\Db\Query\Select</a>|<a href="../classes/Bluz.Db.Query.Update.html">\Bluz\Db\Query\Update</a>|<a href="../classes/Bluz.Db.Query.Delete.html">\Bluz\Db\Query\Delete</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -1265,7 +1158,7 @@ $sb
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:54 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:50 +0300.<br/>
     </footer>
     </body>
 </html>

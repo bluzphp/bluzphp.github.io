@@ -360,16 +360,15 @@
                 <p class="short_description">Abstract class for Auth\Row</p>
                 <div class="details">
                     <div class="long_description">
-                        <p>Example of Users\Row</p>
-<pre><code>namespace Application\Users;
+                        <p>Example of Users\Row
+namespace Application\Users;
 class Row extends \Bluz\Db\Row
 {
-   public function beforeInsert()
-   {
-       $this-&gt;created = gmdate('Y-m-d H:i:s');
-   }
-
-   public function beforeUpdate()
+public function beforeInsert()
+{
+$this-&gt;created = gmdate('Y-m-d H:i:s');
+}</p>
+<pre><code>   public function beforeUpdate()
    {
        $this-&gt;updated = gmdate('Y-m-d H:i:s');
    }
@@ -978,8 +977,8 @@ $userRow -&gt; save();</code></pre>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>mixed</code><p><p>The primary key value(s), as an associative array if the</p>
-<pre><code>key is compound, or a scalar if the key is single-column.</code></pre></p>
+                                        <code>mixed</code><p><p>The primary key value(s), as an associative array if the
+key is compound, or a scalar if the key is single-column.</p></p>
                                                                     </div>
                             </div>
 
@@ -1149,7 +1148,7 @@ $userRow -&gt; save();</code></pre>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Table.html">\Bluz\Db\Table</a></code><p></p>
+                                        <code>\Bluz\Db\Table</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1395,8 +1394,8 @@ properties with fresh data from the table on success.</p></div>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>mixed</code><p><p>The primary key value(s), as an associative array if the</p>
-<pre><code>key is compound, or a scalar if the key is single-column.</code></pre></p>
+                                        <code>mixed</code><p><p>The primary key value(s), as an associative array if the
+key is compound, or a scalar if the key is single-column.</p></p>
                                                                     </div>
                             </div>
 
@@ -1473,7 +1472,7 @@ properties with fresh data from the table on success.</p></div>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$table</h4>
-                                                <code><a href="../classes/Bluz.Db.Table.html">\Bluz\Db\Table</a></code><p></p>
+                                                <code>\Bluz\Db\Table</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
@@ -1536,7 +1535,7 @@ properties with fresh data from the table on success.</p></div>
                                                                                     </table>
 
                                                                                     <h3>Type(s)</h3>
-                                            <code><a href="../classes/Bluz.Db.Table.html">\Bluz\Db\Table</a></code>
+                                            <code>\Bluz\Db\Table</code>
                                                                             </div>
                                 </div>
                             </div>
@@ -1917,7 +1916,7 @@ when dirty data is posted to the database with save().</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:54 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:52 +0300.<br/>
     </footer>
     </body>
 </html>

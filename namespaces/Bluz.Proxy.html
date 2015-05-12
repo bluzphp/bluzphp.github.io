@@ -146,22 +146,13 @@
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="class_AbstractProxy" class="element ajax clickable class" data-toggle="collapse" data-target="#class_AbstractProxy .collapse">
-        <h1>AbstractProxy<a href="../classes/Bluz.Proxy.AbstractProxy.html">¶</a></h1>
-        <p class="short_description">Abstract Proxy</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/Bluz.Proxy.AbstractProxy.html" class="more">« More »</a>    </div>
-
                                         <div id="class_Acl" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Acl .collapse">
         <h1>Acl<a href="../classes/Bluz.Proxy.Acl.html">¶</a></h1>
         <p class="short_description">Proxy to Acl</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Acl;
-
-if (!Acl::isAllowed('users', 'profile')) {
+                            <p>Example of usage
+use Bluz\Proxy\Acl;</p>
+<pre><code>if (!Acl::isAllowed('users', 'profile')) {
      throw new Exception('You do not have permission to access user profiles');
 }</code></pre>
                     </div>
@@ -171,10 +162,9 @@ if (!Acl::isAllowed('users', 'profile')) {
         <h1>Auth<a href="../classes/Bluz.Proxy.Auth.html">¶</a></h1>
         <p class="short_description">Proxy to Auth</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Auth;
-
-$user = Auth::getIdentity();</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Auth;</p>
+<pre><code>$user = Auth::getIdentity();</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Auth.html" class="more">« More »</a>    </div>
 
@@ -182,10 +172,9 @@ $user = Auth::getIdentity();</code></pre>
         <h1>Cache<a href="../classes/Bluz.Proxy.Cache.html">¶</a></h1>
         <p class="short_description">Proxy to Cache</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Cache;
-
-if (!$result = Cache::get('some unique id')) {
+                            <p>Example of usage
+use Bluz\Proxy\Cache;</p>
+<pre><code>if (!$result = Cache::get('some unique id')) {
      $result = 2*2;
      Cache::set('some unique id', $result);
 }</code></pre>
@@ -196,10 +185,9 @@ if (!$result = Cache::get('some unique id')) {
         <h1>Config<a href="../classes/Bluz.Proxy.Config.html">¶</a></h1>
         <p class="short_description">Proxy to Config</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Config;
-
-if (!Config::getData('db')) {
+                            <p>Example of usage
+use Bluz\Proxy\Config;</p>
+<pre><code>if (!Config::getData('db')) {
      throw new Exception('Configuration for `db` is missed');
 }</code></pre>
                     </div>
@@ -209,10 +197,9 @@ if (!Config::getData('db')) {
         <h1>Db<a href="../classes/Bluz.Proxy.Db.html">¶</a></h1>
         <p class="short_description">Proxy to Db</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Db;
-
-Db::fetchAll('SELECT * FROM users');</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Db;</p>
+<pre><code>Db::fetchAll('SELECT * FROM users');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Db.html" class="more">« More »</a>    </div>
 
@@ -220,10 +207,9 @@ Db::fetchAll('SELECT * FROM users');</code></pre>
         <h1>EventManager<a href="../classes/Bluz.Proxy.EventManager.html">¶</a></h1>
         <p class="short_description">Proxy to EventManager</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\EventManager;
-
-EvenManager::attach('event name', function() {
+                            <p>Example of usage
+use Bluz\Proxy\EventManager;</p>
+<pre><code>EvenManager::attach('event name', function() {
     // ... some logic
 });
 
@@ -235,8 +221,8 @@ EventManager::trigger('event name');</code></pre>
         <h1>HttpCacheControl<a href="../classes/Bluz.Proxy.HttpCacheControl.html">¶</a></h1>
         <p class="short_description">Proxy to Http\CacheControl</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\HttpCacheControl;</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\HttpCacheControl;</p>
                     </div>
         <a href="../classes/Bluz.Proxy.HttpCacheControl.html" class="more">« More »</a>    </div>
 
@@ -244,10 +230,9 @@ EventManager::trigger('event name');</code></pre>
         <h1>Layout<a href="../classes/Bluz.Proxy.Layout.html">¶</a></h1>
         <p class="short_description">Proxy to Layout</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Layout;
-
-Layout::title('Homepage');
+                            <p>Example of usage
+use Bluz\Proxy\Layout;</p>
+<pre><code>Layout::title('Homepage');
 Layout::set('description', 'some page description');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Layout.html" class="more">« More »</a>    </div>
@@ -256,10 +241,9 @@ Layout::set('description', 'some page description');</code></pre>
         <h1>Logger<a href="../classes/Bluz.Proxy.Logger.html">¶</a></h1>
         <p class="short_description">Proxy to Logger</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Logger;
-
-Logger::error('Configuration not found');</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Logger;</p>
+<pre><code>Logger::error('Configuration not found');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Logger.html" class="more">« More »</a>    </div>
 
@@ -267,10 +251,9 @@ Logger::error('Configuration not found');</code></pre>
         <h1>Mailer<a href="../classes/Bluz.Proxy.Mailer.html">¶</a></h1>
         <p class="short_description">Proxy to Mailer</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Mailer;
-
-$mail = Mailer::create();
+                            <p>Example of usage
+use Bluz\Proxy\Mailer;</p>
+<pre><code>$mail = Mailer::create();
 $mail-&gt;From = 'from@example.com';
 $mail-&gt;Subject = 'Here is the subject';
 // ...
@@ -282,10 +265,9 @@ Mailer::send($mail);</code></pre>
         <h1>Messages<a href="../classes/Bluz.Proxy.Messages.html">¶</a></h1>
         <p class="short_description">Proxy to Messages</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Messages;
-
-Messages::addSuccess('All Ok!');</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Messages;</p>
+<pre><code>Messages::addSuccess('All Ok!');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Messages.html" class="more">« More »</a>    </div>
 
@@ -293,10 +275,9 @@ Messages::addSuccess('All Ok!');</code></pre>
         <h1>Registry<a href="../classes/Bluz.Proxy.Registry.html">¶</a></h1>
         <p class="short_description">Proxy to Registry</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Registry;
-
-Registry::set('key', 'value');
+                            <p>Example of usage
+use Bluz\Proxy\Registry;</p>
+<pre><code>Registry::set('key', 'value');
 Registry::get('key');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Registry.html" class="more">« More »</a>    </div>
@@ -305,10 +286,9 @@ Registry::get('key');</code></pre>
         <h1>Request<a href="../classes/Bluz.Proxy.Request.html">¶</a></h1>
         <p class="short_description">Proxy to Request</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Request;
-
-Request::getParam('foo');</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Request;</p>
+<pre><code>Request::getParam('foo');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Request.html" class="more">« More »</a>    </div>
 
@@ -316,10 +296,9 @@ Request::getParam('foo');</code></pre>
         <h1>Response<a href="../classes/Bluz.Proxy.Response.html">¶</a></h1>
         <p class="short_description">Proxy to Response</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Response;
-
-Response::setStatusCode(304);
+                            <p>Example of usage
+use Bluz\Proxy\Response;</p>
+<pre><code>Response::setStatusCode(304);
 Response::setHeader('Location', '/index/index');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Response.html" class="more">« More »</a>    </div>
@@ -328,10 +307,9 @@ Response::setHeader('Location', '/index/index');</code></pre>
         <h1>Router<a href="../classes/Bluz.Proxy.Router.html">¶</a></h1>
         <p class="short_description">Proxy to Router</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Router;
-
-Router::getUrl('pages', 'index', ['alias' =&gt; 'about']); // for skeleton application is `/about.html`</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Router;</p>
+<pre><code>Router::getUrl('pages', 'index', ['alias' =&gt; 'about']); // for skeleton application is `/about.html`</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Router.html" class="more">« More »</a>    </div>
 
@@ -339,10 +317,9 @@ Router::getUrl('pages', 'index', ['alias' =&gt; 'about']); // for skeleton appli
         <h1>Session<a href="../classes/Bluz.Proxy.Session.html">¶</a></h1>
         <p class="short_description">Proxy to Session</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Session;
-
-// lazy session loading
+                            <p>Example of usage
+use Bluz\Proxy\Session;</p>
+<pre><code>// lazy session loading
 Session::set('some key in session', 'value example');
 Session::get('some key in session');</code></pre>
                     </div>
@@ -352,10 +329,9 @@ Session::get('some key in session');</code></pre>
         <h1>Translator<a href="../classes/Bluz.Proxy.Translator.html">¶</a></h1>
         <p class="short_description">Proxy to Translator</p>
         <div class="details collapse">
-                            <p>Example of usage</p>
-<pre><code>use Bluz\Proxy\Translator;
-
-echo Translator::translate('message id');</code></pre>
+                            <p>Example of usage
+use Bluz\Proxy\Translator;</p>
+<pre><code>echo Translator::translate('message id');</code></pre>
                     </div>
         <a href="../classes/Bluz.Proxy.Translator.html" class="more">« More »</a>    </div>
 
@@ -370,7 +346,7 @@ echo Translator::translate('message id');</code></pre>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:51 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:44 +0300.<br/>
     </footer>
     </body>
 </html>

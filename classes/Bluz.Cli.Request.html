@@ -125,7 +125,13 @@
         </a>
     </li>
 
-                                                                                                                                                                <li class="method public inherited">
+                                                                                                                                                                <li class="method public">
+        <a href="#method_getAccept" title="getAccept :: Accept only CLI">
+            <span class="description">Accept only CLI</span><pre>getAccept</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_getAllParams" title="getAllParams :: Get all request parameters">
             <span class="description">Get all request parameters</span><pre>getAllParams</pre>
         </a>
@@ -158,6 +164,12 @@
                                                                                                         <li class="method public inherited">
         <a href="#method_getEnv" title="getEnv :: Retrieve a member of the $_ENV super global">
             <span class="description">Retrieve a member of the $_ENV super global</span><pre>getEnv</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getHeader" title="getHeader :: Return false for CLI">
+            <span class="description">Return false for CLI</span><pre>getHeader</pre>
         </a>
     </li>
 
@@ -320,7 +332,7 @@
                                 <span class="description">Check options in package</span><pre>checkOptions</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="method protected inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method protected inherited">
                             <a href="#method_initOptions" title="initOptions :: Initialization for options">
                                 <span class="description">Initialization for options</span><pre>initOptions</pre>
                             </a>
@@ -329,7 +341,7 @@
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="method private inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method private inherited">
                             <a href="#method_normalizeKey" title="normalizeKey :: Normalize key name">
                                 <span class="description">Normalize key name</span><pre>normalizeKey</pre>
                             </a>
@@ -339,6 +351,31 @@
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
             <ul>
+                                <li class="constant ">
+                    <a href="#constant_ACCEPT_CLI" title="ACCEPT_CLI :: ">
+                        <span class="description"></span><pre>ACCEPT_CLI</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ACCEPT_HTML" title="ACCEPT_HTML :: ">
+                        <span class="description"></span><pre>ACCEPT_HTML</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ACCEPT_JSON" title="ACCEPT_JSON :: ">
+                        <span class="description"></span><pre>ACCEPT_JSON</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ACCEPT_JSONP" title="ACCEPT_JSONP :: ">
+                        <span class="description"></span><pre>ACCEPT_JSONP</pre>
+                    </a>
+                </li>
+                                <li class="constant ">
+                    <a href="#constant_ACCEPT_XML" title="ACCEPT_XML :: ">
+                        <span class="description"></span><pre>ACCEPT_XML</pre>
+                    </a>
+                </li>
                                 <li class="constant ">
                     <a href="#constant_METHOD_CLI" title="METHOD_CLI :: Command line request">
                         <span class="description">Command line request</span><pre>METHOD_CLI</pre>
@@ -462,7 +499,7 @@
                                                 </th>
                                                 <td>
                                                                                                                                                                         
-                                                                                                                                                                        <p>php bin/cli.php --uri "/index/index/?foo=bar"</p>
+                                                                                                                                                                        <p>php bin/cli.php --uri &quot;/index/index/?foo=bar&quot;</p>
                                                                                                     </td>
                                             </tr>
                                                                                     <tr>
@@ -520,6 +557,35 @@
                                     
                                                                             <h3>Response</h3>
                                         <code>boolean</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getAccept"></a>
+                        <div class="element clickable method public  method_getAccept" data-toggle="collapse" data-target=".method_getAccept .collapse">
+                            <h2>Accept only CLI</h2>
+                            <pre>getAccept() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p></p>
                                                                     </div>
                             </div>
 
@@ -696,6 +762,33 @@
                                                                             
                                                                             <h3>Response</h3>
                                         <code>mixed</code><p><p>Returns null if key does not exist</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getHeader"></a>
+                        <div class="element clickable method public  method_getHeader" data-toggle="collapse" data-target=".method_getHeader .collapse">
+                            <h2>Return false for CLI</h2>
+                            <pre>getHeader(string $header) : false</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$header</h4>
+                                                <code>string</code><p><p>HTTP header name</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>false</code><p><p>HTTP header not found</p></p>
                                                                     </div>
                             </div>
 
@@ -1709,6 +1802,119 @@
                                     </div>
                                 </div>
                             </div>
+                                                    <a id="constant_ACCEPT_CLI"> </a>
+                            <div class="element clickable constant  constant_ACCEPT_CLI inherited" data-toggle="collapse" data-target=".constant_ACCEPT_CLI .collapse">
+                                <h2>ACCEPT_CLI</h2>
+                                <pre>ACCEPT_CLI</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        const
+                                                    </th>
+                                                    <td>
+                                                                                                                    <p>string HTTP ACCEPT MIME types</p>
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ACCEPT_HTML"> </a>
+                            <div class="element clickable constant  constant_ACCEPT_HTML inherited" data-toggle="collapse" data-target=".constant_ACCEPT_HTML .collapse">
+                                <h2>ACCEPT_HTML</h2>
+                                <pre>ACCEPT_HTML</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ACCEPT_JSON"> </a>
+                            <div class="element clickable constant  constant_ACCEPT_JSON inherited" data-toggle="collapse" data-target=".constant_ACCEPT_JSON .collapse">
+                                <h2>ACCEPT_JSON</h2>
+                                <pre>ACCEPT_JSON</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ACCEPT_JSONP"> </a>
+                            <div class="element clickable constant  constant_ACCEPT_JSONP inherited" data-toggle="collapse" data-target=".constant_ACCEPT_JSONP .collapse">
+                                <h2>ACCEPT_JSONP</h2>
+                                <pre>ACCEPT_JSONP</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="constant_ACCEPT_XML"> </a>
+                            <div class="element clickable constant  constant_ACCEPT_XML inherited" data-toggle="collapse" data-target=".constant_ACCEPT_XML .collapse">
+                                <h2>ACCEPT_XML</h2>
+                                <pre>ACCEPT_XML</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
                                             
                                                                 <h3><i class="icon-custom icon-property"></i> Properties</h3>
                                                     <a id="property_requestUri"> </a>
@@ -1812,6 +2018,32 @@
 
                                                                                     <h3>Type(s)</h3>
                                             <code>\Bluz\Request\string;</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_accept"> </a>
+                            <div class="element clickable property  protected property_accept inherited" data-toggle="collapse" data-target=".property_accept .collapse">
+                                <h2>HTTP Accept Mime Type or CLI</h2>
+                                <pre>accept : string</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
                                                                             </div>
                                 </div>
                             </div>
@@ -1991,7 +2223,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:55 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:51 +0300.<br/>
     </footer>
     </body>
 </html>

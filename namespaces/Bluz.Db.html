@@ -173,14 +173,6 @@
                 <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
                 
                 
-                                        <div id="class_Db" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Db .collapse">
-        <h1>Db<a href="../classes/Bluz.Db.Db.html">¶</a></h1>
-        <p class="short_description">PDO wrapper</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/Bluz.Db.Db.html" class="more">« More »</a>    </div>
-
                                         <div id="class_Relations" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Relations .collapse">
         <h1>Relations<a href="../classes/Bluz.Db.Relations.html">¶</a></h1>
         <p class="short_description">Relations map of Db tables</p>
@@ -193,16 +185,15 @@
         <h1>Row<a href="../classes/Bluz.Db.Row.html">¶</a></h1>
         <p class="short_description">Row</p>
         <div class="details collapse">
-                            <p>Example of Users\Row</p>
-<pre><code>namespace Application\Users;
+                            <p>Example of Users\Row
+namespace Application\Users;
 class Row extends \Bluz\Db\Row
 {
-   public function beforeInsert()
-   {
-       $this-&gt;created = gmdate('Y-m-d H:i:s');
-   }
-
-   public function beforeUpdate()
+public function beforeInsert()
+{
+$this-&gt;created = gmdate('Y-m-d H:i:s');
+}</p>
+<pre><code>   public function beforeUpdate()
    {
        $this-&gt;updated = gmdate('Y-m-d H:i:s');
    }
@@ -213,26 +204,6 @@ $userRow -&gt; login = 'username';
 $userRow -&gt; save();</code></pre>
                     </div>
         <a href="../classes/Bluz.Db.Row.html" class="more">« More »</a>    </div>
-
-                                        <div id="class_Table" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Table .collapse">
-        <h1>Table<a href="../classes/Bluz.Db.Table.html">¶</a></h1>
-        <p class="short_description">Table</p>
-        <div class="details collapse">
-                            <p>Example of Users\Table</p>
-<pre><code>namespace Application\Users;
-class Table extends \Bluz\Db\Table
-{
-   protected $table = 'users';
-   protected $primary = array('id');
-}
-
-$userRows = \Application\Users\Table::find(1,2,3,4,5);
-foreach ($userRows as $userRow) {
-   $userRow -&gt; description = 'In first 5';
-   $userRow -&gt; save();
-}</code></pre>
-                    </div>
-        <a href="../classes/Bluz.Db.Table.html" class="more">« More »</a>    </div>
 
                             </div>
             
@@ -364,14 +335,6 @@ Based on Doctrine QueryBuilder code</p>
                     </div>
         <a href="../classes/Bluz.Db.Query.Insert.html" class="more">« More »</a>    </div>
 
-                                        <div id="class_Select" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Select .collapse">
-        <h1>Select<a href="../classes/Bluz.Db.Query.Select.html">¶</a></h1>
-        <p class="short_description">Builder of SELECT queries</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/Bluz.Db.Query.Select.html" class="more">« More »</a>    </div>
-
                                         <div id="class_Update" class="element ajax clickable class" data-toggle="collapse" data-target="#class_Update .collapse">
         <h1>Update<a href="../classes/Bluz.Db.Query.Update.html">¶</a></h1>
         <p class="short_description">Builder of UPDATE queries</p>
@@ -458,17 +421,6 @@ Based on Doctrine QueryBuilder code</p>
                     </div>
         <a href="../classes/Bluz.Db.Query.Traits.Set.html" class="more">« More »</a>    </div>
 
-                                        <div id="trait_Where" class="element ajax clickable trait" data-toggle="collapse" data-target="#trait_Where .collapse">
-        <h1>Where<a href="../classes/Bluz.Db.Query.Traits.Where.html">¶</a></h1>
-        <p class="short_description">Order Trait, required for:
- - Select Builder
- - Update Builder
- - Delete Builder</p>
-        <div class="details collapse">
-                            
-                    </div>
-        <a href="../classes/Bluz.Db.Query.Traits.Where.html" class="more">« More »</a>    </div>
-
                 
                 
                             </div>
@@ -484,7 +436,7 @@ Based on Doctrine QueryBuilder code</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Wed, 03 Dec 2014 10:34:52 +0200.<br/>
+            generated on Tue, 12 May 2015 19:37:44 +0300.<br/>
     </footer>
     </body>
 </html>
