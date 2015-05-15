@@ -120,8 +120,8 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_addClassMap" title="addClassMap :: Add information about Table classes">
-            <span class="description">Add information about Table classes</span><pre>addClassMap</pre>
+        <a href="#method_addClassMap" title="addClassMap :: Add information about model&#039;s classes">
+            <span class="description">Add information about model&#039;s classes</span><pre>addClassMap</pre>
         </a>
     </li>
 
@@ -150,26 +150,26 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getRelations" title="getRelations :: getRelations">
-            <span class="description">getRelations</span><pre>getRelations</pre>
+        <a href="#method_getModelClass" title="getModelClass :: Get information about Model classes">
+            <span class="description">Get information about Model classes</span><pre>getModelClass</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getTableClass" title="getTableClass :: Get information about Table classes">
-            <span class="description">Get information about Table classes</span><pre>getTableClass</pre>
+        <a href="#method_getRelations" title="getRelations :: Get relations">
+            <span class="description">Get relations</span><pre>getRelations</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setRelation" title="setRelation :: Setup relation between two tables">
-            <span class="description">Setup relation between two tables</span><pre>setRelation</pre>
+        <a href="#method_setRelation" title="setRelation :: Setup relation between two models">
+            <span class="description">Setup relation between two models</span><pre>setRelation</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_setRelations" title="setRelations :: setMultiRelations">
-            <span class="description">setMultiRelations</span><pre>setRelations</pre>
+        <a href="#method_setRelations" title="setRelations :: Setup multi relations">
+            <span class="description">Setup multi relations</span><pre>setRelations</pre>
         </a>
     </li>
 
@@ -236,8 +236,8 @@
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
                                                                 <a id="method_addClassMap"></a>
                         <div class="element clickable method public  method_addClassMap" data-toggle="collapse" data-target=".method_addClassMap .collapse">
-                            <h2>Add information about Table classes</h2>
-                            <pre>addClassMap(string $tableName, string $className) : void</pre>
+                            <h2>Add information about model&#039;s classes</h2>
+                            <pre>addClassMap(string $model, string $className) : void</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -251,7 +251,7 @@
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableName</h4>
+                                                <h4>$model</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -266,7 +266,7 @@
                                             <a id="method_createRow"></a>
                         <div class="element clickable method public  method_createRow" data-toggle="collapse" data-target=".method_createRow .collapse">
                             <h2>Get information about Table classes</h2>
-                            <pre>createRow(string $tableName, array $data) : \Bluz\Db\Row</pre>
+                            <pre>createRow(string $modelName, array $data) : \Bluz\Db\Row</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -289,7 +289,7 @@
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableName</h4>
+                                                <h4>$modelName</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -342,7 +342,7 @@
                                             <a id="method_findRelation"></a>
                         <div class="element clickable method public  method_findRelation" data-toggle="collapse" data-target=".method_findRelation .collapse">
                             <h2>findRelation</h2>
-                            <pre>findRelation(\Bluz\Db\Row $row, string $tableRelation) : array</pre>
+                            <pre>findRelation(\Bluz\Db\Row $row, string $relation) : array</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -369,7 +369,7 @@
                                                 <code><a href="../classes/Bluz.Db.Row.html">\Bluz\Db\Row</a></code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableRelation</h4>
+                                                <h4>$relation</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                             
@@ -382,7 +382,7 @@
                                             <a id="method_findRelations"></a>
                         <div class="element clickable method public  method_findRelations" data-toggle="collapse" data-target=".method_findRelations .collapse">
                             <h2>Find Relations between two tables</h2>
-                            <pre>findRelations(string $tableOne, string $tableTwo, array $keys) : array</pre>
+                            <pre>findRelations(string $modelOne, string $modelTwo, array $keys) : array</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -405,11 +405,11 @@
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableOne</h4>
+                                                <h4>$modelOne</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableTwo</h4>
+                                                <h4>$modelTwo</h4>
                                                 <code>string</code><p><p>target table</p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -423,41 +423,10 @@
                             </div>
 
                         </div>
-                                            <a id="method_getRelations"></a>
-                        <div class="element clickable method public  method_getRelations" data-toggle="collapse" data-target=".method_getRelations .collapse">
-                            <h2>getRelations</h2>
-                            <pre>getRelations(string $tableOne, string $tableTwo) : array|false</pre>
-                            <div class="labels">
-                                                                <span class="label">static</span>                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$tableOne</h4>
-                                                <code>string</code><p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$tableTwo</h4>
-                                                <code>string</code><p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>array|false</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_getTableClass"></a>
-                        <div class="element clickable method public  method_getTableClass" data-toggle="collapse" data-target=".method_getTableClass .collapse">
-                            <h2>Get information about Table classes</h2>
-                            <pre>getTableClass(string $tableName) : string</pre>
+                                            <a id="method_getModelClass"></a>
+                        <div class="element clickable method public  method_getModelClass" data-toggle="collapse" data-target=".method_getModelClass .collapse">
+                            <h2>Get information about Model classes</h2>
+                            <pre>getModelClass(string $model) : string</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -480,7 +449,7 @@
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableName</h4>
+                                                <h4>$model</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                             
@@ -490,10 +459,10 @@
                             </div>
 
                         </div>
-                                            <a id="method_setRelation"></a>
-                        <div class="element clickable method public  method_setRelation" data-toggle="collapse" data-target=".method_setRelation .collapse">
-                            <h2>Setup relation between two tables</h2>
-                            <pre>setRelation(string $tableOne, string $keyOne, string $tableTwo, string $keyTwo) : void</pre>
+                                            <a id="method_getRelations"></a>
+                        <div class="element clickable method public  method_getRelations" data-toggle="collapse" data-target=".method_getRelations .collapse">
+                            <h2>Get relations</h2>
+                            <pre>getRelations(string $modelOne, string $modelTwo) : array|false</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -507,7 +476,38 @@
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableOne</h4>
+                                                <h4>$modelOne</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$modelTwo</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array|false</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setRelation"></a>
+                        <div class="element clickable method public  method_setRelation" data-toggle="collapse" data-target=".method_setRelation .collapse">
+                            <h2>Setup relation between two models</h2>
+                            <pre>setRelation(string $modelOne, string $keyOne, string $modelTwo, string $keyTwo) : void</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$modelOne</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -515,7 +515,7 @@
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableTwo</h4>
+                                                <h4>$modelTwo</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -529,8 +529,8 @@
                         </div>
                                             <a id="method_setRelations"></a>
                         <div class="element clickable method public  method_setRelations" data-toggle="collapse" data-target=".method_setRelations .collapse">
-                            <h2>setMultiRelations</h2>
-                            <pre>setRelations(string $tableOne, string $tableTwo, array $relations) : void</pre>
+                            <h2>Setup multi relations</h2>
+                            <pre>setRelations(string $modelOne, string $modelTwo, array $relations) : void</pre>
                             <div class="labels">
                                                                 <span class="label">static</span>                                                                                                                            </div>
 
@@ -544,11 +544,11 @@
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableOne</h4>
+                                                <h4>$modelOne</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableTwo</h4>
+                                                <h4>$modelTwo</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
@@ -572,11 +572,11 @@
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"><p>array(
-'table1:table2' =&gt; ['table1'=&gt;'foreignKey', 'table2'=&gt;'primaryKey'],
-'pages:users' =&gt; ['pages'=&gt;'userId', 'users'=&gt;'id'],
-'pages_tags:pages' =&gt; ['pages_tags'=&gt;'pageId', 'pages'=&gt;'id'],
-'pages_tags:tags' =&gt; ['pages_tags'=&gt;'tagId', 'tags'=&gt;'id'],
-'pages:tags' =&gt; ['pages_tags'],
+'Model1:Model2' =&gt; ['Model1'=&gt;'foreignKey', 'Model2'=&gt;'primaryKey'],
+'Pages:Users' =&gt; ['Pages'=&gt;'userId', 'Users'=&gt;'id'],
+'PagesTags:Pages' =&gt; ['PagesTags'=&gt;'pageId', 'Pages'=&gt;'id'],
+'PagesTags:Tags' =&gt; ['PagesTags'=&gt;'tagId', 'Tags'=&gt;'id'],
+'Pages:Tags' =&gt; ['PagesTags'],
 )</p></div>
 
                                         <table class="table">
@@ -595,17 +595,17 @@
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_tableClassMap"> </a>
-                            <div class="element clickable property  protected property_tableClassMap" data-toggle="collapse" data-target=".property_tableClassMap .collapse">
+                                                    <a id="property_modelClassMap"> </a>
+                            <div class="element clickable property  protected property_modelClassMap" data-toggle="collapse" data-target=".property_modelClassMap .collapse">
                                 <h2>Class map, i.e.</h2>
-                                <pre>tableClassMap : array</pre>
+                                <pre>modelClassMap : array</pre>
                                 <div class="labels">
                                                                         <span class="label">static</span>                                </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description"><p>array(
-'table_name' =&gt; '\Application\TableName\Table',
-'users' =&gt; '\Application\Users\Table',
+'Pages' =&gt; '\Application\Pages\Table',
+'Users' =&gt; '\Application\Users\Table',
 )</p></div>
 
                                         <table class="table">
@@ -644,7 +644,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 12 May 2015 19:37:51 +0300.<br/>
+            generated on Fri, 15 May 2015 17:38:45 +0300.<br/>
     </footer>
     </body>
 </html>

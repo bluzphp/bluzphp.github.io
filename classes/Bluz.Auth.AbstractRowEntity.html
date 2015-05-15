@@ -126,6 +126,12 @@
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method___debugInfo" title="__debugInfo :: ">
+            <span class="description"></span><pre>__debugInfo</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method___get" title="__get :: Magic alias for get() regular method">
             <span class="description">Magic alias for get() regular method</span><pre>__get</pre>
         </a>
@@ -176,6 +182,12 @@
                                                                                                         <li class="method public inherited">
         <a href="#method_getRelation" title="getRelation :: Get relation by name">
             <span class="description">Get relation by name</span><pre>getRelation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_getRelations" title="getRelations :: Get relation by name">
+            <span class="description">Get relation by name</span><pre>getRelations</pre>
         </a>
     </li>
 
@@ -273,7 +285,7 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
+                                                                                                                                                                                                                                                                                                                                                                            <li class="method protected inherited">
                             <a href="#method_afterDelete" title="afterDelete :: Allows post-delete logic to be applied to row.">
                                 <span class="description">Allows post-delete logic to be applied to row.</span><pre>afterDelete</pre>
                             </a>
@@ -353,11 +365,11 @@
                                 <span class="description">Retrieves an associative array of primary keys, if it exists</span><pre>getPrimaryKey</pre>
                             </a>
                         </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -433,6 +445,35 @@ $userRow -&gt; save();</code></pre>
                                                                             
                                                                             <h3>Response</h3>
                                         <code><a href="../classes/Bluz.Db.Row.html">\Bluz\Db\Row</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method___debugInfo"></a>
+                        <div class="element clickable method public  method___debugInfo inherited" data-toggle="collapse" data-target=".method___debugInfo .collapse">
+                            <h2>__debugInfo</h2>
+                            <pre>__debugInfo() : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1112,7 +1153,7 @@ key is compound, or a scalar if the key is single-column.</p></p>
                                             <a id="method_getRelation"></a>
                         <div class="element clickable method public  method_getRelation inherited" data-toggle="collapse" data-target=".method_getRelation .collapse">
                             <h2>Get relation by name</h2>
-                            <pre>getRelation(string $tableName) : \Bluz\Db\Row</pre>
+                            <pre>getRelation(string $modelName) : \Bluz\Db\Row|false</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -1135,12 +1176,48 @@ key is compound, or a scalar if the key is single-column.</p></p>
 
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
-                                                <h4>$tableName</h4>
+                                                <h4>$modelName</h4>
                                                 <code>string</code><p></p>
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Db.Row.html">\Bluz\Db\Row</a></code><p></p>
+                                        <code><a href="../classes/Bluz.Db.Row.html">\Bluz\Db\Row</a>|false</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_getRelations"></a>
+                        <div class="element clickable method public  method_getRelations inherited" data-toggle="collapse" data-target=".method_getRelations .collapse">
+                            <h2>Get relation by name</h2>
+                            <pre>getRelations(string $modelName) : array</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$modelName</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1664,32 +1741,6 @@ key is compound, or a scalar if the key is single-column.</p></p>
                                                                             </div>
                                 </div>
                             </div>
-                                                    <a id="property_primary"> </a>
-                            <div class="element clickable property  protected property_primary inherited" data-toggle="collapse" data-target=".property_primary .collapse">
-                                <h2>Primary row key(s)</h2>
-                                <pre>primary : array</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description"></div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    <p>Primary row key(s)</p>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-
-                                                                                    <h3>Type(s)</h3>
-                                            <code>array</code>
-                                                                            </div>
-                                </div>
-                            </div>
                                                     <a id="property_clean"> </a>
                             <div class="element clickable property  protected property_clean inherited" data-toggle="collapse" data-target=".property_clean .collapse">
                                 <h2>This is set to a copy of $data when the data is fetched from
@@ -1815,7 +1866,7 @@ when dirty data is posted to the database with save().</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Tue, 12 May 2015 19:37:52 +0300.<br/>
+            generated on Fri, 15 May 2015 17:38:45 +0300.<br/>
     </footer>
     </body>
 </html>
