@@ -131,7 +131,7 @@
         </a>
     </li>
 
-                                                                                                                                                                <li class="method public">
+                                                                                                        <li class="method public">
         <a href="#method_clearBody" title="clearBody :: Clear response body">
             <span class="description">Clear response body</span><pre>clearBody</pre>
         </a>
@@ -299,14 +299,9 @@ same case-insensitive name.</span><pre>setHeader</pre>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                    <li class="method protected inherited">
-                            <a href="#method_checkOptions" title="checkOptions :: Check options in package">
-                                <span class="description">Check options in package</span><pre>checkOptions</pre>
-                            </a>
-                        </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
-                            <a href="#method_initOptions" title="initOptions :: Initialization for options">
-                                <span class="description">Initialization for options</span><pre>initOptions</pre>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="method protected inherited">
+                            <a href="#method_initOptions" title="initOptions :: Check and initialize options in package">
+                                <span class="description">Check and initialize options in package</span><pre>initOptions</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                 <li class="method protected">
@@ -323,7 +318,7 @@ same case-insensitive name.</span><pre>setHeader</pre>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method private inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="method private inherited">
                             <a href="#method_normalizeKey" title="normalizeKey :: Normalize key name">
                                 <span class="description">Normalize key name</span><pre>normalizeKey</pre>
                             </a>
@@ -445,44 +440,6 @@ header is added.</p></div>
                                                 <code>array</code><p><p>Associative array of headers to add to the message</p></p>
                                             </div>
                                                                             
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_checkOptions"></a>
-                        <div class="element clickable method protected  method_checkOptions inherited" data-toggle="collapse" data-target=".method_checkOptions .collapse">
-                            <h2>Check options in package</h2>
-                            <pre>checkOptions() : boolean</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>boolean</code><p></p>
                                                                     </div>
                             </div>
 
@@ -692,7 +649,7 @@ foreach ($message-&gt;getHeaders() as $name =&gt; $values) {
                                             <a id="method_getOption"></a>
                         <div class="element clickable method public  method_getOption inherited" data-toggle="collapse" data-target=".method_getOption .collapse">
                             <h2>Get option by key</h2>
-                            <pre>getOption(string $key, string|null $subKey = null) : mixed</pre>
+                            <pre>getOption(string $key, string|null $section = null) : mixed</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -710,7 +667,7 @@ foreach ($message-&gt;getHeaders() as $name =&gt; $values) {
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$subKey</h4>
+                                                <h4>$section</h4>
                                                 <code>string|null</code><p></p>
                                             </div>
                                                                             
@@ -900,7 +857,7 @@ no matching header name is found in the message.</p></p>
                         </div>
                                             <a id="method_initOptions"></a>
                         <div class="element clickable method protected  method_initOptions inherited" data-toggle="collapse" data-target=".method_initOptions .collapse">
-                            <h2>Initialization for options</h2>
+                            <h2>Check and initialize options in package</h2>
                             <pre>initOptions() : void</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
@@ -1663,7 +1620,7 @@ to the RFC 2616 recommended reason phrase for the response's Status-Code.</p></d
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Fri, 15 May 2015 17:38:46 +0300.<br/>
+            generated on Wed, 15 Jul 2015 13:25:12 +0300.<br/>
     </footer>
     </body>
 </html>

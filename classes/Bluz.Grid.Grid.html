@@ -120,8 +120,8 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method___construct" title="__construct :: __construct">
-            <span class="description">__construct</span><pre>__construct</pre>
+        <a href="#method___construct" title="__construct :: Grid constructor">
+            <span class="description">Grid constructor</span><pre>__construct</pre>
         </a>
     </li>
 
@@ -149,7 +149,7 @@
         </a>
     </li>
 
-                                                                                                                                                                <li class="method public">
+                                                                                                        <li class="method public">
         <a href="#method_filter" title="filter :: ">
             <span class="description"></span><pre>filter</pre>
         </a>
@@ -276,8 +276,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_init" title="init :: init">
-            <span class="description">init</span><pre>init</pre>
+        <a href="#method_init" title="init :: Initialize Grid">
+            <span class="description">Initialize Grid</span><pre>init</pre>
         </a>
     </li>
 
@@ -435,21 +435,16 @@
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                <li class="method protected inherited">
-                            <a href="#method_checkOptions" title="checkOptions :: Check options in package">
-                                <span class="description">Check options in package</span><pre>checkOptions</pre>
-                            </a>
-                        </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
-                            <a href="#method_initOptions" title="initOptions :: Initialization for options">
-                                <span class="description">Initialization for options</span><pre>initOptions</pre>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method protected inherited">
+                            <a href="#method_initOptions" title="initOptions :: Check and initialize options in package">
+                                <span class="description">Check and initialize options in package</span><pre>initOptions</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li class="method private inherited">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li class="method private inherited">
                             <a href="#method_normalizeKey" title="normalizeKey :: Normalize key name">
                                 <span class="description">Normalize key name</span><pre>normalizeKey</pre>
                             </a>
@@ -573,8 +568,8 @@
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
                                                                 <a id="method___construct"></a>
                         <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
-                            <h2>__construct</h2>
-                            <pre>__construct(array $options = null) : \Bluz\Grid\Grid</pre>
+                            <h2>Grid constructor</h2>
+                            <pre>__construct(array $options = null) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -584,6 +579,13 @@
                                     <div class="long_description"></div>
 
                                     <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
                                                                             </table>
 
                                                                             <h3>Arguments</h3>
@@ -592,8 +594,6 @@
                                                 <code>array</code><p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/Bluz.Grid.Grid.html">\Bluz\Grid\Grid</a></code><p></p>
                                                                     </div>
                             </div>
 
@@ -724,44 +724,6 @@
                                                 <code>string</code><p></p>
                                             </div>
                                                                             
-                                                                            <h3>Response</h3>
-                                        <code>boolean</code><p></p>
-                                                                    </div>
-                            </div>
-
-                        </div>
-                                            <a id="method_checkOptions"></a>
-                        <div class="element clickable method protected  method_checkOptions inherited" data-toggle="collapse" data-target=".method_checkOptions .collapse">
-                            <h2>Check options in package</h2>
-                            <pre>checkOptions() : boolean</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-
-                            
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
                                                                             <h3>Response</h3>
                                         <code>boolean</code><p></p>
                                                                     </div>
@@ -1131,7 +1093,7 @@
                                             <a id="method_getOption"></a>
                         <div class="element clickable method public  method_getOption inherited" data-toggle="collapse" data-target=".method_getOption .collapse">
                             <h2>Get option by key</h2>
-                            <pre>getOption(string $key, string|null $subKey = null) : mixed</pre>
+                            <pre>getOption(string $key, string|null $section = null) : mixed</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
 
@@ -1149,7 +1111,7 @@
                                                 <code>string</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
-                                                <h4>$subKey</h4>
+                                                <h4>$section</h4>
                                                 <code>string|null</code><p></p>
                                             </div>
                                                                             
@@ -1389,7 +1351,7 @@
                         </div>
                                             <a id="method_init"></a>
                         <div class="element clickable method public  method_init" data-toggle="collapse" data-target=".method_init .collapse">
-                            <h2>init</h2>
+                            <h2>Initialize Grid</h2>
                             <pre>init() : \Bluz\Grid\Grid</pre>
                             <div class="labels">
                                                                                                                                 <span class="label">abstract</span>                                                            </div>
@@ -1418,7 +1380,7 @@
                         </div>
                                             <a id="method_initOptions"></a>
                         <div class="element clickable method protected  method_initOptions inherited" data-toggle="collapse" data-target=".method_initOptions .collapse">
-                            <h2>Initialization for options</h2>
+                            <h2>Check and initialize options in package</h2>
                             <pre>initOptions() : void</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
@@ -1792,7 +1754,7 @@
                                             <a id="method_setAllowFilters"></a>
                         <div class="element clickable method public  method_setAllowFilters" data-toggle="collapse" data-target=".method_setAllowFilters .collapse">
                             <h2>Set allowed filters</h2>
-                            <pre>setAllowFilters(array $filters = array()) : void</pre>
+                            <pre>setAllowFilters(array&lt;mixed,string&gt; $filters = array()) : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1807,7 +1769,7 @@
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$filters</h4>
-                                                <code>array</code><p></p>
+                                                <code>array&lt;mixed,string&gt;</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -1817,7 +1779,7 @@
                                             <a id="method_setAllowOrders"></a>
                         <div class="element clickable method public  method_setAllowOrders" data-toggle="collapse" data-target=".method_setAllowOrders .collapse">
                             <h2>Set allow orders</h2>
-                            <pre>setAllowOrders(array $orders = array()) : void</pre>
+                            <pre>setAllowOrders(array&lt;mixed,string&gt; $orders = array()) : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1832,7 +1794,7 @@
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$orders</h4>
-                                                <code>array</code><p></p>
+                                                <code>array&lt;mixed,string&gt;</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -1842,7 +1804,7 @@
                                             <a id="method_setController"></a>
                         <div class="element clickable method public  method_setController" data-toggle="collapse" data-target=".method_setController .collapse">
                             <h2>Set controller</h2>
-                            <pre>setController( $controller) : void</pre>
+                            <pre>setController(string $controller) : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1857,7 +1819,7 @@
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$controller</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -1973,7 +1935,7 @@
                                             <a id="method_setModule"></a>
                         <div class="element clickable method public  method_setModule" data-toggle="collapse" data-target=".method_setModule .collapse">
                             <h2>Set module</h2>
-                            <pre>setModule( $module) : void</pre>
+                            <pre>setModule(string $module) : void</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1988,7 +1950,7 @@
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$module</h4>
-                                                <code></code><p></p>
+                                                <code>string</code><p></p>
                                             </div>
                                                                             
                                                                     </div>
@@ -2864,7 +2826,7 @@
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Fri, 15 May 2015 17:38:48 +0300.<br/>
+            generated on Wed, 15 Jul 2015 13:25:13 +0300.<br/>
     </footer>
     </body>
 </html>
