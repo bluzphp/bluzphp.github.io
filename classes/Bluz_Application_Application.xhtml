@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Application\Application</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Application">Bluz\Application</a>
+          </li>
+          <li class="separator">Application</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Application/Application.php.xhtml#line52">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Application\</small>Application</h1>
+        <h4>Application</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Application
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$path</a>;
+                    </li><li>protected string <a href="#members">$environment</a> =
+                        'production';
+                    </li><li>protected <span title="Bluz\Application\bool">bool</span> <a href="#members">$debugFlag</a> =
+                        false;
+                    </li><li>protected <span title="Bluz\Application\bool">bool</span> <a href="#members">$layoutFlag</a> =
+                        true;
+                    </li><li>protected <span title="Bluz\Application\bool">bool</span> <a href="#members">$jsonFlag</a> =
+                        false;
+                    </li><li>protected <span title="Bluz\Application\bool">bool</span> <a href="#members">$xmlFlag</a> =
+                        false;
+                    </li><li>protected array <a href="#members">$widgets</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$api</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getEnvironment.xhtml">getEnvironment</a>()
+                    </li><li>public string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getPath.xhtml">getPath</a>()
+                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isDebug.xhtml">isDebug</a>()
+                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isJson.xhtml">isJson</a>()
+                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isXml.xhtml">isXml</a>()
+                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/hasLayout.xhtml">hasLayout</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useLayout.xhtml">useLayout</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useJson.xhtml">useJson</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useJsonp.xhtml">useJsonp</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useXml.xhtml">useXml</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRequest.xhtml">initRequest</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preProcess.xhtml">preProcess</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doProcess.xhtml">doProcess</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess</a>()
+                    </li><li>public View|callable <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/dispatch.xhtml">dispatch</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preDispatch.xhtml">preDispatch</a>()
+                    </li><li>protected View|callable <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doDispatch.xhtml">doDispatch</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/render.xhtml">render</a>()
+                    </li><li>public Response <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getResponse.xhtml">getResponse</a>()
+                    </li><li>public Request <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getRequest.xhtml">getRequest</a>()
+                    </li><li>public Closure <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/widget.xhtml">widget</a>()
+                    </li><li>public Closure <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/api.xhtml">api</a>()
+                    </li><li>public Reflection <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/reflection.xhtml">reflection</a>()
+                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isAllowed.xhtml">isAllowed</a>()
+                    </li><li>protected string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getControllerFile.xhtml">getControllerFile</a>()
+                    </li><li>protected string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getWidgetFile.xhtml">getWidgetFile</a>()
+                    </li><li>protected string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getApiFile.xhtml">getApiFile</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/finish.xhtml">finish</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
+                        </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
+                        </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Singleton">Singleton</span></li><li>public final static Application <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance</a>()
+                        </li><li>protected void <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__construct.xhtml">__construct</a>()
+                        </li><li>protected void <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__clone.xhtml">__clone</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a>
+            </li>
+            <li>
+              <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton.xhtml">Bluz\Common\Singleton</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="api"><strong>$api</strong>
+                —
+                array</li>
+            <li id="debugFlag"><strong>$debugFlag</strong>
+                —
+                <a title="Bluz\Application\bool" href="../classes/Bluz_Application_bool.xhtml">Bluz\Application\bool</a></li>
+            <li id="environment"><strong>$environment</strong>
+                —
+                string</li>
+            <li id="helpers"><strong>$helpers</strong>
+                —
+                array</li>
+            <li id="helpersPath"><strong>$helpersPath</strong>
+                —
+                array</li>
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application.xhtml">Bluz\Application\Application</a></li>
+            <li id="jsonFlag"><strong>$jsonFlag</strong>
+                —
+                <a title="Bluz\Application\bool" href="../classes/Bluz_Application_bool.xhtml">Bluz\Application\bool</a></li>
+            <li id="layoutFlag"><strong>$layoutFlag</strong>
+                —
+                <a title="Bluz\Application\bool" href="../classes/Bluz_Application_bool.xhtml">Bluz\Application\bool</a></li>
+            <li id="path"><strong>$path</strong>
+                —
+                string</li>
+            <li id="widgets"><strong>$widgets</strong>
+                —
+                array</li>
+            <li id="xmlFlag"><strong>$xmlFlag</strong>
+                —
+                <a title="Bluz\Application\bool" href="../classes/Bluz_Application_bool.xhtml">Bluz\Application\bool</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="doDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doDispatch.xhtml">doDispatch()</a>
+                — Do dispatch</li>
+            <li id="doProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doProcess.xhtml">doProcess()</a>
+                — Do process</li>
+            <li id="getApiFile"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getApiFile.xhtml">getApiFile()</a>
+                — Get API file</li>
+            <li id="getControllerFile"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getControllerFile.xhtml">getControllerFile()</a>
+                — Get controller file</li>
+            <li id="getWidgetFile"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getWidgetFile.xhtml">getWidgetFile()</a>
+                — Get widget file</li>
+            <li id="initRequest"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRequest.xhtml">initRequest()</a>
+                — Initial Request instance</li>
+            <li id="initResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse()</a>
+                — Initial Response instance</li>
+            <li id="postDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch()</a>
+                — Post dispatch mount point</li>
+            <li id="postProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess()</a>
+                — Post process</li>
+            <li id="preDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preDispatch.xhtml">preDispatch()</a>
+                — Pre dispatch mount point</li>
+            <li id="preProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preProcess.xhtml">preProcess()</a>
+                — Pre process</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="api"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/api.xhtml">api()</a>
+                — Api call</li>
+            <li id="dispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/dispatch.xhtml">dispatch()</a>
+                — Dispatch controller with params</li>
+            <li id="finish"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/finish.xhtml">finish()</a>
+                — Finally method</li>
+            <li id="getEnvironment"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getEnvironment.xhtml">getEnvironment()</a>
+                — Get application environment</li>
+            <li id="getPath"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getPath.xhtml">getPath()</a>
+                — Get path to Application</li>
+            <li id="getRequest"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getRequest.xhtml">getRequest()</a>
+                — Get Request instance</li>
+            <li id="getResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getResponse.xhtml">getResponse()</a>
+                — Get Response instance</li>
+            <li id="hasLayout"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/hasLayout.xhtml">hasLayout()</a>
+                — Check Layout flag</li>
+            <li id="init"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init()</a>
+                — Initialize process</li>
+            <li id="isAllowed"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isAllowed.xhtml">isAllowed()</a>
+                — Is allowed controller/widget/etc</li>
+            <li id="isDebug"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isDebug.xhtml">isDebug()</a>
+                — Check debug flag</li>
+            <li id="isJson"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isJson.xhtml">isJson()</a>
+                — Check Json flag</li>
+            <li id="isXml"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isXml.xhtml">isXml()</a>
+                — Check XML flag</li>
+            <li id="process"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process()</a>
+                — Process application</li>
+            <li id="reflection"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/reflection.xhtml">reflection()</a>
+                — Retrieve reflection for anonymous function</li>
+            <li id="render"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/render.xhtml">render()</a>
+                — Render, is send Response</li>
+            <li id="useJson"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useJson.xhtml">useJson()</a>
+                — Set JSON presentation</li>
+            <li id="useJsonp"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useJsonp.xhtml">useJsonp()</a>
+                — Set JSONP presentation</li>
+            <li id="useLayout"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useLayout.xhtml">useLayout()</a>
+                — Set Layout template and/or flag</li>
+            <li id="useXml"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useXml.xhtml">useXml()</a>
+                — Set XML presentation</li>
+            <li id="widget"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/widget.xhtml">widget()</a>
+                — Widget call</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call()</a>
+                — Call magic helper</li>
+            <li id="addHelperPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath()</a>
+                — Add helper path</li>
+            <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
+                — Set helpers path</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton.xhtml">Bluz\Common\Singleton</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="__clone"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__clone.xhtml">__clone()</a>
+                — Disabled by access level</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getInstance"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance()</a>
+                — Get instance</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-07-06T11:10:22+00:00 (commit #<span title="21a812d864221c809af040cea4356f212e1ec5d1">21a812d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-06-19T11:25:56+00:00 (commit #<span title="1d5fef43793f645f125e7bf398afaf4906f8939d">1d5fef4</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated description</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-05-08T07:14:59+00:00 (commit #<span title="8ef5c429df732120f2f13c02c9d1608dafc8543c">8ef5c42</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed old style:
+- call call_user_func_array()
+- func_get_args()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-30T16:28:33+00:00 (commit #<span title="0a0b2fc0b302da457842fa8b135833e0378c293b">0a0b2fc</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-30T16:18:56+00:00 (commit #<span title="0b24a0d7fab93f02ae24b1d99716c692c0d24065">0b24a0d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `Request::getAccept()` for retrieve MIME type from request headers</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-05T14:21:51+00:00 (commit #<span title="a9c58e97f555c4c493f2cea9a7db59143bed6920">a9c58e9</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-01T14:56:51+00:00 (commit #<span title="7da2f03e4ac6c416acb59c813c709980035f5b28">7da2f03</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added small remark for future</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-26T13:56:19+00:00 (commit #<span title="af787efdab68f977518eb66f1ac1adf2209744c0">af787ef</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-26T13:38:57+00:00 (commit #<span title="c7f7861b3f2eeb273054dfa7a627bdf912202f4b">c7f7861</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #284 - added support `@accept` doc element</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-18T10:43:56+00:00 (commit #<span title="f672ff1548aa90d11a1c28a655f97ac4e49bce71">f672ff1</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed descriptions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-17T15:27:23+00:00 (commit #<span title="794e940da52978de4a3622d8817e080da846763e">794e940</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added JSONP response presentation usage to Application
+Marked as deprecated `isJson()` and `isXml()` methods</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T14:27:49+00:00 (commit #<span title="6185ed5435041ae9bbd5cfeca0779266a8642f8e">6185ed5</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Change dispatch behaviour - always return callable structure (class or function)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T11:11:46+00:00 (commit #<span title="4f077aa5c6c784f2ad6b1162c4b6d3e6d1ff0804">4f077aa</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added default check for text/html</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T09:36:48+00:00 (commit #<span title="b61aa10acf091de6f4c1f7e0c4c8a3f632787630">b61aa10</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #281 - Added support of XML Response Presentation</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

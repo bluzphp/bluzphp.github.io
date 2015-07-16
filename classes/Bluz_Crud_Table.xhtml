@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Crud\Table</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Crud">Bluz\Crud</a>
+          </li>
+          <li class="separator">Table</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Crud/Table.php.xhtml#line28">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Crud\</small>Table</h1>
+        <h4>Crud Table</h4>
+        <p/>
+        <ul>
+          <li>Author: AntonShevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Table
+                extends <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud.xhtml">AbstractCrud</a>
+            {<br/><ul class="none"><li>// Inherited constants from <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud.xhtml">AbstractCrud</a></li><li>const <a href="#DEFAULT_LIMIT">DEFAULT_LIMIT</a> = 10;</li></ul><ul class="none"><li>// members</li><li>protected <span title="\Bluz\Db\Table">Table</span> <a href="#members">$table</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public Table <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/setTable.xhtml">setTable</a>()
+                    </li><li>public Table <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/getTable.xhtml">getTable</a>()
+                    </li><li>public array <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/getPrimaryKey.xhtml">getPrimaryKey</a>()
+                    </li><li>public Row <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/readOne.xhtml">readOne</a>()
+                    </li><li>public integer <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/createOne.xhtml">createOne</a>()
+                    </li><li>public integer <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/updateOne.xhtml">updateOne</a>()
+                    </li><li>public integer <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/deleteOne.xhtml">deleteOne</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Crud\AbstractCrud">AbstractCrud</span></li><li>public static Table <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getInstance.xhtml">getInstance</a>()
+                        </li><li>public abstract array <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getPrimaryKey.xhtml">getPrimaryKey</a>()
+                        </li><li>public mixed <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/readOne.xhtml">readOne</a>()
+                        </li><li>public mixed <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/readSet.xhtml">readSet</a>()
+                        </li><li>public mixed <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/createOne.xhtml">createOne</a>()
+                        </li><li>public mixed <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/createSet.xhtml">createSet</a>()
+                        </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/updateOne.xhtml">updateOne</a>()
+                        </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/updateSet.xhtml">updateSet</a>()
+                        </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/deleteOne.xhtml">deleteOne</a>()
+                        </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/deleteSet.xhtml">deleteSet</a>()
+                        </li><li>public array <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getMethods.xhtml">getMethods</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud.xhtml">Bluz\Crud\AbstractCrud</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="DEFAULT_LIMIT">DEFAULT_LIMIT</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="table"><strong>$table</strong>
+                —
+                <a title="\Bluz\Db\Table" href="../classes/_Bluz_Db_Table.xhtml">\Bluz\Db\Table</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="createOne"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/createOne.xhtml">createOne()</a>
+                — Create item</li>
+            <li id="deleteOne"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/deleteOne.xhtml">deleteOne()</a>
+                — Delete item</li>
+            <li id="getPrimaryKey"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/getPrimaryKey.xhtml">getPrimaryKey()</a>
+                — Get primary key</li>
+            <li id="getTable"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/getTable.xhtml">getTable()</a>
+                — Return table instance for manipulation</li>
+            <li id="readOne"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/readOne.xhtml">readOne()</a>
+                — Get record from Db or create new</li>
+            <li id="setTable"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/setTable.xhtml">setTable()</a>
+                — Setup Table instance</li>
+            <li id="updateOne"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/updateOne.xhtml">updateOne()</a>
+                — Update item</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud.xhtml">Bluz\Crud\AbstractCrud</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="createOne"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/createOne.xhtml">createOne()</a>
+                — Create new item</li>
+            <li id="createSet"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/createSet.xhtml">createSet()</a>
+                — Create items</li>
+            <li id="deleteOne"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/deleteOne.xhtml">deleteOne()</a>
+                — Delete item</li>
+            <li id="deleteSet"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/deleteSet.xhtml">deleteSet()</a>
+                — Delete items</li>
+            <li id="getInstance"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getInstance.xhtml">getInstance()</a>
+                — Get CRUD Instance</li>
+            <li id="getMethods"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getMethods.xhtml">getMethods()</a>
+                — Get realized methods</li>
+            <li id="getPrimaryKey"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getPrimaryKey.xhtml">getPrimaryKey()</a>
+                — Return primary key signature</li>
+            <li id="readOne"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/readOne.xhtml">readOne()</a>
+                — Get item by primary key(s)</li>
+            <li id="readSet"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/readSet.xhtml">readSet()</a>
+                — Get collection of items</li>
+            <li id="updateOne"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/updateOne.xhtml">updateOne()</a>
+                — Update item</li>
+            <li id="updateSet"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/updateSet.xhtml">updateSet()</a>
+                — Update items</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-06T11:10:22+00:00 (commit #<span title="21a812d864221c809af040cea4356f212e1ec5d1">21a812d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-05-08T10:41:49+00:00 (commit #<span title="126e7020f2c588cd853c6cb20325e8de8c556886">126e702</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed old style:
+- get_called_class()
+Fixed tests</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

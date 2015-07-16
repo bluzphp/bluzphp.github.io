@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Http\File</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Http">Bluz\Http</a>
+          </li>
+          <li class="separator">File</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Http/File.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Http\</small>File</h1>
+        <h4>HttpFile</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class File
+            {<br/><ul class="none"><li>// constants</li><li>const TYPE_APPLICATION = 'application';</li><li>const TYPE_AUDIO = 'audio';</li><li>const TYPE_IMAGE = 'image';</li><li>const TYPE_MESSAGE = 'message';</li><li>const TYPE_MODEL = 'model';</li><li>const TYPE_MULTIPART = 'multipart';</li><li>const TYPE_TEXT = 'text';</li><li>const TYPE_VIDEO = 'video';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$name</a>;
+                    </li><li>protected  <a href="#members">$ext</a>;
+                    </li><li>protected  <a href="#members">$type</a>;
+                    </li><li>protected  <a href="#members">$mimetype</a>;
+                    </li><li>protected  <a href="#members">$tmp</a>;
+                    </li><li>protected int <a href="#members">$error</a> =
+                        UPLOAD_ERR_OK;
+                    </li><li>protected integer <a href="#members">$size</a> =
+                        0;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/__construct.xhtml">__construct</a>()
+                    </li><li>public File <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getName.xhtml">getName</a>()
+                    </li><li>public string <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getFullName.xhtml">getFullName</a>()
+                    </li><li>public string <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getExtension.xhtml">getExtension</a>()
+                    </li><li>public string <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getType.xhtml">getType</a>()
+                    </li><li>public string <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getMimeType.xhtml">getMimeType</a>()
+                    </li><li>public integer <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getErrorCode.xhtml">getErrorCode</a>()
+                    </li><li>public integer <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getSize.xhtml">getSize</a>()
+                    </li><li>public string <a title="Bluz\Http\File" href="../classes/Bluz_Http_File/moveTo.xhtml">moveTo</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">200 - 227</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method getSize() has a Cyclomatic Complexity of 16. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="TYPE_APPLICATION">TYPE_APPLICATION</td>
+              <td>'application'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_AUDIO">TYPE_AUDIO</td>
+              <td>'audio'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_IMAGE">TYPE_IMAGE</td>
+              <td>'image'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_MESSAGE">TYPE_MESSAGE</td>
+              <td>'message'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_MODEL">TYPE_MODEL</td>
+              <td>'model'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_MULTIPART">TYPE_MULTIPART</td>
+              <td>'multipart'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_TEXT">TYPE_TEXT</td>
+              <td>'text'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_VIDEO">TYPE_VIDEO</td>
+              <td>'video'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="error"><strong>$error</strong>
+                —
+                int<br/><span class="indent">Error status of upload</span></li>
+            <li id="ext"><strong>$ext</strong>
+                —
+                string<br/><span class="indent">File extension</span></li>
+            <li id="mimetype"><strong>$mimetype</strong>
+                —
+                string<br/><span class="indent">File mimetype</span></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string<br/><span class="indent">Filename without extension</span></li>
+            <li id="size"><strong>$size</strong>
+                —
+                int<br/><span class="indent">File size in bytes</span></li>
+            <li id="tmp"><strong>$tmp</strong>
+                —
+                string<br/><span class="indent">Path to temporary file</span></li>
+            <li id="type"><strong>$type</strong>
+                —
+                string<br/><span class="indent">File type</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/__construct.xhtml">__construct()</a>
+                — Construct of File</li>
+            <li id="getErrorCode"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getErrorCode.xhtml">getErrorCode()</a>
+                — Get error code</li>
+            <li id="getExtension"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getExtension.xhtml">getExtension()</a>
+                — Get file extension</li>
+            <li id="getFullName"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getFullName.xhtml">getFullName()</a>
+                — Get original filename (with extension)</li>
+            <li id="getMimeType"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getMimeType.xhtml">getMimeType()</a>
+                — Get mime type</li>
+            <li id="getName"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getName.xhtml">getName()</a>
+                — Get original filename (w/o extension)</li>
+            <li id="getSize"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getSize.xhtml">getSize()</a>
+                — Get size</li>
+            <li id="getType"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/getType.xhtml">getType()</a>
+                — Return type of file</li>
+            <li id="moveTo"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/moveTo.xhtml">moveTo()</a>
+                — Move uploaded file to directory</li>
+            <li id="setName"><a title="Bluz\Http\File" href="../classes/Bluz_Http_File/setName.xhtml">setName()</a>
+                — Set filename (w/o extension)</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Cache\Adapter\FileBase</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Cache_Adapter">Bluz\Cache\Adapter</a>
+          </li>
+          <li class="separator">FileBase</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Cache/Adapter/FileBase.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Cache\Adapter\</small>FileBase</h1>
+        <h4>Base class for all filesystem-based cache adapters</h4>
+        <p/>
+        <ul>
+          <li>Author: murzik</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class FileBase
+                extends <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter.xhtml">AbstractAdapter</a>
+            {<br/><ul class="none"><li>// members</li><li>protected <span title="Bluz\Cache\Adapter\null|string">null|string</span> <a href="#members">$cacheDir</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$extension</a> =
+                        ".cache";
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Cache\Adapter\AbstractAdapter">AbstractAdapter</span></li><li>protected array <a href="#members">$settings</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/__construct.xhtml">__construct</a>()
+                    </li><li>protected bool <a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/doFlush.xhtml">doFlush</a>()
+                    </li><li>protected bool|mixed <a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/doDelete.xhtml">doDelete</a>()
+                    </li><li>protected string <a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/getFilename.xhtml">getFilename</a>()
+                    </li><li>protected bool|int <a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/writeFile.xhtml">writeFile</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Cache\Adapter\AbstractAdapter">AbstractAdapter</span></li><li>public void <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/__construct.xhtml">__construct</a>()
+                        </li><li>public mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/get.xhtml">get</a>()
+                        </li><li>public bool <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/contains.xhtml">contains</a>()
+                        </li><li>public bool <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/add.xhtml">add</a>()
+                        </li><li>public bool <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/set.xhtml">set</a>()
+                        </li><li>public mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/delete.xhtml">delete</a>()
+                        </li><li>public mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/flush.xhtml">flush</a>()
+                        </li><li>protected abstract mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doFlush.xhtml">doFlush</a>()
+                        </li><li>protected abstract mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doGet.xhtml">doGet</a>()
+                        </li><li>protected abstract mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doAdd.xhtml">doAdd</a>()
+                        </li><li>protected abstract mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doSet.xhtml">doSet</a>()
+                        </li><li>protected abstract mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doDelete.xhtml">doDelete</a>()
+                        </li><li>protected abstract mixed <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doContains.xhtml">doContains</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter.xhtml">Bluz\Cache\Adapter\AbstractAdapter</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">77</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$file'.</td>
+            </tr>
+            <tr>
+              <td class="line">90</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">101</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">24+</td>
+            <td>http://habrahabr.ru/post/148527/#comment_5014715</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="cacheDir"><strong>$cacheDir</strong>
+                —
+                <a title="Bluz\Cache\Adapter\null|string" href="../classes/Bluz_Cache_Adapter_null|string.xhtml">Bluz\Cache\Adapter\null|string</a><br/><span class="indent">Directory of cache files</span></li>
+            <li id="extension"><strong>$extension</strong>
+                —
+                string<br/><span class="indent">Extension of cache files</span></li>
+            <li id="settings"><strong>$settings</strong>
+                —
+                array<br/><span class="indent">Cache settings</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="doDelete"><a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/doDelete.xhtml">doDelete()</a>
+                — {@inheritdoc}</li>
+            <li id="doFlush"><a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/doFlush.xhtml">doFlush()</a>
+                — Flush implementation for all file-based cache implementations</li>
+            <li id="getFilename"><a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/getFilename.xhtml">getFilename()</a>
+                — Generate path to cache file based on cache entry id</li>
+            <li id="writeFile"><a title="Bluz\Cache\Adapter\FileBase" href="../classes/Bluz_Cache_Adapter_FileBase/writeFile.xhtml">writeFile()</a>
+                — Write string to the file in an atomic way</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter.xhtml">Bluz\Cache\Adapter\AbstractAdapter</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="doAdd"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doAdd.xhtml">doAdd()</a>
+                — Must be implemented in particular cache driver implementation Actual  work for \Bluz\Cache\CacheInterface::add() goes here</li>
+            <li id="doContains"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doContains.xhtml">doContains()</a>
+                — Must be implemented in particular cache driver implementation Actual  work for \Bluz\Cache\CacheInterface::contains() goes here</li>
+            <li id="doDelete"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doDelete.xhtml">doDelete()</a>
+                — Must be implemented in particular cache driver implementation Actual  work for \Bluz\Cache\CacheInterface::delete() goes here</li>
+            <li id="doFlush"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doFlush.xhtml">doFlush()</a>
+                — Must be implemented in particular cache driver implementation Actual  work for \Bluz\Cache\CacheInterface::flush() goes here</li>
+            <li id="doGet"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doGet.xhtml">doGet()</a>
+                — Must be implemented in particular cache driver implementation Actual  work for \Bluz\Cache\CacheInterface::get() goes here</li>
+            <li id="doSet"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/doSet.xhtml">doSet()</a>
+                — Must be implemented in particular cache driver implementation Actual  work for \Bluz\Cache\CacheInterface::set() goes here</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="add"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/add.xhtml">add()</a>
+                — {@inheritdoc}</li>
+            <li id="contains"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/contains.xhtml">contains()</a>
+                — {@inheritdoc}</li>
+            <li id="delete"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/delete.xhtml">delete()</a>
+                — {@inheritdoc}</li>
+            <li id="flush"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/flush.xhtml">flush()</a>
+                — {@inheritdoc}</li>
+            <li id="get"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/get.xhtml">get()</a>
+                — {@inheritdoc}</li>
+            <li id="set"><a title="Bluz\Cache\Adapter\AbstractAdapter" href="../classes/Bluz_Cache_Adapter_AbstractAdapter/set.xhtml">set()</a>
+                — {@inheritdoc}</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-02-02T02:54:04+00:00 (commit #<span title="e50ac3678f6426823b6322953ef9441b0461a21e">e50ac36</span>)</h3>
+            <div>
+              <p>
+                        Author: silver_slice (silver_slice@mail.ru) /
+                        Commiter: silver_slice (silver_slice@mail.ru)
+                    </p>
+              <pre class="wrapped">Fix file cache race condition</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-24T13:51:15+00:00 (commit #<span title="49eb9d9ea4aac7bd74b20dca9a16a852504a1142">49eb9d9</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated Controller\Reflection test
+Small optimization for Proxy</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

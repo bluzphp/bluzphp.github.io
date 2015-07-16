@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
+  <head>
+    <title>phpDox - Test Method</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#Bluz_Db_Query">Bluz\Db\Query</a>
+          </li>
+          <li class="separator">
+            <a title="Bluz\Db\Query\Select" href="../../classes/Bluz_Db_Query_Select.xhtml">Select</a>
+          </li>
+          <li class="separator">innerJoin</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/Db/Query/Select.php.xhtml#line177">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>Bluz\Db\Query\Select::</small>innerJoin</h1>
+        <h4>Creates and adds a join to the query</h4>
+        <p>Example
+    $sb = new Select();
+    $sb
+        -&gt;select('u.name')
+        -&gt;from('users', 'u')
+        -&gt;innerJoin('u', 'phonenumbers', 'p', 'p.is_primary = 1');</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function innerJoin(string
+        $fromAlias,
+            string
+        $join,
+            string
+        $alias,
+            [string
+        $condition = null] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$fromAlias</code>
+                —
+                string</dt>
+          <dd>The alias that points to a from clause</dd>
+          <dt><code>$join</code>
+                —
+                string</dt>
+          <dd>The table name to join</dd>
+          <dt><code>$alias</code>
+                —
+                string</dt>
+          <dd>The alias of the join table</dd>
+          <dt><code>$condition</code>
+                —
+                string</dt>
+          <dd>The condition for the join</dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>Select</dt>
+          <dd>instance<br/>
+        </dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

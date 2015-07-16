@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Cli\Request</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Cli">Bluz\Cli</a>
+          </li>
+          <li class="separator">Request</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Cli/Request.php.xhtml#line25">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Cli\</small>Request</h1>
+        <h4>CLI Request</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Request
+                extends <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest.xhtml">AbstractRequest</a>
+            {<br/><ul class="none"><li>// Inherited constants from <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest.xhtml">AbstractRequest</a></li><li>const <a href="#METHOD_OPTIONS">METHOD_OPTIONS</a> = 'OPTIONS';</li><li>const <a href="#METHOD_GET">METHOD_GET</a> = 'GET';</li><li>const <a href="#METHOD_HEAD">METHOD_HEAD</a> = 'HEAD';</li><li>const <a href="#METHOD_PATCH">METHOD_PATCH</a> = 'PATCH';</li><li>const <a href="#METHOD_POST">METHOD_POST</a> = 'POST';</li><li>const <a href="#METHOD_PUT">METHOD_PUT</a> = 'PUT';</li><li>const <a href="#METHOD_DELETE">METHOD_DELETE</a> = 'DELETE';</li><li>const <a href="#METHOD_TRACE">METHOD_TRACE</a> = 'TRACE';</li><li>const <a href="#METHOD_CONNECT">METHOD_CONNECT</a> = 'CONNECT';</li><li>const <a href="#METHOD_CLI">METHOD_CLI</a> = 'CLI';</li><li>const <a href="#METHOD_HTTP">METHOD_HTTP</a> = 'HTTP';</li><li>const <a href="#ACCEPT_CLI">ACCEPT_CLI</a> = 'CLI';</li><li>const <a href="#ACCEPT_HTML">ACCEPT_HTML</a> = 'HTML';</li><li>const <a href="#ACCEPT_JSON">ACCEPT_JSON</a> = 'JSON';</li><li>const <a href="#ACCEPT_JSONP">ACCEPT_JSONP</a> = 'JSONP';</li><li>const <a href="#ACCEPT_XML">ACCEPT_XML</a> = 'XML';</li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Request\AbstractRequest">AbstractRequest</span></li><li>protected <span title="Bluz\Request\string;">string;</span> <a href="#members">$requestUri</a>;
+                        </li><li>protected <span title="Bluz\Request\string;">string;</span> <a href="#members">$cleanUri</a>;
+                        </li><li>protected <span title="Bluz\Request\string;">string;</span> <a href="#members">$baseUrl</a>;
+                        </li><li>protected <span title="Bluz\Request\string;">string;</span> <a href="#members">$basePath</a>;
+                        </li><li>protected  <a href="#members">$accept</a>;
+                        </li><li>protected  <a href="#members">$method</a>;
+                        </li><li>protected string <a href="#members">$module</a>;
+                        </li><li>protected string <a href="#members">$controller</a>;
+                        </li><li>protected array <a href="#members">$params</a>;
+                        </li><li>protected array <a href="#members">$rawParams</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getRequestUri.xhtml">getRequestUri</a>()
+                    </li><li>public string <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getCleanUri.xhtml">getCleanUri</a>()
+                    </li><li>public string <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getBaseUrl.xhtml">getBaseUrl</a>()
+                    </li><li>public string <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getClientIp.xhtml">getClientIp</a>()
+                    </li><li>public false <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getHeader.xhtml">getHeader</a>()
+                    </li><li>public string <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getAccept.xhtml">getAccept</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Request\AbstractRequest">AbstractRequest</span></li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getMethod.xhtml">getMethod</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setMethod.xhtml">setMethod</a>()
+                        </li><li>public bool <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isCli.xhtml">isCli</a>()
+                        </li><li>public bool <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isHttp.xhtml">isHttp</a>()
+                        </li><li>public bool <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isGet.xhtml">isGet</a>()
+                        </li><li>public bool <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isPost.xhtml">isPost</a>()
+                        </li><li>public bool <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isPut.xhtml">isPut</a>()
+                        </li><li>public bool <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isDelete.xhtml">isDelete</a>()
+                        </li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getBaseUrl.xhtml">getBaseUrl</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setBaseUrl.xhtml">setBaseUrl</a>()
+                        </li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getCleanUri.xhtml">getCleanUri</a>()
+                        </li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getRequestUri.xhtml">getRequestUri</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setRequestUri.xhtml">setRequestUri</a>()
+                        </li><li>public mixed <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getParam.xhtml">getParam</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setParam.xhtml">setParam</a>()
+                        </li><li>public array <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getParams.xhtml">getParams</a>()
+                        </li><li>public array <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getAllParams.xhtml">getAllParams</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setParams.xhtml">setParams</a>()
+                        </li><li>public array <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getRawParams.xhtml">getRawParams</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setRawParams.xhtml">setRawParams</a>()
+                        </li><li>public mixed <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getEnv.xhtml">getEnv</a>()
+                        </li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getServer.xhtml">getServer</a>()
+                        </li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getModule.xhtml">getModule</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setModule.xhtml">setModule</a>()
+                        </li><li>public string <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getController.xhtml">getController</a>()
+                        </li><li>public void <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setController.xhtml">setController</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest.xhtml">Bluz\Request\AbstractRequest</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">32 - 61</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method __construct() has an NPath complexity of 225. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">111</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$header'.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="METHOD_OPTIONS">METHOD_OPTIONS</td>
+              <td>'OPTIONS'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_GET">METHOD_GET</td>
+              <td>'GET'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_HEAD">METHOD_HEAD</td>
+              <td>'HEAD'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_PATCH">METHOD_PATCH</td>
+              <td>'PATCH'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_POST">METHOD_POST</td>
+              <td>'POST'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_PUT">METHOD_PUT</td>
+              <td>'PUT'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_DELETE">METHOD_DELETE</td>
+              <td>'DELETE'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_TRACE">METHOD_TRACE</td>
+              <td>'TRACE'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_CONNECT">METHOD_CONNECT</td>
+              <td>'CONNECT'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_CLI">METHOD_CLI</td>
+              <td>'CLI'</td>
+            </tr>
+            <tr>
+              <td id="METHOD_HTTP">METHOD_HTTP</td>
+              <td>'HTTP'</td>
+            </tr>
+            <tr>
+              <td id="ACCEPT_CLI">ACCEPT_CLI</td>
+              <td>'CLI'</td>
+            </tr>
+            <tr>
+              <td id="ACCEPT_HTML">ACCEPT_HTML</td>
+              <td>'HTML'</td>
+            </tr>
+            <tr>
+              <td id="ACCEPT_JSON">ACCEPT_JSON</td>
+              <td>'JSON'</td>
+            </tr>
+            <tr>
+              <td id="ACCEPT_JSONP">ACCEPT_JSONP</td>
+              <td>'JSONP'</td>
+            </tr>
+            <tr>
+              <td id="ACCEPT_XML">ACCEPT_XML</td>
+              <td>'XML'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="accept"><strong>$accept</strong>
+                —
+                string<br/><span class="indent">HTTP Accept Mime Type or CLI</span></li>
+            <li id="basePath"><strong>$basePath</strong>
+                —
+                <a title="Bluz\Request\string;" href="../classes/Bluz_Request_string;.xhtml">Bluz\Request\string;</a><br/><span class="indent">Base Path</span></li>
+            <li id="baseUrl"><strong>$baseUrl</strong>
+                —
+                <a title="Bluz\Request\string;" href="../classes/Bluz_Request_string;.xhtml">Bluz\Request\string;</a><br/><span class="indent">Base URL</span></li>
+            <li id="cleanUri"><strong>$cleanUri</strong>
+                —
+                <a title="Bluz\Request\string;" href="../classes/Bluz_Request_string;.xhtml">Bluz\Request\string;</a><br/><span class="indent">REQUEST_URI minus Base URL</span></li>
+            <li id="controller"><strong>$controller</strong>
+                —
+                string<br/><span class="indent">Controller</span></li>
+            <li id="method"><strong>$method</strong>
+                —
+                string<br/><span class="indent">HTTP Method or CLI</span></li>
+            <li id="module"><strong>$module</strong>
+                —
+                string<br/><span class="indent">Module</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="params"><strong>$params</strong>
+                —
+                array<br/><span class="indent">Instance parameters</span></li>
+            <li id="rawParams"><strong>$rawParams</strong>
+                —
+                array<br/><span class="indent">Instance raw parameters</span></li>
+            <li id="requestUri"><strong>$requestUri</strong>
+                —
+                <a title="Bluz\Request\string;" href="../classes/Bluz_Request_string;.xhtml">Bluz\Request\string;</a><br/><span class="indent">REQUEST_URI</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/__construct.xhtml">__construct()</a>
+                — Constructor</li>
+            <li id="getAccept"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getAccept.xhtml">getAccept()</a>
+                — Accept only CLI</li>
+            <li id="getBaseUrl"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getBaseUrl.xhtml">getBaseUrl()</a>
+                — Get the base URL</li>
+            <li id="getCleanUri"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getCleanUri.xhtml">getCleanUri()</a>
+                — Get the request URI</li>
+            <li id="getClientIp"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getClientIp.xhtml">getClientIp()</a>
+                — Get the client's IP address</li>
+            <li id="getHeader"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getHeader.xhtml">getHeader()</a>
+                — Return false for CLI</li>
+            <li id="getRequestUri"><a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request/getRequestUri.xhtml">getRequestUri()</a>
+                — Get the request URI</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest.xhtml">Bluz\Request\AbstractRequest</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="getAllParams"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getAllParams.xhtml">getAllParams()</a>
+                — Get all request parameters</li>
+            <li id="getBaseUrl"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getBaseUrl.xhtml">getBaseUrl()</a>
+                — Get the base URL.</li>
+            <li id="getCleanUri"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getCleanUri.xhtml">getCleanUri()</a>
+                — Get the request URI without baseUrl</li>
+            <li id="getController"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getController.xhtml">getController()</a>
+                — Retrieve the controller name</li>
+            <li id="getEnv"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getEnv.xhtml">getEnv()</a>
+                — Retrieve a member of the $_ENV super global</li>
+            <li id="getMethod"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getMethod.xhtml">getMethod()</a>
+                — Return HTTP method or CLI</li>
+            <li id="getModule"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getModule.xhtml">getModule()</a>
+                — Retrieve the module name</li>
+            <li id="getParam"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getParam.xhtml">getParam()</a>
+                — Get an action parameter</li>
+            <li id="getParams"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getParams.xhtml">getParams()</a>
+                — Get parameters</li>
+            <li id="getRawParams"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getRawParams.xhtml">getRawParams()</a>
+                — Get raw params, w/out module and controller</li>
+            <li id="getRequestUri"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getRequestUri.xhtml">getRequestUri()</a>
+                — Get the request URI.</li>
+            <li id="getServer"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/getServer.xhtml">getServer()</a>
+                — Retrieve a member of the $_SERVER super global</li>
+            <li id="isCli"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isCli.xhtml">isCli()</a>
+                — Check CLI</li>
+            <li id="isDelete"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isDelete.xhtml">isDelete()</a>
+                — Is this a DELETE method request?</li>
+            <li id="isGet"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isGet.xhtml">isGet()</a>
+                — Is this a GET method request?</li>
+            <li id="isHttp"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isHttp.xhtml">isHttp()</a>
+                — Check HTTP</li>
+            <li id="isPost"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isPost.xhtml">isPost()</a>
+                — Is this a POST method request?</li>
+            <li id="isPut"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/isPut.xhtml">isPut()</a>
+                — Is this a PUT method request?</li>
+            <li id="setBaseUrl"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setBaseUrl.xhtml">setBaseUrl()</a>
+                — Set the base URL.</li>
+            <li id="setController"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setController.xhtml">setController()</a>
+                — Retrieve the controller name</li>
+            <li id="setMethod"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setMethod.xhtml">setMethod()</a>
+                — setMethod</li>
+            <li id="setModule"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setModule.xhtml">setModule()</a>
+                — Retrieve the module name</li>
+            <li id="setParam"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setParam.xhtml">setParam()</a>
+                — Set an action parameter</li>
+            <li id="setParams"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setParams.xhtml">setParams()</a>
+                — Overwrite all parameters</li>
+            <li id="setRawParams"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setRawParams.xhtml">setRawParams()</a>
+                — Set raw params, w/out module and controller</li>
+            <li id="setRequestUri"><a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest/setRequestUri.xhtml">setRequestUri()</a>
+                — Set the request URI.</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-04-03T08:20:23+00:00 (commit #<span title="76c99ffdad32db7c30e00198c1844340d0086da9">76c99ff</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed many PHP Analyzer issues</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-30T16:18:56+00:00 (commit #<span title="0b24a0d7fab93f02ae24b1d99716c692c0d24065">0b24a0d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `Request::getAccept()` for retrieve MIME type from request headers</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-05T10:25:28+00:00 (commit #<span title="2ff162aeac1510be97ec5030a91831e2e819c346">2ff162a</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `getHeader()` to `Cli\Request()`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

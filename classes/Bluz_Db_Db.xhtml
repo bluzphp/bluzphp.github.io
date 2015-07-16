@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Db\Db</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Db">Bluz\Db</a>
+          </li>
+          <li class="separator">Db</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Db/Db.php.xhtml#line29">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Db\</small>Db</h1>
+        <h4>PDO wrapper</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Db
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$connect</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$attributes</a> =
+                        ;
+                    </li><li>protected <span title="\PDO">PDO</span> <a href="#members">$handler</a>;
+                    </li><li>protected  <a href="#members">$timer</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public Db <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setConnect.xhtml">setConnect</a>()
+                    </li><li>private void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/checkConnect.xhtml">checkConnect</a>()
+                    </li><li>public Db <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setAttributes.xhtml">setAttributes</a>()
+                    </li><li>public Db <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/connect.xhtml">connect</a>()
+                    </li><li>public PDO <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/handler.xhtml">handler</a>()
+                    </li><li>protected PDOStatement <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/prepare.xhtml">prepare</a>()
+                    </li><li>public string <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/quote.xhtml">quote</a>()
+                    </li><li>public string <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/quoteIdentifier.xhtml">quoteIdentifier</a>()
+                    </li><li>public integer <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/query.xhtml">query</a>()
+                    </li><li>public Select <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/select.xhtml">select</a>()
+                    </li><li>public Insert <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/insert.xhtml">insert</a>()
+                    </li><li>public Update <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/update.xhtml">update</a>()
+                    </li><li>public Delete <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/delete.xhtml">delete</a>()
+                    </li><li>public string <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchOne.xhtml">fetchOne</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchRow.xhtml">fetchRow</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchAll.xhtml">fetchAll</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchColumn.xhtml">fetchColumn</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchGroup.xhtml">fetchGroup</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchColumnGroup.xhtml">fetchColumnGroup</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchPairs.xhtml">fetchPairs</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchObject.xhtml">fetchObject</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchObjects.xhtml">fetchObjects</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchRelations.xhtml">fetchRelations</a>()
+                    </li><li>public bool <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/transaction.xhtml">transaction</a>()
+                    </li><li>protected void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/ok.xhtml">ok</a>()
+                    </li><li>protected void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/log.xhtml">log</a>()
+                    </li><li>public void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/disconnect.xhtml">disconnect</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="attributes"><strong>$attributes</strong>
+                —
+                array<br/><span class="indent">PDO connection flags</span></li>
+            <li id="connect"><strong>$connect</strong>
+                —
+                array<br/><span class="indent">PDO connection settings</span></li>
+            <li id="handler"><strong>$handler</strong>
+                —
+                <a title="\PDO" href="../classes/_PDO.xhtml">\PDO</a><br/><span class="indent">PDO instance</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="timer"><strong>$timer</strong>
+                —
+                float<br/><span class="indent">Part time</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="checkConnect"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/checkConnect.xhtml">checkConnect()</a>
+                — Check connection options</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="log"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/log.xhtml">log()</a>
+                — Log queries by Application</li>
+            <li id="ok"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/ok.xhtml">ok()</a>
+                — Setup timer</li>
+            <li id="prepare"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/prepare.xhtml">prepare()</a>
+                — Prepare SQL query and return PDO Statement</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="connect"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/connect.xhtml">connect()</a>
+                — Connect to Db</li>
+            <li id="delete"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/delete.xhtml">delete()</a>
+                — Create new query update builder</li>
+            <li id="disconnect"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/disconnect.xhtml">disconnect()</a>
+                — Disconnect PDO and clean default adapter</li>
+            <li id="fetchAll"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchAll.xhtml">fetchAll()</a>
+                — Returns an array containing all of the result set rows</li>
+            <li id="fetchColumn"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchColumn.xhtml">fetchColumn()</a>
+                — Returns an array containing one column from the result set rows</li>
+            <li id="fetchColumnGroup"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchColumnGroup.xhtml">fetchColumnGroup()</a>
+                — Returns an array containing all of the result set rows</li>
+            <li id="fetchGroup"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchGroup.xhtml">fetchGroup()</a>
+                — Returns an array containing all of the result set rows</li>
+            <li id="fetchObject"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchObject.xhtml">fetchObject()</a>
+                — Returns an object containing first row from the result set</li>
+            <li id="fetchObjects"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchObjects.xhtml">fetchObjects()</a>
+                — Returns an array of objects containing the result set</li>
+            <li id="fetchOne"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchOne.xhtml">fetchOne()</a>
+                — Return first field from first element from the result set</li>
+            <li id="fetchPairs"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchPairs.xhtml">fetchPairs()</a>
+                — Returns a key-value array</li>
+            <li id="fetchRelations"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchRelations.xhtml">fetchRelations()</a>
+                — Returns an array of linked objects containing the result set</li>
+            <li id="fetchRow"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchRow.xhtml">fetchRow()</a>
+                — Returns an array containing first row from the result set</li>
+            <li id="handler"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/handler.xhtml">handler()</a>
+                — Return PDO handler</li>
+            <li id="insert"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/insert.xhtml">insert()</a>
+                — Create new query insert builder</li>
+            <li id="query"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/query.xhtml">query()</a>
+                — Execute SQL query</li>
+            <li id="quote"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/quote.xhtml">quote()</a>
+                — Quotes a string for use in a query</li>
+            <li id="quoteIdentifier"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/quoteIdentifier.xhtml">quoteIdentifier()</a>
+                — Quote a string so it can be safely used as a table or column name</li>
+            <li id="select"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/select.xhtml">select()</a>
+                — Create new query select builder</li>
+            <li id="setAttributes"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setAttributes.xhtml">setAttributes()</a>
+                — Setup attributes for PDO connect</li>
+            <li id="setConnect"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setConnect.xhtml">setConnect()</a>
+                — Setup connection</li>
+            <li id="transaction"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/transaction.xhtml">transaction()</a>
+                — Transaction wrapper</li>
+            <li id="update"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/update.xhtml">update()</a>
+                — Create new query update builder</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-08T08:39:15+00:00 (commit #<span title="57f8bed3755182ed8a77a55678af4d7bd86f04bb">57f8bed</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated DB log</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-05-15T15:15:01+00:00 (commit #<span title="69090a65e16e05b240a4cfb7410c60d601ca9948">69090a6</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated DocComments blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-05-08T07:14:59+00:00 (commit #<span title="8ef5c429df732120f2f13c02c9d1608dafc8543c">8ef5c42</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed old style:
+- call call_user_func_array()
+- func_get_args()</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-06T12:15:59+00:00 (commit #<span title="a667f9f0316405a330c99a02e815c2ac46069a9e">a667f9f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added @api tags to framework components</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:56:25+00:00 (commit #<span title="0682e0d3582c6f9a970590beee0a9504ec504ace">0682e0d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

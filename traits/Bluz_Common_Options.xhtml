@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Common\Options</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../traits.xhtml">Traits</a>
+          </li>
+          <li class="separator">
+            <a href="../traits.xhtml#Bluz_Common">Bluz\Common</a>
+          </li>
+          <li class="separator">Options</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Common/Options.php.xhtml#line44">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Common\</small>Options</h1>
+        <h4>Options Trait</h4>
+        <p>Example of usage<br/>class Foo<br/>{<br/>use \Bluz\Common\Options;<br/><br/>protected $bar = '';<br/>protected $baz = '';<br/><br/>public function setBar($value)<br/>{<br/>$this-&gt;bar = $value;<br/>}<br/><br/>public function setBaz($value)<br/>{<br/>$this-&gt;baz = $value;<br/>}<br/>}<br/><br/>    $Foo = new Foo(array('bar'=&gt;123, 'baz'=&gt;456));</p>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">trait Options
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$options</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                    </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                    </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                    </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                    </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                    </li><li>private string <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/normalizeKey.xhtml">normalizeKey</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Used by</h4>
+          <ul>
+            <li>
+              <a title="Bluz\View\View" href="../classes/Bluz_View_View.xhtml">Bluz\View\View</a>
+            </li>
+            <li>
+              <a title="Bluz\Translator\Translator" href="../classes/Bluz_Translator_Translator.xhtml">Bluz\Translator\Translator</a>
+            </li>
+            <li>
+              <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session.xhtml">Bluz\Session\Session</a>
+            </li>
+            <li>
+              <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router.xhtml">Bluz\Router\Router</a>
+            </li>
+            <li>
+              <a title="Bluz\Response\AbstractResponse" href="../classes/Bluz_Response_AbstractResponse.xhtml">Bluz\Response\AbstractResponse</a>
+            </li>
+            <li>
+              <a title="Bluz\Request\AbstractRequest" href="../classes/Bluz_Request_AbstractRequest.xhtml">Bluz\Request\AbstractRequest</a>
+            </li>
+            <li>
+              <a title="Bluz\Messages\Messages" href="../classes/Bluz_Messages_Messages.xhtml">Bluz\Messages\Messages</a>
+            </li>
+            <li>
+              <a title="Bluz\Mailer\Mailer" href="../classes/Bluz_Mailer_Mailer.xhtml">Bluz\Mailer\Mailer</a>
+            </li>
+            <li>
+              <a title="Bluz\Logger\Logger" href="../classes/Bluz_Logger_Logger.xhtml">Bluz\Logger\Logger</a>
+            </li>
+            <li>
+              <a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout.xhtml">Bluz\Layout\Layout</a>
+            </li>
+            <li>
+              <a title="Bluz\Http\Response" href="../classes/Bluz_Http_Response.xhtml">Bluz\Http\Response</a>
+            </li>
+            <li>
+              <a title="Bluz\Http\Request" href="../classes/Bluz_Http_Request.xhtml">Bluz\Http\Request</a>
+            </li>
+            <li>
+              <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid.xhtml">Bluz\Grid\Grid</a>
+            </li>
+            <li>
+              <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db.xhtml">Bluz\Db\Db</a>
+            </li>
+            <li>
+              <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection.xhtml">Bluz\Controller\Reflection</a>
+            </li>
+            <li>
+              <a title="Bluz\Cli\Response" href="../classes/Bluz_Cli_Response.xhtml">Bluz\Cli\Response</a>
+            </li>
+            <li>
+              <a title="Bluz\Cli\Request" href="../classes/Bluz_Cli_Request.xhtml">Bluz\Cli\Request</a>
+            </li>
+            <li>
+              <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache.xhtml">Bluz\Cache\Cache</a>
+            </li>
+            <li>
+              <a title="Bluz\Auth\Auth" href="../classes/Bluz_Auth_Auth.xhtml">Bluz\Auth\Auth</a>
+            </li>
+            <li>
+              <a title="Bluz\Acl\Acl" href="../classes/Bluz_Acl_Acl.xhtml">Bluz\Acl\Acl</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="normalizeKey"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/normalizeKey.xhtml">normalizeKey()</a>
+                — Normalize key name</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-21T12:34:28+00:00 (commit #<span title="f73da55b86edd325e9eac223700988b3e2498669">f73da55</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Change Options trait behaviour - option will save to container if setter method not found</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

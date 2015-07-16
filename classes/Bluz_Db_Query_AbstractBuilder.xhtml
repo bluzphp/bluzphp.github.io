@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Db\Query\AbstractBuilder</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Db_Query">Bluz\Db\Query</a>
+          </li>
+          <li class="separator">AbstractBuilder</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Db/Query/AbstractBuilder.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Db\Query\</small>AbstractBuilder</h1>
+        <h4>Query Builders classes is responsible to dynamically create SQL queries Based on Doctrine QueryBuilder code</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class AbstractBuilder
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$aliases</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$sql</a>;
+                    </li><li>protected array <a href="#members">$sqlParts</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$params</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$types</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public integer|string|array <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/execute.xhtml">execute</a>()
+                    </li><li>public abstract string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getSql.xhtml">getSql</a>()
+                    </li><li>public string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQuery.xhtml">getQuery</a>()
+                    </li><li>public AbstractBuilder <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameter.xhtml">setParameter</a>()
+                    </li><li>public AbstractBuilder <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameters.xhtml">setParameters</a>()
+                    </li><li>public mixed <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameter.xhtml">getParameter</a>()
+                    </li><li>public array <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameters.xhtml">getParameters</a>()
+                    </li><li>protected AbstractBuilder <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/addQueryPart.xhtml">addQueryPart</a>()
+                    </li><li>public mixed <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQueryPart.xhtml">getQueryPart</a>()
+                    </li><li>protected AbstractBuilder <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/resetQueryPart.xhtml">resetQueryPart</a>()
+                    </li><li>protected AbstractBuilder <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setFromQueryPart.xhtml">setFromQueryPart</a>()
+                    </li><li>protected string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/prepareCondition.xhtml">prepareCondition</a>()
+                    </li><li>public string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/__toString.xhtml">__toString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">195 - 222</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method addQueryPart() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="aliases"><strong>$aliases</strong>
+                —
+                array<br/><span class="indent">Known table aliases</span></li>
+            <li id="params"><strong>$params</strong>
+                —
+                array</li>
+            <li id="sql"><strong>$sql</strong>
+                —
+                string</li>
+            <li id="sqlParts"><strong>$sqlParts</strong>
+                —
+                array</li>
+            <li id="types"><strong>$types</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="addQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/addQueryPart.xhtml">addQueryPart()</a>
+                — Either appends to or replaces a single, generic query part</li>
+            <li id="prepareCondition"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/prepareCondition.xhtml">prepareCondition()</a>
+                — Prepare condition</li>
+            <li id="resetQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/resetQueryPart.xhtml">resetQueryPart()</a>
+                — Reset single SQL part</li>
+            <li id="setFromQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setFromQueryPart.xhtml">setFromQueryPart()</a>
+                — setFromQueryPart</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/__toString.xhtml">__toString()</a>
+                — Gets a string representation of this QueryBuilder which corresponds to the final SQL query being constructed.</li>
+            <li id="execute"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/execute.xhtml">execute()</a>
+                — Execute this query using the bound parameters and their types</li>
+            <li id="getParameter"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameter.xhtml">getParameter()</a>
+                — Gets a (previously set) query parameter of the query being constructed</li>
+            <li id="getParameters"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameters.xhtml">getParameters()</a>
+                — Gets all defined query parameters for the query being constructed</li>
+            <li id="getQuery"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQuery.xhtml">getQuery()</a>
+                — Return the complete SQL string formed for use</li>
+            <li id="getQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQueryPart.xhtml">getQueryPart()</a>
+                — Get a query part by its name</li>
+            <li id="getSql"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getSql.xhtml">getSql()</a>
+                — Return the complete SQL string formed by the current specifications</li>
+            <li id="setParameter"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameter.xhtml">setParameter()</a>
+                — Sets a query parameter for the query being constructed</li>
+            <li id="setParameters"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameters.xhtml">setParameters()</a>
+                — Sets a collection of query parameters for the query being constructed</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-04-03T08:20:23+00:00 (commit #<span title="76c99ffdad32db7c30e00198c1844340d0086da9">76c99ff</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed many PHP Analyzer issues</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

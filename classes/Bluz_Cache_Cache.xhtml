@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Cache\Cache</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Cache">Bluz\Cache</a>
+          </li>
+          <li class="separator">Cache</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Cache/Cache.php.xhtml#line36">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Cache\</small>Cache</h1>
+        <h4>Cache Frontend for Bluz\Cache system</h4>
+        <p>Configuration<br/>'enabled' =&gt; true, // Boolean,optional, true by default<br/>'cacheAdapter' =&gt; 'redis', // Required if option 'enabled' set to true<br/>'tagAdapter' =&gt; 'memcached', // Optional<br/>'settings' =&gt; [<br/>'redis' =&gt; [], // Settings for setup Instance of Bluz\Cache\CacheInterface.<br/>'memcached' =&gt; [], // Settings for another cache adapter<br/>    ]</p>
+        <ul>
+          <li>Author: murzik</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Cache
+                implements
+                <a title="Bluz\Cache\CacheInterface" href="../interfaces/Bluz_Cache_CacheInterface.xhtml">CacheInterface</a>,<a title="Bluz\Cache\TagableInterface" href="../interfaces/Bluz_Cache_TagableInterface.xhtml">TagableInterface</a>
+            {<br/><ul class="none"><li>// constants</li><li>const TTL_NO_EXPIRY = 0;</li></ul><ul class="none"><li>// members</li><li>protected array <a href="#members">$adapter</a> =
+                        ;
+                    </li><li>protected string <a href="#members">$prefix</a> =
+                        'bluz:';
+                    </li><li>protected <span title="Bluz\Cache\CacheInterface">CacheInterface</span> <a href="#members">$tagAdapter</a> =
+                        null;
+                    </li><li>protected string <a href="#members">$tagPrefix</a> =
+                        'bluz:@:';
+                    </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/initOptions.xhtml">initOptions</a>()
+                    </li><li>protected string <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/prepareId.xhtml">prepareId</a>()
+                    </li><li>public void <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/setPrefix.xhtml">setPrefix</a>()
+                    </li><li>public void <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/setTagPrefix.xhtml">setTagPrefix</a>()
+                    </li><li>public bool <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/add.xhtml">add</a>()
+                    </li><li>public bool <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/set.xhtml">set</a>()
+                    </li><li>public mixed <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/get.xhtml">get</a>()
+                    </li><li>public bool <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/contains.xhtml">contains</a>()
+                    </li><li>public mixed <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/delete.xhtml">delete</a>()
+                    </li><li>public void <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/flush.xhtml">flush</a>()
+                    </li><li>public AbstractAdapter <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/getAdapter.xhtml">getAdapter</a>()
+                    </li><li>public AbstractAdapter <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/getTagAdapter.xhtml">getTagAdapter</a>()
+                    </li><li>protected AbstractAdapter <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/initAdapter.xhtml">initAdapter</a>()
+                    </li><li>public bool <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/addTag.xhtml">addTag</a>()
+                    </li><li>public bool <a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/deleteByTag.xhtml">deleteByTag</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Cache\CacheInterface" href="../interfaces/Bluz_Cache_CacheInterface.xhtml">Bluz\Cache\CacheInterface</a>
+            </li>
+            <li>
+              <a title="Bluz\Cache\TagableInterface" href="../interfaces/Bluz_Cache_TagableInterface.xhtml">Bluz\Cache\TagableInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">88</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">122</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">137</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">150</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">163</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">176</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">268</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="TTL_NO_EXPIRY">TTL_NO_EXPIRY</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="adapter"><strong>$adapter</strong>
+                —
+                array</li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="prefix"><strong>$prefix</strong>
+                —
+                string</li>
+            <li id="tagAdapter"><strong>$tagAdapter</strong>
+                —
+                <a title="Bluz\Cache\CacheInterface" href="../classes/Bluz_Cache_CacheInterface.xhtml">Bluz\Cache\CacheInterface</a></li>
+            <li id="tagPrefix"><strong>$tagPrefix</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="initAdapter"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/initAdapter.xhtml">initAdapter()</a>
+                — Initialize adapter</li>
+            <li id="initOptions"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/initOptions.xhtml">initOptions()</a>
+                — Check Cache configuration</li>
+            <li id="prepareId"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/prepareId.xhtml">prepareId()</a>
+                — Prepare Id with prefix</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="add"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/add.xhtml">add()</a>
+                — {@inheritdoc}</li>
+            <li id="addTag"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/addTag.xhtml">addTag()</a>
+                — {@inheritdoc}</li>
+            <li id="contains"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/contains.xhtml">contains()</a>
+                — {@inheritdoc}</li>
+            <li id="delete"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/delete.xhtml">delete()</a>
+                — {@inheritdoc}</li>
+            <li id="deleteByTag"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/deleteByTag.xhtml">deleteByTag()</a>
+                — {@inheritdoc}</li>
+            <li id="flush"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/flush.xhtml">flush()</a>
+                — {@inheritdoc}</li>
+            <li id="get"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/get.xhtml">get()</a>
+                — {@inheritdoc}</li>
+            <li id="getAdapter"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/getAdapter.xhtml">getAdapter()</a>
+                — Get underlying cache adapter</li>
+            <li id="getTagAdapter"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/getTagAdapter.xhtml">getTagAdapter()</a>
+                — Get underlying tag adapter</li>
+            <li id="set"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/set.xhtml">set()</a>
+                — {@inheritdoc}</li>
+            <li id="setPrefix"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/setPrefix.xhtml">setPrefix()</a>
+                — Setup prefix for cache records</li>
+            <li id="setTagPrefix"><a title="Bluz\Cache\Cache" href="../classes/Bluz_Cache_Cache/setTagPrefix.xhtml">setTagPrefix()</a>
+                — Setup prefix for cache records of tags</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-04-03T08:20:23+00:00 (commit #<span title="76c99ffdad32db7c30e00198c1844340d0086da9">76c99ff</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed many PHP Analyzer issues</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-01T14:55:01+00:00 (commit #<span title="2d4aa0285969f5ef841518e952fb7aae3d503d0c">2d4aa02</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed Cache\InvalidArgumentException</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-24T12:41:33+00:00 (commit #<span title="d3918eb521ae6ea947190613306b78c0757190ef">d3918eb</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #298 - Added multiple caches' support</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-06T12:15:59+00:00 (commit #<span title="a667f9f0316405a330c99a02e815c2ac46069a9e">a667f9f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added @api tags to framework components</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-30T15:24:13+00:00 (commit #<span title="66e9751a1d057222095f35fd69196785771318ab">66e9751</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #273 - Removed deprecated methods from Application
+Updated docblocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

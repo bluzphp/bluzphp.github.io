@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Session\Adapter\Redis</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Session_Adapter">Bluz\Session\Adapter</a>
+          </li>
+          <li class="separator">Redis</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Session/Adapter/Redis.php.xhtml#line21">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Session\Adapter\</small>Redis</h1>
+        <h4>Redis session handler</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Redis
+                extends <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter.xhtml">AbstractAdapter</a>
+                implements
+                <a title="SessionHandlerInterface" href="../interfaces/SessionHandlerInterface.xhtml">SessionHandlerInterface</a>
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$settings</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Session\Adapter\AbstractAdapter">AbstractAdapter</span></li><li>protected mixed <a href="#members">$handler</a>;
+                        </li><li>protected string <a href="#members">$prefix</a>;
+                        </li><li>protected integer <a href="#members">$ttl</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/__construct.xhtml">__construct</a>()
+                    </li><li>public bool|string <a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/read.xhtml">read</a>()
+                    </li><li>public bool|void <a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/write.xhtml">write</a>()
+                    </li><li>public bool|void <a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/destroy.xhtml">destroy</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Session\Adapter\AbstractAdapter">AbstractAdapter</span></li><li>protected string <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/prepareId.xhtml">prepareId</a>()
+                        </li><li>public bool|void <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/open.xhtml">open</a>()
+                        </li><li>public bool|void <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/close.xhtml">close</a>()
+                        </li><li>public bool|void <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/gc.xhtml">gc</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter.xhtml">Bluz\Session\Adapter\AbstractAdapter</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="SessionHandlerInterface" href="../interfaces/SessionHandlerInterface.xhtml">SessionHandlerInterface</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">78</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">89</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">99</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="handler"><strong>$handler</strong>
+                —
+                mixed</li>
+            <li id="prefix"><strong>$prefix</strong>
+                —
+                string</li>
+            <li id="settings"><strong>$settings</strong>
+                —
+                array<br/><span class="indent">Default Redis settings</span></li>
+            <li id="ttl"><strong>$ttl</strong>
+                —
+                int</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/__construct.xhtml">__construct()</a>
+                — Check and setup Redis server</li>
+            <li id="destroy"><a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/destroy.xhtml">destroy()</a>
+                — Destroy a session</li>
+            <li id="read"><a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/read.xhtml">read()</a>
+                — Read session data</li>
+            <li id="write"><a title="Bluz\Session\Adapter\Redis" href="../classes/Bluz_Session_Adapter_Redis/write.xhtml">write()</a>
+                — Write session data</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter.xhtml">Bluz\Session\Adapter\AbstractAdapter</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="prepareId"><a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/prepareId.xhtml">prepareId()</a>
+                — Prepare Id - add prefix</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="close"><a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/close.xhtml">close()</a>
+                — Close the session</li>
+            <li id="gc"><a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/gc.xhtml">gc()</a>
+                — Cleanup old sessions</li>
+            <li id="open"><a title="Bluz\Session\Adapter\AbstractAdapter" href="../classes/Bluz_Session_Adapter_AbstractAdapter/open.xhtml">open()</a>
+                — Initialize session</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-06T11:10:22+00:00 (commit #<span title="21a812d864221c809af040cea4356f212e1ec5d1">21a812d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-14T09:55:14+00:00 (commit #<span title="f43c97952c69f27c5de54290cb90d75341be9dbf">f43c979</span>)</h3>
+            <div>
+              <p>
+                        Author: Artur Edamov (artur.edamov@nixsolutions.com) /
+                        Commiter: Artur Edamov (artur.edamov@nixsolutions.com)
+                    </p>
+              <pre class="wrapped">Fixed #289</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

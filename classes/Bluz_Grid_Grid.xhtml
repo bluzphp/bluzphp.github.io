@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Grid\Grid</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Grid">Bluz\Grid</a>
+          </li>
+          <li class="separator">Grid</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Grid/Grid.php.xhtml#line40">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Grid\</small>Grid</h1>
+        <h4>Grid</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Grid
+            {<br/><ul class="none"><li>// constants</li><li>const ORDER_ASC = 'asc';</li><li>const ORDER_DESC = 'desc';</li><li>const FILTER_LIKE = 'like';</li><li>const FILTER_ENUM = 'enum';</li><li>const FILTER_NUM = 'num';</li><li>const FILTER_EQ = 'eq';</li><li>const FILTER_NE = 'ne';</li><li>const FILTER_GT = 'gt';</li><li>const FILTER_GE = 'ge';</li><li>const FILTER_LT = 'lt';</li><li>const FILTER_LE = 'le';</li></ul><ul class="none"><li>// members</li><li>protected <span title="Bluz\Grid\Source\AbstractSource">AbstractSource</span> <a href="#members">$adapter</a>;
+                    </li><li>protected <span title="Bluz\Grid\Data">Data</span> <a href="#members">$data</a>;
+                    </li><li>protected  <a href="#members">$uid</a>;
+                    </li><li>protected  <a href="#members">$prefix</a>;
+                    </li><li>protected  <a href="#members">$module</a>;
+                    </li><li>protected  <a href="#members">$controller</a>;
+                    </li><li>protected array <a href="#members">$params</a> =
+                        ;
+                    </li><li>protected integer <a href="#members">$page</a> =
+                        1;
+                    </li><li>protected integer <a href="#members">$limit</a> =
+                        25;
+                    </li><li>protected integer <a href="#members">$defaultLimit</a> =
+                        25;
+                    </li><li>protected  <a href="#members">$defaultOrder</a>;
+                    </li><li>protected array <a href="#members">$orders</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$allowOrders</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$filters</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$allowFilters</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/__construct.xhtml">__construct</a>()
+                    </li><li>public abstract Grid <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/init.xhtml">init</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAdapter.xhtml">setAdapter</a>()
+                    </li><li>public AbstractSource <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAdapter.xhtml">getAdapter</a>()
+                    </li><li>public string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getUid.xhtml">getUid</a>()
+                    </li><li>public string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getPrefix.xhtml">getPrefix</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setModule.xhtml">setModule</a>()
+                    </li><li>public string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getModule.xhtml">getModule</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setController.xhtml">setController</a>()
+                    </li><li>public string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getController.xhtml">getController</a>()
+                    </li><li>public Grid <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/processRequest.xhtml">processRequest</a>()
+                    </li><li>public Grid <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/processSource.xhtml">processSource</a>()
+                    </li><li>public Data <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getData.xhtml">getData</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getSettings.xhtml">getSettings</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setParams.xhtml">setParams</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getParams.xhtml">getParams</a>()
+                    </li><li>public string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getUrl.xhtml">getUrl</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowOrders.xhtml">setAllowOrders</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowOrders.xhtml">getAllowOrders</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrder.xhtml">addOrder</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrders.xhtml">addOrders</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setOrder.xhtml">setOrder</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setOrders.xhtml">setOrders</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getOrders.xhtml">getOrders</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowFilters.xhtml">setAllowFilters</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowFilters.xhtml">getAllowFilters</a>()
+                    </li><li>public bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilter.xhtml">checkFilter</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addFilter.xhtml">addFilter</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilters.xhtml">getFilters</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setPage.xhtml">setPage</a>()
+                    </li><li>public integer <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getPage.xhtml">getPage</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setLimit.xhtml">setLimit</a>()
+                    </li><li>public integer <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getLimit.xhtml">getLimit</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setDefaultLimit.xhtml">setDefaultLimit</a>()
+                    </li><li>public integer <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getDefaultLimit.xhtml">getDefaultLimit</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setDefaultOrder.xhtml">setDefaultOrder</a>()
+                    </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getDefaultOrder.xhtml">getDefaultOrder</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
+                        </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
+                        </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a>
+            </li>
+            <li>
+              <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">405 - 456</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method getParams() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">405 - 456</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
+              </td>
+              <td>The method getParams() has an NPath complexity of 768. The configured NPath complexity threshold is 200.</td>
+            </tr>
+            <tr>
+              <td class="line">607 - 622</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method checkFilter() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="ORDER_ASC">ORDER_ASC</td>
+              <td>'asc'</td>
+            </tr>
+            <tr>
+              <td id="ORDER_DESC">ORDER_DESC</td>
+              <td>'desc'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_LIKE">FILTER_LIKE</td>
+              <td>'like'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_ENUM">FILTER_ENUM</td>
+              <td>'enum'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_NUM">FILTER_NUM</td>
+              <td>'num'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_EQ">FILTER_EQ</td>
+              <td>'eq'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_NE">FILTER_NE</td>
+              <td>'ne'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_GT">FILTER_GT</td>
+              <td>'gt'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_GE">FILTER_GE</td>
+              <td>'ge'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_LT">FILTER_LT</td>
+              <td>'lt'</td>
+            </tr>
+            <tr>
+              <td id="FILTER_LE">FILTER_LE</td>
+              <td>'le'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="adapter"><strong>$adapter</strong>
+                —
+                <a title="Bluz\Grid\Source\AbstractSource" href="../classes/Bluz_Grid_Source_AbstractSource.xhtml">Bluz\Grid\Source\AbstractSource</a><br/><span class="indent">Instance of Source</span></li>
+            <li id="allowFilters"><strong>$allowFilters</strong>
+                —
+                array<br/><span class="indent">Stack of allow filters</span></li>
+            <li id="allowOrders"><strong>$allowOrders</strong>
+                —
+                array<br/><span class="indent">Stack of allow orders</span></li>
+            <li id="controller"><strong>$controller</strong>
+                —
+                string<br/><span class="indent">Location of Grid</span></li>
+            <li id="data"><strong>$data</strong>
+                —
+                <a title="Bluz\Grid\Data" href="../classes/Bluz_Grid_Data.xhtml">Bluz\Grid\Data</a><br/><span class="indent">Instance of Data</span></li>
+            <li id="defaultLimit"><strong>$defaultLimit</strong>
+                —
+                int<br/><span class="indent">Default value of page limit</span></li>
+            <li id="defaultOrder"><strong>$defaultOrder</strong>
+                —
+                array<br/><span class="indent">Default order</span></li>
+            <li id="filters"><strong>$filters</strong>
+                —
+                array<br/><span class="indent">Stack of filters</span></li>
+            <li id="helpers"><strong>$helpers</strong>
+                —
+                array</li>
+            <li id="helpersPath"><strong>$helpersPath</strong>
+                —
+                array</li>
+            <li id="limit"><strong>$limit</strong>
+                —
+                int<br/><span class="indent">Limit per page</span></li>
+            <li id="module"><strong>$module</strong>
+                —
+                string<br/><span class="indent">Location of Grid</span></li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="orders"><strong>$orders</strong>
+                —
+                array<br/><span class="indent">Stack of orders</span></li>
+            <li id="page"><strong>$page</strong>
+                —
+                int<br/><span class="indent">Start from 1!</span></li>
+            <li id="params"><strong>$params</strong>
+                —
+                array<br/><span class="indent">Custom array params</span></li>
+            <li id="prefix"><strong>$prefix</strong>
+                —
+                string<br/><span class="indent">Unique prefix of grid</span></li>
+            <li id="uid"><strong>$uid</strong>
+                —
+                string<br/><span class="indent">Unique identification of grid</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/__construct.xhtml">__construct()</a>
+                — Grid constructor</li>
+            <li id="addFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addFilter.xhtml">addFilter()</a>
+                — Add filter</li>
+            <li id="addOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrder.xhtml">addOrder()</a>
+                — Add order rule</li>
+            <li id="addOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrders.xhtml">addOrders()</a>
+                — Add order rules</li>
+            <li id="checkFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilter.xhtml">checkFilter()</a>
+                — Check filter</li>
+            <li id="getAdapter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAdapter.xhtml">getAdapter()</a>
+                — Get source adapter</li>
+            <li id="getAllowFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowFilters.xhtml">getAllowFilters()</a>
+                — Get allow filters</li>
+            <li id="getAllowOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowOrders.xhtml">getAllowOrders()</a>
+                — Get allow orders</li>
+            <li id="getController"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getController.xhtml">getController()</a>
+                — Get controller</li>
+            <li id="getData"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getData.xhtml">getData()</a>
+                — Get data</li>
+            <li id="getDefaultLimit"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getDefaultLimit.xhtml">getDefaultLimit()</a>
+                — Get default limit</li>
+            <li id="getDefaultOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getDefaultOrder.xhtml">getDefaultOrder()</a>
+                — Get default order</li>
+            <li id="getFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilters.xhtml">getFilters()</a>
+                — Get filters</li>
+            <li id="getLimit"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getLimit.xhtml">getLimit()</a>
+                — Get limit per page</li>
+            <li id="getModule"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getModule.xhtml">getModule()</a>
+                — Get module</li>
+            <li id="getOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getOrders.xhtml">getOrders()</a>
+                — Get orders</li>
+            <li id="getPage"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getPage.xhtml">getPage()</a>
+                — Get page</li>
+            <li id="getParams"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getParams.xhtml">getParams()</a>
+                — Return params prepared for url builder</li>
+            <li id="getPrefix"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getPrefix.xhtml">getPrefix()</a>
+                — Get prefix</li>
+            <li id="getSettings"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getSettings.xhtml">getSettings()</a>
+                — Get settings</li>
+            <li id="getUid"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getUid.xhtml">getUid()</a>
+                — Get unique Grid Id</li>
+            <li id="getUrl"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getUrl.xhtml">getUrl()</a>
+                — Get Url</li>
+            <li id="init"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/init.xhtml">init()</a>
+                — Initialize Grid</li>
+            <li id="processRequest"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/processRequest.xhtml">processRequest()</a>
+                — Process request</li>
+            <li id="processSource"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/processSource.xhtml">processSource()</a>
+                — Process source</li>
+            <li id="setAdapter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAdapter.xhtml">setAdapter()</a>
+                — Set source adapter</li>
+            <li id="setAllowFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowFilters.xhtml">setAllowFilters()</a>
+                — Set allowed filters</li>
+            <li id="setAllowOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowOrders.xhtml">setAllowOrders()</a>
+                — Set allow orders</li>
+            <li id="setController"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setController.xhtml">setController()</a>
+                — Set controller</li>
+            <li id="setDefaultLimit"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setDefaultLimit.xhtml">setDefaultLimit()</a>
+                — Set default limit</li>
+            <li id="setDefaultOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setDefaultOrder.xhtml">setDefaultOrder()</a>
+                — Set default order</li>
+            <li id="setLimit"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setLimit.xhtml">setLimit()</a>
+                — Set limit per page</li>
+            <li id="setModule"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setModule.xhtml">setModule()</a>
+                — Set module</li>
+            <li id="setOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setOrder.xhtml">setOrder()</a>
+                — Set order</li>
+            <li id="setOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setOrders.xhtml">setOrders()</a>
+                — Set orders</li>
+            <li id="setPage"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setPage.xhtml">setPage()</a>
+                — Set page</li>
+            <li id="setParams"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setParams.xhtml">setParams()</a>
+                — Setup params</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call()</a>
+                — Call magic helper</li>
+            <li id="addHelperPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath()</a>
+                — Add helper path</li>
+            <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
+                — Set helpers path</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-07-06T11:10:22+00:00 (commit #<span title="21a812d864221c809af040cea4356f212e1ec5d1">21a812d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-05T14:21:51+00:00 (commit #<span title="a9c58e97f555c4c493f2cea9a7db59143bed6920">a9c58e9</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

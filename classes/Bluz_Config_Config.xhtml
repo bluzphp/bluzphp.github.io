@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Config\Config</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Config">Bluz\Config</a>
+          </li>
+          <li class="separator">Config</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Config/Config.php.xhtml#line23">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Config\</small>Config</h1>
+        <h4>Config</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Config
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$config</a>;
+                    </li><li>protected  <a href="#members">$modules</a>;
+                    </li><li>protected  <a href="#members">$path</a>;
+                    </li><li>protected  <a href="#members">$environment</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/setPath.xhtml">setPath</a>()
+                    </li><li>public void <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/setEnvironment.xhtml">setEnvironment</a>()
+                    </li><li>public void <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/init.xhtml">init</a>()
+                    </li><li>protected array <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/loadFile.xhtml">loadFile</a>()
+                    </li><li>protected array <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/loadFiles.xhtml">loadFiles</a>()
+                    </li><li>public array|mixed <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/getData.xhtml">getData</a>()
+                    </li><li>public mixed <a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/getModuleData.xhtml">getModuleData</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="config"><strong>$config</strong>
+                —
+                array</li>
+            <li id="environment"><strong>$environment</strong>
+                —
+                string</li>
+            <li id="modules"><strong>$modules</strong>
+                —
+                array</li>
+            <li id="path"><strong>$path</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="loadFile"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/loadFile.xhtml">loadFile()</a>
+                — Load configuration file</li>
+            <li id="loadFiles"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/loadFiles.xhtml">loadFiles()</a>
+                — Load configuration files to array</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getData"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/getData.xhtml">getData()</a>
+                — Return configuration by key</li>
+            <li id="getModuleData"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/getModuleData.xhtml">getModuleData()</a>
+                — Return module configuration by section</li>
+            <li id="init"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/init.xhtml">init()</a>
+                — Load configuration</li>
+            <li id="setEnvironment"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/setEnvironment.xhtml">setEnvironment()</a>
+                — Set application environment</li>
+            <li id="setPath"><a title="Bluz\Config\Config" href="../classes/Bluz_Config_Config/setPath.xhtml">setPath()</a>
+                — Set path to configuration files</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments
+Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-04-03T08:20:23+00:00 (commit #<span title="76c99ffdad32db7c30e00198c1844340d0086da9">76c99ff</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed many PHP Analyzer issues</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-02-19T16:46:07+00:00 (commit #<span title="f7f409ba3d31018c1bfa74b7fa6a796a7e63a6f0">f7f409b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-06T12:15:59+00:00 (commit #<span title="a667f9f0316405a330c99a02e815c2ac46069a9e">a667f9f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added @api tags to framework components</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

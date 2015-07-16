@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Session\Session</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Session">Bluz\Session</a>
+          </li>
+          <li class="separator">Session</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Session/Session.php.xhtml#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Session\</small>Session</h1>
+        <h4>Session</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Session
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$name</a>;
+                    </li><li>protected string <a href="#members">$namespace</a> =
+                        'bluz';
+                    </li><li>protected <span title="\SessionHandlerInterface">SessionHandlerInterface</span> <a href="#members">$adapter</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public Session <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setName.xhtml">setName</a>()
+                    </li><li>public string <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getName.xhtml">getName</a>()
+                    </li><li>public Session <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setNamespace.xhtml">setNamespace</a>()
+                    </li><li>public string <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getNamespace.xhtml">getNamespace</a>()
+                    </li><li>public Session <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setId.xhtml">setId</a>()
+                    </li><li>public string <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getId.xhtml">getId</a>()
+                    </li><li>public bool <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/regenerateId.xhtml">regenerateId</a>()
+                    </li><li>public bool <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/cookieExists.xhtml">cookieExists</a>()
+                    </li><li>public bool <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/sessionExists.xhtml">sessionExists</a>()
+                    </li><li>public void <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/start.xhtml">start</a>()
+                    </li><li>public void <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/destroy.xhtml">destroy</a>()
+                    </li><li>public Session <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setAdapter.xhtml">setAdapter</a>()
+                    </li><li>public SessionHandlerInterface <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getAdapter.xhtml">getAdapter</a>()
+                    </li><li>protected bool <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/initAdapter.xhtml">initAdapter</a>()
+                    </li><li>public void <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setSessionCookieLifetime.xhtml">setSessionCookieLifetime</a>()
+                    </li><li>public void <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/expireSessionCookie.xhtml">expireSessionCookie</a>()
+                    </li><li>protected Session <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setSavePath.xhtml">setSavePath</a>()
+                    </li><li>public void <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/set.xhtml">set</a>()
+                    </li><li>public mixed <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/get.xhtml">get</a>()
+                    </li><li>public bool <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/contains.xhtml">contains</a>()
+                    </li><li>public void <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/delete.xhtml">delete</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">124</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="adapter"><strong>$adapter</strong>
+                —
+                <a title="\SessionHandlerInterface" href="../classes/_SessionHandlerInterface.xhtml">\SessionHandlerInterface</a></li>
+            <li id="name"><strong>$name</strong>
+                —
+                string</li>
+            <li id="namespace"><strong>$namespace</strong>
+                —
+                string</li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="initAdapter"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/initAdapter.xhtml">initAdapter()</a>
+                — Register Save Handler with ext/session</li>
+            <li id="setSavePath"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setSavePath.xhtml">setSavePath()</a>
+                — Set session save path</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="contains"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/contains.xhtml">contains()</a>
+                — Isset</li>
+            <li id="cookieExists"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/cookieExists.xhtml">cookieExists()</a>
+                — Returns true if session ID is set</li>
+            <li id="delete"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/delete.xhtml">delete()</a>
+                — Unset</li>
+            <li id="destroy"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/destroy.xhtml">destroy()</a>
+                — Destroy/end a session</li>
+            <li id="expireSessionCookie"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/expireSessionCookie.xhtml">expireSessionCookie()</a>
+                — Expire the session cookie</li>
+            <li id="get"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/get.xhtml">get()</a>
+                — Get value by key</li>
+            <li id="getAdapter"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getAdapter.xhtml">getAdapter()</a>
+                — Get SaveHandler Object</li>
+            <li id="getId"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getId.xhtml">getId()</a>
+                — Get session ID</li>
+            <li id="getName"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getName.xhtml">getName()</a>
+                — Get session name</li>
+            <li id="getNamespace"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/getNamespace.xhtml">getNamespace()</a>
+                — Get Namespace</li>
+            <li id="regenerateId"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/regenerateId.xhtml">regenerateId()</a>
+                — Regenerate id</li>
+            <li id="sessionExists"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/sessionExists.xhtml">sessionExists()</a>
+                — Does a session started and is it currently active?</li>
+            <li id="set"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/set.xhtml">set()</a>
+                — Set key/value pair</li>
+            <li id="setAdapter"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setAdapter.xhtml">setAdapter()</a>
+                — Set session save handler object</li>
+            <li id="setId"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setId.xhtml">setId()</a>
+                — Set session ID</li>
+            <li id="setName"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setName.xhtml">setName()</a>
+                — Attempt to set the session name</li>
+            <li id="setNamespace"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setNamespace.xhtml">setNamespace()</a>
+                — Set Namespace</li>
+            <li id="setSessionCookieLifetime"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/setSessionCookieLifetime.xhtml">setSessionCookieLifetime()</a>
+                — Set the session cookie lifetime</li>
+            <li id="start"><a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session/start.xhtml">start()</a>
+                — Start session</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2015-07-06T11:10:22+00:00 (commit #<span title="21a812d864221c809af040cea4356f212e1ec5d1">21a812d</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-05-20T13:49:10+00:00 (commit #<span title="982aff6f09294cb660bc59f276afa9fe83f8c7b6">982aff6</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed Session regenerate Id behaviour for PHP 7</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-22T16:38:08+00:00 (commit #<span title="4791061587f26f0afbdfb2fde111ceb326f8a98e">4791061</span>)</h3>
+            <div>
+              <p>
+                        Author: farior2109 (srgspbabko@gmail.com) /
+                        Commiter: farior2109 (srgspbabko@gmail.com)
+                    </p>
+              <pre class="wrapped">Enable read/delete session variables even if there are no PHPSESSID Cookie</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-06T12:15:59+00:00 (commit #<span title="a667f9f0316405a330c99a02e815c2ac46069a9e">a667f9f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added @api tags to framework components</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-14T08:17:53+00:00 (commit #<span title="21ccd1eb9e5dcd14070a173a135dfd4b220e1d0c">21ccd1e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed deprecated code from Db\Table and Session</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-10T11:22:07+00:00 (commit #<span title="e0ee580f9ab5c36739c2fdbed3a84bb0027ea14d">e0ee580</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated library versions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T11:34:03+00:00 (commit #<span title="ccaf2679e128660b1c50892e8d3407201da5931a">ccaf267</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated doc blocks</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-09T09:15:51+00:00 (commit #<span title="71425b659bec6d23ff23ec60cef151fa20e8d4b6">71425b6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #259 from AntonShevchuk/master
+
+Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
