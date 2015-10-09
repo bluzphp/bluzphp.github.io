@@ -112,6 +112,7 @@
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRequest.xhtml">initRequest</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse</a>()
+                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView</a>()
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preProcess.xhtml">preProcess</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doProcess.xhtml">doProcess</a>()
@@ -156,13 +157,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">43.75%</td>
-            <td class="nummeric">14 / 32</td>
+            <td class="percent">45.45%</td>
+            <td class="nummeric">15 / 33</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">46.77%</td>
-            <td class="nummeric">123 / 263</td>
+            <td class="percent">47.17%</td>
+            <td class="nummeric">125 / 265</td>
           </tr>
         </table>
         <h2 id="members">Members</h2>
@@ -222,6 +223,9 @@
                 — Initial Request instance</li>
             <li id="initResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse()</a>
                 — Initial Response instance</li>
+            <li id="initView">
+              <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView()</a>
+            </li>
             <li id="postDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch()</a>
                 — Post dispatch mount point</li>
             <li id="postProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess()</a>
@@ -300,6 +304,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2015-10-09T13:04:58+00:00 (commit #<span title="23034d63e55e96029542ffdae1c9e97e550c61b7">23034d6</span>)</h3>
+            <div>
+              <p>
+                        Author: Andrey (dev.andreyalek@gmail.com) /
+                        Commiter: Andrey (dev.andreyalek@gmail.com)
+                    </p>
+              <pre class="wrapped">Moved view initialization into it's own method</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
             <div>
@@ -454,21 +468,11 @@ Marked as deprecated `isJson()` and `isXml()` methods</pre>
               <pre class="wrapped">Added default check for text/html</pre>
             </div>
           </li>
-          <li>
-            <h3>2014-11-11T09:36:48+00:00 (commit #<span title="b61aa10acf091de6f4c1f7e0c4c8a3f632787630">b61aa10</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #281 - Added support of XML Response Presentation</pre>
-            </div>
-          </li>
         </ul>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.8.0 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
     </footer>
   </body>
 </html>
