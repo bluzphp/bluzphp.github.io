@@ -112,7 +112,7 @@
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRequest.xhtml">initRequest</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse</a>()
-                    </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView</a>()
+                    </li><li>protected View <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView</a>()
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preProcess.xhtml">preProcess</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doProcess.xhtml">doProcess</a>()
@@ -134,6 +134,7 @@
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/finish.xhtml">finish</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
                         </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
+                        </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/resetHelpersPath.xhtml">resetHelpersPath</a>()
                         </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Singleton">Singleton</span></li><li>public final static Application <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance</a>()
                         </li><li>protected void <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__construct.xhtml">__construct</a>()
@@ -223,9 +224,8 @@
                 — Initial Request instance</li>
             <li id="initResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse()</a>
                 — Initial Response instance</li>
-            <li id="initView">
-              <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView()</a>
-            </li>
+            <li id="initView"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView()</a>
+                — Initial controller view</li>
             <li id="postDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch()</a>
                 — Post dispatch mount point</li>
             <li id="postProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess()</a>
@@ -287,6 +287,8 @@
                 — Call magic helper</li>
             <li id="addHelperPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath()</a>
                 — Add helper path</li>
+            <li id="resetHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/resetHelpersPath.xhtml">resetHelpersPath()</a>
+                — Reset helpers path</li>
             <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
                 — Set helpers path</li>
           </ul>
@@ -304,6 +306,17 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2015-10-12T08:47:26+00:00 (commit #<span title="46157600d98758f05b1d243c1c835e06c728b03e">4615760</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `resetHelperPath` for Helper trait
+Added docblock for initView method in Application</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-10-09T13:04:58+00:00 (commit #<span title="23034d63e55e96029542ffdae1c9e97e550c61b7">23034d6</span>)</h3>
             <div>
@@ -456,16 +469,6 @@ Marked as deprecated `isJson()` and `isXml()` methods</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Added links to wiki in every package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-11T11:11:46+00:00 (commit #<span title="4f077aa5c6c784f2ad6b1162c4b6d3e6d1ff0804">4f077aa</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added default check for text/html</pre>
             </div>
           </li>
         </ul>
