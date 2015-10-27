@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Update.php.xhtml#line56">Source</a>
+            <a href="../../source/Db/Query/Update.php.xhtml#line58">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,11 +76,13 @@
         <h1><small>Bluz\Db\Query\Update::</small>update</h1>
         <h4>Turns the query being built into a bulk update query that ranges over a certain table</h4>
         <p>Example
+&lt;code&gt;
     $ub = new UpdateBuilder();
     $ub
         -&gt;update('users')
         -&gt;set('password', md5('password'))
-        -&gt;where('id = ?');</p>
+        -&gt;where('id = ?');
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -93,7 +95,7 @@
           <dt><code>$table</code>
                 —
                 string</dt>
-          <dd>The table whose rows are subject to the update</dd>
+          <dd>the table whose rows are subject to the update</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

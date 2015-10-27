@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Select.php.xhtml#line135">Source</a>
+            <a href="../../source/Db/Query/Select.php.xhtml#line136">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,12 +76,14 @@
         <h1><small>Bluz\Db\Query\Select::</small>addSelect</h1>
         <h4>Adds an item that is to be returned in the query result.</h4>
         <p>Example
+&lt;code&gt;
     $sb = new Select();
     $sb
         -&gt;select('u.id')
         -&gt;addSelect('p.id')
         -&gt;from('users', 'u')
-        -&gt;leftJoin('u', 'phonenumbers', 'u.id = p.user_id');</p>
+        -&gt;leftJoin('u', 'phone', 'u.id = p.user_id');
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -94,7 +96,7 @@
           <dt><code>$select</code>
                 —
                 string</dt>
-          <dd>The selection expression</dd>
+          <dd>the selection expression</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

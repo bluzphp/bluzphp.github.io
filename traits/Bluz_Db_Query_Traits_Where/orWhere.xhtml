@@ -65,7 +65,7 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Traits/Where.php.xhtml#line102">Source</a>
+            <a href="../../source/Db/Query/Traits/Where.php.xhtml#line108">Source</a>
           </li>
         </ul>
       </nav>
@@ -74,12 +74,14 @@
         <h4>Add WHERE .. OR .. condition</h4>
         <p>Adds one or more restrictions to the query results, forming a logical
 disjunction with any previously specified restrictions.
+&lt;code&gt;
     $sb = new SelectBuilder();
     $sb
         -&gt;select('u.name')
         -&gt;from('users', 'u')
         -&gt;where('u.id = 1')
-        -&gt;orWhere('u.id = ?', 2);</p>
+        -&gt;orWhere('u.id = ?', 2);
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">

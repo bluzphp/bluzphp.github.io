@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Db.php.xhtml#line320">Source</a>
+            <a href="../../source/Db/Db.php.xhtml#line315">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,7 +76,9 @@
         <h1><small>Bluz\Db\Db::</small>fetchOne</h1>
         <h4>Return first field from first element from the result set</h4>
         <p>Example of usage
-    $db-&gt;fetchOne("SELECT COUNT(*) FROM users");</p>
+&lt;code&gt;
+    $db-&gt;fetchOne("SELECT COUNT(*) FROM users");
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -91,11 +93,11 @@
           <dt><code>$sql</code>
                 —
                 string</dt>
-          <dd>&lt;p&gt;<br/>"SELECT id FROM users WHERE name = :name AND pass = :pass"<br/> &lt;/p&gt;</dd>
+          <dd>SQL query with placeholders<br/>"SELECT * FROM users WHERE name = :name AND pass = :pass"</dd>
           <dt><code>$params</code>
                 —
                 array</dt>
-          <dd>&lt;p&gt;<br/>array (':name' =&gt; 'John', ':pass' =&gt; '123456')<br/>&lt;/p&gt;</dd>
+          <dd>params for query placeholders (optional)<br/>array (':name' =&gt; 'John', ':pass' =&gt; '123456')</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

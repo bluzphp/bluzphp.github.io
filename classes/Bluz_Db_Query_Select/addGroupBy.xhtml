@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Select.php.xhtml#line300">Source</a>
+            <a href="../../source/Db/Query/Select.php.xhtml#line313">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,12 +76,14 @@
         <h1><small>Bluz\Db\Query\Select::</small>addGroupBy</h1>
         <h4>Adds a grouping expression to the query.</h4>
         <p>Example
+&lt;code&gt;
     $sb = new Select();
     $sb
         -&gt;select('u.name')
         -&gt;from('users', 'u')
         -&gt;groupBy('u.lastLogin');
-        -&gt;addGroupBy('u.createdAt')</p>
+        -&gt;addGroupBy('u.createdAt')
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -94,7 +96,7 @@
           <dt><code>$groupBy</code>
                 —
                 array</dt>
-          <dd>The grouping expression<br/><br/><br/>      </dd>
+          <dd>the grouping expression<br/><br/><br/>      </dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

@@ -65,7 +65,7 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Traits/Where.php.xhtml#line73">Source</a>
+            <a href="../../source/Db/Query/Traits/Where.php.xhtml#line77">Source</a>
           </li>
         </ul>
       </nav>
@@ -74,12 +74,14 @@
         <h4>Add WHERE .. AND .. condition</h4>
         <p>Adds one or more restrictions to the query results, forming a logical
 conjunction with any previously specified restrictions.
+&lt;code&gt;
     $sb = new SelectBuilder();
     $sb
         -&gt;select('u')
         -&gt;from('users', 'u')
         -&gt;where('u.username LIKE ?', '%Smith%')
-        -&gt;andWhere('u.is_active = ?', 1);</p>
+        -&gt;andWhere('u.is_active = ?', 1);
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">

@@ -65,7 +65,7 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Traits/From.php.xhtml#line46">Source</a>
+            <a href="../../source/Db/Query/Traits/From.php.xhtml#line49">Source</a>
           </li>
         </ul>
       </nav>
@@ -74,10 +74,13 @@
         <h4>Set FROM</h4>
         <p>Create and add a query root corresponding to the table identified by the
 given alias, forming a cartesian product with any existing query roots
+
+&lt;code&gt;
     $sb = new SelectBuilder();
     $sb
         -&gt;select('u.id')
-        -&gt;from('users', 'u')</p>
+        -&gt;from('users', 'u')
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">

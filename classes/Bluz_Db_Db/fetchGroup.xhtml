@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Db.php.xhtml#line415">Source</a>
+            <a href="../../source/Db/Db.php.xhtml#line403">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,7 +76,9 @@
         <h1><small>Bluz\Db\Db::</small>fetchGroup</h1>
         <h4>Returns an array containing all of the result set rows</h4>
         <p>Group by first column
-    $db-&gt;fetchGroup("SELECT ip, COUNT(id) FROM users GROUP BY ip", array());</p>
+&lt;code&gt;
+    $db-&gt;fetchGroup("SELECT ip, COUNT(id) FROM users GROUP BY ip", array());
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -91,11 +93,11 @@
           <dt><code>$sql</code>
                 —
                 string</dt>
-          <dd>&lt;p&gt;<br/>"SELECT ip, id FROM users"<br/> &lt;/p&gt;</dd>
+          <dd>SQL query with placeholders<br/>"SELECT ip, id FROM users"</dd>
           <dt><code>$params</code>
                 —
                 array</dt>
-          <dd/>
+          <dd>params for query placeholders (optional)</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

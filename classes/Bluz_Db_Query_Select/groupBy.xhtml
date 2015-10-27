@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Select.php.xhtml#line277">Source</a>
+            <a href="../../source/Db/Query/Select.php.xhtml#line288">Source</a>
           </li>
         </ul>
       </nav>
@@ -78,11 +78,13 @@
         <p>Replaces any previously specified groupings, if any.
 
 Example
+&lt;code&gt;
     $sb = new Select();
     $sb
         -&gt;select('u.name')
         -&gt;from('users', 'u')
-        -&gt;groupBy('u.id');</p>
+        -&gt;groupBy('u.id');
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -95,7 +97,7 @@ Example
           <dt><code>$groupBy</code>
                 —
                 array</dt>
-          <dd>The grouping expression<br/><br/><br/>      </dd>
+          <dd>the grouping expression<br/><br/><br/>      </dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Select.php.xhtml#line177">Source</a>
+            <a href="../../source/Db/Query/Select.php.xhtml#line182">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,11 +76,13 @@
         <h1><small>Bluz\Db\Query\Select::</small>innerJoin</h1>
         <h4>Creates and adds a join to the query</h4>
         <p>Example
+&lt;code&gt;
     $sb = new Select();
     $sb
         -&gt;select('u.name')
         -&gt;from('users', 'u')
-        -&gt;innerJoin('u', 'phonenumbers', 'p', 'p.is_primary = 1');</p>
+        -&gt;innerJoin('u', 'phone', 'p', 'p.is_primary = 1');
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -99,19 +101,19 @@
           <dt><code>$fromAlias</code>
                 —
                 string</dt>
-          <dd>The alias that points to a from clause</dd>
+          <dd>the alias that points to a from clause</dd>
           <dt><code>$join</code>
                 —
                 string</dt>
-          <dd>The table name to join</dd>
+          <dd>the table name to join</dd>
           <dt><code>$alias</code>
                 —
                 string</dt>
-          <dd>The alias of the join table</dd>
+          <dd>the alias of the join table</dd>
           <dt><code>$condition</code>
                 —
                 string</dt>
-          <dd>The condition for the join</dd>
+          <dd>the condition for the join</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

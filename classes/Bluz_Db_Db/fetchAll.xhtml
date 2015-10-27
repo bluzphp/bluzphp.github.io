@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Db.php.xhtml#line372">Source</a>
+            <a href="../../source/Db/Db.php.xhtml#line363">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,7 +76,9 @@
         <h1><small>Bluz\Db\Db::</small>fetchAll</h1>
         <h4>Returns an array containing all of the result set rows</h4>
         <p>Example of usage
-    $db-&gt;fetchAll("SELECT * FROM users WHERE ip = ?", array('192.168.1.1'));</p>
+&lt;code&gt;
+    $db-&gt;fetchAll("SELECT * FROM users WHERE ip = ?", array('192.168.1.1'));
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -91,11 +93,11 @@
           <dt><code>$sql</code>
                 —
                 string</dt>
-          <dd>&lt;p&gt;<br/>"SELECT * FROM users WHERE ip = :ip"<br/> &lt;/p&gt;</dd>
+          <dd>SQL query with placeholders<br/>"SELECT * FROM users WHERE ip = :ip"</dd>
           <dt><code>$params</code>
                 —
                 array</dt>
-          <dd>&lt;p&gt;<br/>array (':ip' =&gt; '127.0.0.1')<br/>&lt;/p&gt;</dd>
+          <dd>params for query placeholders (optional)<br/>array (':ip' =&gt; '127.0.0.1')</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

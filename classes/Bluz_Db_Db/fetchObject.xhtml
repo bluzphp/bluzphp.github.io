@@ -68,19 +68,22 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Db.php.xhtml#line486">Source</a>
+            <a href="../../source/Db/Db.php.xhtml#line469">Source</a>
           </li>
         </ul>
       </nav>
       <section>
         <h1><small>Bluz\Db\Db::</small>fetchObject</h1>
         <h4>Returns an object containing first row from the result set</h4>
-        <p>Fetch object to stdClass
+        <p>Example of usage
+&lt;code&gt;
+    // Fetch object to stdClass
     $stdClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id));
-Fetch object to new Some object
+    // Fetch object to new Some object
     $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id), 'Some');
-Fetch object to exists instance of Some object
-    $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id), $someClass);</p>
+    // Fetch object to exists instance of Some object
+    $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id), $someClass);
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
@@ -97,11 +100,11 @@ Fetch object to exists instance of Some object
           <dt><code>$sql</code>
                 —
                 string</dt>
-          <dd>&lt;p&gt;<br/>"SELECT * FROM users WHERE name = :name AND pass = :pass"<br/> &lt;/p&gt;</dd>
+          <dd>SQL query with placeholders<br/>"SELECT * FROM users WHERE name = :name AND pass = :pass"</dd>
           <dt><code>$params</code>
                 —
                 array</dt>
-          <dd>&lt;p&gt;<br/>array (':name' =&gt; 'John', ':pass' =&gt; '123456')<br/>&lt;/p&gt;</dd>
+          <dd>params for query placeholders (optional)<br/>array (':name' =&gt; 'John', ':pass' =&gt; '123456')</dd>
           <dt><code>$object</code>
                 —
                 string</dt>

@@ -75,7 +75,7 @@
       <section>
         <h1 id="introduction"><small>Bluz\Db\</small>Table</h1>
         <h4>Table</h4>
-        <p>Example of Users\Table<br/>namespace Application\Users;<br/>class Table extends \Bluz\Db\Table<br/>{<br/>protected $table = 'users';<br/>protected $primary = array('id');<br/>}<br/><br/>$userRows = \Application\Users\Table::find(1,2,3,4,5);<br/>foreach ($userRows as $userRow) {<br/>$userRow -&gt; description = 'In first 5';<br/>$userRow -&gt; save();<br/>    }</p>
+        <p>Example of Users\Table<br/>&lt;code&gt;<br/>namespace Application\Users;<br/>class Table extends \Bluz\Db\Table<br/>{<br/>protected $table = 'users';<br/>protected $primary = array('id');<br/>}<br/><br/>$userRows = \Application\Users\Table::find(1,2,3,4,5);<br/>foreach ($userRows as $userRow) {<br/>$userRow -&gt; description = 'In first 5';<br/>$userRow -&gt; save();<br/>}<br/>&lt;/code&gt;</p>
         <ul>
           <li>Author: Anton Shevchuk</li>
         </ul>
@@ -216,6 +216,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated dockblocks in all projects</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
             <div>
@@ -370,16 +380,6 @@ Added PHPDocumentor configuration</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Implement Proxy package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-09-19T15:04:42+00:00 (commit #<span title="f33cf4cb5e61fc54b7f3d7f8434452205ced5c68">f33cf4c</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added Cache save handler for Session package</pre>
             </div>
           </li>
         </ul>

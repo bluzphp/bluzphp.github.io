@@ -65,7 +65,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/AbstractBuilder.php.xhtml#line98">Source</a>
+            <a href="../../source/Db/Query/AbstractBuilder.php.xhtml#line101">Source</a>
           </li>
         </ul>
       </nav>
@@ -73,12 +73,14 @@
         <h1><small>Bluz\Db\Query\AbstractBuilder::</small>getQuery</h1>
         <h4>Return the complete SQL string formed for use</h4>
         <p>Example
+&lt;code&gt;
     $sb = new SelectBuilder();
     $sb
         -&gt;select('u')
         -&gt;from('User', 'u')
         -&gt;where('id = ?', 42);
-    echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = "42"</p>
+    echo $qb-&gt;getQuery(); // SELECT u FROM User u WHERE id = "42"
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">

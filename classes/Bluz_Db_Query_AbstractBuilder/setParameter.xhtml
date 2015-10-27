@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/AbstractBuilder.php.xhtml#line125">Source</a>
+            <a href="../../source/Db/Query/AbstractBuilder.php.xhtml#line130">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,16 +76,18 @@
         <h1><small>Bluz\Db\Query\AbstractBuilder::</small>setParameter</h1>
         <h4>Sets a query parameter for the query being constructed</h4>
         <p>Example
+&lt;code&gt;
     $sb = new SelectBuilder();
     $sb
         -&gt;select('u')
         -&gt;from('users', 'u')
         -&gt;where('u.id = :user_id')
-        -&gt;setParameter(':user_id', 1);</p>
+        -&gt;setParameter(':user_id', 1);
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function setParameter(<a title="Bluz\Db\Query\string|integer" href="../../classes/Bluz_Db_Query_string|integer.xhtml">string|integer</a>
+          <code>public function setParameter(<a title="Bluz\Db\Query\string|int" href="../../classes/Bluz_Db_Query_string|int.xhtml">string|int</a>
         $key,
             mixed
         $value,

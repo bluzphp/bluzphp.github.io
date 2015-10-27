@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Db.php.xhtml#line549">Source</a>
+            <a href="../../source/Db/Db.php.xhtml#line526">Source</a>
           </li>
         </ul>
       </nav>
@@ -90,11 +90,11 @@
           <dt><code>$sql</code>
                 —
                 string</dt>
-          <dd>&lt;p&gt;<br/>"SELECT '__users', u.*, '__users_profile', up.<br/>FROM users u<br/>LEFT JOIN users_profile up ON up.userId = u.id"<br/>WHERE u.name = :name<br/> &lt;/p&gt;</dd>
+          <dd>SQL query with placeholders<br/>"SELECT '__users', u.*, '__users_profile', up.<br/>FROM users u<br/>LEFT JOIN users_profile up ON up.userId = u.id<br/>                       WHERE u.name = :name"</dd>
           <dt><code>$params</code>
                 —
                 array</dt>
-          <dd>&lt;p&gt;<br/>array (':name' =&gt; 'John')<br/>&lt;/p&gt;</dd>
+          <dd>params for query placeholders (optional)<br/>array (':name' =&gt; 'John')</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

@@ -65,7 +65,7 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/Db/Query/Traits/Where.php.xhtml#line51">Source</a>
+            <a href="../../source/Db/Query/Traits/Where.php.xhtml#line53">Source</a>
           </li>
         </ul>
       </nav>
@@ -74,12 +74,14 @@
         <h4>Set WHERE condition</h4>
         <p>Specifies one or more restrictions to the query result
 Replaces any previously specified restrictions, if any
+&lt;code&gt;
     $sb = new SelectBuilder();
     $sb
         -&gt;select('u.name')
         -&gt;from('users', 'u')
         -&gt;where('u.id = ?', $id)
-     ;</p>
+     ;
+&lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
