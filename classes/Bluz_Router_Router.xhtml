@@ -90,7 +90,9 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Router
-            {<br/><ul class="none"><li>// constants</li><li>const DEFAULT_MODULE = 'index';</li><li>const DEFAULT_CONTROLLER = 'index';</li><li>const ERROR_MODULE = 'error';</li><li>const ERROR_CONTROLLER = 'index';</li></ul><ul class="none"><li>// members</li><li>protected string <a href="#members">$defaultModule</a> =
+            {<br/><ul class="none"><li>// constants</li><li>const DEFAULT_MODULE = 'index';</li><li>const DEFAULT_CONTROLLER = 'index';</li><li>const ERROR_MODULE = 'error';</li><li>const ERROR_CONTROLLER = 'index';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$baseUrl</a>;
+                    </li><li>protected  <a href="#members">$cleanUri</a>;
+                    </li><li>protected string <a href="#members">$defaultModule</a> =
                         self::DEFAULT_MODULE;
                     </li><li>protected string <a href="#members">$defaultController</a> =
                         self::DEFAULT_CONTROLLER;
@@ -103,6 +105,8 @@
                     </li><li>protected array <a href="#members">$reverse</a> =
                         ;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/__construct.xhtml">__construct</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getBaseUrl.xhtml">getBaseUrl</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setBaseUrl.xhtml">setBaseUrl</a>()
                     </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultModule.xhtml">getDefaultModule</a>()
                     </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultModule.xhtml">setDefaultModule</a>()
                     </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultController.xhtml">getDefaultController</a>()
@@ -119,6 +123,7 @@
                     </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processDefault.xhtml">processDefault</a>()
                     </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processCustom.xhtml">processCustom</a>()
                     </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processRoute.xhtml">processRoute</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getCleanUri.xhtml">getCleanUri</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
                         </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
                         </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
@@ -140,13 +145,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">41.18%</td>
-            <td class="nummeric">7 / 17</td>
+            <td class="percent">50%</td>
+            <td class="nummeric">10 / 20</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">54.55%</td>
-            <td class="nummeric">78 / 143</td>
+            <td class="percent">79.35%</td>
+            <td class="nummeric">123 / 155</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -161,7 +166,7 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">372</td>
+              <td class="line">403</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
@@ -200,6 +205,12 @@
         <div class="styled members">
           <h4>protected</h4>
           <ul class="members">
+            <li id="baseUrl"><strong>$baseUrl</strong>
+                —
+                string</li>
+            <li id="cleanUri"><strong>$cleanUri</strong>
+                —
+                string</li>
             <li id="defaultController"><strong>$defaultController</strong>
                 —
                 string</li>
@@ -242,6 +253,10 @@
           <ul>
             <li id="__construct"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/__construct.xhtml">__construct()</a>
                 — Constructor of Router</li>
+            <li id="getBaseUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getBaseUrl.xhtml">getBaseUrl()</a>
+                — Get the base URL.</li>
+            <li id="getCleanUri"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getCleanUri.xhtml">getCleanUri()</a>
+                — Get the request URI without baseUrl</li>
             <li id="getDefaultController"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultController.xhtml">getDefaultController()</a>
                 — Get default controller</li>
             <li id="getDefaultModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultModule.xhtml">getDefaultModule()</a>
@@ -256,6 +271,8 @@
                 — Build URL to controller</li>
             <li id="process"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/process.xhtml">process()</a>
                 — Process routing</li>
+            <li id="setBaseUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setBaseUrl.xhtml">setBaseUrl()</a>
+                — Set the base URL.</li>
             <li id="setDefaultController"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultController.xhtml">setDefaultController()</a>
                 — Set default controller</li>
             <li id="setDefaultModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultModule.xhtml">setDefaultModule()</a>
@@ -285,6 +302,27 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2015-11-05T11:47:00+00:00 (commit #<span title="2b1277e385d130654560aa64d42234c2b7d5fa99">2b1277e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-11-05T10:55:08+00:00 (commit #<span title="bba7cd9a54d0a1a64a5d415ee159a51d49f64177">bba7cd9</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `initRouter()` to Application
+Moved `baseUrl` to `Router`</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
             <div>
@@ -399,54 +437,33 @@ Added Reflection of Controller class</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-19T15:04:42+00:00 (commit #<span title="f33cf4cb5e61fc54b7f3d7f8434452205ced5c68">f33cf4c</span>)</h3>
+            <h3>2014-09-19T15:07:19+00:00 (commit #<span title="51ee979a3b5ed275db5ef68fcdce6171bd2dc900">51ee979</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added Cache save handler for Session package</pre>
+              <pre class="wrapped">Fixed access for two methods</pre>
             </div>
           </li>
           <li>
-            <h3>2014-08-22T10:53:42+00:00 (commit #<span title="1056357dda83a26753337a7ef1b52be8f072f653">1056357</span>)</h3>
+            <h3>2014-08-22T10:58:22+00:00 (commit #<span title="2a4c364a2fba39c026f9e8d689395424f475b9aa">2a4c364</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added test for ValidatorException</pre>
+              <pre class="wrapped">Added CovarageIgnore tags</pre>
             </div>
           </li>
           <li>
-            <h3>2014-08-22T08:15:41+00:00 (commit #<span title="144dded8ebd3615668b428103dad64864905d935">144dded</span>)</h3>
+            <h3>2014-08-22T08:48:41+00:00 (commit #<span title="3ea56adaba196f5c667162d7468e2089c68a9e02">3ea56ad</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added test for Cli\Response</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-21T07:54:43+00:00 (commit #<span title="4d64784ca679f8e3575ec67596f6ba0617294b7d">4d64784</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added tests for Request package
-Method `getApp()` in test case transformed to static</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-20T12:39:04+00:00 (commit #<span title="99c688c424b9dcf31826ef278c9fda8918ce9265">99c688c</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated tests of Session package</pre>
+              <pre class="wrapped">Refactoring Response methods for support PSR-7</pre>
             </div>
           </li>
         </ul>
