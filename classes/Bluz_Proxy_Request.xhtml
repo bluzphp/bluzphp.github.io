@@ -62,6 +62,9 @@
             <a href="#coverage">Coverage</a>
           </li>
           <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
             <a href="#constants">Constants</a>
           </li>
           <li>
@@ -74,7 +77,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Proxy/Request.php.xhtml#line113">Source</a>
+            <a href="../source/Proxy/Request.php.xhtml#line37">Source</a>
           </li>
         </ul>
       </nav>
@@ -88,8 +91,27 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Request
                 extends <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">AbstractProxy</a>
-            {<br/><ul class="none"><li>// constants</li><li>const METHOD_OPTIONS = Instance::METHOD_OPTIONS;</li><li>const METHOD_GET = Instance::METHOD_GET;</li><li>const METHOD_HEAD = Instance::METHOD_HEAD;</li><li>const METHOD_PATCH = Instance::METHOD_PATCH;</li><li>const METHOD_POST = Instance::METHOD_POST;</li><li>const METHOD_PUT = Instance::METHOD_PUT;</li><li>const METHOD_DELETE = Instance::METHOD_DELETE;</li><li>const METHOD_TRACE = Instance::METHOD_TRACE;</li><li>const METHOD_CONNECT = Instance::METHOD_CONNECT;</li><li>const METHOD_CLI = Instance::METHOD_CLI;</li><li>const METHOD_HTTP = Instance::METHOD_HTTP;</li><li>const ACCEPT_CLI = Instance::ACCEPT_CLI;</li><li>const ACCEPT_HTML = Instance::ACCEPT_HTML;</li><li>const ACCEPT_JSON = Instance::ACCEPT_JSON;</li><li>const ACCEPT_JSONP = Instance::ACCEPT_JSONP;</li><li>const ACCEPT_XML = Instance::ACCEPT_XML;</li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static array <a href="#members">$instances</a>;
+            {<br/><ul class="none"><li>// constants</li><li>const METHOD_OPTIONS = 'OPTIONS';</li><li>const METHOD_GET = 'GET';</li><li>const METHOD_HEAD = 'HEAD';</li><li>const METHOD_PATCH = 'PATCH';</li><li>const METHOD_POST = 'POST';</li><li>const METHOD_PUT = 'PUT';</li><li>const METHOD_DELETE = 'DELETE';</li><li>const METHOD_TRACE = 'TRACE';</li><li>const METHOD_CONNECT = 'CONNECT';</li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static array <a href="#members">$instances</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
+                    </li><li>public static UriInterface <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getRequestUri.xhtml">getRequestUri</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getCookie.xhtml">getCookie</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getEnv.xhtml">getEnv</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getHeader.xhtml">getHeader</a>()
+                    </li><li>public static mixed <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParam.xhtml">getParam</a>()
+                    </li><li>public static array <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParams.xhtml">getParams</a>()
+                    </li><li>public static UploadedFile <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getFile.xhtml">getFile</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getClientIp.xhtml">getClientIp</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getModule.xhtml">getModule</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getController.xhtml">getController</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isHttp.xhtml">isHttp</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isGet.xhtml">isGet</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isPost.xhtml">isPost</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isPut.xhtml">isPut</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isDelete.xhtml">isDelete</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isXmlHttpRequest.xhtml">isXmlHttpRequest</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/initInstance.xhtml">initInstance</a>()
                         </li><li>public static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/getInstance.xhtml">getInstance</a>()
                         </li><li>public static void <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/setInstance.xhtml">setInstance</a>()
@@ -110,15 +132,42 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">0%</td>
-            <td class="nummeric">0 / 1</td>
+            <td class="percent">40%</td>
+            <td class="nummeric">8 / 20</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">0%</td>
-            <td class="nummeric">0 / 1</td>
+            <td class="percent">55.56%</td>
+            <td class="nummeric">35 / 63</td>
           </tr>
         </table>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">134 - 150</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method getParam() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+            <tr>
+              <td class="line">185</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $ip. Configured minimum length is 3.</td>
+            </tr>
+          </table>
+        </div>
         <h2 id="constants">Constants</h2>
         <table class="styled">
           <thead>
@@ -130,67 +179,39 @@
           <tbody>
             <tr>
               <td id="METHOD_OPTIONS">METHOD_OPTIONS</td>
-              <td>Instance::METHOD_OPTIONS</td>
+              <td>'OPTIONS'</td>
             </tr>
             <tr>
               <td id="METHOD_GET">METHOD_GET</td>
-              <td>Instance::METHOD_GET</td>
+              <td>'GET'</td>
             </tr>
             <tr>
               <td id="METHOD_HEAD">METHOD_HEAD</td>
-              <td>Instance::METHOD_HEAD</td>
+              <td>'HEAD'</td>
             </tr>
             <tr>
               <td id="METHOD_PATCH">METHOD_PATCH</td>
-              <td>Instance::METHOD_PATCH</td>
+              <td>'PATCH'</td>
             </tr>
             <tr>
               <td id="METHOD_POST">METHOD_POST</td>
-              <td>Instance::METHOD_POST</td>
+              <td>'POST'</td>
             </tr>
             <tr>
               <td id="METHOD_PUT">METHOD_PUT</td>
-              <td>Instance::METHOD_PUT</td>
+              <td>'PUT'</td>
             </tr>
             <tr>
               <td id="METHOD_DELETE">METHOD_DELETE</td>
-              <td>Instance::METHOD_DELETE</td>
+              <td>'DELETE'</td>
             </tr>
             <tr>
               <td id="METHOD_TRACE">METHOD_TRACE</td>
-              <td>Instance::METHOD_TRACE</td>
+              <td>'TRACE'</td>
             </tr>
             <tr>
               <td id="METHOD_CONNECT">METHOD_CONNECT</td>
-              <td>Instance::METHOD_CONNECT</td>
-            </tr>
-            <tr>
-              <td id="METHOD_CLI">METHOD_CLI</td>
-              <td>Instance::METHOD_CLI</td>
-            </tr>
-            <tr>
-              <td id="METHOD_HTTP">METHOD_HTTP</td>
-              <td>Instance::METHOD_HTTP</td>
-            </tr>
-            <tr>
-              <td id="ACCEPT_CLI">ACCEPT_CLI</td>
-              <td>Instance::ACCEPT_CLI</td>
-            </tr>
-            <tr>
-              <td id="ACCEPT_HTML">ACCEPT_HTML</td>
-              <td>Instance::ACCEPT_HTML</td>
-            </tr>
-            <tr>
-              <td id="ACCEPT_JSON">ACCEPT_JSON</td>
-              <td>Instance::ACCEPT_JSON</td>
-            </tr>
-            <tr>
-              <td id="ACCEPT_JSONP">ACCEPT_JSONP</td>
-              <td>Instance::ACCEPT_JSONP</td>
-            </tr>
-            <tr>
-              <td id="ACCEPT_XML">ACCEPT_XML</td>
-              <td>Instance::ACCEPT_XML</td>
+              <td>'CONNECT'</td>
             </tr>
           </tbody>
         </table>
@@ -210,6 +231,47 @@
             <li id="initInstance"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance()</a>
                 — Init instance</li>
           </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getAccept"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept()</a>
+                — Get Accept MIME Type</li>
+            <li id="getClientIp"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getClientIp.xhtml">getClientIp()</a>
+                — Get the client's IP address</li>
+            <li id="getController"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getController.xhtml">getController()</a>
+                — Get controller</li>
+            <li id="getCookie"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getCookie.xhtml">getCookie()</a>
+                — Retrieve a member of the $_COOKIE super global</li>
+            <li id="getEnv"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getEnv.xhtml">getEnv()</a>
+                — Retrieve a member of the $_ENV super global</li>
+            <li id="getFile"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getFile.xhtml">getFile()</a>
+                — Get uploaded file</li>
+            <li id="getHeader"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getHeader.xhtml">getHeader()</a>
+                — Search for a header value</li>
+            <li id="getModule"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getModule.xhtml">getModule()</a>
+                — Get module</li>
+            <li id="getParam"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParam.xhtml">getParam()</a>
+                — Access values contained in the superglobals as public members Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER, 5. ENV</li>
+            <li id="getParams"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParams.xhtml">getParams()</a>
+                — Get all params from GET and POST or PUT</li>
+            <li id="getRequestUri"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getRequestUri.xhtml">getRequestUri()</a>
+                — Get Request Uri</li>
+            <li id="getServer"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer()</a>
+                — Retrieve a member of the $_SERVER super global</li>
+            <li id="isCli"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli()</a>
+                — Check CLI</li>
+            <li id="isDelete"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isDelete.xhtml">isDelete()</a>
+                — Is this a DELETE method request?</li>
+            <li id="isGet"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isGet.xhtml">isGet()</a>
+                — Is this a GET method request?</li>
+            <li id="isHttp"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isHttp.xhtml">isHttp()</a>
+                — Check HTTP</li>
+            <li id="isPost"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isPost.xhtml">isPost()</a>
+                — Is this a POST method request?</li>
+            <li id="isPut"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isPut.xhtml">isPut()</a>
+                — Is this a PUT method request?</li>
+            <li id="isXmlHttpRequest"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isXmlHttpRequest.xhtml">isXmlHttpRequest()</a>
+                — Is the request a Javascript XMLHttpRequest?</li>
+          </ul>
           <h3>Inherited from <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">Bluz\Proxy\AbstractProxy</a></h3>
           <h4>protected</h4>
           <ul>
@@ -228,6 +290,87 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-01-26T13:54:13+00:00 (commit #<span title="43d15689da230ec1f9594d7de0fa411d2ae8eb57">43d1568</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-26T11:48:49+00:00 (commit #<span title="3edc46f16eaf412d08b0cd4ce82bbdef9b67e517">3edc46f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed unused flag</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-26T09:31:27+00:00 (commit #<span title="ced590f3a431bd4b05460f0bd65fbf9575a583a9">ced590f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed REST issue</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-26T08:50:46+00:00 (commit #<span title="3100038a9ef99dbd85722bf5c39199e67e950139">3100038</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed CLI Request and Response</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T11:37:18+00:00 (commit #<span title="a3acff28e4eaa462c97b16b8ee1527bf8b9847cd">a3acff2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to PSR7 Response</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-12-29T11:14:30+00:00 (commit #<span title="2177873612694ffc3bc491ab52068f4ffeff3098">2177873</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed unused constants</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-12-28T17:06:10+00:00 (commit #<span title="ce8aab8f95bbd0aec88e05ebba2c652959596572">ce8aab8</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added RequestFactory
+Added Proxy\Request::getHeader method</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-12-28T15:26:09+00:00 (commit #<span title="cf96f0bf69ee97261d41b9126aaad31e9583d462">cf96f0b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to Zend\Diactoros</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-11-05T10:55:08+00:00 (commit #<span title="bba7cd9a54d0a1a64a5d415ee159a51d49f64177">bba7cd9</span>)</h3>
             <div>
@@ -312,31 +455,11 @@ Added generatedSecret method to Auth\AbstractTable</pre>
               <pre class="wrapped">Create Layout package with different Helper path</pre>
             </div>
           </li>
-          <li>
-            <h3>2014-10-01T07:18:53+00:00 (commit #<span title="d838720e8e8703a952a153c9134ec9e4afe5113b">d838720</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Migrate to Proxy package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-09-30T16:10:55+00:00 (commit #<span title="7aae6798281ab196d83339a4cd889bf970f943bf">7aae679</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Migrate to Proxy, unstable</pre>
-            </div>
-          </li>
         </ul>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
     </footer>
   </body>
 </html>

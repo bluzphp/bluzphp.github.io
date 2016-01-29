@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Response\Response</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Response">Bluz\Response</a>
+          </li>
+          <li class="separator">Response</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#coverage">Coverage</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Response/Response.php.xhtml#line30">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Response\</small>Response</h1>
+        <h4>Response Container</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Response
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$protocol</a> =
+                        '1.1';
+                    </li><li>protected integer <a href="#members">$code</a> =
+                        200;
+                    </li><li>protected <span title="Bluz\Response\string|null">string|null</span> <a href="#members">$phrase</a>;
+                    </li><li>protected array <a href="#members">$headers</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$cookies</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$body</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/send.xhtml">send</a>()
+                    </li><li>public string <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getProtocolVersion.xhtml">getProtocolVersion</a>()
+                    </li><li>public integer <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getStatusCode.xhtml">getStatusCode</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setStatusCode.xhtml">setStatusCode</a>()
+                    </li><li>public string|null <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getReasonPhrase.xhtml">getReasonPhrase</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setReasonPhrase.xhtml">setReasonPhrase</a>()
+                    </li><li>public string <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getHeader.xhtml">getHeader</a>()
+                    </li><li>public array <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getHeaderAsArray.xhtml">getHeaderAsArray</a>()
+                    </li><li>public bool <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/hasHeader.xhtml">hasHeader</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setHeader.xhtml">setHeader</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/addHeader.xhtml">addHeader</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/removeHeader.xhtml">removeHeader</a>()
+                    </li><li>public array <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getHeaders.xhtml">getHeaders</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setHeaders.xhtml">setHeaders</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/addHeaders.xhtml">addHeaders</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/removeHeaders.xhtml">removeHeaders</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setBody.xhtml">setBody</a>()
+                    </li><li>public View <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getBody.xhtml">getBody</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/clearBody.xhtml">clearBody</a>()
+                    </li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setCookie.xhtml">setCookie</a>()
+                    </li><li>public array|null <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getCookie.xhtml">getCookie</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="coverage">Coverage</h2>
+        <table class="styled">
+          <tr>
+            <td>Methods</td>
+            <td class="percent">85.71%</td>
+            <td class="nummeric">18 / 21</td>
+          </tr>
+          <tr>
+            <td>Lines</td>
+            <td class="percent">51.92%</td>
+            <td class="nummeric">54 / 104</td>
+          </tr>
+        </table>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">69 - 132</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method send() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="body"><strong>$body</strong>
+                —
+                mixed</li>
+            <li id="code"><strong>$code</strong>
+                —
+                integer</li>
+            <li id="cookies"><strong>$cookies</strong>
+                —
+                array</li>
+            <li id="headers"><strong>$headers</strong>
+                —
+                array</li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="phrase"><strong>$phrase</strong>
+                —
+                <a title="Bluz\Response\string|null" href="../classes/Bluz_Response_string|null.xhtml">Bluz\Response\string|null</a></li>
+            <li id="protocol"><strong>$protocol</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="addHeader"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/addHeader.xhtml">addHeader()</a>
+                — Appends a header value for the specified header</li>
+            <li id="addHeaders"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/addHeaders.xhtml">addHeaders()</a>
+                — Merges in an associative array of headers.</li>
+            <li id="clearBody"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/clearBody.xhtml">clearBody()</a>
+                — Clear response body</li>
+            <li id="getBody"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getBody.xhtml">getBody()</a>
+                — Get response body</li>
+            <li id="getCookie"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getCookie.xhtml">getCookie()</a>
+                — Get Cookie by name</li>
+            <li id="getHeader"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getHeader.xhtml">getHeader()</a>
+                — Retrieve a header by the given case-insensitive name as a string</li>
+            <li id="getHeaderAsArray"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getHeaderAsArray.xhtml">getHeaderAsArray()</a>
+                — Retrieves a header by the given case-insensitive name as an array of strings</li>
+            <li id="getHeaders"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getHeaders.xhtml">getHeaders()</a>
+                — Gets all message headers</li>
+            <li id="getProtocolVersion"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getProtocolVersion.xhtml">getProtocolVersion()</a>
+                — Gets the HTTP protocol version as a string</li>
+            <li id="getReasonPhrase"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getReasonPhrase.xhtml">getReasonPhrase()</a>
+                — Gets the response Reason-Phrase, a short textual description of the Status-Code</li>
+            <li id="getStatusCode"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/getStatusCode.xhtml">getStatusCode()</a>
+                — Gets the response Status-Code</li>
+            <li id="hasHeader"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/hasHeader.xhtml">hasHeader()</a>
+                — Checks if a header exists by the given case-insensitive name</li>
+            <li id="removeHeader"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/removeHeader.xhtml">removeHeader()</a>
+                — Remove a specific header by case-insensitive name.</li>
+            <li id="removeHeaders"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/removeHeaders.xhtml">removeHeaders()</a>
+                — Remove all headers</li>
+            <li id="send"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/send.xhtml">send()</a>
+                — send</li>
+            <li id="setBody"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setBody.xhtml">setBody()</a>
+                — Set response body</li>
+            <li id="setCookie"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setCookie.xhtml">setCookie()</a>
+                — Set Cookie</li>
+            <li id="setHeader"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setHeader.xhtml">setHeader()</a>
+                — Sets a header, replacing any existing values of any headers with the same case-insensitive name</li>
+            <li id="setHeaders"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setHeaders.xhtml">setHeaders()</a>
+                — Sets headers, replacing any headers that have already been set on the message</li>
+            <li id="setReasonPhrase"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setReasonPhrase.xhtml">setReasonPhrase()</a>
+                — Sets the Reason-Phrase of the response</li>
+            <li id="setStatusCode"><a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/setStatusCode.xhtml">setStatusCode()</a>
+                — Sets the status code of this response</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2016-01-26T08:50:46+00:00 (commit #<span title="3100038a9ef99dbd85722bf5c39199e67e950139">3100038</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed CLI Request and Response</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-25T11:37:18+00:00 (commit #<span title="a3acff28e4eaa462c97b16b8ee1527bf8b9847cd">a3acff2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to PSR7 Response</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated dockblocks in all projects</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-29T14:23:39+00:00 (commit #<span title="21e1b74a254754b03f3dea7467fbee69c3216a04">21e1b74</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed error with `return false`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-03T08:33:47+00:00 (commit #<span title="d0c0827041f5ed723ebfa9153b8b383699f0224e">d0c0827</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-02T13:51:54+00:00 (commit #<span title="915b25c6729955c82f41c7da71c050f737daf92b">915b25c</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Try to fix codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-02T13:39:20+00:00 (commit #<span title="25d00813ff3580f28dc7a442556981b210b1e2d5">25d0081</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Try to fix codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-02T13:00:12+00:00 (commit #<span title="2bb61cf6c0340e515c9ea8bee658f382d532800e">2bb61cf</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Try to fix codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-01T14:54:21+00:00 (commit #<span title="a3f4b4bd292f2b209a954961e4cb220b187813ec">a3f4b4b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #288</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-26T13:38:57+00:00 (commit #<span title="c7f7861b3f2eeb273054dfa7a627bdf912202f4b">c7f7861</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #284 - added support `@accept` doc element</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-18T10:43:56+00:00 (commit #<span title="f672ff1548aa90d11a1c28a655f97ac4e49bce71">f672ff1</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed descriptions</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added links to wiki in every package</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-11T09:36:48+00:00 (commit #<span title="b61aa10acf091de6f4c1f7e0c4c8a3f632787630">b61aa10</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #281 - Added support of XML Response Presentation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-20T08:39:34+00:00 (commit #<span title="b069af20fad6a6a9f0895a6734dc85ace6073589">b069af2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor
+Added PHPDocumentor configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-09-30T16:10:55+00:00 (commit #<span title="7aae6798281ab196d83339a4cd889bf970f943bf">7aae679</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to Proxy, unstable</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-09-19T15:34:01+00:00 (commit #<span title="9edb2aee0c7f7510fdedd83604b41a46a0e6ca54">9edb2ae</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle and configuration for testing</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

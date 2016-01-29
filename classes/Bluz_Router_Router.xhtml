@@ -100,6 +100,10 @@
                         self::ERROR_MODULE;
                     </li><li>protected string <a href="#members">$errorController</a> =
                         self::ERROR_CONTROLLER;
+                    </li><li>protected array <a href="#members">$params</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$rawParams</a> =
+                        ;
                     </li><li>protected array <a href="#members">$routers</a> =
                         ;
                     </li><li>protected array <a href="#members">$reverse</a> =
@@ -107,6 +111,10 @@
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/__construct.xhtml">__construct</a>()
                     </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getBaseUrl.xhtml">getBaseUrl</a>()
                     </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setBaseUrl.xhtml">setBaseUrl</a>()
+                    </li><li>public mixed <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParam.xhtml">getParam</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setParam.xhtml">setParam</a>()
+                    </li><li>public array <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParams.xhtml">getParams</a>()
+                    </li><li>public array <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getRawParams.xhtml">getRawParams</a>()
                     </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultModule.xhtml">getDefaultModule</a>()
                     </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultModule.xhtml">setDefaultModule</a>()
                     </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultController.xhtml">getDefaultController</a>()
@@ -123,6 +131,7 @@
                     </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processDefault.xhtml">processDefault</a>()
                     </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processCustom.xhtml">processCustom</a>()
                     </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processRoute.xhtml">processRoute</a>()
+                    </li><li>protected void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/resetRequest.xhtml">resetRequest</a>()
                     </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getCleanUri.xhtml">getCleanUri</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
                         </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
@@ -145,13 +154,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">50%</td>
-            <td class="nummeric">10 / 20</td>
+            <td class="percent">48%</td>
+            <td class="nummeric">12 / 25</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">79.35%</td>
-            <td class="nummeric">123 / 155</td>
+            <td class="percent">79.67%</td>
+            <td class="nummeric">145 / 182</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -166,7 +175,7 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">403</td>
+              <td class="line">469</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
               </td>
@@ -226,6 +235,12 @@
             <li id="options"><strong>$options</strong>
                 —
                 array</li>
+            <li id="params"><strong>$params</strong>
+                —
+                array</li>
+            <li id="rawParams"><strong>$rawParams</strong>
+                —
+                array</li>
             <li id="reverse"><strong>$reverse</strong>
                 —
                 array</li>
@@ -244,6 +259,8 @@
                 — Process default router</li>
             <li id="processRoute"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processRoute.xhtml">processRoute()</a>
                 — Process router by default rules</li>
+            <li id="resetRequest"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/resetRequest.xhtml">resetRequest()</a>
+                — Reset Request</li>
             <li id="urlCustom"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/urlCustom.xhtml">urlCustom()</a>
                 — Build URL by custom route</li>
             <li id="urlRoute"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/urlRoute.xhtml">urlRoute()</a>
@@ -267,6 +284,12 @@
                 — Get error module</li>
             <li id="getFullUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getFullUrl.xhtml">getFullUrl()</a>
                 — Build full URL to controller</li>
+            <li id="getParam"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParam.xhtml">getParam()</a>
+                — Get an action parameter</li>
+            <li id="getParams"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParams.xhtml">getParams()</a>
+                — Get parameters</li>
+            <li id="getRawParams"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getRawParams.xhtml">getRawParams()</a>
+                — Get raw params, w/out module and controller</li>
             <li id="getUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getUrl.xhtml">getUrl()</a>
                 — Build URL to controller</li>
             <li id="process"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/process.xhtml">process()</a>
@@ -281,6 +304,8 @@
                 — Set error controller</li>
             <li id="setErrorModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setErrorModule.xhtml">setErrorModule()</a>
                 — Set error module</li>
+            <li id="setParam"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setParam.xhtml">setParam()</a>
+                — Set an action parameter</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
           <h4>protected</h4>
@@ -302,6 +327,36 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-01-26T13:54:13+00:00 (commit #<span title="43d15689da230ec1f9594d7de0fa411d2ae8eb57">43d1568</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-01-26T09:31:27+00:00 (commit #<span title="ced590f3a431bd4b05460f0bd65fbf9575a583a9">ced590f</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed REST issue</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-12-28T15:26:09+00:00 (commit #<span title="cf96f0bf69ee97261d41b9126aaad31e9583d462">cf96f0b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to Zend\Diactoros</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-11-05T11:47:00+00:00 (commit #<span title="2b1277e385d130654560aa64d42234c2b7d5fa99">2b1277e</span>)</h3>
             <div>
@@ -436,41 +491,11 @@ Added Reflection of Controller class</pre>
               <pre class="wrapped">Implement Proxy package</pre>
             </div>
           </li>
-          <li>
-            <h3>2014-09-19T15:07:19+00:00 (commit #<span title="51ee979a3b5ed275db5ef68fcdce6171bd2dc900">51ee979</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed access for two methods</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T10:58:22+00:00 (commit #<span title="2a4c364a2fba39c026f9e8d689395424f475b9aa">2a4c364</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added CovarageIgnore tags</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T08:48:41+00:00 (commit #<span title="3ea56adaba196f5c667162d7468e2089c68a9e02">3ea56ad</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Refactoring Response methods for support PSR-7</pre>
-            </div>
-          </li>
         </ul>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
     </footer>
   </body>
 </html>
