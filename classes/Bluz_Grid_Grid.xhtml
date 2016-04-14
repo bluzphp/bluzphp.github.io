@@ -113,6 +113,8 @@
                         ;
                     </li><li>protected array <a href="#members">$allowFilters</a> =
                         ;
+                    </li><li>protected array <a href="#members">$aliases</a> =
+                        ;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/__construct.xhtml">__construct</a>()
                     </li><li>public abstract Grid <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/init.xhtml">init</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAdapter.xhtml">setAdapter</a>()
@@ -141,7 +143,11 @@
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowFilters.xhtml">getAllowFilters</a>()
                     </li><li>public bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilter.xhtml">checkFilter</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addFilter.xhtml">addFilter</a>()
+                    </li><li>public mixed <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilter.xhtml">getFilter</a>()
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilters.xhtml">getFilters</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAlias.xhtml">addAlias</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAliases.xhtml">setAliases</a>()
+                    </li><li>protected string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/applyAlias.xhtml">applyAlias</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setPage.xhtml">setPage</a>()
                     </li><li>public integer <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getPage.xhtml">getPage</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setLimit.xhtml">setLimit</a>()
@@ -178,13 +184,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">81.08%</td>
-            <td class="nummeric">30 / 37</td>
+            <td class="percent">75.61%</td>
+            <td class="nummeric">31 / 41</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">91.1%</td>
-            <td class="nummeric">174 / 191</td>
+            <td class="percent">86.34%</td>
+            <td class="nummeric">177 / 205</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -199,21 +205,21 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">396 - 447</td>
+              <td class="line">402 - 453</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method getParams() has a Cyclomatic Complexity of 13. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">396 - 447</td>
+              <td class="line">402 - 453</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#npathcomplexity" target="_blank" title="Code Size Rules">NPathComplexity</a>
               </td>
               <td>The method getParams() has an NPath complexity of 768. The configured NPath complexity threshold is 200.</td>
             </tr>
             <tr>
-              <td class="line">598 - 613</td>
+              <td class="line">605 - 620</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
@@ -283,6 +289,9 @@
             <li id="adapter"><strong>$adapter</strong>
                 —
                 <a title="Bluz\Grid\Source\AbstractSource" href="../classes/Bluz_Grid_Source_AbstractSource.xhtml">Bluz\Grid\Source\AbstractSource</a></li>
+            <li id="aliases"><strong>$aliases</strong>
+                —
+                array<br/><span class="indent">List of aliases for columns in DB</span></li>
             <li id="allowFilters"><strong>$allowFilters</strong>
                 —
                 array<br/><span class="indent">List of allow filters</span></li>
@@ -338,10 +347,17 @@
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="applyAlias"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/applyAlias.xhtml">applyAlias()</a>
+                — Apply Alias</li>
+          </ul>
           <h4>public</h4>
           <ul>
             <li id="__construct"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/__construct.xhtml">__construct()</a>
                 — Grid constructor</li>
+            <li id="addAlias"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAlias.xhtml">addAlias()</a>
+                — Add alias</li>
             <li id="addFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addFilter.xhtml">addFilter()</a>
                 — Add filter</li>
             <li id="addOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrder.xhtml">addOrder()</a>
@@ -364,6 +380,8 @@
                 — Get default limit</li>
             <li id="getDefaultOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getDefaultOrder.xhtml">getDefaultOrder()</a>
                 — Get default order</li>
+            <li id="getFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilter.xhtml">getFilter()</a>
+                — Get filter</li>
             <li id="getFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilters.xhtml">getFilters()</a>
                 — Get filters</li>
             <li id="getLimit"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getLimit.xhtml">getLimit()</a>
@@ -392,6 +410,8 @@
                 — Process source</li>
             <li id="setAdapter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAdapter.xhtml">setAdapter()</a>
                 — Set source adapter</li>
+            <li id="setAliases"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAliases.xhtml">setAliases()</a>
+                — Set aliases</li>
             <li id="setAllowFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowFilters.xhtml">setAllowFilters()</a>
                 — Set allowed filters</li>
             <li id="setAllowOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowOrders.xhtml">setAllowOrders()</a>
@@ -448,6 +468,36 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2016-04-14T14:35:45+00:00 (commit #<span title="570164e771bda91ca72927eaa107f1cab3ab1e1e">570164e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-03-07T15:59:58+00:00 (commit #<span title="79cde875321a80a02d954da48d8c3e7588dfdc71">79cde87</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added aliases for GRID columns and filter</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-03-07T13:51:04+00:00 (commit #<span title="9c82d6aa234a1e7fa4c90de780ad3928766ee630">9c82d6a</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `Grid::getFilter($column, $filter = null)`</pre>
+            </div>
+          </li>
+          <li>
             <h3>2015-12-28T15:26:09+00:00 (commit #<span title="cf96f0bf69ee97261d41b9126aaad31e9583d462">cf96f0b</span>)</h3>
             <div>
               <p>
@@ -499,6 +549,49 @@ Updated Scrutinizer configuration</pre>
             </div>
           </li>
           <li>
+            <h3>2014-12-01T14:56:51+00:00 (commit #<span title="7da2f03e4ac6c416acb59c813c709980035f5b28">7da2f03</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added small remark for future</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-24T13:51:15+00:00 (commit #<span title="49eb9d9ea4aac7bd74b20dca9a16a852504a1142">49eb9d9</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated Controller\Reflection test
+Small optimization for Proxy</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-24T12:21:47+00:00 (commit #<span title="16aa8b21c6e0a6aa781268f52161867e6ded658f">16aa8b2</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #300 - cache of Controller\Reflection</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-17T16:00:42+00:00 (commit #<span title="629f4748c29427a20397cd8c99a8c045ad68c7b0">629f474</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #294 from AntonShevchuk/master
+
+Fixed #292 - Add support JSONP responce presentation</pre>
+            </div>
+          </li>
+          <li>
             <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
             <div>
               <p>
@@ -509,96 +602,33 @@ Updated Scrutinizer configuration</pre>
             </div>
           </li>
           <li>
-            <h3>2014-10-01T07:18:53+00:00 (commit #<span title="d838720e8e8703a952a153c9134ec9e4afe5113b">d838720</span>)</h3>
+            <h3>2014-10-10T14:30:06+00:00 (commit #<span title="097e656765d2e9bcc02ea1b70d1574095142728e">097e656</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Migrate to Proxy package</pre>
+              <pre class="wrapped">Updated library versions</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-29T11:05:34+00:00 (commit #<span title="ea9d76bfe40208cc5121151e6fc6da8e52209079">ea9d76b</span>)</h3>
+            <h3>2014-10-03T08:15:10+00:00 (commit #<span title="cfac374e6c577972908a2197a10a4187d04c916a">cfac374</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Implement Proxy package</pre>
+              <pre class="wrapped">Added methods for BC to old version of skeleton</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-25T11:51:05+00:00 (commit #<span title="c768978ffd1e5f1916da06c9aff7eb9e9e6e2162">c768978</span>)</h3>
+            <h3>2014-09-30T07:50:11+00:00 (commit #<span title="5d81312620948f672279b2fbf1090e4a5156627a">5d81312</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added test for check user agent</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-09-22T07:15:29+00:00 (commit #<span title="1cd24ecad0d02f0d508eefc09fb7c3c369a385e8">1cd24ec</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added rule for check Cache Adapter for Session package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T15:19:02+00:00 (commit #<span title="9b646e662dc15066234b74669cecacd17567ff6f">9b646e6</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated tests of Grid package
-Fixed filters on Grid\Source\ArraySource</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T13:47:43+00:00 (commit #<span title="ef99e907cc965e19f96752f43a221f94f1ffadfc">ef99e90</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added tests for translator package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T09:46:39+00:00 (commit #<span title="9266f26bb01301424aae907636a8dceebcb9108f">9266f26</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated Response test</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-21T15:38:50+00:00 (commit #<span title="6e053af4ae9611bdfa853187af36bd2c978fd974">6e053af</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated tests of Auth package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-21T09:40:21+00:00 (commit #<span title="e6294a6d518c7f55f0212cf07ce1a5620036fdca">e6294a6</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Merge pull request #245 from AntonShevchuk/master
-
-Fixed tests</pre>
+              <pre class="wrapped">Fixed codestyle</pre>
             </div>
           </li>
         </ul>
