@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Controller\Controller</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Controller">Bluz\Controller</a>
+          </li>
+          <li class="separator">Controller</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#coverage">Coverage</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Controller/Controller.php.xhtml#line43">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Controller\</small>Controller</h1>
+        <h4>Statement</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Controller
+                implements
+                <a title="JsonSerializable" href="../interfaces/JsonSerializable.xhtml">JsonSerializable</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$module</a>;
+                    </li><li>protected  <a href="#members">$controller</a>;
+                    </li><li>protected  <a href="#members">$template</a>;
+                    </li><li>protected  <a href="#members">$file</a>;
+                    </li><li>protected <span title="Bluz\Controller\Reflection">Reflection</span> <a href="#members">$reflection</a>;
+                    </li><li>protected <span title="Bluz\Controller\Data">Data</span> <a href="#members">$data</a>;
+                    </li><li>protected string <a href="#members">$render</a> =
+                        'HTML';
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/__construct.xhtml">__construct</a>()
+                    </li><li>public void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/checkPrivilege.xhtml">checkPrivilege</a>()
+                    </li><li>public void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/checkMethod.xhtml">checkMethod</a>()
+                    </li><li>public void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/checkAccept.xhtml">checkAccept</a>()
+                    </li><li>public Data <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run</a>()
+                    </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setFile.xhtml">setFile</a>()
+                    </li><li>protected string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getFile.xhtml">getFile</a>()
+                    </li><li>protected Reflection <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setReflection.xhtml">setReflection</a>()
+                    </li><li>public Reflection <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getReflection.xhtml">getReflection</a>()
+                    </li><li>public Controller <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/assign.xhtml">assign</a>()
+                    </li><li>public Data <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getData.xhtml">getData</a>()
+                    </li><li>public mixed <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/render.xhtml">render</a>()
+                    </li><li>public array <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize</a>()
+                    </li><li>public string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/__toString.xhtml">__toString</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
+                        </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
+                        </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/resetHelpersPath.xhtml">resetHelpersPath</a>()
+                        </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a>
+            </li>
+          </ul>
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="JsonSerializable" href="../interfaces/JsonSerializable.xhtml">JsonSerializable</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="coverage">Coverage</h2>
+        <table class="styled">
+          <tr>
+            <td>Methods</td>
+            <td class="percent">42.86%</td>
+            <td class="nummeric">6 / 14</td>
+          </tr>
+          <tr>
+            <td>Lines</td>
+            <td class="percent">58.97%</td>
+            <td class="nummeric">69 / 117</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="controller"><strong>$controller</strong>
+                —
+                string</li>
+            <li id="data"><strong>$data</strong>
+                —
+                <a title="Bluz\Controller\Data" href="../classes/Bluz_Controller_Data.xhtml">Bluz\Controller\Data</a></li>
+            <li id="file"><strong>$file</strong>
+                —
+                string</li>
+            <li id="helpers"><strong>$helpers</strong>
+                —
+                array</li>
+            <li id="helpersPath"><strong>$helpersPath</strong>
+                —
+                array</li>
+            <li id="module"><strong>$module</strong>
+                —
+                string</li>
+            <li id="reflection"><strong>$reflection</strong>
+                —
+                <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection.xhtml">Bluz\Controller\Reflection</a></li>
+            <li id="render"><strong>$render</strong>
+                —
+                string<br/><span class="indent">One of HTML, JSON or empty string</span></li>
+            <li id="template"><strong>$template</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getFile"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getFile.xhtml">getFile()</a>
+                — Get controller file path</li>
+            <li id="setFile"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setFile.xhtml">setFile()</a>
+                — Setup controller file</li>
+            <li id="setReflection"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setReflection.xhtml">setReflection()</a>
+                — Retrieve reflection for anonymous function</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/__construct.xhtml">__construct()</a>
+                — Constructor of Statement</li>
+            <li id="__toString"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/__toString.xhtml">__toString()</a>
+                — Magic cast to string</li>
+            <li id="assign"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/assign.xhtml">assign()</a>
+                — Assign key/value pair to Data object</li>
+            <li id="checkAccept"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/checkAccept.xhtml">checkAccept()</a>
+                — Check `Accept`</li>
+            <li id="checkMethod"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/checkMethod.xhtml">checkMethod()</a>
+                — Check `Method`</li>
+            <li id="checkPrivilege"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/checkPrivilege.xhtml">checkPrivilege()</a>
+                — Check `Privilege`</li>
+            <li id="getData"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getData.xhtml">getData()</a>
+                — Get controller Data container</li>
+            <li id="getReflection"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getReflection.xhtml">getReflection()</a>
+                — Get Reflection</li>
+            <li id="jsonSerialize"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize()</a>
+                — Specify data which should be serialized to JSON</li>
+            <li id="render"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/render.xhtml">render()</a>
+                — Render controller</li>
+            <li id="run"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run()</a>
+                — __invoke</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call()</a>
+                — Call magic helper</li>
+            <li id="addHelperPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath()</a>
+                — Add helper path</li>
+            <li id="resetHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/resetHelpersPath.xhtml">resetHelpersPath()</a>
+                — Reset helpers path</li>
+            <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
+                — Set helpers path</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2016-06-10T15:49:45+00:00 (commit #<span title="2f740051c6ae87c6006aaba2667cad9a6e1fdf28">2f74005</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added CliResponse</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-10T15:24:52+00:00 (commit #<span title="507fa610ef29fb20b59a496489ba9fa101e00505">507fa61</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added switch content type to Response logic
+Added cookies implementation - fixed #362</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-02T12:18:19+00:00 (commit #<span title="8fd9f366eece9f513cc519b4a5f90ae3bf5eed31">8fd9f36</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added support header `Accept` with `*/*` value</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-20T16:24:18+00:00 (commit #<span title="f6d6f78e01dceb2df9290bc759574ee5ff54489a">f6d6f78</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Controller Helper `IsAllowed`
+Removed method `Request::getRequestUri()` use `Request::getUri()` instead</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-28T10:02:46+00:00 (commit #<span title="d1fed0b092ece38da2f313fdc575481d192ac1a7">d1fed0b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">- Added `Dispatch` helper to Controller
+- Added support @acl tag to Controller\Reflection
+- Added getMethod to Proxy\Request</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-22T09:41:07+00:00 (commit #<span title="4e08e99e6db98e9e57a7001236e9d137ab25eca5">4e08e99</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Bluz7 refactoring
+Step1 - create Controller class</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.1.1 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

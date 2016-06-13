@@ -71,7 +71,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Proxy/Response.php.xhtml#line85">Source</a>
+            <a href="../source/Proxy/Response.php.xhtml#line89">Source</a>
           </li>
         </ul>
       </nav>
@@ -87,6 +87,9 @@
                 extends <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">AbstractProxy</a>
             {<br/><ul class="none"><li>// Inherited members from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static array <a href="#members">$instances</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/initInstance.xhtml">initInstance</a>()
+                    </li><li>public static void <a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/redirect.xhtml">redirect</a>()
+                    </li><li>public static void <a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/redirectTo.xhtml">redirectTo</a>()
+                    </li><li>public static void <a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/reload.xhtml">reload</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/initInstance.xhtml">initInstance</a>()
                         </li><li>public static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/getInstance.xhtml">getInstance</a>()
                         </li><li>public static void <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/setInstance.xhtml">setInstance</a>()
@@ -107,13 +110,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">0%</td>
-            <td class="nummeric">0 / 1</td>
+            <td class="percent">25%</td>
+            <td class="nummeric">1 / 4</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">0%</td>
-            <td class="nummeric">0 / 1</td>
+            <td class="percent">66.67%</td>
+            <td class="nummeric">6 / 9</td>
           </tr>
         </table>
         <h2 id="members">Members</h2>
@@ -131,6 +134,15 @@
           <ul>
             <li id="initInstance"><a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/initInstance.xhtml">initInstance()</a>
                 — Init instance</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="redirect"><a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/redirect.xhtml">redirect()</a>
+                — Redirect to URL</li>
+            <li id="redirectTo"><a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/redirectTo.xhtml">redirectTo()</a>
+                — Redirect to controller</li>
+            <li id="reload"><a title="Bluz\Proxy\Response" href="../classes/Bluz_Proxy_Response/reload.xhtml">reload()</a>
+                — Reload current page please, be careful to avoid loop of reload</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">Bluz\Proxy\AbstractProxy</a></h3>
           <h4>protected</h4>
@@ -150,6 +162,58 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-06-13T09:18:40+00:00 (commit #<span title="45107f6cb16c1e6d3fd49df3315666a3b428077f">45107f6</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-10T15:24:52+00:00 (commit #<span title="507fa610ef29fb20b59a496489ba9fa101e00505">507fa61</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added switch content type to Response logic
+Added cookies implementation - fixed #362</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-27T09:33:11+00:00 (commit #<span title="49e29e5386ba1dc364deec87eae416b105794037">49e29e5</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed `ReloadException` (use RedirectException instead)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-19T10:56:41+00:00 (commit #<span title="7eaecbc498f5429dde1be74b3d81f62b93aa2018">7eaecbc</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Helpers `redirect()`, `redirectTo` and `reload` was moved to `Proxy\Response`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-22T09:41:07+00:00 (commit #<span title="4e08e99e6db98e9e57a7001236e9d137ab25eca5">4e08e99</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Bluz7 refactoring
+Step1 - create Controller class</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-01-25T11:37:18+00:00 (commit #<span title="a3acff28e4eaa462c97b16b8ee1527bf8b9847cd">a3acff2</span>)</h3>
             <div>
@@ -233,13 +297,13 @@ Updated docblocks</pre>
             </div>
           </li>
           <li>
-            <h3>2014-10-01T07:56:10+00:00 (commit #<span title="93110ec935925fa7e009791ac17d345bba480dc4">93110ec</span>)</h3>
+            <h3>2014-10-01T07:59:10+00:00 (commit #<span title="9e132b5786e6fdf39c328ced8b24b57f13b30893">9e132b5</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed codestyle</pre>
+              <pre class="wrapped">Fixed access level</pre>
             </div>
           </li>
         </ul>

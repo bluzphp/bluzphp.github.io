@@ -62,6 +62,9 @@
             <a href="#coverage">Coverage</a>
           </li>
           <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -96,6 +99,8 @@
                     </li><li>public array <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/__sleep.xhtml">__sleep</a>()
                     </li><li>public string <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/__toString.xhtml">__toString</a>()
                     </li><li>public array <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/__debugInfo.xhtml">__debugInfo</a>()
+                    </li><li>public boolean <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/validate.xhtml">validate</a>()
+                    </li><li>public boolean <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/assert.xhtml">assert</a>()
                     </li><li>public mixed <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/save.xhtml">save</a>()
                     </li><li>protected mixed <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/doInsert.xhtml">doInsert</a>()
                     </li><li>protected integer <a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/doUpdate.xhtml">doUpdate</a>()
@@ -166,15 +171,42 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">54.17%</td>
-            <td class="nummeric">13 / 24</td>
+            <td class="percent">7.69%</td>
+            <td class="nummeric">2 / 26</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">73.47%</td>
-            <td class="nummeric">72 / 98</td>
+            <td class="percent">19.79%</td>
+            <td class="nummeric">19 / 96</td>
           </tr>
         </table>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">137</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$data'.</td>
+            </tr>
+            <tr>
+              <td class="line">148</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$data'.</td>
+            </tr>
+          </table>
+        </div>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
@@ -235,6 +267,8 @@
                 — List of required for serialization properties</li>
             <li id="__toString"><a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/__toString.xhtml">__toString()</a>
                 — Cast to string as class name</li>
+            <li id="assert"><a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/assert.xhtml">assert()</a>
+                — Assert input data</li>
             <li id="delete"><a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/delete.xhtml">delete()</a>
                 — Delete existing row</li>
             <li id="getRelation"><a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/getRelation.xhtml">getRelation()</a>
@@ -251,6 +285,8 @@
                 — Set relation</li>
             <li id="setTable"><a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/setTable.xhtml">setTable()</a>
                 — Setup Table instance</li>
+            <li id="validate"><a title="Bluz\Db\Row" href="../classes/Bluz_Db_Row/validate.xhtml">validate()</a>
+                — Validate input data</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container.xhtml">Bluz\Common\Container\Container</a></h3>
           <h4>protected</h4>
@@ -306,6 +342,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-04-25T10:28:03+00:00 (commit #<span title="2f996bd9c2fef802fadd30969ba0b0fd3137bb8f">2f996bd</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">- Updated `Db\Row` - added `validate` and `assert` methods</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
             <div>
@@ -442,33 +488,23 @@ Migrate code to new Container structure</pre>
             </div>
           </li>
           <li>
-            <h3>2014-10-01T07:56:10+00:00 (commit #<span title="93110ec935925fa7e009791ac17d345bba480dc4">93110ec</span>)</h3>
+            <h3>2014-10-01T07:59:10+00:00 (commit #<span title="9e132b5786e6fdf39c328ced8b24b57f13b30893">9e132b5</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed codestyle</pre>
+              <pre class="wrapped">Fixed access level</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-26T08:53:01+00:00 (commit #<span title="62ecedede26d75015c54195a9936d21cb5bc91c1">62ecede</span>)</h3>
+            <h3>2014-09-26T08:59:43+00:00 (commit #<span title="d239e7ebf9d208b6d4b33548898bdb8c5a3ce9f7">d239e7e</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated exception structure</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-09-22T09:26:36+00:00 (commit #<span title="c8295c47036e9ba8afffdb170e3b4892f488c91a">c8295c4</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added Predis cache adapter</pre>
+              <pre class="wrapped">Fixed tests for new Exception structure</pre>
             </div>
           </li>
         </ul>

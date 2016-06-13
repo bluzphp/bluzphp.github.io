@@ -65,9 +65,6 @@
             <a href="#violations">Violations</a>
           </li>
           <li>
-            <a href="#tasks">Tasks</a>
-          </li>
-          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -77,7 +74,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Controller/Reflection.php.xhtml#line23">Source</a>
+            <a href="../source/Controller/Reflection.php.xhtml#line24">Source</a>
           </li>
         </ul>
       </nav>
@@ -93,9 +90,9 @@
             {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$file</a>;
                     </li><li>protected integer <a href="#members">$cache</a> =
                         0;
-                    </li><li>protected integer <a href="#members">$cacheHtml</a> =
-                        0;
                     </li><li>protected array <a href="#members">$accept</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$acl</a> =
                         ;
                     </li><li>protected array <a href="#members">$method</a> =
                         ;
@@ -113,11 +110,11 @@
                     </li><li>public string <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getFile.xhtml">getFile</a>()
                     </li><li>public integer <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getCache.xhtml">getCache</a>()
                     </li><li>public void <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setCache.xhtml">setCache</a>()
-                    </li><li>public integer <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getCacheHtml.xhtml">getCacheHtml</a>()
-                    </li><li>public void <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setCacheHtml.xhtml">setCacheHtml</a>()
                     </li><li>protected integer <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/prepareCache.xhtml">prepareCache</a>()
                     </li><li>public array|null <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getAccept.xhtml">getAccept</a>()
                     </li><li>public void <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setAccept.xhtml">setAccept</a>()
+                    </li><li>public array|null <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getAcl.xhtml">getAcl</a>()
+                    </li><li>public void <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setAcl.xhtml">setAcl</a>()
                     </li><li>public array|null <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getMethod.xhtml">getMethod</a>()
                     </li><li>public void <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setMethod.xhtml">setMethod</a>()
                     </li><li>public array <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getParams.xhtml">getParams</a>()
@@ -149,13 +146,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">72.73%</td>
-            <td class="nummeric">16 / 22</td>
+            <td class="percent">68.18%</td>
+            <td class="nummeric">15 / 22</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">80%</td>
-            <td class="nummeric">100 / 125</td>
+            <td class="percent">74.8%</td>
+            <td class="nummeric">95 / 127</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -170,35 +167,7 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">106</td>
-              <td>
-                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
-              </td>
-              <td>Avoid unused local variables such as '$bootstrap'.</td>
-            </tr>
-            <tr>
-              <td class="line">106</td>
-              <td>
-                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
-              </td>
-              <td>Avoid unused local variables such as '$view'.</td>
-            </tr>
-            <tr>
-              <td class="line">106</td>
-              <td>
-                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
-              </td>
-              <td>Avoid unused local variables such as '$module'.</td>
-            </tr>
-            <tr>
-              <td class="line">106</td>
-              <td>
-                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
-              </td>
-              <td>Avoid unused local variables such as '$controller'.</td>
-            </tr>
-            <tr>
-              <td class="line">160 - 195</td>
+              <td class="line">155 - 190</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
@@ -206,19 +175,6 @@
             </tr>
           </table>
         </div>
-        <h2 id="tasks">Tasks</h2>
-        <table class="styled">
-          <thead>
-            <tr>
-              <th style="width:3em;">Line</th>
-              <th>Task</th>
-            </tr>
-          </thead>
-          <tr>
-            <td class="nummeric">278+</td>
-            <td>move here "accept map" from Application</td>
-          </tr>
-        </table>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
@@ -226,10 +182,10 @@
             <li id="accept"><strong>$accept</strong>
                 —
                 array</li>
-            <li id="cache"><strong>$cache</strong>
+            <li id="acl"><strong>$acl</strong>
                 —
-                integer</li>
-            <li id="cacheHtml"><strong>$cacheHtml</strong>
+                array</li>
+            <li id="cache"><strong>$cache</strong>
                 —
                 integer</li>
             <li id="file"><strong>$file</strong>
@@ -274,10 +230,10 @@
                 — Set state required for working with var_export (used inside PHP File cache)</li>
             <li id="getAccept"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getAccept.xhtml">getAccept()</a>
                 — Get accepted type</li>
+            <li id="getAcl"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getAcl.xhtml">getAcl()</a>
+                — Get Acl privileges</li>
             <li id="getCache"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getCache.xhtml">getCache()</a>
                 — Get Cache TTL</li>
-            <li id="getCacheHtml"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getCacheHtml.xhtml">getCacheHtml()</a>
-                — Get HTML Cache TTL</li>
             <li id="getFile"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getFile.xhtml">getFile()</a>
                 — Get path to file</li>
             <li id="getMethod"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/getMethod.xhtml">getMethod()</a>
@@ -294,10 +250,10 @@
                 — Process to get reflection from file</li>
             <li id="setAccept"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setAccept.xhtml">setAccept()</a>
                 — Set accepted types</li>
+            <li id="setAcl"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setAcl.xhtml">setAcl()</a>
+                — Set Acl privileges</li>
             <li id="setCache"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setCache.xhtml">setCache()</a>
                 — Set Cache TTL</li>
-            <li id="setCacheHtml"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setCacheHtml.xhtml">setCacheHtml()</a>
-                — Set HTML Cache TTL</li>
             <li id="setMethod"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setMethod.xhtml">setMethod()</a>
                 — Set HTTP Method</li>
             <li id="setParam"><a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection/setParam.xhtml">setParam()</a>
@@ -327,6 +283,71 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-06-13T09:18:40+00:00 (commit #<span title="45107f6cb16c1e6d3fd49df3315666a3b428077f">45107f6</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-10T15:24:52+00:00 (commit #<span title="507fa610ef29fb20b59a496489ba9fa101e00505">507fa61</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added switch content type to Response logic
+Added cookies implementation - fixed #362</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-02T12:18:19+00:00 (commit #<span title="8fd9f366eece9f513cc519b4a5f90ae3bf5eed31">8fd9f36</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added support header `Accept` with `*/*` value</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-20T16:24:18+00:00 (commit #<span title="f6d6f78e01dceb2df9290bc759574ee5ff54489a">f6d6f78</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Controller Helper `IsAllowed`
+Removed method `Request::getRequestUri()` use `Request::getUri()` instead</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-28T10:02:46+00:00 (commit #<span title="d1fed0b092ece38da2f313fdc575481d192ac1a7">d1fed0b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">- Added `Dispatch` helper to Controller
+- Added support @acl tag to Controller\Reflection
+- Added getMethod to Proxy\Request</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-22T09:41:07+00:00 (commit #<span title="4e08e99e6db98e9e57a7001236e9d137ab25eca5">4e08e99</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Bluz7 refactoring
+Step1 - create Controller class</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-01-25T11:37:18+00:00 (commit #<span title="a3acff28e4eaa462c97b16b8ee1527bf8b9847cd">a3acff2</span>)</h3>
             <div>
@@ -428,17 +449,6 @@ Added generatedSecret method to Auth\AbstractTable</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Small optimization and style fixes</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-10-07T13:59:08+00:00 (commit #<span title="3900447702aa334c64303fa53ed1dcadcf114e5d">3900447</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #255
-Added Reflection of Controller class</pre>
             </div>
           </li>
         </ul>

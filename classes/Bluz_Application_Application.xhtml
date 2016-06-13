@@ -62,6 +62,12 @@
             <a href="#coverage">Coverage</a>
           </li>
           <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -71,7 +77,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Application/Application.php.xhtml#line52">Source</a>
+            <a href="../source/Application/Application.php.xhtml#line44">Source</a>
           </li>
         </ul>
       </nav>
@@ -84,50 +90,33 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Application
-            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$path</a>;
-                    </li><li>protected string <a href="#members">$environment</a> =
+            {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$environment</a> =
                         'production';
-                    </li><li>protected <span title="\Exception">Exception</span> <a href="#members">$exception</a>;
+                    </li><li>protected  <a href="#members">$path</a>;
                     </li><li>protected <span title="Bluz\Application\bool">bool</span> <a href="#members">$debugFlag</a> =
                         false;
                     </li><li>protected <span title="Bluz\Application\bool">bool</span> <a href="#members">$layoutFlag</a> =
                         true;
-                    </li><li>protected array <a href="#members">$widgets</a> =
-                        ;
-                    </li><li>protected array <a href="#members">$api</a> =
-                        ;
                     </li></ul><ul class="none"><li>// methods</li><li>public string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getEnvironment.xhtml">getEnvironment</a>()
                     </li><li>public string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getPath.xhtml">getPath</a>()
                     </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isDebug.xhtml">isDebug</a>()
-                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/hasLayout.xhtml">hasLayout</a>()
-                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useLayout.xhtml">useLayout</a>()
-                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useJson.xhtml">useJson</a>()
+                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useLayout.xhtml">useLayout</a>()
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init</a>()
-                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/run.xhtml">run</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRequest.xhtml">initRequest</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRouter.xhtml">initRouter</a>()
-                    </li><li>protected View <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView</a>()
+                    </li><li>public Response <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getResponse.xhtml">getResponse</a>()
+                    </li><li>public ServerRequest <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getRequest.xhtml">getRequest</a>()
+                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/run.xhtml">run</a>()
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preProcess.xhtml">preProcess</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doProcess.xhtml">doProcess</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess</a>()
-                    </li><li>public View|callable <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/dispatch.xhtml">dispatch</a>()
+                    </li><li>public Controller <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/dispatch.xhtml">dispatch</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preDispatch.xhtml">preDispatch</a>()
-                    </li><li>protected View|callable <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doDispatch.xhtml">doDispatch</a>()
+                    </li><li>protected Controller <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doDispatch.xhtml">doDispatch</a>()
                     </li><li>protected void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch</a>()
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/render.xhtml">render</a>()
-                    </li><li>public Response <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getResponse.xhtml">getResponse</a>()
-                    </li><li>public ServerRequest <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getRequest.xhtml">getRequest</a>()
-                    </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/setException.xhtml">setException</a>()
-                    </li><li>public Exception <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getException.xhtml">getException</a>()
-                    </li><li>public Closure <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/widget.xhtml">widget</a>()
-                    </li><li>public Closure <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/api.xhtml">api</a>()
-                    </li><li>public Reflection <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/reflection.xhtml">reflection</a>()
-                    </li><li>public bool <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isAllowed.xhtml">isAllowed</a>()
-                    </li><li>protected string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getControllerFile.xhtml">getControllerFile</a>()
-                    </li><li>protected string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getWidgetFile.xhtml">getWidgetFile</a>()
-                    </li><li>protected string <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getApiFile.xhtml">getApiFile</a>()
                     </li><li>public void <a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/finish.xhtml">finish</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
                         </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
@@ -155,31 +144,65 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">39.39%</td>
-            <td class="nummeric">13 / 33</td>
+            <td class="percent">61.9%</td>
+            <td class="nummeric">13 / 21</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">47.5%</td>
-            <td class="nummeric">133 / 280</td>
+            <td class="percent">69.81%</td>
+            <td class="nummeric">74 / 106</td>
+          </tr>
+        </table>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">365</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$params'.</td>
+            </tr>
+            <tr>
+              <td class="line">406</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$params'.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">380</td>
+            <td>try to find custom controller class</td>
           </tr>
         </table>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
           <ul class="members">
-            <li id="api"><strong>$api</strong>
-                —
-                array</li>
             <li id="debugFlag"><strong>$debugFlag</strong>
                 —
                 <a title="Bluz\Application\bool" href="../classes/Bluz_Application_bool.xhtml">Bluz\Application\bool</a></li>
             <li id="environment"><strong>$environment</strong>
                 —
                 string</li>
-            <li id="exception"><strong>$exception</strong>
-                —
-                <a title="\Exception" href="../classes/_Exception.xhtml">\Exception</a></li>
             <li id="helpers"><strong>$helpers</strong>
                 —
                 array</li>
@@ -195,9 +218,6 @@
             <li id="path"><strong>$path</strong>
                 —
                 string</li>
-            <li id="widgets"><strong>$widgets</strong>
-                —
-                array</li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -208,20 +228,12 @@
                 — Do dispatch</li>
             <li id="doProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/doProcess.xhtml">doProcess()</a>
                 — Do process</li>
-            <li id="getApiFile"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getApiFile.xhtml">getApiFile()</a>
-                — Get API file</li>
-            <li id="getControllerFile"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getControllerFile.xhtml">getControllerFile()</a>
-                — Get controller file</li>
-            <li id="getWidgetFile"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getWidgetFile.xhtml">getWidgetFile()</a>
-                — Get widget file</li>
             <li id="initRequest"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRequest.xhtml">initRequest()</a>
                 — Initial Request instance</li>
             <li id="initResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initResponse.xhtml">initResponse()</a>
                 — Initial Response instance</li>
             <li id="initRouter"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRouter.xhtml">initRouter()</a>
                 — Initial Router instance</li>
-            <li id="initView"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initView.xhtml">initView()</a>
-                — Initial controller view</li>
             <li id="postDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch()</a>
                 — Post dispatch mount point</li>
             <li id="postProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess()</a>
@@ -233,46 +245,30 @@
           </ul>
           <h4>public</h4>
           <ul>
-            <li id="api"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/api.xhtml">api()</a>
-                — Api call</li>
             <li id="dispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/dispatch.xhtml">dispatch()</a>
                 — Dispatch controller with params</li>
             <li id="finish"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/finish.xhtml">finish()</a>
                 — Finally method</li>
             <li id="getEnvironment"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getEnvironment.xhtml">getEnvironment()</a>
                 — Get application environment</li>
-            <li id="getException"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getException.xhtml">getException()</a>
-                — getException</li>
             <li id="getPath"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getPath.xhtml">getPath()</a>
                 — Get path to Application</li>
             <li id="getRequest"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getRequest.xhtml">getRequest()</a>
                 — Get Request instance</li>
             <li id="getResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getResponse.xhtml">getResponse()</a>
                 — Get Response instance</li>
-            <li id="hasLayout"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/hasLayout.xhtml">hasLayout()</a>
-                — Check Layout flag</li>
             <li id="init"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init()</a>
                 — Initialize process</li>
-            <li id="isAllowed"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isAllowed.xhtml">isAllowed()</a>
-                — Is allowed controller/widget/etc</li>
             <li id="isDebug"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isDebug.xhtml">isDebug()</a>
-                — Check debug flag</li>
+                — Return Debug flag</li>
             <li id="process"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process()</a>
                 — Process application</li>
-            <li id="reflection"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/reflection.xhtml">reflection()</a>
-                — Retrieve reflection for anonymous function</li>
             <li id="render"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/render.xhtml">render()</a>
                 — Render, is send Response</li>
             <li id="run"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/run.xhtml">run()</a>
                 — Run application</li>
-            <li id="setException"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/setException.xhtml">setException()</a>
-                — setException</li>
-            <li id="useJson"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useJson.xhtml">useJson()</a>
-                — Set JSON presentation</li>
             <li id="useLayout"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useLayout.xhtml">useLayout()</a>
-                — Set Layout template and/or flag</li>
-            <li id="widget"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/widget.xhtml">widget()</a>
-                — Widget call</li>
+                — Return Layout Flag</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a></h3>
           <h4>public</h4>
@@ -300,6 +296,80 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-06-10T15:24:52+00:00 (commit #<span title="507fa610ef29fb20b59a496489ba9fa101e00505">507fa61</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added switch content type to Response logic
+Added cookies implementation - fixed #362</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-01T10:42:59+00:00 (commit #<span title="5cd4c4a605d7f9a8cf9607d3a1d50191868e3d14">5cd4c4a</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added constants to `Proxy\Response` for content types
+Added check `Accept` at `preProcess` stage for switch layout</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-27T09:33:11+00:00 (commit #<span title="49e29e5386ba1dc364deec87eae416b105794037">49e29e5</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed `ReloadException` (use RedirectException instead)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-11T11:18:30+00:00 (commit #<span title="2f5a6d5b5a0a369fc336df9907b579101d6e7238">2f5a6d5</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed HeadStyle and HeadScript</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-25T10:28:03+00:00 (commit #<span title="2f996bd9c2fef802fadd30969ba0b0fd3137bb8f">2f996bd</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">- Updated `Db\Row` - added `validate` and `assert` methods</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-22T10:40:03+00:00 (commit #<span title="5c18d32a20e0f12b491b77b51d0ad59d1ac8f5f1">5c18d32</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">- Removed `app()` function
+- Recovered `Application::useLayout()`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-22T09:41:07+00:00 (commit #<span title="4e08e99e6db98e9e57a7001236e9d137ab25eca5">4e08e99</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Bluz7 refactoring
+Step1 - create Controller class</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-04-14T14:35:45+00:00 (commit #<span title="570164e771bda91ca72927eaa107f1cab3ab1e1e">570164e</span>)</h3>
             <div>
@@ -389,79 +459,6 @@ Set Reload and Redirect exception - required for tests</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Migrate to PSR7 Response</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-12-28T15:26:09+00:00 (commit #<span title="cf96f0bf69ee97261d41b9126aaad31e9583d462">cf96f0b</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Migrate to Zend\Diactoros</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-11-05T10:55:08+00:00 (commit #<span title="bba7cd9a54d0a1a64a5d415ee159a51d49f64177">bba7cd9</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added method `initRouter()` to Application
-Moved `baseUrl` to `Router`</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated dockblocks in all projects</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-10-12T08:47:26+00:00 (commit #<span title="46157600d98758f05b1d243c1c835e06c728b03e">4615760</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added method `resetHelperPath` for Helper trait
-Added docblock for initView method in Application</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-10-09T13:04:58+00:00 (commit #<span title="23034d63e55e96029542ffdae1c9e97e550c61b7">23034d6</span>)</h3>
-            <div>
-              <p>
-                        Author: Andrey (dev.andreyalek@gmail.com) /
-                        Commiter: Andrey (dev.andreyalek@gmail.com)
-                    </p>
-              <pre class="wrapped">Moved view initialization into it's own method</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-07-07T14:54:12+00:00 (commit #<span title="1e21e6933fe00b4c6c6bd197d6a15707facd3d82">1e21e69</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed codestyle and comments
-Updated Scrutinizer configuration</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-07-06T11:10:22+00:00 (commit #<span title="21a812d864221c809af040cea4356f212e1ec5d1">21a812d</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed codestyle and comments</pre>
             </div>
           </li>
         </ul>

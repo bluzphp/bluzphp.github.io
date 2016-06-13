@@ -65,6 +65,9 @@
             <a href="#violations">Violations</a>
           </li>
           <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
             <a href="#constants">Constants</a>
           </li>
           <li>
@@ -77,7 +80,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Proxy/Request.php.xhtml#line37">Source</a>
+            <a href="../source/Proxy/Request.php.xhtml#line39">Source</a>
           </li>
         </ul>
       </nav>
@@ -91,9 +94,8 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Request
                 extends <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">AbstractProxy</a>
-            {<br/><ul class="none"><li>// constants</li><li>const METHOD_OPTIONS = 'OPTIONS';</li><li>const METHOD_GET = 'GET';</li><li>const METHOD_HEAD = 'HEAD';</li><li>const METHOD_PATCH = 'PATCH';</li><li>const METHOD_POST = 'POST';</li><li>const METHOD_PUT = 'PUT';</li><li>const METHOD_DELETE = 'DELETE';</li><li>const METHOD_TRACE = 'TRACE';</li><li>const METHOD_CONNECT = 'CONNECT';</li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static array <a href="#members">$instances</a>;
+            {<br/><ul class="none"><li>// constants</li><li>const METHOD_OPTIONS = 'OPTIONS';</li><li>const METHOD_GET = 'GET';</li><li>const METHOD_HEAD = 'HEAD';</li><li>const METHOD_PATCH = 'PATCH';</li><li>const METHOD_POST = 'POST';</li><li>const METHOD_PUT = 'PUT';</li><li>const METHOD_DELETE = 'DELETE';</li><li>const METHOD_TRACE = 'TRACE';</li><li>const METHOD_CONNECT = 'CONNECT';</li><li>const TYPE_ANY = '*/*';</li><li>const TYPE_HTML = 'text/html';</li><li>const TYPE_JSON = 'application/json';</li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static array <a href="#members">$instances</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
-                    </li><li>public static UriInterface <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getRequestUri.xhtml">getRequestUri</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getCookie.xhtml">getCookie</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getEnv.xhtml">getEnv</a>()
@@ -104,6 +106,8 @@
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getClientIp.xhtml">getClientIp</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getModule.xhtml">getModule</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getController.xhtml">getController</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getMethod.xhtml">getMethod</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isHttp.xhtml">isHttp</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isGet.xhtml">isGet</a>()
@@ -111,7 +115,6 @@
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isPut.xhtml">isPut</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isDelete.xhtml">isDelete</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isXmlHttpRequest.xhtml">isXmlHttpRequest</a>()
-                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/initInstance.xhtml">initInstance</a>()
                         </li><li>public static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/getInstance.xhtml">getInstance</a>()
                         </li><li>public static void <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/setInstance.xhtml">setInstance</a>()
@@ -132,13 +135,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">40%</td>
-            <td class="nummeric">8 / 20</td>
+            <td class="percent">35%</td>
+            <td class="nummeric">7 / 20</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">54.55%</td>
-            <td class="nummeric">36 / 66</td>
+            <td class="percent">55.71%</td>
+            <td class="nummeric">39 / 70</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -153,21 +156,45 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">134 - 150</td>
+              <td class="line">133 - 149</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
               <td>The method getParam() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
             <tr>
-              <td class="line">185</td>
+              <td class="line">184</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $ip. Configured minimum length is 3.</td>
             </tr>
+            <tr>
+              <td class="line">232 - 285</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method getAccept() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
           </table>
         </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">39+</td>
+            <td>Proxy class should be clean</td>
+          </tr>
+          <tr>
+            <td class="nummeric">232+</td>
+            <td>:  refactoring this method, accept types should be stored in static? variable</td>
+          </tr>
+        </table>
         <h2 id="constants">Constants</h2>
         <table class="styled">
           <thead>
@@ -213,6 +240,18 @@
               <td id="METHOD_CONNECT">METHOD_CONNECT</td>
               <td>'CONNECT'</td>
             </tr>
+            <tr>
+              <td id="TYPE_ANY">TYPE_ANY</td>
+              <td>'*/*'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_HTML">TYPE_HTML</td>
+              <td>'text/html'</td>
+            </tr>
+            <tr>
+              <td id="TYPE_JSON">TYPE_JSON</td>
+              <td>'application/json'</td>
+            </tr>
           </tbody>
         </table>
         <h2 id="members">Members</h2>
@@ -247,14 +286,14 @@
                 — Get uploaded file</li>
             <li id="getHeader"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getHeader.xhtml">getHeader()</a>
                 — Search for a header value</li>
+            <li id="getMethod"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getMethod.xhtml">getMethod()</a>
+                — Get method</li>
             <li id="getModule"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getModule.xhtml">getModule()</a>
                 — Get module</li>
             <li id="getParam"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParam.xhtml">getParam()</a>
                 — Access values contained in the superglobals as public members Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER, 5. ENV</li>
             <li id="getParams"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParams.xhtml">getParams()</a>
                 — Get all params from GET and POST or PUT</li>
-            <li id="getRequestUri"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getRequestUri.xhtml">getRequestUri()</a>
-                — Get Request Uri</li>
             <li id="getServer"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer()</a>
                 — Retrieve a member of the $_SERVER super global</li>
             <li id="isCli"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli()</a>
@@ -290,6 +329,70 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-06-13T09:18:40+00:00 (commit #<span title="45107f6cb16c1e6d3fd49df3315666a3b428077f">45107f6</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-02T12:18:19+00:00 (commit #<span title="8fd9f366eece9f513cc519b4a5f90ae3bf5eed31">8fd9f36</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added support header `Accept` with `*/*` value</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-06-01T10:42:59+00:00 (commit #<span title="5cd4c4a605d7f9a8cf9607d3a1d50191868e3d14">5cd4c4a</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added constants to `Proxy\Response` for content types
+Added check `Accept` at `preProcess` stage for switch layout</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-20T16:24:18+00:00 (commit #<span title="f6d6f78e01dceb2df9290bc759574ee5ff54489a">f6d6f78</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Controller Helper `IsAllowed`
+Removed method `Request::getRequestUri()` use `Request::getUri()` instead</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-05-18T13:17:15+00:00 (commit #<span title="d129548289073348ce3048b2fef96e45bad74ff4">d129548</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed JSON response</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-04-28T10:02:46+00:00 (commit #<span title="d1fed0b092ece38da2f313fdc575481d192ac1a7">d1fed0b</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">- Added `Dispatch` helper to Controller
+- Added support @acl tag to Controller\Reflection
+- Added getMethod to Proxy\Request</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-02-11T13:44:32+00:00 (commit #<span title="f3584cbafe95cbe1603448f7f6870ef90fb1f611">f3584cb</span>)</h3>
             <div>
@@ -391,69 +494,6 @@ Added Proxy\Request::getHeader method</pre>
                     </p>
               <pre class="wrapped">Added method `initRouter()` to Application
 Moved `baseUrl` to `Router`</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated dockblocks in all projects</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-01-30T16:18:56+00:00 (commit #<span title="0b24a0d7fab93f02ae24b1d99716c692c0d24065">0b24a0d</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added method `Request::getAccept()` for retrieve MIME type from request headers</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-07T11:27:17+00:00 (commit #<span title="f0312f6a99bf005ac364f31f0615f812972a5261">f0312f6</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #271</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-10-30T15:24:13+00:00 (commit #<span title="66e9751a1d057222095f35fd69196785771318ab">66e9751</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #273 - Removed deprecated methods from Application
-Updated docblocks</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-10-08T14:11:02+00:00 (commit #<span title="21edc49abe5c07ea92480e878db3c931347ae40b">21edc49</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed Reflection Class
-Moved Application properties required for tests to tests Bootstraps
-Added generatedSecret method to Auth\AbstractTable</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-10-03T08:38:59+00:00 (commit #<span title="13d59659593282306b0846212d5714a51d264462">13d5965</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed codestyle</pre>
             </div>
           </li>
         </ul>
