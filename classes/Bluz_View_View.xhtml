@@ -74,7 +74,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/View/View.php.xhtml#line50">Source</a>
+            <a href="../source/View/View.php.xhtml#line51">Source</a>
           </li>
         </ul>
       </nav>
@@ -96,12 +96,10 @@
                     </li><li>protected  <a href="#members">$template</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/__construct.xhtml">__construct</a>()
                     </li><li>public array <a title="Bluz\View\View" href="../classes/Bluz_View_View/__sleep.xhtml">__sleep</a>()
-                    </li><li>public string <a title="Bluz\View\View" href="../classes/Bluz_View_View/__invoke.xhtml">__invoke</a>()
                     </li><li>public string <a title="Bluz\View\View" href="../classes/Bluz_View_View/__toString.xhtml">__toString</a>()
                     </li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/setPath.xhtml">setPath</a>()
                     </li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/setTemplate.xhtml">setTemplate</a>()
                     </li><li>public View <a title="Bluz\View\View" href="../classes/Bluz_View_View/addPartialPath.xhtml">addPartialPath</a>()
-                    </li><li>public string <a title="Bluz\View\View" href="../classes/Bluz_View_View/render.xhtml">render</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Container\Container">Container</span></li><li>protected void <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doSetContainer.xhtml">doSetContainer</a>()
                         </li><li>protected mixed <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doGetContainer.xhtml">doGetContainer</a>()
                         </li><li>protected bool <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doContainsContainer.xhtml">doContainsContainer</a>()
@@ -123,6 +121,7 @@
                         </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
                         </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/resetHelpersPath.xhtml">resetHelpersPath</a>()
                         </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Response\ResponseTrait">ResponseTrait</span></li><li>public mixed <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render</a>()
                         </li></ul>
 
             }<br/></div>
@@ -145,6 +144,9 @@
             <li>
               <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a>
             </li>
+            <li>
+              <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait.xhtml">Bluz\Response\ResponseTrait</a>
+            </li>
           </ul>
           <h4>Implements</h4>
           <ul>
@@ -160,13 +162,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">62.5%</td>
-            <td class="nummeric">5 / 8</td>
+            <td class="percent">83.33%</td>
+            <td class="nummeric">5 / 6</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">85.71%</td>
-            <td class="nummeric">18 / 21</td>
+            <td class="percent">84.21%</td>
+            <td class="nummeric">16 / 19</td>
           </tr>
         </table>
         <h2 id="constants">Constants</h2>
@@ -228,16 +230,12 @@
           <ul>
             <li id="__construct"><a title="Bluz\View\View" href="../classes/Bluz_View_View/__construct.xhtml">__construct()</a>
                 — Create view instance, initial default helper path</li>
-            <li id="__invoke"><a title="Bluz\View\View" href="../classes/Bluz_View_View/__invoke.xhtml">__invoke()</a>
-                — View should be callable</li>
             <li id="__sleep"><a title="Bluz\View\View" href="../classes/Bluz_View_View/__sleep.xhtml">__sleep()</a>
                 — List of packed properties</li>
             <li id="__toString"><a title="Bluz\View\View" href="../classes/Bluz_View_View/__toString.xhtml">__toString()</a>
                 — Render like string</li>
             <li id="addPartialPath"><a title="Bluz\View\View" href="../classes/Bluz_View_View/addPartialPath.xhtml">addPartialPath()</a>
                 — Add partial path for use inside partial and partialLoop helpers</li>
-            <li id="render"><a title="Bluz\View\View" href="../classes/Bluz_View_View/render.xhtml">render()</a>
-                — Render template</li>
             <li id="setPath"><a title="Bluz\View\View" href="../classes/Bluz_View_View/setPath.xhtml">setPath()</a>
                 — {@inheritdoc}</li>
             <li id="setTemplate"><a title="Bluz\View\View" href="../classes/Bluz_View_View/setTemplate.xhtml">setTemplate()</a>
@@ -311,9 +309,28 @@
             <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
                 — Set helpers path</li>
           </ul>
+          <h3>Inherited from <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait.xhtml">Bluz\Response\ResponseTrait</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="render">
+              <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render()</a>
+            </li>
+          </ul>
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-06-13T10:20:32+00:00 (commit #<span title="a0479613f775c7df7e56065a948c583fb2d1633f">a047961</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Response\ResponseTrait` for Controller, Layout, View
+Removed unused `View` helpers `Api` and `Widget`
+Fixed docblocks</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
             <div>
@@ -343,6 +360,16 @@ Updated Scrutinizer configuration</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Fixed codestyle and comments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-19T13:46:23+00:00 (commit #<span title="cd55389134a8a5dcbce985b6034eef0df47eb82c">cd55389</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added support description for @param in controller reflection</pre>
             </div>
           </li>
           <li>
@@ -410,13 +437,13 @@ Removed method Application::getRouter()</pre>
             </div>
           </li>
           <li>
-            <h3>2014-10-01T07:59:10+00:00 (commit #<span title="9e132b5786e6fdf39c328ced8b24b57f13b30893">9e132b5</span>)</h3>
+            <h3>2014-10-01T16:12:56+00:00 (commit #<span title="c5b812ffc9e02615f6b50437e1c8f0b7e9f7f993">c5b812f</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed access level</pre>
+              <pre class="wrapped">Small optimization</pre>
             </div>
           </li>
           <li>
@@ -430,55 +457,34 @@ Removed method Application::getRouter()</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-26T08:59:43+00:00 (commit #<span title="d239e7ebf9d208b6d4b33548898bdb8c5a3ce9f7">d239e7e</span>)</h3>
+            <h3>2014-09-26T09:28:42+00:00 (commit #<span title="debebd87f9601883ff8a766cb73c992851fd3fd1">debebd8</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed tests for new Exception structure</pre>
+              <pre class="wrapped">Added UnauthorizedException
+Updated Redirect anr Reload exception</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-22T10:25:48+00:00 (commit #<span title="60fc5a95929292a9fbc9d4e513cabdcd667836bb">60fc5a9</span>)</h3>
+            <h3>2014-09-23T08:06:29+00:00 (commit #<span title="c7802cd4e885cbafe3ea5f35f9dacce097b19413">c7802cd</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed #180 - Added prefix for Cache</pre>
+              <pre class="wrapped">Updated log messages for one style</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-05T15:00:35+00:00 (commit #<span title="40870d3b21988eea651a57bbe4c834f88547d11b">40870d3</span>)</h3>
+            <h3>2014-09-05T18:52:59+00:00 (commit #<span title="f82a9d6bf4c1d97d915241d05b3fc25f3ab44341">f82a9d6</span>)</h3>
             <div>
               <p>
-                        Author: Ravenholm (aedakftw@gmail.com) /
-                        Commiter: Ravenholm (aedakftw@gmail.com)
+                        Author: dev (dev@ravenholm-ubnt.php.nixsolutions.com) /
+                        Commiter: dev (dev@ravenholm-ubnt.php.nixsolutions.com)
                     </p>
-              <pre class="wrapped">Fixed length validator's error message</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T14:35:53+00:00 (commit #<span title="57bd92be2a494c48221483ad14f28067bbbb257d">57bd92b</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated tests of Grid package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-08-22T10:19:14+00:00 (commit #<span title="dbcf8fb2aefed3f499885beadb75f128db60bd2f">dbcf8fb</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Merge pull request #247 from AntonShevchuk/master
-
-Prepare Response object for PSR-7</pre>
+              <pre class="wrapped">Fixed codestyle</pre>
             </div>
           </li>
         </ul>

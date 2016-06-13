@@ -71,7 +71,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Controller/Controller.php.xhtml#line43">Source</a>
+            <a href="../source/Controller/Controller.php.xhtml#line44">Source</a>
           </li>
         </ul>
       </nav>
@@ -105,13 +105,13 @@
                     </li><li>public Reflection <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getReflection.xhtml">getReflection</a>()
                     </li><li>public Controller <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/assign.xhtml">assign</a>()
                     </li><li>public Data <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getData.xhtml">getData</a>()
-                    </li><li>public mixed <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/render.xhtml">render</a>()
                     </li><li>public array <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize</a>()
                     </li><li>public string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/__toString.xhtml">__toString</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
                         </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
                         </li><li>public Helper <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/resetHelpersPath.xhtml">resetHelpersPath</a>()
                         </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Response\ResponseTrait">ResponseTrait</span></li><li>public mixed <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render</a>()
                         </li></ul>
 
             }<br/></div>
@@ -121,6 +121,9 @@
           <ul>
             <li>
               <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a>
+            </li>
+            <li>
+              <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait.xhtml">Bluz\Response\ResponseTrait</a>
             </li>
           </ul>
           <h4>Implements</h4>
@@ -134,13 +137,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">42.86%</td>
-            <td class="nummeric">6 / 14</td>
+            <td class="percent">46.15%</td>
+            <td class="nummeric">6 / 13</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">58.97%</td>
-            <td class="nummeric">69 / 117</td>
+            <td class="percent">60.19%</td>
+            <td class="nummeric">65 / 108</td>
           </tr>
         </table>
         <h2 id="members">Members</h2>
@@ -207,8 +210,6 @@
                 — Get Reflection</li>
             <li id="jsonSerialize"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize()</a>
                 — Specify data which should be serialized to JSON</li>
-            <li id="render"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/render.xhtml">render()</a>
-                — Render controller</li>
             <li id="run"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run()</a>
                 — __invoke</li>
           </ul>
@@ -224,9 +225,28 @@
             <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
                 — Set helpers path</li>
           </ul>
+          <h3>Inherited from <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait.xhtml">Bluz\Response\ResponseTrait</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="render">
+              <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render()</a>
+            </li>
+          </ul>
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-06-13T10:20:32+00:00 (commit #<span title="a0479613f775c7df7e56065a948c583fb2d1633f">a047961</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Response\ResponseTrait` for Controller, Layout, View
+Removed unused `View` helpers `Api` and `Widget`
+Fixed docblocks</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-06-10T15:49:45+00:00 (commit #<span title="2f740051c6ae87c6006aaba2667cad9a6e1fdf28">2f74005</span>)</h3>
             <div>
