@@ -68,7 +68,7 @@
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Db/Db.php.xhtml#line403">Source</a>
+            <a href="../../source/Db/Db.php.xhtml#line405">Source</a>
           </li>
         </ul>
       </nav>
@@ -76,6 +76,7 @@
         <h1><small>Bluz\Db\Db::</small>fetchGroup</h1>
         <h4>Returns an array containing all of the result set rows</h4>
         <p>Group by first column
+
 &lt;code&gt;
     $db-&gt;fetchGroup("SELECT ip, COUNT(id) FROM users GROUP BY ip", array());
 &lt;/code&gt;</p>
@@ -85,7 +86,9 @@
           <code>public function fetchGroup(string
         $sql,
             [array
-        $params = ] )
+        $params = ,
+            [mixed
+        $object = null]] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
@@ -98,6 +101,10 @@
                 —
                 array</dt>
           <dd>params for query placeholders (optional)</dd>
+          <dt><code>$object</code>
+                —
+                mixed</dt>
+          <dd/>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
@@ -108,7 +115,7 @@
         <div class="styled">
           <h3>Information</h3>
           <ul class="styled">
-            <li>Coverage: 4/4 Lines (100%)</li>
+            <li>Coverage: 5/6 Lines (83.333333333333%)</li>
             <li>Tests: 1</li>
             <li>Passed: 1 (100%)</li>
           </ul>
