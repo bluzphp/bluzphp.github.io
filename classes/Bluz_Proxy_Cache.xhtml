@@ -87,22 +87,22 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Cache
-                extends <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">AbstractProxy</a>
-            {<br/><ul class="none"><li>// constants</li><li>const TTL_NO_EXPIRY = Instance::TTL_NO_EXPIRY;</li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static array <a href="#members">$instances</a>;
-                        </li></ul><ul class="none"><li>// methods</li><li>protected static Cache <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/initInstance.xhtml">initInstance</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\AbstractProxy">AbstractProxy</span></li><li>protected static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/initInstance.xhtml">initInstance</a>()
-                        </li><li>public static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/getInstance.xhtml">getInstance</a>()
-                        </li><li>public static void <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/setInstance.xhtml">setInstance</a>()
-                        </li><li>public static mixed <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/__callStatic.xhtml">__callStatic</a>()
+            {<br/><ul class="none"><li>// constants</li><li>const TTL_NO_EXPIRY = Instance::TTL_NO_EXPIRY;</li></ul><ul class="none"><li>// methods</li><li>protected static Instance|Nil <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/initInstance.xhtml">initInstance</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\ProxyTrait">ProxyTrait</span></li><li>public static mixed <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/__callStatic.xhtml">__callStatic</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Singleton">Singleton</span></li><li>public static void <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/setInstance.xhtml">setInstance</a>()
+                        </li><li>public static Cache <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance</a>()
+                        </li><li>protected static Cache <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/initInstance.xhtml">initInstance</a>()
+                        </li><li>protected void <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__construct.xhtml">__construct</a>()
+                        </li><li>protected void <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__clone.xhtml">__clone</a>()
                         </li></ul>
 
             }<br/></div>
         <h2 id="hierarchy">Hierarchy</h2>
         <div class="styled">
-          <h4>Extends</h4>
+          <h4>Uses</h4>
           <ul>
             <li>
-              <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">Bluz\Proxy\AbstractProxy</a>
+              <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait.xhtml">Bluz\Proxy\ProxyTrait</a>
             </li>
           </ul>
         </div>
@@ -138,9 +138,9 @@
         <div class="styled members">
           <h4>protected</h4>
           <ul class="members">
-            <li id="instances"><strong>$instances</strong>
+            <li id="instance"><strong>$instance</strong>
                 —
-                array</li>
+                <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache.xhtml">Bluz\Proxy\Cache</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -150,24 +150,40 @@
             <li id="initInstance"><a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/initInstance.xhtml">initInstance()</a>
                 — Init instance</li>
           </ul>
-          <h3>Inherited from <a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy.xhtml">Bluz\Proxy\AbstractProxy</a></h3>
+          <h3>Inherited from <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait.xhtml">Bluz\Proxy\ProxyTrait</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__callStatic"><a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/__callStatic.xhtml">__callStatic()</a>
+                — Handle dynamic, static calls to the object.</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton.xhtml">Bluz\Common\Singleton</a></h3>
           <h4>protected</h4>
           <ul>
-            <li id="initInstance"><a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/initInstance.xhtml">initInstance()</a>
-                — Init class instance</li>
+            <li id="__clone"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/__clone.xhtml">__clone()</a>
+                — Disabled by access level</li>
+            <li id="initInstance"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/initInstance.xhtml">initInstance()</a>
+                — Initialization of class instance</li>
           </ul>
           <h4>public</h4>
           <ul>
-            <li id="__callStatic"><a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/__callStatic.xhtml">__callStatic()</a>
-                — Handle dynamic, static calls to the object.</li>
-            <li id="getInstance"><a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/getInstance.xhtml">getInstance()</a>
-                — Get class instance</li>
-            <li id="setInstance"><a title="Bluz\Proxy\AbstractProxy" href="../classes/Bluz_Proxy_AbstractProxy/setInstance.xhtml">setInstance()</a>
+            <li id="getInstance"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance()</a>
+                — Get instance</li>
+            <li id="setInstance"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/setInstance.xhtml">setInstance()</a>
                 — Set or replace instance</li>
           </ul>
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-09-01T10:37:23+00:00 (commit #<span title="be76a301119c86bab6ffdf483da85fb70d84db5d">be76a30</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
           <li>
             <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
             <div>
@@ -189,46 +205,55 @@
             </div>
           </li>
           <li>
-            <h3>2014-12-01T14:56:51+00:00 (commit #<span title="7da2f03e4ac6c416acb59c813c709980035f5b28">7da2f03</span>)</h3>
+            <h3>2015-01-15T14:44:35+00:00 (commit #<span title="91190e6c004046ff63fb411447c63574d4c9f516">91190e6</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added small remark for future</pre>
+              <pre class="wrapped">Added webhook for Gitter</pre>
             </div>
           </li>
           <li>
-            <h3>2014-11-24T13:51:15+00:00 (commit #<span title="49eb9d9ea4aac7bd74b20dca9a16a852504a1142">49eb9d9</span>)</h3>
+            <h3>2014-12-02T13:00:12+00:00 (commit #<span title="2bb61cf6c0340e515c9ea8bee658f382d532800e">2bb61cf</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated Controller\Reflection test
-Small optimization for Proxy</pre>
+              <pre class="wrapped">Try to fix codestyle</pre>
             </div>
           </li>
           <li>
-            <h3>2014-11-24T12:21:47+00:00 (commit #<span title="16aa8b21c6e0a6aa781268f52161867e6ded658f">16aa8b2</span>)</h3>
+            <h3>2014-11-26T13:38:57+00:00 (commit #<span title="c7f7861b3f2eeb273054dfa7a627bdf912202f4b">c7f7861</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed #300 - cache of Controller\Reflection</pre>
+              <pre class="wrapped">Fixed #284 - added support `@accept` doc element</pre>
             </div>
           </li>
           <li>
-            <h3>2014-11-17T16:00:42+00:00 (commit #<span title="629f4748c29427a20397cd8c99a8c045ad68c7b0">629f474</span>)</h3>
+            <h3>2014-11-24T12:41:33+00:00 (commit #<span title="d3918eb521ae6ea947190613306b78c0757190ef">d3918eb</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #298 - Added multiple caches' support</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-11-18T12:39:48+00:00 (commit #<span title="1a35bc6dc1f24b6b0dac191accd641276c6bb869">1a35bc6</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #294 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #296 from AntonShevchuk/master
 
-Fixed #292 - Add support JSONP responce presentation</pre>
+Updated version of libraries in composer.json</pre>
             </div>
           </li>
           <li>
@@ -243,33 +268,58 @@ Updated docblocks</pre>
             </div>
           </li>
           <li>
-            <h3>2014-10-10T14:30:06+00:00 (commit #<span title="097e656765d2e9bcc02ea1b70d1574095142728e">097e656</span>)</h3>
+            <h3>2014-10-10T15:48:57+00:00 (commit #<span title="e9bcc6b43535e874438e0f6ebc3721113004cdaa">e9bcc6b</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated library versions</pre>
+              <pre class="wrapped">Fixed comments</pre>
             </div>
           </li>
           <li>
-            <h3>2014-10-03T08:15:10+00:00 (commit #<span title="cfac374e6c577972908a2197a10a4187d04c916a">cfac374</span>)</h3>
+            <h3>2014-10-08T14:11:02+00:00 (commit #<span title="21edc49abe5c07ea92480e878db3c931347ae40b">21edc49</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added methods for BC to old version of skeleton</pre>
+              <pre class="wrapped">Fixed Reflection Class
+Moved Application properties required for tests to tests Bootstraps
+Added generatedSecret method to Auth\AbstractTable</pre>
             </div>
           </li>
           <li>
-            <h3>2014-09-30T07:50:11+00:00 (commit #<span title="5d81312620948f672279b2fbf1090e4a5156627a">5d81312</span>)</h3>
+            <h3>2014-10-07T13:59:08+00:00 (commit #<span title="3900447702aa334c64303fa53ed1dcadcf114e5d">3900447</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #255
+Added Reflection of Controller class</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-10-03T08:38:59+00:00 (commit #<span title="13d59659593282306b0846212d5714a51d264462">13d5965</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-09-30T07:56:05+00:00 (commit #<span title="2b5bae4fb2d4738ab6db24b1e4e31047bb1997eb">2b5bae4</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #256 from AntonShevchuk/master
+
+Implement Proxy package</pre>
             </div>
           </li>
         </ul>
