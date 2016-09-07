@@ -78,8 +78,8 @@
         <p>Example of usage
 &lt;code&gt;
     $db-&gt;fetchRow("SELECT name, email FROM users WHERE id = ". $db-&gt;quote($id));
-    $db-&gt;fetchRow("SELECT name, email FROM users WHERE id = ?", array($id));
-    $db-&gt;fetchRow("SELECT name, email FROM users WHERE id = :id", array(':id'=&gt;$id));
+    $db-&gt;fetchRow("SELECT name, email FROM users WHERE id = ?", [$id]);
+    $db-&gt;fetchRow("SELECT name, email FROM users WHERE id = :id", [':id'=&gt;$id]);
 &lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>

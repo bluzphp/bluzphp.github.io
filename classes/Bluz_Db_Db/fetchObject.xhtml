@@ -78,11 +78,11 @@
         <p>Example of usage
 &lt;code&gt;
     // Fetch object to stdClass
-    $stdClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id));
+    $stdClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', [$id]);
     // Fetch object to new Some object
-    $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id), 'Some');
+    $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', [$id], 'Some');
     // Fetch object to exists instance of Some object
-    $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', array($id), $someClass);
+    $someClass = $db-&gt;fetchObject('SELECT * FROM some_table WHERE id = ?', [$id], $someClass);
 &lt;/code&gt;</p>
         <ul/>
         <h2 id="signature">Signature</h2>

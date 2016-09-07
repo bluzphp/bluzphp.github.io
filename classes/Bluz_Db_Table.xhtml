@@ -75,7 +75,7 @@
       <section>
         <h1 id="introduction"><small>Bluz\Db\</small>Table</h1>
         <h4>Table</h4>
-        <p>Example of Users\Table<br/>&lt;code&gt;<br/>namespace Application\Users;<br/>class Table extends \Bluz\Db\Table<br/>{<br/>protected $table = 'users';<br/>protected $primary = array('id');<br/>}<br/><br/>$userRows = \Application\Users\Table::find(1,2,3,4,5);<br/>foreach ($userRows as $userRow) {<br/>$userRow -&gt; description = 'In first 5';<br/>$userRow -&gt; save();<br/>}<br/>&lt;/code&gt;</p>
+        <p>Example of Users\Table<br/>&lt;code&gt;<br/>namespace Application\Users;<br/>class Table extends \Bluz\Db\Table<br/>{<br/>protected $table = 'users';<br/>protected $primary = ['id'];<br/>}<br/><br/>$userRows = \Application\Users\Table::find(1,2,3,4,5);<br/>foreach ($userRows as $userRow) {<br/>$userRow -&gt; description = 'In first 5';<br/>$userRow -&gt; save();<br/>}<br/>&lt;/code&gt;</p>
         <ul>
           <li>Author: Anton Shevchuk</li>
         </ul>
@@ -217,6 +217,16 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2016-09-07T14:21:42+00:00 (commit #<span title="d5923ee32a48f00d4a1ada64f1148d12bd8c03b4">d5923ee</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to short array notation</pre>
+            </div>
+          </li>
+          <li>
             <h3>2016-04-14T14:35:45+00:00 (commit #<span title="570164e771bda91ca72927eaa107f1cab3ab1e1e">570164e</span>)</h3>
             <div>
               <p>
@@ -312,13 +322,45 @@ Fixed tests</pre>
             </div>
           </li>
           <li>
-            <h3>2015-01-15T15:18:49+00:00 (commit #<span title="f2bf0e4423f8723d0bd4ac8cb34f57157d0ed5fe">f2bf0e4</span>)</h3>
+            <h3>2015-01-23T10:20:40+00:00 (commit #<span title="8f100bfe140c1f747f49f0faa499f02a8c2ad44f">8f100bf</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Try to fix codestyle</pre>
+              <pre class="wrapped">More simple composer install (removed prefer-source flag)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-15T16:17:31+00:00 (commit #<span title="db4b8a67bd774501dafe3255baaa458b7a165c67">db4b8a6</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added webhook for Gitter</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-01-15T15:57:36+00:00 (commit #<span title="401e3538c01adcc84ed3ec2768487d88f49acf6d">401e353</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #311 from AntonShevchuk/master
+
+Added webhook for Gitter</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2014-12-08T08:18:20+00:00 (commit #<span title="9224a6aad17e3c664904dc091d3710ae8c01c08b">9224a6a</span>)</h3>
+            <div>
+              <p>
+                        Author: naxel (alexander.khaylo@nixsolutions.com) /
+                        Commiter: naxel (alexander.khaylo@nixsolutions.com)
+                    </p>
+              <pre class="wrapped">Changing check is Closure</pre>
             </div>
           </li>
           <li>
@@ -332,55 +374,13 @@ Fixed tests</pre>
             </div>
           </li>
           <li>
-            <h3>2014-12-02T13:39:20+00:00 (commit #<span title="25d00813ff3580f28dc7a442556981b210b1e2d5">25d0081</span>)</h3>
+            <h3>2014-12-02T15:54:15+00:00 (commit #<span title="e4091f7e1ec5d909fce31b68769b490376f2813e">e4091f7</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Try to fix codestyle</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-26T13:56:19+00:00 (commit #<span title="af787efdab68f977518eb66f1ac1adf2209744c0">af787ef</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed codestyle</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-24T13:14:59+00:00 (commit #<span title="21de3e21c7b688b4a2d596f9157106758f23ac03">21de3e2</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Merge pull request #301 from AntonShevchuk/master
-
-Fixed #300 - cache of Controller\Reflection</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added links to wiki in every package</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-10-20T08:56:25+00:00 (commit #<span title="0682e0d3582c6f9a970590beee0a9504ec504ace">0682e0d</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed comments for correct working of PHPDocumentor</pre>
+              <pre class="wrapped">Added identity property to Auth class</pre>
             </div>
           </li>
         </ul>
