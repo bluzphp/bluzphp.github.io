@@ -168,14 +168,14 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">369</td>
+              <td class="line">377</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
               </td>
               <td>Avoid unused parameters such as '$params'.</td>
             </tr>
             <tr>
-              <td class="line">410</td>
+              <td class="line">418</td>
               <td>
                 <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
               </td>
@@ -192,7 +192,7 @@
             </tr>
           </thead>
           <tr>
-            <td class="nummeric">384</td>
+            <td class="nummeric">392</td>
             <td>try to find custom controller class</td>
           </tr>
         </table>
@@ -240,20 +240,20 @@
             <li id="initRouter"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/initRouter.xhtml">initRouter()</a>
                 — Initial Router instance</li>
             <li id="postDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postDispatch.xhtml">postDispatch()</a>
-                — Post dispatch mount point</li>
+                — Extension point: post dispatch</li>
             <li id="postProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/postProcess.xhtml">postProcess()</a>
-                — Post process</li>
+                — Extension point: post process</li>
             <li id="preDispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preDispatch.xhtml">preDispatch()</a>
-                — Pre dispatch mount point</li>
+                — Extension point: pre dispatch</li>
             <li id="preProcess"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/preProcess.xhtml">preProcess()</a>
-                — Pre process</li>
+                — Extension point: pre process</li>
           </ul>
           <h4>public</h4>
           <ul>
             <li id="dispatch"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/dispatch.xhtml">dispatch()</a>
                 — Dispatch controller with params</li>
             <li id="end"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/end.xhtml">end()</a>
-                — Finally method</li>
+                — Extension point: finally method</li>
             <li id="getEnvironment"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getEnvironment.xhtml">getEnvironment()</a>
                 — Get application environment</li>
             <li id="getPath"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getPath.xhtml">getPath()</a>
@@ -263,7 +263,7 @@
             <li id="getResponse"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/getResponse.xhtml">getResponse()</a>
                 — Get Response instance</li>
             <li id="init"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/init.xhtml">init()</a>
-                — Initialize process</li>
+                — Initialize system packages</li>
             <li id="isDebug"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/isDebug.xhtml">isDebug()</a>
                 — Return Debug flag</li>
             <li id="process"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/process.xhtml">process()</a>
@@ -273,7 +273,7 @@
             <li id="run"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/run.xhtml">run()</a>
                 — Run application</li>
             <li id="useLayout"><a title="Bluz\Application\Application" href="../classes/Bluz_Application_Application/useLayout.xhtml">useLayout()</a>
-                — Return Layout Flag</li>
+                — Return/setup Layout Flag</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a></h3>
           <h4>public</h4>
@@ -305,6 +305,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-12-13T13:43:01+00:00 (commit #<span title="7ef42625ff7b22cf98b2ff7d8379d3b18704f5e5">7ef4262</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Http\StatusCode</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-11-23T13:26:18+00:00 (commit #<span title="aa37343f7c690f4591cb321b0089b37bd33ebf05">aa37343</span>)</h3>
             <div>
@@ -461,16 +471,6 @@ Step1 - create Controller class</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Added method `Application::run()`</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-02-01T11:21:39+00:00 (commit #<span title="dbba2c00627d62d379cba9a38b059bf0658e89ad">dbba2c0</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed REST controller and Response</pre>
             </div>
           </li>
         </ul>
