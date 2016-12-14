@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
   <head>
-    <title>phpDox - Bluz\Cache\Adapter\Predis::doFlush</title>
+    <title>phpDox - Bluz\Proxy\Cache::delete</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -42,12 +42,12 @@
             <a href="../../classes.xhtml">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.xhtml#Bluz_Cache_Adapter">Bluz\Cache\Adapter</a>
+            <a href="../../classes.xhtml#Bluz_Proxy">Bluz\Proxy</a>
           </li>
           <li class="separator">
-            <a title="Bluz\Cache\Adapter\Predis" href="../../classes/Bluz_Cache_Adapter_Predis.xhtml">Predis</a>
+            <a title="Bluz\Proxy\Cache" href="../../classes/Bluz_Proxy_Cache.xhtml">Cache</a>
           </li>
-          <li class="separator">doFlush</li>
+          <li class="separator">delete</li>
         </ul>
       </div>
       <nav class="box">
@@ -59,34 +59,43 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
-            <a href="#overrides">Overrides</a>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
           </li>
           <li>
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Cache/Adapter/Predis.php.xhtml#line155">Source</a>
+            <a href="../../source/Proxy/Cache.php.xhtml#line185">Source</a>
           </li>
         </ul>
       </nav>
       <section>
-        <h1><small>Bluz\Cache\Adapter\Predis::</small>doFlush</h1>
-        <h4>{@inheritdoc}</h4>
+        <h1><small>Bluz\Proxy\Cache::</small>delete</h1>
+        <h4>Delete cache item</h4>
         <p/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>protected function doFlush()
+          <code>public function delete(string
+        $key )
             </code>
         </div>
-        <h2 id="overrides">Parent Implementation</h2>
-        <ul class="styled">
-          <li>
-            <code>
-              <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../../classes/Bluz_Cache_Adapter_AbstractAdapter/doFlush.xhtml">AbstractAdapter</a>
-            </code>
-          </li>
-        </ul>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$key</code>
+                —
+                string</dt>
+          <dd/>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>bool</dt>
+          <dd><br/>
+        </dd>
+        </dl>
         <h2 id="tests">Test Coverage</h2>
         <div class="styled">
           <h3>Information</h3>

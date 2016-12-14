@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
   <head>
-    <title>phpDox - Bluz\Cache\Cache::contains</title>
+    <title>phpDox - Bluz\Proxy\Cache::getAdapter</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -42,12 +42,12 @@
             <a href="../../classes.xhtml">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.xhtml#Bluz_Cache">Bluz\Cache</a>
+            <a href="../../classes.xhtml#Bluz_Proxy">Bluz\Proxy</a>
           </li>
           <li class="separator">
-            <a title="Bluz\Cache\Cache" href="../../classes/Bluz_Cache_Cache.xhtml">Cache</a>
+            <a title="Bluz\Proxy\Cache" href="../../classes/Bluz_Proxy_Cache.xhtml">Cache</a>
           </li>
-          <li class="separator">contains</li>
+          <li class="separator">getAdapter</li>
         </ul>
       </div>
       <nav class="box">
@@ -65,78 +65,57 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="#interface">Interface</a>
+            <a href="#throws">Throws</a>
           </li>
           <li>
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Cache/Cache.php.xhtml#line164">Source</a>
+            <a href="../../source/Proxy/Cache.php.xhtml#line112">Source</a>
           </li>
         </ul>
       </nav>
       <section>
-        <h1><small>Bluz\Cache\Cache::</small>contains</h1>
-        <h4>{@inheritdoc}</h4>
+        <h1><small>Bluz\Proxy\Cache::</small>getAdapter</h1>
+        <h4>Get Cache Adapter</h4>
         <p/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function contains(string
-        $id )
+          <code>public function getAdapter(string
+        $adapter )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$id</code>
+          <dt><code>$adapter</code>
                 —
                 string</dt>
           <dd/>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>bool</dt>
+          <dt>Instance|false</dt>
           <dd><br/>
         </dd>
         </dl>
-        <h2 id="interface">Defined by Interface</h2>
-        <p class="styled">
-          <code>
-            <a title="Bluz\Cache\CacheInterface" href="../../interfaces/Bluz_Cache_CacheInterface.xhtml">CacheInterface</a>
-          </code>
-        </p>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
+            <code>
+              <a title="Bluz\Common\Exception\ComponentException" href="../../classes/Bluz_Common_Exception_ComponentException.xhtml">ComponentException</a>
+            </code>
+          </dt>
+          <dd/>
+        </dl>
         <h2 id="tests">Test Coverage</h2>
         <div class="styled">
           <h3>Information</h3>
           <ul class="styled">
-            <li>Coverage: 2/2 Lines (100%)</li>
-            <li>Tests: 1</li>
-            <li>Passed: 1 (100%)</li>
+            <li>Coverage: 0/8 Lines (0%)</li>
+            <li>Tests: 0</li>
+            <li>Passed: 0 (0%)</li>
           </ul>
-          <h3>Tests</h3>
-          <ul class="styled">
-            <li>[ <span class="testresult-PASSED">PASSED</span> ] — Bluz\Tests\Cache\CacheTest::testFileCache</li>
-          </ul>
-        </div>
-        <h2 id="violations">Violations</h2>
-        <div class="styled">
-          <h3>PHPMessDetector</h3>
-          <table class="styled">
-            <thead>
-              <tr>
-                <th>Line</th>
-                <th>Rule</th>
-                <th>Message</th>
-              </tr>
-            </thead>
-            <tr>
-              <td class="line">164</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
-            </tr>
-          </table>
         </div>
       </section>
     </div>

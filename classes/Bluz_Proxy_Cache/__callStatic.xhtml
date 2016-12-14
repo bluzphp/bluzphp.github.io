@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:pu="http://schema.phpunit.de/coverage/1.0" lang="en">
   <head>
-    <title>phpDox - Bluz\Cache\Adapter\Apc::doFlush</title>
+    <title>phpDox - Bluz\Proxy\Cache::__callStatic</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -42,12 +42,12 @@
             <a href="../../classes.xhtml">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.xhtml#Bluz_Cache_Adapter">Bluz\Cache\Adapter</a>
+            <a href="../../classes.xhtml#Bluz_Proxy">Bluz\Proxy</a>
           </li>
           <li class="separator">
-            <a title="Bluz\Cache\Adapter\Apc" href="../../classes/Bluz_Cache_Adapter_Apc.xhtml">Apc</a>
+            <a title="Bluz\Proxy\Cache" href="../../classes/Bluz_Proxy_Cache.xhtml">Cache</a>
           </li>
-          <li class="separator">doFlush</li>
+          <li class="separator">__callStatic</li>
         </ul>
       </div>
       <nav class="box">
@@ -59,48 +59,65 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="#overrides">Overrides</a>
+            <a href="#throws">Throws</a>
           </li>
           <li>
             <a href="#tests">Tests</a>
           </li>
           <li>
-            <a href="../../source/Cache/Adapter/Apc.php.xhtml#line106">Source</a>
+            <a href="../../source/Proxy/Cache.php.xhtml#line80">Source</a>
           </li>
         </ul>
       </nav>
       <section>
-        <h1><small>Bluz\Cache\Adapter\Apc::</small>doFlush</h1>
-        <h4>{@inheritdoc}</h4>
+        <h1><small>Bluz\Proxy\Cache::</small>__callStatic</h1>
+        <h4>Handle dynamic, static calls to the object.</h4>
         <p/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>protected function doFlush()
+          <code>public function __callStatic(string
+        $method,
+            array
+        $args )
             </code>
         </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$method</code>
+                —
+                string</dt>
+          <dd/>
+          <dt><code>$args</code>
+                —
+                array</dt>
+          <dd/>
+        </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>bool</dt>
-          <dd><br/>
-        </dd>
+          <dt>mixed</dt>
+          <dd/>
         </dl>
-        <h2 id="overrides">Parent Implementation</h2>
-        <ul class="styled">
-          <li>
+        <h2 id="throws">Errors/Exceptions</h2>
+        <dl class="styled">
+          <dt>
             <code>
-              <a title="Bluz\Cache\Adapter\AbstractAdapter" href="../../classes/Bluz_Cache_Adapter_AbstractAdapter/doFlush.xhtml">AbstractAdapter</a>
+              <a title="Bluz\Common\Exception\ComponentException" href="../../classes/Bluz_Common_Exception_ComponentException.xhtml">ComponentException</a>
             </code>
-          </li>
-        </ul>
+          </dt>
+          <dd/>
+        </dl>
         <h2 id="tests">Test Coverage</h2>
         <div class="styled">
           <h3>Information</h3>
           <ul class="styled">
-            <li>Coverage: 0/3 Lines (0%)</li>
+            <li>Coverage: 0/4 Lines (0%)</li>
             <li>Tests: 0</li>
             <li>Passed: 0 (0%)</li>
           </ul>
