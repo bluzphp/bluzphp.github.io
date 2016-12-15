@@ -91,11 +91,11 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class AbstractTable
                 extends <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table.xhtml">Table</a>
-            {<br/><ul class="none"><li>// constants</li><li>const TYPE_ACCESS = 'access';</li><li>const TYPE_REQUEST = 'request';</li><li>const PROVIDER_COOKIE = 'cookie';</li><li>const PROVIDER_EQUALS = 'equals';</li><li>const PROVIDER_FACEBOOK = 'facebook';</li><li>const PROVIDER_GOOGLE = 'google';</li><li>const PROVIDER_LDAP = 'ldap';</li><li>const PROVIDER_TOKEN = 'token';</li><li>const PROVIDER_TWITTER = 'twitter';</li></ul><ul class="none"><li>// members</li><li>protected string <a href="#members">$table</a> =
+            {<br/><ul class="none"><li>// constants</li><li>const TYPE_ACCESS = 'access';</li><li>const TYPE_REQUEST = 'request';</li><li>const PROVIDER_COOKIE = 'cookie';</li><li>const PROVIDER_EQUALS = 'equals';</li><li>const PROVIDER_FACEBOOK = 'facebook';</li><li>const PROVIDER_GOOGLE = 'google';</li><li>const PROVIDER_LDAP = 'ldap';</li><li>const PROVIDER_TOKEN = 'token';</li><li>const PROVIDER_TWITTER = 'twitter';</li></ul><ul class="none"><li>// members</li><li>protected string <a href="#members">$name</a> =
                         'auth';
                     </li><li>protected array <a href="#members">$primary</a> =
                         ;
-                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Db\Table">Table</span></li><li>protected  <a href="#members">$table</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Db\Table">Table</span></li><li>protected  <a href="#members">$name</a>;
                         </li><li>protected  <a href="#members">$model</a>;
                         </li><li>protected array <a href="#members">$columns</a>;
                         </li><li>protected string <a href="#members">$select</a>;
@@ -228,6 +228,12 @@
             <li id="model"><strong>$model</strong>
                 —
                 string</li>
+            <li id="name"><strong>$name</strong>
+                —
+                string</li>
+            <li id="name"><strong>$name</strong>
+                —
+                string</li>
             <li id="primary"><strong>$primary</strong>
                 —
                 array</li>
@@ -241,12 +247,6 @@
                 —
                 string</li>
             <li id="sequence"><strong>$sequence</strong>
-                —
-                string</li>
-            <li id="table"><strong>$table</strong>
-                —
-                string</li>
-            <li id="table"><strong>$table</strong>
                 —
                 string</li>
           </ul>
@@ -315,6 +315,17 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2016-12-15T12:41:34+00:00 (commit #<span title="c2520ccbc8a1176853e0928d31b7eb2033bbba14">c2520cc</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Rename property `Db\Table::$table` to `Db\Table::$name`
+Fixed dynamic calls for static methods</pre>
+            </div>
+          </li>
+          <li>
             <h3>2016-10-11T08:57:35+00:00 (commit #<span title="5fafd459d0928e137ac0ab7ddd5b2dbc32b6c43e">5fafd45</span>)</h3>
             <div>
               <p>
@@ -345,67 +356,67 @@
             </div>
           </li>
           <li>
-            <h3>2015-06-23T13:21:22+00:00 (commit #<span title="9e1c333c5862e58cda429f0f66be13dc7be68e92">9e1c333</span>)</h3>
+            <h3>2015-07-15T14:55:55+00:00 (commit #<span title="fa8df97664090d959f6e807e5d36453f958a5434">fa8df97</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added Scrutinizer configuration</pre>
+              <pre class="wrapped">Try to integrate PHPDoc to Travis</pre>
             </div>
           </li>
           <li>
-            <h3>2015-06-22T16:06:52+00:00 (commit #<span title="583c77e851fefcdf58ba14210a223272b8638f21">583c77e</span>)</h3>
+            <h3>2015-07-06T10:17:54+00:00 (commit #<span title="31fcf5ecd466a3d539f9ccbd6efe857819c53548">31fcf5e</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated Scrutinizer configuration</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2015-07-06T09:55:47+00:00 (commit #<span title="3c4759d7c6b12e35a1dc16df64f52a082eb70cec">3c4759d</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #330 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #331 from AntonShevchuk/master
 
-Updated description</pre>
+Added Scrutinizer configuration</pre>
             </div>
           </li>
           <li>
-            <h3>2014-11-11T10:00:14+00:00 (commit #<span title="ff61fb7e59dbac029685d17378068afff4e71124">ff61fb7</span>)</h3>
+            <h3>2014-11-11T10:10:50+00:00 (commit #<span title="1dd36b090c2f38206003621422b16cd3b0a70203">1dd36b0</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed codestyle</pre>
+              <pre class="wrapped">Updated travis configuration</pre>
             </div>
           </li>
           <li>
-            <h3>2014-11-07T12:13:59+00:00 (commit #<span title="86db723a70e8d2e36bc3e704785e1d4214b3b842">86db723</span>)</h3>
+            <h3>2014-11-07T13:46:03+00:00 (commit #<span title="c309852ad93431cfa851c182f509114e8406df22">c309852</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed #279</pre>
+              <pre class="wrapped">Added support composite primary key for REST controller</pre>
             </div>
           </li>
           <li>
-            <h3>2014-11-06T14:42:15+00:00 (commit #<span title="500b329a65a1a763cc222fadcf21eacb04b96320">500b329</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed tests</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-06T12:23:57+00:00 (commit #<span title="0cf7409223c0774f50f3adde21d6332424cb200a">0cf7409</span>)</h3>
+            <h3>2014-11-06T15:00:08+00:00 (commit #<span title="aae6791209da7bbd3d574d679dbea3a0727cc47d">aae6791</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #277 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #278 from AntonShevchuk/master
 
-Added Http\CacheControl</pre>
+Added tests for `Bluz\Http\CacheControl` class</pre>
             </div>
           </li>
         </ul>
