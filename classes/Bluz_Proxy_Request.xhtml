@@ -100,7 +100,7 @@
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getCookie.xhtml">getCookie</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getEnv.xhtml">getEnv</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getHeader.xhtml">getHeader</a>()
-                    </li><li>public static mixed <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParam.xhtml">getParam</a>()
+                    </li><li>public static string|null <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParam.xhtml">getParam</a>()
                     </li><li>public static array <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParams.xhtml">getParams</a>()
                     </li><li>public static UploadedFile <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getFile.xhtml">getFile</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getClientIp.xhtml">getClientIp</a>()
@@ -142,8 +142,8 @@
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">62.5%</td>
-            <td class="nummeric">35 / 56</td>
+            <td class="percent">63.64%</td>
+            <td class="nummeric">35 / 55</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -158,14 +158,7 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">206</td>
-              <td>
-                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
-              </td>
-              <td>Avoid variables with short names like $ip. Configured minimum length is 3.</td>
-            </tr>
-            <tr>
-              <td class="line">254 - 307</td>
+              <td class="line">251 - 304</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
@@ -186,7 +179,7 @@
             <td>Proxy class should be clean</td>
           </tr>
           <tr>
-            <td class="nummeric">254+</td>
+            <td class="nummeric">251+</td>
             <td>:  refactoring this method, accept types should be stored in static? variable</td>
           </tr>
         </table>
@@ -286,7 +279,7 @@
             <li id="getModule"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getModule.xhtml">getModule()</a>
                 — Get module</li>
             <li id="getParam"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParam.xhtml">getParam()</a>
-                — Access values contained in the superglobals as public members Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER, 5. ENV</li>
+                — Access values contained in the superglobals as public members Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER</li>
             <li id="getParams"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParams.xhtml">getParams()</a>
                 — Get all params from GET and POST or PUT</li>
             <li id="getPost"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getPost.xhtml">getPost()</a>
@@ -334,6 +327,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-12-19T16:11:02+00:00 (commit #<span title="7ff8246071669b4ba940d5e1aa149f3536b20ff8">7ff8246</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Refactoring of `setHelpersPath()` - removed support of string argument</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-12-19T14:46:08+00:00 (commit #<span title="d421b020173445d36a63d846bbe92cc5336eb3d7">d421b02</span>)</h3>
             <div>
@@ -453,14 +456,14 @@ Removed method `Request::getRequestUri()` use `Request::getUri()` instead</pre>
             </div>
           </li>
           <li>
-            <h3>2016-04-22T09:41:07+00:00 (commit #<span title="4e08e99e6db98e9e57a7001236e9d137ab25eca5">4e08e99</span>)</h3>
+            <h3>2016-04-22T10:40:03+00:00 (commit #<span title="5c18d32a20e0f12b491b77b51d0ad59d1ac8f5f1">5c18d32</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Bluz7 refactoring
-Step1 - create Controller class</pre>
+              <pre class="wrapped">- Removed `app()` function
+- Recovered `Application::useLayout()`</pre>
             </div>
           </li>
           <li>
@@ -492,16 +495,6 @@ Fixed Response - removed `array` cast</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Removed unused flag</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-01-26T09:31:27+00:00 (commit #<span title="ced590f3a431bd4b05460f0bd65fbf9575a583a9">ced590f</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed REST issue</pre>
             </div>
           </li>
         </ul>
