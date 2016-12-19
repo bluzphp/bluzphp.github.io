@@ -94,6 +94,8 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Request
             {<br/><ul class="none"><li>// constants</li><li>const METHOD_OPTIONS = 'OPTIONS';</li><li>const METHOD_GET = 'GET';</li><li>const METHOD_HEAD = 'HEAD';</li><li>const METHOD_PATCH = 'PATCH';</li><li>const METHOD_POST = 'POST';</li><li>const METHOD_PUT = 'PUT';</li><li>const METHOD_DELETE = 'DELETE';</li><li>const METHOD_TRACE = 'TRACE';</li><li>const METHOD_CONNECT = 'CONNECT';</li><li>const TYPE_ANY = '*/*';</li><li>const TYPE_HTML = 'text/html';</li><li>const TYPE_JSON = 'application/json';</li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getQuery.xhtml">getQuery</a>()
+                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getPost.xhtml">getPost</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getCookie.xhtml">getCookie</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getEnv.xhtml">getEnv</a>()
@@ -135,13 +137,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">35%</td>
-            <td class="nummeric">7 / 20</td>
+            <td class="percent">50%</td>
+            <td class="nummeric">11 / 22</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">56.67%</td>
-            <td class="nummeric">34 / 60</td>
+            <td class="percent">62.5%</td>
+            <td class="nummeric">35 / 56</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -156,21 +158,14 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">135 - 151</td>
-              <td>
-                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
-              </td>
-              <td>The method getParam() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
-            </tr>
-            <tr>
-              <td class="line">186</td>
+              <td class="line">206</td>
               <td>
                 <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
               </td>
               <td>Avoid variables with short names like $ip. Configured minimum length is 3.</td>
             </tr>
             <tr>
-              <td class="line">234 - 287</td>
+              <td class="line">254 - 307</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
@@ -191,7 +186,7 @@
             <td>Proxy class should be clean</td>
           </tr>
           <tr>
-            <td class="nummeric">234+</td>
+            <td class="nummeric">254+</td>
             <td>:  refactoring this method, accept types should be stored in static? variable</td>
           </tr>
         </table>
@@ -294,6 +289,10 @@
                 — Access values contained in the superglobals as public members Order of precedence: 1. GET, 2. POST, 3. COOKIE, 4. SERVER, 5. ENV</li>
             <li id="getParams"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getParams.xhtml">getParams()</a>
                 — Get all params from GET and POST or PUT</li>
+            <li id="getPost"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getPost.xhtml">getPost()</a>
+                — Retrieve a member of the $_POST super global</li>
+            <li id="getQuery"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getQuery.xhtml">getQuery()</a>
+                — Retrieve a member of the $_GET super global</li>
             <li id="getServer"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer()</a>
                 — Retrieve a member of the $_SERVER super global</li>
             <li id="isCli"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli()</a>
@@ -335,6 +334,18 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-12-19T14:00:06+00:00 (commit #<span title="5c5530e10ca18ef36ae60b8b2a512996256168e0">5c5530e</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Proxy\Request::getQuery`
+Added `Proxy\Request::getPost`
+Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
             <div>
@@ -490,16 +501,6 @@ Fixed Response - removed `array` cast</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Migrate to PSR7 Response</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-12-29T11:14:30+00:00 (commit #<span title="2177873612694ffc3bc491ab52068f4ffeff3098">2177873</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Removed unused constants</pre>
             </div>
           </li>
         </ul>
