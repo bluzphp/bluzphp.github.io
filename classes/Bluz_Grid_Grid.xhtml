@@ -132,21 +132,26 @@
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setParams.xhtml">setParams</a>()
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getParams.xhtml">getParams</a>()
                     </li><li>public string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getUrl.xhtml">getUrl</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAllowOrder.xhtml">addAllowOrder</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowOrders.xhtml">setAllowOrders</a>()
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowOrders.xhtml">getAllowOrders</a>()
+                    </li><li>protected bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkOrderColumn.xhtml">checkOrderColumn</a>()
+                    </li><li>protected bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkOrderName.xhtml">checkOrderName</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrder.xhtml">addOrder</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrders.xhtml">addOrders</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setOrder.xhtml">setOrder</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setOrders.xhtml">setOrders</a>()
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getOrders.xhtml">getOrders</a>()
+                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAllowFilter.xhtml">addAllowFilter</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowFilters.xhtml">setAllowFilters</a>()
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowFilters.xhtml">getAllowFilters</a>()
-                    </li><li>public bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilter.xhtml">checkFilter</a>()
+                    </li><li>protected bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilterColumn.xhtml">checkFilterColumn</a>()
+                    </li><li>protected bool <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilterName.xhtml">checkFilterName</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addFilter.xhtml">addFilter</a>()
                     </li><li>public mixed <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilter.xhtml">getFilter</a>()
                     </li><li>public array <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getFilters.xhtml">getFilters</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAlias.xhtml">addAlias</a>()
-                    </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAliases.xhtml">setAliases</a>()
+                    </li><li>protected string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/reverseAlias.xhtml">reverseAlias</a>()
                     </li><li>protected string <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/applyAlias.xhtml">applyAlias</a>()
                     </li><li>public void <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setPage.xhtml">setPage</a>()
                     </li><li>public integer <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getPage.xhtml">getPage</a>()
@@ -184,13 +189,13 @@
         <table class="styled">
           <tr>
             <td>Methods</td>
-            <td class="percent">75.61%</td>
-            <td class="nummeric">31 / 41</td>
+            <td class="percent">86.96%</td>
+            <td class="nummeric">40 / 46</td>
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">88.24%</td>
-            <td class="nummeric">150 / 170</td>
+            <td class="percent">93.14%</td>
+            <td class="nummeric">163 / 175</td>
           </tr>
         </table>
         <h2 id="violations">Violations</h2>
@@ -205,18 +210,11 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">402 - 446</td>
+              <td class="line">666 - 681</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
-              <td>The method getParams() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
-            </tr>
-            <tr>
-              <td class="line">598 - 613</td>
-              <td>
-                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
-              </td>
-              <td>The method checkFilter() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+              <td>The method checkFilterName() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
             </tr>
           </table>
         </div>
@@ -343,22 +341,34 @@
           <h4>protected</h4>
           <ul>
             <li id="applyAlias"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/applyAlias.xhtml">applyAlias()</a>
-                — Apply Alias</li>
+                — Get alias by column name</li>
+            <li id="checkFilterColumn"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilterColumn.xhtml">checkFilterColumn()</a>
+                — Check filter column</li>
+            <li id="checkFilterName"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilterName.xhtml">checkFilterName()</a>
+                — Check filter</li>
+            <li id="checkOrderColumn"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkOrderColumn.xhtml">checkOrderColumn()</a>
+                — Check order column</li>
+            <li id="checkOrderName"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkOrderName.xhtml">checkOrderName()</a>
+                — Check order name</li>
+            <li id="reverseAlias"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/reverseAlias.xhtml">reverseAlias()</a>
+                — Get column name by alias</li>
           </ul>
           <h4>public</h4>
           <ul>
             <li id="__construct"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/__construct.xhtml">__construct()</a>
                 — Grid constructor</li>
             <li id="addAlias"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAlias.xhtml">addAlias()</a>
-                — Add alias</li>
+                — Add alias for column name</li>
+            <li id="addAllowFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAllowFilter.xhtml">addAllowFilter()</a>
+                — Add column name to allow filter it</li>
+            <li id="addAllowOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addAllowOrder.xhtml">addAllowOrder()</a>
+                — Add column name for allow order</li>
             <li id="addFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addFilter.xhtml">addFilter()</a>
                 — Add filter</li>
             <li id="addOrder"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrder.xhtml">addOrder()</a>
                 — Add order rule</li>
             <li id="addOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/addOrders.xhtml">addOrders()</a>
                 — Add order rules</li>
-            <li id="checkFilter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/checkFilter.xhtml">checkFilter()</a>
-                — Check filter</li>
             <li id="getAdapter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAdapter.xhtml">getAdapter()</a>
                 — Get source adapter</li>
             <li id="getAllowFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/getAllowFilters.xhtml">getAllowFilters()</a>
@@ -403,8 +413,6 @@
                 — Process source</li>
             <li id="setAdapter"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAdapter.xhtml">setAdapter()</a>
                 — Set source adapter</li>
-            <li id="setAliases"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAliases.xhtml">setAliases()</a>
-                — Set aliases</li>
             <li id="setAllowFilters"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowFilters.xhtml">setAllowFilters()</a>
                 — Set allowed filters</li>
             <li id="setAllowOrders"><a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid/setAllowOrders.xhtml">setAllowOrders()</a>
@@ -460,6 +468,19 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-12-20T16:14:24+00:00 (commit #<span title="56fcbc3e5a28bcd4c8898a38d11145c7e9d5427a">56fcbc3</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Refactoring of `Grid` package:
+- changed signature of `addAlias()` method
+- added `addAllowOrder()` method
+- added `addAllowFilter()` method</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-12-19T16:11:02+00:00 (commit #<span title="7ff8246071669b4ba940d5e1aa149f3536b20ff8">7ff8246</span>)</h3>
             <div>
@@ -523,14 +544,13 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
           <li>
-            <h3>2016-04-22T10:40:03+00:00 (commit #<span title="5c18d32a20e0f12b491b77b51d0ad59d1ac8f5f1">5c18d32</span>)</h3>
+            <h3>2016-04-25T10:28:03+00:00 (commit #<span title="2f996bd9c2fef802fadd30969ba0b0fd3137bb8f">2f996bd</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">- Removed `app()` function
-- Recovered `Application::useLayout()`</pre>
+              <pre class="wrapped">- Updated `Db\Row` - added `validate` and `assert` methods</pre>
             </div>
           </li>
           <li>
@@ -574,6 +594,17 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
           <li>
+            <h3>2015-12-05T12:24:17+00:00 (commit #<span title="f77c1b020215c0090708ae44aa17ec5f3d69a4e6">f77c1b0</span>)</h3>
+            <div>
+              <p>
+                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed mistakes in description
+Removed unused method `Cli\Request::GetBaseUrl()`</pre>
+            </div>
+          </li>
+          <li>
             <h3>2015-10-26T14:05:29+00:00 (commit #<span title="524c27235a7fb3afeb406e04f7f529eb3e69c346">524c272</span>)</h3>
             <div>
               <p>
@@ -584,7 +615,7 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
           <li>
-            <h3>2015-07-15T15:21:42+00:00 (commit #<span title="8cfd0584a458b21820b3106733b3070239d747f3">8cfd058</span>)</h3>
+            <h3>2015-07-16T08:19:52+00:00 (commit #<span title="cc79fc96a3e3725d0d441be0e1045bc50388bd34">cc79fc9</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
@@ -594,35 +625,13 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
           <li>
-            <h3>2015-07-08T08:39:15+00:00 (commit #<span title="57f8bed3755182ed8a77a55678af4d7bd86f04bb">57f8bed</span>)</h3>
+            <h3>2015-07-09T14:13:37+00:00 (commit #<span title="a64b2188db70bf7fee72aa35960ab77453e78a9d">a64b218</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated DB log</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-07-07T15:32:18+00:00 (commit #<span title="f8de0df21b11a455aa076b32171fbc72bf799ea9">f8de0df</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Merge pull request #334 from AntonShevchuk/master
-
-Fixed codestyle and comments</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2014-11-11T12:31:16+00:00 (commit #<span title="8289987a62089c581744414d359dbf9e017ae786">8289987</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added links to wiki in every package</pre>
+              <pre class="wrapped">Updated PHPUnit and CodeSniffer version</pre>
             </div>
           </li>
         </ul>
