@@ -80,7 +80,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Proxy/Request.php.xhtml#line39">Source</a>
+            <a href="../source/Proxy/Request.php.xhtml#line40">Source</a>
           </li>
         </ul>
       </nav>
@@ -93,7 +93,7 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Request
-            {<br/><ul class="none"><li>// constants</li><li>const METHOD_OPTIONS = 'OPTIONS';</li><li>const METHOD_GET = 'GET';</li><li>const METHOD_HEAD = 'HEAD';</li><li>const METHOD_PATCH = 'PATCH';</li><li>const METHOD_POST = 'POST';</li><li>const METHOD_PUT = 'PUT';</li><li>const METHOD_DELETE = 'DELETE';</li><li>const METHOD_TRACE = 'TRACE';</li><li>const METHOD_CONNECT = 'CONNECT';</li><li>const TYPE_ANY = '*/*';</li><li>const TYPE_HTML = 'text/html';</li><li>const TYPE_JSON = 'application/json';</li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
+            {<br/><ul class="none"><li>// constants</li><li>const TYPE_ANY = '*/*';</li><li>const TYPE_HTML = 'text/html';</li><li>const TYPE_JSON = 'application/json';</li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getQuery.xhtml">getQuery</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getPost.xhtml">getPost</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer</a>()
@@ -158,7 +158,7 @@
               </tr>
             </thead>
             <tr>
-              <td class="line">251 - 304</td>
+              <td class="line">239 - 292</td>
               <td>
                 <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
               </td>
@@ -175,11 +175,11 @@
             </tr>
           </thead>
           <tr>
-            <td class="nummeric">39+</td>
+            <td class="nummeric">40+</td>
             <td>Proxy class should be clean</td>
           </tr>
           <tr>
-            <td class="nummeric">251+</td>
+            <td class="nummeric">239+</td>
             <td>:  refactoring this method, accept types should be stored in static? variable</td>
           </tr>
         </table>
@@ -192,42 +192,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td id="METHOD_OPTIONS">METHOD_OPTIONS</td>
-              <td>'OPTIONS'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_GET">METHOD_GET</td>
-              <td>'GET'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_HEAD">METHOD_HEAD</td>
-              <td>'HEAD'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_PATCH">METHOD_PATCH</td>
-              <td>'PATCH'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_POST">METHOD_POST</td>
-              <td>'POST'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_PUT">METHOD_PUT</td>
-              <td>'PUT'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_DELETE">METHOD_DELETE</td>
-              <td>'DELETE'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_TRACE">METHOD_TRACE</td>
-              <td>'TRACE'</td>
-            </tr>
-            <tr>
-              <td id="METHOD_CONNECT">METHOD_CONNECT</td>
-              <td>'CONNECT'</td>
-            </tr>
             <tr>
               <td id="TYPE_ANY">TYPE_ANY</td>
               <td>'*/*'</td>
@@ -327,6 +291,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2016-12-21T14:48:25+00:00 (commit #<span title="2180b5bce8f1d2d7d9fe8fb862f227c094a9194d">2180b5b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Created `Http\RequestMethod` with constants</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-12-19T16:11:02+00:00 (commit #<span title="7ff8246071669b4ba940d5e1aa149f3536b20ff8">7ff8246</span>)</h3>
             <div>
@@ -444,13 +418,13 @@ Removed method `Request::getRequestUri()` use `Request::getUri()` instead</pre>
             </div>
           </li>
           <li>
-            <h3>2016-05-10T14:13:59+00:00 (commit #<span title="fe23efe8174c992ab1476d2bd38fe6d2422fb363">fe23efe</span>)</h3>
+            <h3>2016-05-11T11:18:30+00:00 (commit #<span title="2f5a6d5b5a0a369fc336df9907b579101d6e7238">2f5a6d5</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">- Added Rest\Rest package</pre>
+              <pre class="wrapped">Fixed HeadStyle and HeadScript</pre>
             </div>
           </li>
           <li>
@@ -482,16 +456,6 @@ Fixed Response - removed `array` cast</pre>
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Removed unused flag</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-01-26T09:31:27+00:00 (commit #<span title="ced590f3a431bd4b05460f0bd65fbf9575a583a9">ced590f</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed REST issue</pre>
             </div>
           </li>
         </ul>
