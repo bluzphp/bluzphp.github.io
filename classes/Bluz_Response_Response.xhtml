@@ -62,6 +62,9 @@
             <a href="#coverage">Coverage</a>
           </li>
           <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -93,7 +96,7 @@
                         ;
                     </li><li>protected array <a href="#members">$cookies</a> =
                         ;
-                    </li><li>protected  <a href="#members">$body</a>;
+                    </li><li>protected <span title="Bluz\Controller\Controller">Controller</span> <a href="#members">$body</a>;
                     </li><li>protected string <a href="#members">$type</a> =
                         'HTML';
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response/send.xhtml">send</a>()
@@ -145,17 +148,37 @@
           </tr>
           <tr>
             <td>Lines</td>
-            <td class="percent">54.55%</td>
-            <td class="nummeric">54 / 99</td>
+            <td class="percent">50.94%</td>
+            <td class="nummeric">54 / 106</td>
           </tr>
         </table>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">77 - 138</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method send() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
           <ul class="members">
             <li id="body"><strong>$body</strong>
                 —
-                mixed</li>
+                <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller.xhtml">Bluz\Controller\Controller</a></li>
             <li id="code"><strong>$code</strong>
                 —
                 integer</li>
@@ -253,6 +276,17 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-01-30T12:38:53+00:00 (commit #<span title="0ab8691acf18d8d7b4e73698c7d6cd1635c45f61">0ab8691</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `AttachmentResponse`
+Added `attachment($file)` helper for `Controller`</pre>
+            </div>
+          </li>
           <li>
             <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
             <div>
@@ -366,13 +400,14 @@ Added check `Accept` at `preProcess` stage for switch layout</pre>
             </div>
           </li>
           <li>
-            <h3>2016-05-19T10:56:41+00:00 (commit #<span title="7eaecbc498f5429dde1be74b3d81f62b93aa2018">7eaecbc</span>)</h3>
+            <h3>2016-05-19T13:14:44+00:00 (commit #<span title="b34c86dd856b91239b6a9f3ff36b4e422e42c6df">b34c86d</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Helpers `redirect()`, `redirectTo` and `reload` was moved to `Proxy\Response`</pre>
+              <pre class="wrapped">Fixed `Dispatch` controller helpers
+Added Exception to BootstrapTest</pre>
             </div>
           </li>
           <li>
@@ -397,20 +432,20 @@ Fixed Response - removed `array` cast</pre>
             </div>
           </li>
           <li>
-            <h3>2016-01-26T08:50:46+00:00 (commit #<span title="3100038a9ef99dbd85722bf5c39199e67e950139">3100038</span>)</h3>
+            <h3>2016-01-26T09:31:27+00:00 (commit #<span title="ced590f3a431bd4b05460f0bd65fbf9575a583a9">ced590f</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Removed CLI Request and Response</pre>
+              <pre class="wrapped">Fixed REST issue</pre>
             </div>
           </li>
         </ul>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2016 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
     </footer>
   </body>
 </html>
