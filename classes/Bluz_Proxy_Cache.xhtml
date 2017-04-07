@@ -71,7 +71,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Proxy/Cache.php.xhtml#line41">Source</a>
+            <a href="../source/Proxy/Cache.php.xhtml#line39">Source</a>
           </li>
         </ul>
       </nav>
@@ -91,6 +91,7 @@
                     </li><li>public static mixed <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/get.xhtml">get</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/set.xhtml">set</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/prepare.xhtml">prepare</a>()
+                    </li><li>public static bool <a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/clearTags.xhtml">clearTags</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\ProxyTrait">ProxyTrait</span></li><li>public static void <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/setInstance.xhtml">setInstance</a>()
                         </li><li>public static mixed <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/__callStatic.xhtml">__callStatic</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Singleton">Singleton</span></li><li>public static Cache <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance</a>()
@@ -142,6 +143,8 @@
           </ul>
           <h4>public</h4>
           <ul>
+            <li id="clearTags"><a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/clearTags.xhtml">clearTags()</a>
+                — Clear cache items by tags</li>
             <li id="get"><a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/get.xhtml">get()</a>
                 — Get value of cache item</li>
             <li id="getAdapter"><a title="Bluz\Proxy\Cache" href="../classes/Bluz_Proxy_Cache/getAdapter.xhtml">getAdapter()</a>
@@ -168,6 +171,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-04-04T10:34:31+00:00 (commit #<span title="93898bda4d90d93edb15a01863e0777dd4c364e4">93898bd</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed error with FileSystemCache</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-02-02T15:53:34+00:00 (commit #<span title="dab767f4c178d6b34d4e4e7f0692de142b978801">dab767f</span>)</h3>
             <div>
@@ -231,23 +244,23 @@
             </div>
           </li>
           <li>
-            <h3>2016-05-27T13:26:55+00:00 (commit #<span title="6264334321cf2096266fcde82a7a1d2da4bb4fad">6264334</span>)</h3>
+            <h3>2016-05-27T13:48:52+00:00 (commit #<span title="70efe3024c27b9a34e452950e11e3e736c359b3f">70efe30</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added method `readSet()` to Crud\Table realization</pre>
+              <pre class="wrapped">Added transaction for call `SELECT COUNT(*)` queries (for grid and crud)</pre>
             </div>
           </li>
           <li>
-            <h3>2016-01-26T14:45:26+00:00 (commit #<span title="9ce3587b6d3e762420d95e8d728c79a9238f7d59">9ce3587</span>)</h3>
+            <h3>2016-01-27T14:37:45+00:00 (commit #<span title="67cfb20e5a50a153a4f2c4ce20561738cde3a76c">67cfb20</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Switched phpcs output to console</pre>
+              <pre class="wrapped">Added dispatch scheme to docs</pre>
             </div>
           </li>
           <li>
@@ -261,45 +274,35 @@
             </div>
           </li>
           <li>
-            <h3>2015-10-26T08:34:32+00:00 (commit #<span title="7b6dc00c41df0d44f7bb9d76ca9ecd5f8845ed55">7b6dc00</span>)</h3>
+            <h3>2015-10-26T08:34:50+00:00 (commit #<span title="62d3aa38728ed5dd1f60cd5fbb0bc55d1e5ea78e">62d3aa3</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated License year</pre>
+              <pre class="wrapped">Added DockBlock standart</pre>
             </div>
           </li>
           <li>
-            <h3>2015-10-16T14:59:34+00:00 (commit #<span title="e3647d75719e95b12f4512d3a5d34dc2951ba668">e3647d7</span>)</h3>
+            <h3>2015-10-16T15:17:56+00:00 (commit #<span title="29096328c450a69726a8d8de5ba3184e413c3048">2909632</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated version of PHPUnit in requirements</pre>
+              <pre class="wrapped">Updated Test Listener for support PHPUnit 5.1</pre>
             </div>
           </li>
           <li>
-            <h3>2015-10-12T09:39:15+00:00 (commit #<span title="97d1a01fc4e13753a7bcf184b93fbbfe2aa7a2f4">97d1a01</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated method `Db\Row\getRelations` - now it return empty array if linked entities not found</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2015-10-09T13:25:24+00:00 (commit #<span title="e91a37eb7718a3d3c8005ea35d852520832f4340">e91a37e</span>)</h3>
+            <h3>2015-10-12T10:31:43+00:00 (commit #<span title="8ee724d23c7cc816aef078d01bad92d9f109815b">8ee724d</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #349 from Andreyalex/0.9.5
+              <pre class="wrapped">Merge pull request #350 from AntonShevchuk/master
 
-0.9.5</pre>
+Updated Db\Row\getRelations()</pre>
             </div>
           </li>
         </ul>
