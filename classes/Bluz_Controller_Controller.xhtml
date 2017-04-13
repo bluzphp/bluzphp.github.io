@@ -87,7 +87,7 @@
                     </li><li>protected  <a href="#members">$controller</a>;
                     </li><li>protected  <a href="#members">$template</a>;
                     </li><li>protected  <a href="#members">$file</a>;
-                    </li><li>protected <span title="Bluz\Controller\Reflection">Reflection</span> <a href="#members">$reflection</a>;
+                    </li><li>protected <span title="Bluz\Controller\Meta">Meta</span> <a href="#members">$meta</a>;
                     </li><li>protected <span title="Bluz\Controller\Data">Data</span> <a href="#members">$data</a>;
                     </li><li>protected string <a href="#members">$render</a> =
                         'HTML';
@@ -98,8 +98,8 @@
                     </li><li>public Data <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run</a>()
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setFile.xhtml">setFile</a>()
                     </li><li>protected string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getFile.xhtml">getFile</a>()
-                    </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setReflection.xhtml">setReflection</a>()
-                    </li><li>public Reflection <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getReflection.xhtml">getReflection</a>()
+                    </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setMeta.xhtml">setMeta</a>()
+                    </li><li>public Meta <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getMeta.xhtml">getMeta</a>()
                     </li><li>public Controller <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/assign.xhtml">assign</a>()
                     </li><li>public Data <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getData.xhtml">getData</a>()
                     </li><li>public Data <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize</a>()
@@ -109,7 +109,7 @@
                         </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Response\ResponseTrait">ResponseTrait</span></li><li>public abstract string <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/jsonSerialize.xhtml">jsonSerialize</a>()
                         </li><li>public abstract string <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/__toString.xhtml">__toString</a>()
-                        </li><li>public mixed <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render</a>()
+                        </li><li>public string <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render</a>()
                         </li></ul>
 
             }<br/></div>
@@ -150,12 +150,12 @@
             <li id="helpersPath"><strong>$helpersPath</strong>
                 —
                 array</li>
+            <li id="meta"><strong>$meta</strong>
+                —
+                <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta.xhtml">Bluz\Controller\Meta</a></li>
             <li id="module"><strong>$module</strong>
                 —
                 string</li>
-            <li id="reflection"><strong>$reflection</strong>
-                —
-                <a title="Bluz\Controller\Reflection" href="../classes/Bluz_Controller_Reflection.xhtml">Bluz\Controller\Reflection</a></li>
             <li id="render"><strong>$render</strong>
                 —
                 string<br/><span class="indent">One of HTML, JSON or empty string</span></li>
@@ -172,7 +172,7 @@
                 — Get controller file path</li>
             <li id="setFile"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setFile.xhtml">setFile()</a>
                 — Setup controller file</li>
-            <li id="setReflection"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setReflection.xhtml">setReflection()</a>
+            <li id="setMeta"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setMeta.xhtml">setMeta()</a>
                 — Retrieve reflection for anonymous function</li>
           </ul>
           <h4>public</h4>
@@ -191,8 +191,8 @@
                 — Check `Privilege`</li>
             <li id="getData"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getData.xhtml">getData()</a>
                 — Get controller Data container</li>
-            <li id="getReflection"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getReflection.xhtml">getReflection()</a>
-                — Get Reflection</li>
+            <li id="getMeta"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getMeta.xhtml">getMeta()</a>
+                — Get meta information</li>
             <li id="jsonSerialize"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize()</a>
                 — Specify data which should be serialized to JSON</li>
             <li id="run"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run()</a>
@@ -223,6 +223,39 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-04-13T14:30:00+00:00 (commit #<span title="1dd28797636355fdd8c68728e5fe7dcce4497761">1dd2879</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Moved error handling to skeleton</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-13T11:17:00+00:00 (commit #<span title="106162d7deb67025e44ce47efc3a295fa1d689ee">106162d</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Refactoring:
+ - renamed Controller\Reflection to Controller\Meta (for avoid mistake with Reflection class)
+ - set absolute path for file loader - very small perfomance optiomization
+ - small fixes with codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-12T09:45:17+00:00 (commit #<span title="e8463fb1fe5aa54cd2cbdc69a5be1f1dcbc2d935">e8463fb</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed controller cache issue</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-04-11T08:21:54+00:00 (commit #<span title="f9900f15bc1f4d64fc092e9fc2d8d2068c666eba">f9900f1</span>)</h3>
             <div>
@@ -353,14 +386,13 @@ Added cookies implementation - fixed #362</pre>
             </div>
           </li>
           <li>
-            <h3>2016-06-01T10:42:59+00:00 (commit #<span title="5cd4c4a605d7f9a8cf9607d3a1d50191868e3d14">5cd4c4a</span>)</h3>
+            <h3>2016-06-02T10:33:14+00:00 (commit #<span title="802ffad4e8c23825743215e3a2b8e4835680a0b2">802ffad</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added constants to `Proxy\Response` for content types
-Added check `Accept` at `preProcess` stage for switch layout</pre>
+              <pre class="wrapped">Added aliases to Controller Mapper</pre>
             </div>
           </li>
         </ul>
