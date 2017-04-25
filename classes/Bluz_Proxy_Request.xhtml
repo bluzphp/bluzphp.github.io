@@ -101,7 +101,7 @@
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getModule.xhtml">getModule</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getController.xhtml">getController</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getMethod.xhtml">getMethod</a>()
-                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept</a>()
+                    </li><li>public static string|null <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isHttp.xhtml">isHttp</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isGet.xhtml">isGet</a>()
@@ -137,7 +137,7 @@
             <td>Proxy class should be clean</td>
           </tr>
           <tr>
-            <td class="nummeric">238+</td>
+            <td class="nummeric">235+</td>
             <td>:  refactoring this method, accept types should be stored in static? variable</td>
           </tr>
         </table>
@@ -242,6 +242,17 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-04-25T10:06:38+00:00 (commit #<span title="a83c398245d8c2af3ec17f15a9ddf8abd058be6f">a83c398</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `array_add()` function
+Small refactoring of `Proxy\Request`</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-04-12T09:45:17+00:00 (commit #<span title="e8463fb1fe5aa54cd2cbdc69a5be1f1dcbc2d935">e8463fb</span>)</h3>
             <div>
@@ -367,23 +378,23 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
           <li>
-            <h3>2016-06-03T09:13:23+00:00 (commit #<span title="d68988e332f57439d374752784b64a94ffda96ba">d68988e</span>)</h3>
+            <h3>2016-06-03T15:37:07+00:00 (commit #<span title="964af07675c9818d0c46594efb88237a8ccc1693">964af07</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Migrate to usage Mapper aliases</pre>
+              <pre class="wrapped">Updated DB dump</pre>
             </div>
           </li>
           <li>
-            <h3>2016-04-14T13:44:11+00:00 (commit #<span title="d118a5e325e7c4e9adcbecb31df704a1139d3e1e">d118a5e</span>)</h3>
+            <h3>2016-04-14T14:07:26+00:00 (commit #<span title="ad9c8aff9afa25497697bd00a968fba1d0ad545d">ad9c8af</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated Zend Diactoros</pre>
+              <pre class="wrapped">Updated codestyle</pre>
             </div>
           </li>
           <li>
@@ -395,16 +406,6 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
                     </p>
               <pre class="wrapped">Fixed parser of Accept header
 Fixed Response - removed `array` cast</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-02-08T09:42:35+00:00 (commit #<span title="f8e7924269868fee2f75a9c6a39913d044e2d627">f8e7924</span>)</h3>
-            <div>
-              <p>
-                        Author: AntonShevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added method `Application::run()`</pre>
             </div>
           </li>
         </ul>
