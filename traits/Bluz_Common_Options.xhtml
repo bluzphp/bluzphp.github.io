@@ -65,14 +65,14 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Common/Options.php.xhtml#line41">Source</a>
+            <a href="../source/Common/Options.php.xhtml#line42">Source</a>
           </li>
         </ul>
       </nav>
       <section>
         <h1 id="introduction"><small>Bluz\Common\</small>Options</h1>
         <h4>Options Trait</h4>
-        <p>Example of usage<br/>class Foo<br/>{<br/>use \Bluz\Common\Options;<br/><br/>protected $bar = '';<br/>protected $baz = '';<br/><br/>public function setBar($value)<br/>{<br/>$this-&gt;bar = $value;<br/>}<br/><br/>public function setBaz($value)<br/>{<br/>$this-&gt;baz = $value;<br/>}<br/>}<br/><br/>    $Foo = new Foo(['bar'=&gt;123, 'baz'=&gt;456]);</p>
+        <p>Example of usage<br/>class Foo<br/>{<br/>use \Bluz\Common\Options;<br/><br/>protected $bar = '';<br/>protected $baz = '';<br/><br/>public function setBar($value)<br/>{<br/>$this-&gt;bar = $value;<br/>}<br/><br/>public function setBaz($value)<br/>{<br/>$this-&gt;baz = $value;<br/>}<br/>}<br/><br/>$Foo = new Foo();<br/>    $Foo-&gt;setOptions(['bar'=&gt;123, 'baz'=&gt;456]);</p>
         <ul>
           <li>Author: Anton Shevchuk</li>
         </ul>
@@ -84,7 +84,6 @@
                     </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
                     </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
                     </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
-                    </li><li>private string <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/normalizeKey.xhtml">normalizeKey</a>()
                     </li></ul>
 
             }<br/></div>
@@ -147,11 +146,6 @@
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
-          <h4>private</h4>
-          <ul>
-            <li id="normalizeKey"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/normalizeKey.xhtml">normalizeKey()</a>
-                — Normalize key name</li>
-          </ul>
           <h4>protected</h4>
           <ul>
             <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
@@ -171,6 +165,18 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-04-26T12:53:22+00:00 (commit #<span title="ff59da1c4ec0dd02f375d43f1304e4226288b20a">ff59da1</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Common\Line` class
+Added `to_camel_case` function
+Added `str_trim_end` function</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-04-21T16:03:13+00:00 (commit #<span title="41cf4f869fc4d06bf49da791d9d1559dbd47230d">41cf4f8</span>)</h3>
             <div>
@@ -212,46 +218,47 @@
             </div>
           </li>
           <li>
-            <h3>2016-06-10T15:24:52+00:00 (commit #<span title="507fa610ef29fb20b59a496489ba9fa101e00505">507fa61</span>)</h3>
+            <h3>2016-07-05T12:04:37+00:00 (commit #<span title="24419ee0475b717df5bab394c5cae89f94a6a8ff">24419ee</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added switch content type to Response logic
-Added cookies implementation - fixed #362</pre>
+              <pre class="wrapped">Updated imports</pre>
             </div>
           </li>
           <li>
-            <h3>2016-04-14T14:24:59+00:00 (commit #<span title="9deba972aeb1041c367689a4e3a2d1a8c8800aa6">9deba97</span>)</h3>
+            <h3>2016-06-13T10:20:32+00:00 (commit #<span title="a0479613f775c7df7e56065a948c583fb2d1633f">a047961</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated travis configuration</pre>
+              <pre class="wrapped">Added `Response\ResponseTrait` for Controller, Layout, View
+Removed unused `View` helpers `Api` and `Widget`
+Fixed docblocks</pre>
             </div>
           </li>
           <li>
-            <h3>2016-02-23T12:08:11+00:00 (commit #<span title="37dd21c24424b8a050bcec6efeed8e7db559195b">37dd21c</span>)</h3>
+            <h3>2016-06-13T09:18:40+00:00 (commit #<span title="45107f6cb16c1e6d3fd49df3315666a3b428077f">45107f6</span>)</h3>
             <div>
               <p>
                         Author: AntonShevchuk (AntonShevchuk@gmail.com) /
                         Commiter: AntonShevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated version php-coveralls</pre>
+              <pre class="wrapped">Fixed codestyle</pre>
             </div>
           </li>
           <li>
-            <h3>2016-02-12T10:33:28+00:00 (commit #<span title="254be3e23222c583a0187624e083117bb75065c9">254be3e</span>)</h3>
+            <h3>2016-04-14T14:52:37+00:00 (commit #<span title="ffb215d47eefe34cb0bc9409936d2fac779fb3bc">ffb215d</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #358 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #360 from AntonShevchuk/master
 
-Fixed Request and Response for swagger compatability</pre>
+Added aliases for GRID columns and filter</pre>
             </div>
           </li>
         </ul>
