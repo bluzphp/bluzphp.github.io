@@ -40,18 +40,259 @@
       </div>
       <div id="buildinfo">
         <h3>Build</h3>
-        <p>Wed, 10 May 2017 14:26:03 +0000</p>
+        <p>Wed, 10 May 2017 14:51:20 +0000</p>
         <h3>VCS Info</h3>
         <p>
-                    tag: 4731d7a-dirty<br/>
-                    branch: (detached from 4731d7a)</p>
+                    tag: 06951a2-dirty<br/>
+                    branch: (detached from 06951a2)</p>
         <h3>Used Enrichers</h3>
-        <p>build, git, phpunit</p>
+        <p>build, git, phpcs, phploc, phpunit, pmd</p>
       </div>
     </div>
     <div id="mainstage">
-      <div class="unavailable">
-        <p><strong>Warning:</strong> PHPLoc enrichment not enabled or phploc.xml not found.</p>
+      <div class="column">
+        <div class="container">
+          <h2>Structure</h2>
+          <table class="styled overview">
+            <tr>
+              <td>Namespaces</td>
+              <td class="nummeric">41</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Interfaces</td>
+              <td class="nummeric">2</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Traits</td>
+              <td class="nummeric">16</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Classes</td>
+              <td class="nummeric">139</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Abstract Classes</td>
+              <td class="nummeric">13</td>
+              <td class="percent">(9.35%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Concrete Classes</td>
+              <td class="nummeric">126</td>
+              <td class="percent">(90.65%)</td>
+            </tr>
+            <tr>
+              <td>Methods</td>
+              <td class="nummeric">669</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Scope</td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent2">Non-Static Methods</td>
+              <td class="nummeric">581</td>
+              <td class="percent">(86.85%)</td>
+            </tr>
+            <tr>
+              <td class="indent2">Static Methods</td>
+              <td class="nummeric">88</td>
+              <td class="percent">(13.15%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Visibility</td>
+              <td/>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent2">Public Method</td>
+              <td class="nummeric">552</td>
+              <td class="percent">(82.51%)</td>
+            </tr>
+            <tr>
+              <td class="indent2">Non-Public Methods</td>
+              <td class="nummeric">117</td>
+              <td class="percent">(17.49%)</td>
+            </tr>
+            <tr>
+              <td>Functions</td>
+              <td class="nummeric">70</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Named Functions</td>
+              <td class="nummeric">11</td>
+              <td class="percent">(15.71%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Anonymous Functions</td>
+              <td class="nummeric">59</td>
+              <td class="percent">(84.29%)</td>
+            </tr>
+            <tr>
+              <td>Constants</td>
+              <td class="nummeric">109</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Global Constants</td>
+              <td class="nummeric">1</td>
+              <td class="percent">(0.92%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Class Constants</td>
+              <td class="nummeric">108</td>
+              <td class="percent">(99.08%)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="container">
+          <h2>Tests</h2>
+          <table class="styled overview">
+            <tr>
+              <td>Classes</td>
+              <td class="nummeric">0</td>
+              <td class="percent"/>
+            </tr>
+            <tr>
+              <td>Methods</td>
+              <td class="nummeric">0</td>
+              <td class="percent"/>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="column">
+        <div class="container">
+          <h2>Size</h2>
+          <table class="styled overview">
+            <tr>
+              <td>Lines of Code (LOC)</td>
+              <td class="nummeric">19437</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Comment Lines of Code (CLOC)</td>
+              <td class="nummeric">9387</td>
+              <td class="percent">(48.29%)</td>
+            </tr>
+            <tr>
+              <td>Non-Comment Lines of Code (NCLOC)</td>
+              <td class="nummeric">10050</td>
+              <td class="percent">(51.71%)</td>
+            </tr>
+            <tr>
+              <td>Logical Lines of Code (LLOC)</td>
+              <td class="nummeric">3350</td>
+              <td class="percent">(17.24%)</td>
+            </tr>
+            <tr>
+              <td>Classes</td>
+              <td class="nummeric">2246</td>
+              <td class="percent">(67.04%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Average Class Length</td>
+              <td class="nummeric">NaN</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Average Method Length</td>
+              <td class="nummeric">NaN</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Functions</td>
+              <td class="nummeric">281</td>
+              <td class="percent">(8.39%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Average Function Length</td>
+              <td class="nummeric">4</td>
+              <td/>
+            </tr>
+            <tr>
+              <td>Not in classes or functions</td>
+              <td class="nummeric">823</td>
+              <td class="percent">(24.57%)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="container">
+          <h2>Complexity</h2>
+          <table class="styled overview">
+            <tr>
+              <td>Cyclomatic Complexity / LLOC</td>
+              <td class="nummeric">0.23</td>
+              <td class="percent"/>
+            </tr>
+            <tr>
+              <td>Cyclomatic Complexity / Number of Methods</td>
+              <td class="nummeric">0</td>
+              <td class="percent"/>
+            </tr>
+          </table>
+        </div>
+        <div class="container">
+          <h2>Dependencies</h2>
+          <table class="styled overview">
+            <tr>
+              <td>Global Accesses</td>
+              <td class="nummeric">13</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Global Constants</td>
+              <td class="nummeric">1</td>
+              <td class="percent">(7.69%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Global Variables</td>
+              <td class="nummeric">0</td>
+              <td class="percent">(0%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Super-Global Variables</td>
+              <td class="nummeric">12</td>
+              <td class="percent">(92.31%)</td>
+            </tr>
+            <tr>
+              <td>Attribute Accesses</td>
+              <td class="nummeric">739</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Non-Static</td>
+              <td class="nummeric">713</td>
+              <td class="percent">(96.48%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Static</td>
+              <td class="nummeric">26</td>
+              <td class="percent">(3.52%)</td>
+            </tr>
+            <tr>
+              <td>Method Calls</td>
+              <td class="nummeric">1084</td>
+              <td/>
+            </tr>
+            <tr>
+              <td class="indent">Non-Static</td>
+              <td class="nummeric">764</td>
+              <td class="percent">(70.48%)</td>
+            </tr>
+            <tr>
+              <td class="indent">Static</td>
+              <td class="nummeric">320</td>
+              <td class="percent">(29.52%)</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
     <footer>

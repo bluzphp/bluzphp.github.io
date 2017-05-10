@@ -56,6 +56,9 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -89,6 +92,47 @@
                     </li></ul>
 
             }<br/></div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">41</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortvariable" target="_blank" title="Naming Rules">ShortVariable</a>
+              </td>
+              <td>Avoid variables with short names like $id. Configured minimum length is 3.</td>
+            </tr>
+            <tr>
+              <td class="line">53</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$savePath'.</td>
+            </tr>
+            <tr>
+              <td class="line">79</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedformalparameter" target="_blank" title="Unused Code Rules">UnusedFormalParameter</a>
+              </td>
+              <td>Avoid unused parameters such as '$maxLifetime'.</td>
+            </tr>
+            <tr>
+              <td class="line">79 - 82</td>
+              <td>
+                <a href="http://phpmd.org/rules/naming.html#shortmethodname" target="_blank" title="Naming Rules">ShortMethodName</a>
+              </td>
+              <td>Avoid using short method names like AbstractAdapter::gc(). The configured minimum method name length is 3.</td>
+            </tr>
+          </table>
+        </div>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
@@ -134,46 +178,35 @@
             </div>
           </li>
           <li>
-            <h3>2016-09-01T10:36:32+00:00 (commit #<span title="20e5de57a13b6d24c8ea52bef3d499783dd6dd3d">20e5de5</span>)</h3>
+            <h3>2016-09-01T10:37:23+00:00 (commit #<span title="be76a301119c86bab6ffdf483da85fb70d84db5d">be76a30</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated description for Query builder's functions</pre>
+              <pre class="wrapped">Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
             </div>
           </li>
           <li>
-            <h3>2016-08-31T15:42:21+00:00 (commit #<span title="e598e39d38b297d74d45cceb0d2bc3d7bfdbffcb">e598e39</span>)</h3>
+            <h3>2016-08-31T16:04:31+00:00 (commit #<span title="95a5dce640a6cd4901dd94850edae14dda961a78">95a5dce</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added support fetch to object for method `Db::fetchGroup()`</pre>
+              <pre class="wrapped">Back 'stdClass' to `fetchObject()` method</pre>
             </div>
           </li>
           <li>
-            <h3>2016-08-29T15:14:19+00:00 (commit #<span title="f630ac7e87a34e99788537ff3b83d368e270d147">f630ac7</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed codestyle
-Updated coveralls configuration</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-06-14T10:37:14+00:00 (commit #<span title="f97cbb9f44e9bdf99f86dd49b088c6cc5575f9fd">f97cbb9</span>)</h3>
+            <h3>2016-08-29T15:20:40+00:00 (commit #<span title="e0074970a0dda1edd7fa286ae8db9442a71ae743">e007497</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #365 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #366 from AntonShevchuk/master
 
-Added `options()` to `abstractMapper` class</pre>
+Update requirements</pre>
             </div>
           </li>
         </ul>
