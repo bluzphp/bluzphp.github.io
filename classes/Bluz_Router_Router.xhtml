@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Router\Router</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Router">Bluz\Router</a>
+          </li>
+          <li class="separator">Router</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Router/Router.php.xhtml#line26">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Router\</small>Router</h1>
+        <h4>Router</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Router
+            {<br/><ul class="none"><li>// constants</li><li>const DEFAULT_MODULE = 'index';</li><li>const DEFAULT_CONTROLLER = 'index';</li><li>const ERROR_MODULE = 'error';</li><li>const ERROR_CONTROLLER = 'index';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$baseUrl</a>;
+                    </li><li>protected  <a href="#members">$cleanUri</a>;
+                    </li><li>protected string <a href="#members">$defaultModule</a> =
+                        self::DEFAULT_MODULE;
+                    </li><li>protected string <a href="#members">$defaultController</a> =
+                        self::DEFAULT_CONTROLLER;
+                    </li><li>protected string <a href="#members">$errorModule</a> =
+                        self::ERROR_MODULE;
+                    </li><li>protected string <a href="#members">$errorController</a> =
+                        self::ERROR_CONTROLLER;
+                    </li><li>protected array <a href="#members">$params</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$rawParams</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$routers</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$reverse</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/__construct.xhtml">__construct</a>()
+                    </li><li>private array <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/prepareRouterData.xhtml">prepareRouterData</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getBaseUrl.xhtml">getBaseUrl</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setBaseUrl.xhtml">setBaseUrl</a>()
+                    </li><li>public mixed <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParam.xhtml">getParam</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setParam.xhtml">setParam</a>()
+                    </li><li>public array <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParams.xhtml">getParams</a>()
+                    </li><li>public array <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getRawParams.xhtml">getRawParams</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultModule.xhtml">getDefaultModule</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultModule.xhtml">setDefaultModule</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultController.xhtml">getDefaultController</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultController.xhtml">setDefaultController</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getErrorModule.xhtml">getErrorModule</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setErrorModule.xhtml">setErrorModule</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getErrorController.xhtml">getErrorController</a>()
+                    </li><li>public void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setErrorController.xhtml">setErrorController</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getUrl.xhtml">getUrl</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getFullUrl.xhtml">getFullUrl</a>()
+                    </li><li>protected string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/urlCustom.xhtml">urlCustom</a>()
+                    </li><li>protected string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/urlRoute.xhtml">urlRoute</a>()
+                    </li><li>public Router <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/process.xhtml">process</a>()
+                    </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processDefault.xhtml">processDefault</a>()
+                    </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processCustom.xhtml">processCustom</a>()
+                    </li><li>protected bool <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processRoute.xhtml">processRoute</a>()
+                    </li><li>protected void <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/resetRequest.xhtml">resetRequest</a>()
+                    </li><li>public string <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getCleanUri.xhtml">getCleanUri</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">466</td>
+              <td>
+                <a href="http://phpmd.org/rules/unusedcode.html#unusedlocalvariable" target="_blank" title="Unused Code Rules">UnusedLocalVariable</a>
+              </td>
+              <td>Avoid unused local variables such as '$type'.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="DEFAULT_MODULE">DEFAULT_MODULE</td>
+              <td>'index'</td>
+            </tr>
+            <tr>
+              <td id="DEFAULT_CONTROLLER">DEFAULT_CONTROLLER</td>
+              <td>'index'</td>
+            </tr>
+            <tr>
+              <td id="ERROR_MODULE">ERROR_MODULE</td>
+              <td>'error'</td>
+            </tr>
+            <tr>
+              <td id="ERROR_CONTROLLER">ERROR_CONTROLLER</td>
+              <td>'index'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="baseUrl"><strong>$baseUrl</strong>
+                —
+                string</li>
+            <li id="cleanUri"><strong>$cleanUri</strong>
+                —
+                string</li>
+            <li id="defaultController"><strong>$defaultController</strong>
+                —
+                string</li>
+            <li id="defaultModule"><strong>$defaultModule</strong>
+                —
+                string</li>
+            <li id="errorController"><strong>$errorController</strong>
+                —
+                string</li>
+            <li id="errorModule"><strong>$errorModule</strong>
+                —
+                string</li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="params"><strong>$params</strong>
+                —
+                array</li>
+            <li id="rawParams"><strong>$rawParams</strong>
+                —
+                array</li>
+            <li id="reverse"><strong>$reverse</strong>
+                —
+                array</li>
+            <li id="routers"><strong>$routers</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="prepareRouterData"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/prepareRouterData.xhtml">prepareRouterData()</a>
+                — Initial routers data from controllers</li>
+          </ul>
+          <h4>protected</h4>
+          <ul>
+            <li id="processCustom"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processCustom.xhtml">processCustom()</a>
+                — Process custom router</li>
+            <li id="processDefault"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processDefault.xhtml">processDefault()</a>
+                — Process default router</li>
+            <li id="processRoute"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/processRoute.xhtml">processRoute()</a>
+                — Process router by default rules</li>
+            <li id="resetRequest"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/resetRequest.xhtml">resetRequest()</a>
+                — Reset Request</li>
+            <li id="urlCustom"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/urlCustom.xhtml">urlCustom()</a>
+                — Build URL by custom route</li>
+            <li id="urlRoute"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/urlRoute.xhtml">urlRoute()</a>
+                — Build URL by default route</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/__construct.xhtml">__construct()</a>
+                — Constructor of Router</li>
+            <li id="getBaseUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getBaseUrl.xhtml">getBaseUrl()</a>
+                — Get the base URL.</li>
+            <li id="getCleanUri"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getCleanUri.xhtml">getCleanUri()</a>
+                — Get the request URI without baseUrl</li>
+            <li id="getDefaultController"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultController.xhtml">getDefaultController()</a>
+                — Get default controller</li>
+            <li id="getDefaultModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getDefaultModule.xhtml">getDefaultModule()</a>
+                — Get default module</li>
+            <li id="getErrorController"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getErrorController.xhtml">getErrorController()</a>
+                — Get error controller</li>
+            <li id="getErrorModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getErrorModule.xhtml">getErrorModule()</a>
+                — Get error module</li>
+            <li id="getFullUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getFullUrl.xhtml">getFullUrl()</a>
+                — Build full URL to controller</li>
+            <li id="getParam"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParam.xhtml">getParam()</a>
+                — Get an action parameter</li>
+            <li id="getParams"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getParams.xhtml">getParams()</a>
+                — Get parameters</li>
+            <li id="getRawParams"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getRawParams.xhtml">getRawParams()</a>
+                — Get raw params, w/out module and controller</li>
+            <li id="getUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/getUrl.xhtml">getUrl()</a>
+                — Build URL to controller</li>
+            <li id="process"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/process.xhtml">process()</a>
+                — Process routing</li>
+            <li id="setBaseUrl"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setBaseUrl.xhtml">setBaseUrl()</a>
+                — Set the base URL.</li>
+            <li id="setDefaultController"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultController.xhtml">setDefaultController()</a>
+                — Set default controller</li>
+            <li id="setDefaultModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setDefaultModule.xhtml">setDefaultModule()</a>
+                — Set default module</li>
+            <li id="setErrorController"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setErrorController.xhtml">setErrorController()</a>
+                — Set error controller</li>
+            <li id="setErrorModule"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setErrorModule.xhtml">setErrorModule()</a>
+                — Set error module</li>
+            <li id="setParam"><a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router/setParam.xhtml">setParam()</a>
+                — Set an action parameter</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-04-27T10:40:32+00:00 (commit #<span title="bf837336c334c587c092aecc8a314e97cd5c3c48">bf83733</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle in Router</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-27T09:56:41+00:00 (commit #<span title="2e5b01a30e17566f2e470612d61610b67bbc28e0">2e5b01a</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added tests for Controller Mapper</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-26T12:53:22+00:00 (commit #<span title="ff59da1c4ec0dd02f375d43f1304e4226288b20a">ff59da1</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Common\Line` class
+Added `to_camel_case` function
+Added `str_trim_end` function</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-21T15:14:44+00:00 (commit #<span title="c7538da2ed76aae6f81578b520fc91e4b9f72036">c7538da</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Replace `sizeof` to `count`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-21T15:13:17+00:00 (commit #<span title="5e9b7bcbbae76f930779b80ef5bc01a216e267bb">5e9b7bc</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small codestyle fixes</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-13T11:17:00+00:00 (commit #<span title="106162d7deb67025e44ce47efc3a295fa1d689ee">106162d</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Refactoring:
+ - renamed Controller\Reflection to Controller\Meta (for avoid mistake with Reflection class)
+ - set absolute path for file loader - very small perfomance optiomization
+ - small fixes with codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Switch to strict mode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-21T14:48:25+00:00 (commit #<span title="2180b5bce8f1d2d7d9fe8fb862f227c094a9194d">2180b5b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Created `Http\RequestMethod` with constants</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #361:
+- Removed `Cache` package
+- Replaced it with `cache/cache`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-13T14:49:45+00:00 (commit #<span title="6d8574cc20c0213eed7dff3dfa9f387100f8bf63">6d8574c</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed #376</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-10-11T08:57:35+00:00 (commit #<span title="5fafd459d0928e137ac0ab7ddd5b2dbc32b6c43e">5fafd45</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small update to PHP7 sugar</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-07T14:21:42+00:00 (commit #<span title="d5923ee32a48f00d4a1ada64f1148d12bd8c03b4">d5923ee</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to short array notation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-06T14:34:31+00:00 (commit #<span title="f4008ca05d0c078ff443c26f79094c27f723088d">f4008ca</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-01T11:03:48+00:00 (commit #<span title="90d6e2b3c67bb7971ac3beff42251d86361a6d80">90d6e2b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: GitHub (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #368 from AntonShevchuk/master
+
+Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

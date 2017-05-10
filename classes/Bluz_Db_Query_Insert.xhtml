@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Db\Query\Insert</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Db_Query">Bluz\Db\Query</a>
+          </li>
+          <li class="separator">Insert</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Db/Query/Insert.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Db\Query\</small>Insert</h1>
+        <h4>Builder of INSERT queries</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Insert
+                extends <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder.xhtml">AbstractBuilder</a>
+            {<br/><ul class="none"><li>// Inherited members from <span title="Bluz\Db\Query\AbstractBuilder">AbstractBuilder</span></li><li>protected array <a href="#members">$aliases</a>;
+                        </li><li>protected  <a href="#members">$sql</a>;
+                        </li><li>protected array <a href="#members">$sqlParts</a>;
+                        </li><li>protected array <a href="#members">$params</a>;
+                        </li><li>protected array <a href="#members">$types</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public integer|string|array <a title="Bluz\Db\Query\Insert" href="../classes/Bluz_Db_Query_Insert/execute.xhtml">execute</a>()
+                    </li><li>public string <a title="Bluz\Db\Query\Insert" href="../classes/Bluz_Db_Query_Insert/getSql.xhtml">getSql</a>()
+                    </li><li>public Insert <a title="Bluz\Db\Query\Insert" href="../classes/Bluz_Db_Query_Insert/insert.xhtml">insert</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Db\Query\AbstractBuilder">AbstractBuilder</span></li><li>public integer|string|array <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/execute.xhtml">execute</a>()
+                        </li><li>public abstract string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getSql.xhtml">getSql</a>()
+                        </li><li>public string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQuery.xhtml">getQuery</a>()
+                        </li><li>public $this <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameter.xhtml">setParameter</a>()
+                        </li><li>public $this <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameters.xhtml">setParameters</a>()
+                        </li><li>public mixed <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameter.xhtml">getParameter</a>()
+                        </li><li>public array <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameters.xhtml">getParameters</a>()
+                        </li><li>protected $this <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/addQueryPart.xhtml">addQueryPart</a>()
+                        </li><li>public mixed <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQueryPart.xhtml">getQueryPart</a>()
+                        </li><li>protected $this <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/resetQueryPart.xhtml">resetQueryPart</a>()
+                        </li><li>protected $this <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setFromQueryPart.xhtml">setFromQueryPart</a>()
+                        </li><li>protected string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/prepareCondition.xhtml">prepareCondition</a>()
+                        </li><li>public string <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/__toString.xhtml">__toString</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Db\Query\Traits\Set">Set</span></li><li>public $this <a title="Bluz\Db\Query\Traits\Set" href="../traits/Bluz_Db_Query_Traits_Set/set.xhtml">set</a>()
+                        </li><li>public $this <a title="Bluz\Db\Query\Traits\Set" href="../traits/Bluz_Db_Query_Traits_Set/setArray.xhtml">setArray</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder.xhtml">Bluz\Db\Query\AbstractBuilder</a>
+            </li>
+          </ul>
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Db\Query\Traits\Set" href="../traits/Bluz_Db_Query_Traits_Set.xhtml">Bluz\Db\Query\Traits\Set</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="aliases"><strong>$aliases</strong>
+                —
+                array</li>
+            <li id="params"><strong>$params</strong>
+                —
+                array</li>
+            <li id="sql"><strong>$sql</strong>
+                —
+                string</li>
+            <li id="sqlParts"><strong>$sqlParts</strong>
+                —
+                array</li>
+            <li id="types"><strong>$types</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="execute"><a title="Bluz\Db\Query\Insert" href="../classes/Bluz_Db_Query_Insert/execute.xhtml">execute()</a>
+                — {@inheritdoc}</li>
+            <li id="getSql"><a title="Bluz\Db\Query\Insert" href="../classes/Bluz_Db_Query_Insert/getSql.xhtml">getSql()</a>
+                — {@inheritdoc}</li>
+            <li id="insert"><a title="Bluz\Db\Query\Insert" href="../classes/Bluz_Db_Query_Insert/insert.xhtml">insert()</a>
+                — Turns the query being built into an insert query that inserts into a certain table</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder.xhtml">Bluz\Db\Query\AbstractBuilder</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="addQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/addQueryPart.xhtml">addQueryPart()</a>
+                — Either appends to or replaces a single, generic query part</li>
+            <li id="prepareCondition"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/prepareCondition.xhtml">prepareCondition()</a>
+                — Prepare condition</li>
+            <li id="resetQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/resetQueryPart.xhtml">resetQueryPart()</a>
+                — Reset single SQL part</li>
+            <li id="setFromQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setFromQueryPart.xhtml">setFromQueryPart()</a>
+                — setFromQueryPart</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/__toString.xhtml">__toString()</a>
+                — Gets a string representation of this QueryBuilder which corresponds to the final SQL query being constructed.</li>
+            <li id="execute"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/execute.xhtml">execute()</a>
+                — Execute this query using the bound parameters and their types</li>
+            <li id="getParameter"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameter.xhtml">getParameter()</a>
+                — Gets a (previously set) query parameter of the query being constructed</li>
+            <li id="getParameters"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getParameters.xhtml">getParameters()</a>
+                — Gets all defined query parameters for the query being constructed</li>
+            <li id="getQuery"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQuery.xhtml">getQuery()</a>
+                — Return the complete SQL string formed for use</li>
+            <li id="getQueryPart"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getQueryPart.xhtml">getQueryPart()</a>
+                — Get a query part by its name</li>
+            <li id="getSql"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/getSql.xhtml">getSql()</a>
+                — Return the complete SQL string formed by the current specifications</li>
+            <li id="setParameter"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameter.xhtml">setParameter()</a>
+                — Sets a query parameter for the query being constructed</li>
+            <li id="setParameters"><a title="Bluz\Db\Query\AbstractBuilder" href="../classes/Bluz_Db_Query_AbstractBuilder/setParameters.xhtml">setParameters()</a>
+                — Sets a collection of query parameters for the query being constructed</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Db\Query\Traits\Set" href="../traits/Bluz_Db_Query_Traits_Set.xhtml">Bluz\Db\Query\Traits\Set</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="set"><a title="Bluz\Db\Query\Traits\Set" href="../traits/Bluz_Db_Query_Traits_Set/set.xhtml">set()</a>
+                — Set key-value pair</li>
+            <li id="setArray"><a title="Bluz\Db\Query\Traits\Set" href="../traits/Bluz_Db_Query_Traits_Set/setArray.xhtml">setArray()</a>
+                — Set data from array</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-04-21T15:28:30+00:00 (commit #<span title="f0410e7c9bef770cd28c224c71323685fcc2c16f">f0410e7</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Replace `join` with `implode`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Switch to strict mode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-06T14:34:31+00:00 (commit #<span title="f4008ca05d0c078ff443c26f79094c27f723088d">f4008ca</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-01T11:03:48+00:00 (commit #<span title="90d6e2b3c67bb7971ac3beff42251d86361a6d80">90d6e2b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: GitHub (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #368 from AntonShevchuk/master
+
+Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

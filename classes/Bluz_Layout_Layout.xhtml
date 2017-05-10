@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Layout\Layout</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Layout">Bluz\Layout</a>
+          </li>
+          <li class="separator">Layout</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Layout/Layout.php.xhtml#line31">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Layout\</small>Layout</h1>
+        <h4>Layout</h4>
+        <p/>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Layout
+                extends <a title="Bluz\View\View" href="../classes/Bluz_View_View.xhtml">View</a>
+            {<br/><ul class="none"><li>// constants</li><li>const POS_PREPEND = 'prepend';</li><li>const POS_REPLACE = 'replace';</li><li>const POS_APPEND = 'append';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$content</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\View\View">View</span></li><li>protected  <a href="#members">$baseUrl</a>;
+                        </li><li>protected  <a href="#members">$path</a>;
+                        </li><li>protected array <a href="#members">$partialPath</a>;
+                        </li><li>protected  <a href="#members">$template</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout/__construct.xhtml">__construct</a>()
+                    </li><li>public View <a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout/getContent.xhtml">getContent</a>()
+                    </li><li>public void <a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout/setContent.xhtml">setContent</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\View\View">View</span></li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/__construct.xhtml">__construct</a>()
+                        </li><li>public string <a title="Bluz\View\View" href="../classes/Bluz_View_View/__toString.xhtml">__toString</a>()
+                        </li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/setPath.xhtml">setPath</a>()
+                        </li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/setTemplate.xhtml">setTemplate</a>()
+                        </li><li>public void <a title="Bluz\View\View" href="../classes/Bluz_View_View/addPartialPath.xhtml">addPartialPath</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Container\Container">Container</span></li><li>protected void <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doSetContainer.xhtml">doSetContainer</a>()
+                        </li><li>protected mixed <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doGetContainer.xhtml">doGetContainer</a>()
+                        </li><li>protected bool <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doContainsContainer.xhtml">doContainsContainer</a>()
+                        </li><li>protected void <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doDeleteContainer.xhtml">doDeleteContainer</a>()
+                        </li><li>public Container <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/setFromArray.xhtml">setFromArray</a>()
+                        </li><li>public array <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/toArray.xhtml">toArray</a>()
+                        </li><li>public Container <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/resetArray.xhtml">resetArray</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Container\JsonSerialize">JsonSerialize</span></li><li>public array <a title="Bluz\Common\Container\JsonSerialize" href="../traits/Bluz_Common_Container_JsonSerialize/jsonSerialize.xhtml">jsonSerialize</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Container\MagicAccess">MagicAccess</span></li><li>public void <a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__set.xhtml">__set</a>()
+                        </li><li>public mixed <a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__get.xhtml">__get</a>()
+                        </li><li>public bool <a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__isset.xhtml">__isset</a>()
+                        </li><li>public void <a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__unset.xhtml">__unset</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                        </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                        </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                        </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                        </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Helper">Helper</span></li><li>public void <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath</a>()
+                        </li><li>public void <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath</a>()
+                        </li><li>public mixed <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Response\ResponseTrait">ResponseTrait</span></li><li>public abstract string <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/jsonSerialize.xhtml">jsonSerialize</a>()
+                        </li><li>public abstract string <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/__toString.xhtml">__toString</a>()
+                        </li><li>public string <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Container\RegularAccess">RegularAccess</span></li><li>public void <a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/set.xhtml">set</a>()
+                        </li><li>public mixed <a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/get.xhtml">get</a>()
+                        </li><li>public bool <a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/contains.xhtml">contains</a>()
+                        </li><li>public void <a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/delete.xhtml">delete</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\View\View" href="../classes/Bluz_View_View.xhtml">Bluz\View\View</a>
+            </li>
+          </ul>
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess.xhtml">Bluz\Common\Container\RegularAccess</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="POS_PREPEND">POS_PREPEND</td>
+              <td>'prepend'</td>
+            </tr>
+            <tr>
+              <td id="POS_REPLACE">POS_REPLACE</td>
+              <td>'replace'</td>
+            </tr>
+            <tr>
+              <td id="POS_APPEND">POS_APPEND</td>
+              <td>'append'</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="baseUrl"><strong>$baseUrl</strong>
+                —
+                string</li>
+            <li id="container"><strong>$container</strong>
+                —
+                array</li>
+            <li id="content"><strong>$content</strong>
+                —
+                mixed</li>
+            <li id="helpers"><strong>$helpers</strong>
+                —
+                array</li>
+            <li id="helpersPath"><strong>$helpersPath</strong>
+                —
+                array</li>
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+            <li id="partialPath"><strong>$partialPath</strong>
+                —
+                array</li>
+            <li id="path"><strong>$path</strong>
+                —
+                string</li>
+            <li id="template"><strong>$template</strong>
+                —
+                string</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout/__construct.xhtml">__construct()</a>
+                — Layout constructor  - init Layout helpers  - call parent View constructor</li>
+            <li id="getContent"><a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout/getContent.xhtml">getContent()</a>
+                — Get content</li>
+            <li id="setContent"><a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout/setContent.xhtml">setContent()</a>
+                — Set content</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\View\View" href="../classes/Bluz_View_View.xhtml">Bluz\View\View</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString"><a title="Bluz\View\View" href="../classes/Bluz_View_View/__toString.xhtml">__toString()</a>
+                — Render like string</li>
+            <li id="addPartialPath"><a title="Bluz\View\View" href="../classes/Bluz_View_View/addPartialPath.xhtml">addPartialPath()</a>
+                — Add partial path for use inside partial and partialLoop helpers</li>
+            <li id="setPath"><a title="Bluz\View\View" href="../classes/Bluz_View_View/setPath.xhtml">setPath()</a>
+                — {@inheritdoc}</li>
+            <li id="setTemplate"><a title="Bluz\View\View" href="../classes/Bluz_View_View/setTemplate.xhtml">setTemplate()</a>
+                — {@inheritdoc}</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container.xhtml">Bluz\Common\Container\Container</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="doContainsContainer"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doContainsContainer.xhtml">doContainsContainer()</a>
+                — Check contains key in container</li>
+            <li id="doDeleteContainer"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doDeleteContainer.xhtml">doDeleteContainer()</a>
+                — Delete value by key</li>
+            <li id="doGetContainer"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doGetContainer.xhtml">doGetContainer()</a>
+                — Get value by key</li>
+            <li id="doSetContainer"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/doSetContainer.xhtml">doSetContainer()</a>
+                — Set key/value pair</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="resetArray"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/resetArray.xhtml">resetArray()</a>
+                — Reset container array</li>
+            <li id="setFromArray"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/setFromArray.xhtml">setFromArray()</a>
+                — Sets all data in the row from an array</li>
+            <li id="toArray"><a title="Bluz\Common\Container\Container" href="../traits/Bluz_Common_Container_Container/toArray.xhtml">toArray()</a>
+                — Returns the column/value data as an array</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Container\JsonSerialize" href="../traits/Bluz_Common_Container_JsonSerialize.xhtml">Bluz\Common\Container\JsonSerialize</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="jsonSerialize"><a title="Bluz\Common\Container\JsonSerialize" href="../traits/Bluz_Common_Container_JsonSerialize/jsonSerialize.xhtml">jsonSerialize()</a>
+                — Specify data which should be serialized to JSON</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess.xhtml">Bluz\Common\Container\MagicAccess</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__get"><a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__get.xhtml">__get()</a>
+                — Magic alias for get() regular method</li>
+            <li id="__isset"><a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__isset.xhtml">__isset()</a>
+                — Magic alias for contains() regular method</li>
+            <li id="__set"><a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__set.xhtml">__set()</a>
+                — Magic alias for set() regular method</li>
+            <li id="__unset"><a title="Bluz\Common\Container\MagicAccess" href="../traits/Bluz_Common_Container_MagicAccess/__unset.xhtml">__unset()</a>
+                — Magic alias for delete() regular method</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options.xhtml">Bluz\Common\Options</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper.xhtml">Bluz\Common\Helper</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/__call.xhtml">__call()</a>
+                — Call magic helper</li>
+            <li id="addHelperPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/addHelperPath.xhtml">addHelperPath()</a>
+                — Add helper path</li>
+            <li id="setHelpersPath"><a title="Bluz\Common\Helper" href="../traits/Bluz_Common_Helper/setHelpersPath.xhtml">setHelpersPath()</a>
+                — Set helpers path</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait.xhtml">Bluz\Response\ResponseTrait</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__toString">
+              <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/__toString.xhtml">__toString()</a>
+            </li>
+            <li id="jsonSerialize">
+              <a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/jsonSerialize.xhtml">jsonSerialize()</a>
+            </li>
+            <li id="render"><a title="Bluz\Response\ResponseTrait" href="../traits/Bluz_Response_ResponseTrait/render.xhtml">render()</a>
+                — Render object as HTML or JSON</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess.xhtml">Bluz\Common\Container\RegularAccess</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="contains"><a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/contains.xhtml">contains()</a>
+                — Check contains key in container</li>
+            <li id="delete"><a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/delete.xhtml">delete()</a>
+                — Delete value by key</li>
+            <li id="get"><a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/get.xhtml">get()</a>
+                — Get value by key</li>
+            <li id="set"><a title="Bluz\Common\Container\RegularAccess" href="../traits/Bluz_Common_Container_RegularAccess/set.xhtml">set()</a>
+                — Set key/value pair</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-04-24T16:04:21+00:00 (commit #<span title="d59d72adc16df74565a731bb2ea66749fd1b44c6">d59d72a</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `value()` function
+Refactoring for all callable arguments</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-21T16:03:13+00:00 (commit #<span title="41cf4f869fc4d06bf49da791d9d1559dbd47230d">41cf4f8</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small optimizations</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-11T08:21:54+00:00 (commit #<span title="f9900f15bc1f4d64fc092e9fc2d8d2068c666eba">f9900f1</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small refactoring for call `__DIR__`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-29T14:17:15+00:00 (commit #<span title="db0b103972489971c30d7bbe4f5e99816b3f9c72">db0b103</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `View` helper `ScriptBlock($code)`
+Removed functional of `ScriptBlock()` from `Script()` helper
+Added `View` helper `StyleBlock($code)`
+Removed functional of `StyleBlock()` from `Style()` helper</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Switch to strict mode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-06T14:34:31+00:00 (commit #<span title="f4008ca05d0c078ff443c26f79094c27f723088d">f4008ca</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-01T11:03:48+00:00 (commit #<span title="90d6e2b3c67bb7971ac3beff42251d86361a6d80">90d6e2b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: GitHub (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #368 from AntonShevchuk/master
+
+Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

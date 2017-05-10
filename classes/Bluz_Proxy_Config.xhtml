@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Proxy\Config</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Proxy">Bluz\Proxy</a>
+          </li>
+          <li class="separator">Config</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Proxy/Config.php.xhtml#line39">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Proxy\</small>Config</h1>
+        <h4>Proxy to Config</h4>
+        <p>Example of usage<br/>&lt;code&gt;<br/>use Bluz\Proxy\Config;<br/><br/>if (!Config::getData('db')) {<br/>throw new Exception('Configuration for `db` is missed');<br/>}<br/>&lt;/code&gt;</p>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Config
+            {<br/><ul class="none"><li>// methods</li><li>protected static Config <a title="Bluz\Proxy\Config" href="../classes/Bluz_Proxy_Config/initInstance.xhtml">initInstance</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\ProxyTrait">ProxyTrait</span></li><li>public static void <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/setInstance.xhtml">setInstance</a>()
+                        </li><li>public static mixed <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/__callStatic.xhtml">__callStatic</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Singleton">Singleton</span></li><li>public static Config <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Uses</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait.xhtml">Bluz\Proxy\ProxyTrait</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="instance"><strong>$instance</strong>
+                —
+                <a title="Bluz\Proxy\Config" href="../classes/Bluz_Proxy_Config.xhtml">Bluz\Proxy\Config</a></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="initInstance"><a title="Bluz\Proxy\Config" href="../classes/Bluz_Proxy_Config/initInstance.xhtml">initInstance()</a>
+                — Init instance</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait.xhtml">Bluz\Proxy\ProxyTrait</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__callStatic"><a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/__callStatic.xhtml">__callStatic()</a>
+                — Handle dynamic, static calls to the object.</li>
+            <li id="setInstance"><a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/setInstance.xhtml">setInstance()</a>
+                — Set or replace instance</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton.xhtml">Bluz\Common\Singleton</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="getInstance"><a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance()</a>
+                — Get instance</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-04-21T15:13:17+00:00 (commit #<span title="5e9b7bcbbae76f930779b80ef5bc01a216e267bb">5e9b7bc</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small codestyle fixes</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Switch to strict mode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-06T14:34:31+00:00 (commit #<span title="f4008ca05d0c078ff443c26f79094c27f723088d">f4008ca</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-01T11:03:48+00:00 (commit #<span title="90d6e2b3c67bb7971ac3beff42251d86361a6d80">90d6e2b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: GitHub (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #368 from AntonShevchuk/master
+
+Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Validator\Rule\Ip</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Validator_Rule">Bluz\Validator\Rule</a>
+          </li>
+          <li class="separator">Ip</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#violations">Violations</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Validator/Rule/Ip.php.xhtml#line20">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Validator\Rule\</small>Ip</h1>
+        <h4>Check for IP</h4>
+        <p>Strict mode disabled for this file, because function long2ip() was changed in PHP 7.1</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Ip
+                extends <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule.xhtml">AbstractRule</a>
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$options</a>;
+                    </li><li>protected  <a href="#members">$networkRange</a>;
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Validator\Rule\AbstractRule">AbstractRule</span></li><li>protected string <a href="#members">$template</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/__construct.xhtml">__construct</a>()
+                    </li><li>protected array <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/parseRange.xhtml">parseRange</a>()
+                    </li><li>protected void <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/fillAddress.xhtml">fillAddress</a>()
+                    </li><li>protected void <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/parseRangeUsingWildcards.xhtml">parseRangeUsingWildcards</a>()
+                    </li><li>protected void <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/parseRangeUsingCidr.xhtml">parseRangeUsingCidr</a>()
+                    </li><li>public bool <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/validate.xhtml">validate</a>()
+                    </li><li>protected bool <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/verifyAddress.xhtml">verifyAddress</a>()
+                    </li><li>protected bool <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/verifyNetwork.xhtml">verifyNetwork</a>()
+                    </li><li>protected bool <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/belongsToSubnet.xhtml">belongsToSubnet</a>()
+                    </li><li>public string <a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/getTemplate.xhtml">getTemplate</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Validator\Rule\AbstractRule">AbstractRule</span></li><li>public abstract bool <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/validate.xhtml">validate</a>()
+                        </li><li>public bool <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__invoke.xhtml">__invoke</a>()
+                        </li><li>public bool <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/assert.xhtml">assert</a>()
+                        </li><li>public void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/setTemplate.xhtml">setTemplate</a>()
+                        </li><li>public string <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/getTemplate.xhtml">getTemplate</a>()
+                        </li><li>public string <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__toString.xhtml">__toString</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule.xhtml">Bluz\Validator\Rule\AbstractRule</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="violations">Violations</h2>
+        <div class="styled">
+          <h3>PHPMessDetector</h3>
+          <table class="styled">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Rule</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tr>
+              <td class="line">55 - 83</td>
+              <td>
+                <a href="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" target="_blank" title="Code Size Rules">CyclomaticComplexity</a>
+              </td>
+              <td>The method parseRange() has a Cyclomatic Complexity of 11. The configured cyclomatic complexity threshold is 10.</td>
+            </tr>
+          </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="networkRange"><strong>$networkRange</strong>
+                —
+                array</li>
+            <li id="options"><strong>$options</strong>
+                —
+                integer</li>
+            <li id="template"><strong>$template</strong>
+                —
+                string<br/><span class="indent">Template for error output   - {{name}} - name of field   - {{input}} - input value</span></li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="belongsToSubnet"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/belongsToSubnet.xhtml">belongsToSubnet()</a>
+                — Check subnet</li>
+            <li id="fillAddress"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/fillAddress.xhtml">fillAddress()</a>
+                — Fill address</li>
+            <li id="parseRange"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/parseRange.xhtml">parseRange()</a>
+                — Parse IP range</li>
+            <li id="parseRangeUsingCidr"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/parseRangeUsingCidr.xhtml">parseRangeUsingCidr()</a>
+                — Parse range using Classless Inter-Domain Routing (CIDR)</li>
+            <li id="parseRangeUsingWildcards"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/parseRangeUsingWildcards.xhtml">parseRangeUsingWildcards()</a>
+                — Parse range using wildcards</li>
+            <li id="verifyAddress"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/verifyAddress.xhtml">verifyAddress()</a>
+                — Verify IP address</li>
+            <li id="verifyNetwork"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/verifyNetwork.xhtml">verifyNetwork()</a>
+                — Verify Network by mask</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/__construct.xhtml">__construct()</a>
+                — Setup validation rule</li>
+            <li id="getTemplate"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/getTemplate.xhtml">getTemplate()</a>
+                — Get error template</li>
+            <li id="validate"><a title="Bluz\Validator\Rule\Ip" href="../classes/Bluz_Validator_Rule_Ip/validate.xhtml">validate()</a>
+                — Check input data</li>
+          </ul>
+          <h3>Inherited from <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule.xhtml">Bluz\Validator\Rule\AbstractRule</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="__invoke"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__invoke.xhtml">__invoke()</a>
+                — Invoke</li>
+            <li id="__toString"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__toString.xhtml">__toString()</a>
+                — Cast to string</li>
+            <li id="assert"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/assert.xhtml">assert()</a>
+                — Assert</li>
+            <li id="getTemplate"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/getTemplate.xhtml">getTemplate()</a>
+                — Get error template</li>
+            <li id="setTemplate"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/setTemplate.xhtml">setTemplate()</a>
+                — Set error template</li>
+            <li id="validate"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/validate.xhtml">validate()</a>
+                — Check input data</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2016-12-27T14:47:16+00:00 (commit #<span title="7e5a950404989ae5a2ad07670ac16255e0c7582e">7e5a950</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Removed strict mode for `Validator\Rule\Ip` thx to PHP 7.1</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Switch to strict mode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-10-04T11:01:26+00:00 (commit #<span title="8eb51fa0c58f7f9e87294b0d1886bc506b138756">8eb51fa</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added hints to validators</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-10-03T15:57:32+00:00 (commit #<span title="2ca2302f8b7505f7429481d02d5cbd6e09bc85b0">2ca2302</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Ipdated Ip validator for new `long2ip()`  signature</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-07T14:21:42+00:00 (commit #<span title="d5923ee32a48f00d4a1ada64f1148d12bd8c03b4">d5923ee</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to short array notation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-06T14:34:31+00:00 (commit #<span title="f4008ca05d0c078ff443c26f79094c27f723088d">f4008ca</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-01T11:03:48+00:00 (commit #<span title="90d6e2b3c67bb7971ac3beff42251d86361a6d80">90d6e2b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: GitHub (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #368 from AntonShevchuk/master
+
+Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Common\Options</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../traits.xhtml">Traits</a>
+          </li>
+          <li class="separator">
+            <a href="../traits.xhtml#Bluz_Common">Bluz\Common</a>
+          </li>
+          <li class="separator">Options</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Common/Options.php.xhtml#line42">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Common\</small>Options</h1>
+        <h4>Options Trait</h4>
+        <p>Example of usage<br/>class Foo<br/>{<br/>use \Bluz\Common\Options;<br/><br/>protected $bar = '';<br/>protected $baz = '';<br/><br/>public function setBar($value)<br/>{<br/>$this-&gt;bar = $value;<br/>}<br/><br/>public function setBaz($value)<br/>{<br/>$this-&gt;baz = $value;<br/>}<br/>}<br/><br/>$Foo = new Foo();<br/>    $Foo-&gt;setOptions(['bar'=&gt;123, 'baz'=&gt;456]);</p>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">trait Options
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$options</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
+                    </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
+                    </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
+                    </li><li>public Options <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions</a>()
+                    </li><li>protected void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Used by</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Translator\Translator" href="../classes/Bluz_Translator_Translator.xhtml">Bluz\Translator\Translator</a>
+            </li>
+            <li>
+              <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta.xhtml">Bluz\Controller\Meta</a>
+            </li>
+            <li>
+              <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db.xhtml">Bluz\Db\Db</a>
+            </li>
+            <li>
+              <a title="Bluz\Acl\Acl" href="../classes/Bluz_Acl_Acl.xhtml">Bluz\Acl\Acl</a>
+            </li>
+            <li>
+              <a title="Bluz\Router\Router" href="../classes/Bluz_Router_Router.xhtml">Bluz\Router\Router</a>
+            </li>
+            <li>
+              <a title="Bluz\Messages\Messages" href="../classes/Bluz_Messages_Messages.xhtml">Bluz\Messages\Messages</a>
+            </li>
+            <li>
+              <a title="Bluz\View\View" href="../classes/Bluz_View_View.xhtml">Bluz\View\View</a>
+            </li>
+            <li>
+              <a title="Bluz\Response\Response" href="../classes/Bluz_Response_Response.xhtml">Bluz\Response\Response</a>
+            </li>
+            <li>
+              <a title="Bluz\Mailer\Mailer" href="../classes/Bluz_Mailer_Mailer.xhtml">Bluz\Mailer\Mailer</a>
+            </li>
+            <li>
+              <a title="Bluz\Auth\Auth" href="../classes/Bluz_Auth_Auth.xhtml">Bluz\Auth\Auth</a>
+            </li>
+            <li>
+              <a title="Bluz\Session\Session" href="../classes/Bluz_Session_Session.xhtml">Bluz\Session\Session</a>
+            </li>
+            <li>
+              <a title="Bluz\Grid\Grid" href="../classes/Bluz_Grid_Grid.xhtml">Bluz\Grid\Grid</a>
+            </li>
+            <li>
+              <a title="Bluz\Logger\Logger" href="../classes/Bluz_Logger_Logger.xhtml">Bluz\Logger\Logger</a>
+            </li>
+            <li>
+              <a title="Bluz\Layout\Layout" href="../classes/Bluz_Layout_Layout.xhtml">Bluz\Layout\Layout</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="options"><strong>$options</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="initOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/initOptions.xhtml">initOptions()</a>
+                — Check and initialize options in package</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="getOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption()</a>
+                — Get option by key</li>
+            <li id="getOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions()</a>
+                — Get all options</li>
+            <li id="setOption"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption()</a>
+                — Set option by key over setter</li>
+            <li id="setOptions"><a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOptions.xhtml">setOptions()</a>
+                — Setup, check and init options</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-04-26T12:53:22+00:00 (commit #<span title="ff59da1c4ec0dd02f375d43f1304e4226288b20a">ff59da1</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Common\Line` class
+Added `to_camel_case` function
+Added `str_trim_end` function</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-04-21T16:03:13+00:00 (commit #<span title="41cf4f869fc4d06bf49da791d9d1559dbd47230d">41cf4f8</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small optimizations</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Switch to strict mode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-10-11T08:57:35+00:00 (commit #<span title="5fafd459d0928e137ac0ab7ddd5b2dbc32b6c43e">5fafd45</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small update to PHP7 sugar</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-07T14:21:42+00:00 (commit #<span title="d5923ee32a48f00d4a1ada64f1148d12bd8c03b4">d5923ee</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Migrate to short array notation</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-06T14:34:31+00:00 (commit #<span title="f4008ca05d0c078ff443c26f79094c27f723088d">f4008ca</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-01T11:03:48+00:00 (commit #<span title="90d6e2b3c67bb7971ac3beff42251d86361a6d80">90d6e2b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: GitHub (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Merge pull request #368 from AntonShevchuk/master
+
+Migrate from `AbstractClass` to `ProxyTrait` for all Proxies</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.9.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>
