@@ -87,7 +87,8 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Request
-            {<br/><ul class="none"><li>// constants</li><li>const TYPE_ANY = '*/*';</li><li>const TYPE_HTML = 'text/html';</li><li>const TYPE_JSON = 'application/json';</li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
+            {<br/><ul class="none"><li>// constants</li><li>const TYPE_ANY = '*/*';</li><li>const TYPE_HTML = 'text/html';</li><li>const TYPE_JSON = 'application/json';</li></ul><ul class="none"><li>// members</li><li>private static <span title="Bluz\Proxy\array|null">array|null</span> <a href="#members">$accept</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>protected static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/initInstance.xhtml">initInstance</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getQuery.xhtml">getQuery</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getPost.xhtml">getPost</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getServer.xhtml">getServer</a>()
@@ -102,7 +103,8 @@
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getController.xhtml">getController</a>()
                     </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getMethod.xhtml">getMethod</a>()
                     </li><li>public static array <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/getAccept.xhtml">getAccept</a>()
-                    </li><li>public static string <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/checkAccept.xhtml">checkAccept</a>()
+                    </li><li>public static void <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/resetAccept.xhtml">resetAccept</a>()
+                    </li><li>public static string|false <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/checkAccept.xhtml">checkAccept</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isCli.xhtml">isCli</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isHttp.xhtml">isHttp</a>()
                     </li><li>public static bool <a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isGet.xhtml">isGet</a>()
@@ -163,6 +165,12 @@
         </table>
         <h2 id="members">Members</h2>
         <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="accept"><strong>$accept</strong>
+                —
+                <a title="Bluz\Proxy\array|null" href="../classes/Bluz_Proxy_array|null.xhtml">Bluz\Proxy\array|null</a></li>
+          </ul>
           <h4>protected</h4>
           <ul class="members">
             <li id="instance"><strong>$instance</strong>
@@ -223,6 +231,8 @@
                 — Is this a PUT method request?</li>
             <li id="isXmlHttpRequest"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/isXmlHttpRequest.xhtml">isXmlHttpRequest()</a>
                 — Is the request a Javascript XMLHttpRequest?</li>
+            <li id="resetAccept"><a title="Bluz\Proxy\Request" href="../classes/Bluz_Proxy_Request/resetAccept.xhtml">resetAccept()</a>
+                — Reset accept for tests</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait.xhtml">Bluz\Proxy\ProxyTrait</a></h3>
           <h4>public</h4>
@@ -241,6 +251,26 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-07-06T15:23:00+00:00 (commit #<span title="73e7e96f17d11dd9f65a10c22b5d487309d7a916">73e7e96</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-06T15:08:00+00:00 (commit #<span title="8bfc97b888b31f04ea1f01a92590455d6041ea9e">8bfc97b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Controller refactoring</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-06-30T11:02:27+00:00 (commit #<span title="347a99b22fa2943deecebf17ee9cb08b81b46977">347a99b</span>)</h3>
             <div>
@@ -384,33 +414,11 @@ Added `Proxy\Request::getPost`
 Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
-          <li>
-            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #361:
-- Removed `Cache` package
-- Replaced it with `cache/cache`</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-13T14:49:45+00:00 (commit #<span title="6d8574cc20c0213eed7dff3dfa9f387100f8bf63">6d8574c</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #376</pre>
-            </div>
-          </li>
         </ul>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.10.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>

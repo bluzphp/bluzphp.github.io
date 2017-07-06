@@ -102,7 +102,7 @@
                     </li><li>public void <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/process.xhtml">process</a>()
                     </li><li>public array <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/params.xhtml">params</a>()
                     </li><li>public string <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getFile.xhtml">getFile</a>()
-                    </li><li>public integer <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getCache.xhtml">getCache</a>()
+                    </li><li>public int <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getCache.xhtml">getCache</a>()
                     </li><li>public void <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/setCache.xhtml">setCache</a>()
                     </li><li>protected integer <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/prepareCache.xhtml">prepareCache</a>()
                     </li><li>public array|null <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getAccept.xhtml">getAccept</a>()
@@ -113,7 +113,7 @@
                     </li><li>public void <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/setMethod.xhtml">setMethod</a>()
                     </li><li>public array <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getParams.xhtml">getParams</a>()
                     </li><li>public void <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/setParam.xhtml">setParam</a>()
-                    </li><li>public string <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getPrivilege.xhtml">getPrivilege</a>()
+                    </li><li>public string|null <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getPrivilege.xhtml">getPrivilege</a>()
                     </li><li>public void <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/setPrivilege.xhtml">setPrivilege</a>()
                     </li><li>public array|null <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/getRoute.xhtml">getRoute</a>()
                     </li><li>public void <a title="Bluz\Controller\Meta" href="../classes/Bluz_Controller_Meta/setRoute.xhtml">setRoute</a>()
@@ -245,6 +245,26 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-07-06T15:23:00+00:00 (commit #<span title="73e7e96f17d11dd9f65a10c22b5d487309d7a916">73e7e96</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-06T15:08:00+00:00 (commit #<span title="8bfc97b888b31f04ea1f01a92590455d6041ea9e">8bfc97b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Controller refactoring</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
               <p>
@@ -318,32 +338,42 @@
             </div>
           </li>
           <li>
-            <h3>2016-09-07T14:21:42+00:00 (commit #<span title="d5923ee32a48f00d4a1ada64f1148d12bd8c03b4">d5923ee</span>)</h3>
+            <h3>2016-10-04T11:01:26+00:00 (commit #<span title="8eb51fa0c58f7f9e87294b0d1886bc506b138756">8eb51fa</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Migrate to short array notation</pre>
+              <pre class="wrapped">Added hints to validators</pre>
             </div>
           </li>
           <li>
-            <h3>2016-09-06T14:46:49+00:00 (commit #<span title="7e4d8e10108a807643f515e0d6db5db2d8d1db36">7e4d8e1</span>)</h3>
+            <h3>2016-10-03T14:50:15+00:00 (commit #<span title="48c8c7be60fc4af3bab5d89dc1911daa8cf18b65">48c8c7b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">PHP 7.0 is required</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-09-07T15:00:34+00:00 (commit #<span title="abdebbf86deadf2cd0b5a3e8f50306084921ed4e">abdebbf</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #369 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #370 from AntonShevchuk/master
 
-Added Gravatar View helper</pre>
+Migrate to short array notation</pre>
             </div>
           </li>
         </ul>
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 0.10.0 - Copyright (C) 2010 - 2017 by Arne Blankerts</span>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
     </footer>
   </body>
 </html>
