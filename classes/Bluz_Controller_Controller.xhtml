@@ -91,8 +91,6 @@
                     </li><li>protected  <a href="#members">$file</a>;
                     </li><li>protected <span title="Bluz\Controller\Meta">Meta</span> <a href="#members">$meta</a>;
                     </li><li>protected <span title="Bluz\Controller\Data">Data</span> <a href="#members">$data</a>;
-                    </li><li>protected string <a href="#members">$render</a> =
-                        'HTML';
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/__construct.xhtml">__construct</a>()
                     </li><li>public string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getModule.xhtml">getModule</a>()
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setModule.xhtml">setModule</a>()
@@ -100,6 +98,8 @@
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setController.xhtml">setController</a>()
                     </li><li>public array <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getParams.xhtml">getParams</a>()
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setParams.xhtml">setParams</a>()
+                    </li><li>protected string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getTemplate.xhtml">getTemplate</a>()
+                    </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setTemplate.xhtml">setTemplate</a>()
                     </li><li>public <span title="Data">Data</span> <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run</a>()
                     </li><li>protected <span title="Data">Data</span> <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/process.xhtml">process</a>()
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/findFile.xhtml">findFile</a>()
@@ -169,9 +169,6 @@
             <li id="params"><strong>$params</strong>
                 —
                 array</li>
-            <li id="render"><strong>$render</strong>
-                —
-                string<br/><span class="indent">One of HTML, JSON or empty string</span></li>
             <li id="template"><strong>$template</strong>
                 —
                 string</li>
@@ -192,6 +189,9 @@
                 — Setup controller file</li>
             <li id="getFile"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getFile.xhtml">getFile()</a>
                 — Get controller file path</li>
+            <li id="getTemplate">
+              <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getTemplate.xhtml">getTemplate()</a>
+            </li>
             <li id="initMeta"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/initMeta.xhtml">initMeta()</a>
                 — Retrieve reflection for anonymous function</li>
             <li id="process"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/process.xhtml">process()</a>
@@ -204,6 +204,9 @@
             </li>
             <li id="setParams">
               <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setParams.xhtml">setParams()</a>
+            </li>
+            <li id="setTemplate">
+              <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setTemplate.xhtml">setTemplate()</a>
             </li>
           </ul>
           <h4>public</h4>
@@ -255,6 +258,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-07-11T07:52:52+00:00 (commit #<span title="9fd121cd10cbdcb54b67c46ac21854f14549fcf0">9fd121c</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated comment's blocks</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-07-06T15:08:00+00:00 (commit #<span title="8bfc97b888b31f04ea1f01a92590455d6041ea9e">8bfc97b</span>)</h3>
             <div>
@@ -413,16 +426,6 @@ Added `attachment($file)` helper for `Controller`</pre>
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
               <pre class="wrapped">Fixed #376</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-10-04T11:01:26+00:00 (commit #<span title="8eb51fa0c58f7f9e87294b0d1886bc506b138756">8eb51fa</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added hints to validators</pre>
             </div>
           </li>
         </ul>
