@@ -68,7 +68,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Controller/Controller.php.xhtml#line44">Source</a>
+            <a href="../source/Controller/Controller.php.xhtml#line45">Source</a>
           </li>
         </ul>
       </nav>
@@ -98,7 +98,7 @@
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setController.xhtml">setController</a>()
                     </li><li>public array <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getParams.xhtml">getParams</a>()
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setParams.xhtml">setParams</a>()
-                    </li><li>protected string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getTemplate.xhtml">getTemplate</a>()
+                    </li><li>public string <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getTemplate.xhtml">getTemplate</a>()
                     </li><li>protected void <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/setTemplate.xhtml">setTemplate</a>()
                     </li><li>public <span title="Data">Data</span> <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run</a>()
                     </li><li>protected <span title="Data">Data</span> <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/process.xhtml">process</a>()
@@ -189,9 +189,6 @@
                 — Setup controller file</li>
             <li id="getFile"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getFile.xhtml">getFile()</a>
                 — Get controller file path</li>
-            <li id="getTemplate">
-              <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getTemplate.xhtml">getTemplate()</a>
-            </li>
             <li id="initMeta"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/initMeta.xhtml">initMeta()</a>
                 — Retrieve reflection for anonymous function</li>
             <li id="process"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/process.xhtml">process()</a>
@@ -230,6 +227,9 @@
             <li id="getParams">
               <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getParams.xhtml">getParams()</a>
             </li>
+            <li id="getTemplate">
+              <a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/getTemplate.xhtml">getTemplate()</a>
+            </li>
             <li id="jsonSerialize"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/jsonSerialize.xhtml">jsonSerialize()</a>
                 — Specify data which should be serialized to JSON</li>
             <li id="run"><a title="Bluz\Controller\Controller" href="../classes/Bluz_Controller_Controller/run.xhtml">run()</a>
@@ -258,6 +258,29 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-07-18T12:44:53+00:00 (commit #<span title="cc068cebb94882d67579507ffd21829475299300">cc068ce</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Created tests for Controller Helpers
+Added method `Response::getType()`
+Renamed method `Response::switchType()` to `Response::setType()`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-18T08:59:25+00:00 (commit #<span title="83439948f5447059a7bbf5264cff1669f0a1d05c">8343994</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Created tests for Controller Helpers
+Updated View Interface - added getters for `path` and `template`</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-07-11T07:52:52+00:00 (commit #<span title="9fd121cd10cbdcb54b67c46ac21854f14549fcf0">9fd121c</span>)</h3>
             <div>
@@ -404,28 +427,6 @@ Added `attachment($file)` helper for `Controller`</pre>
 - changed signature of `addAlias()` method
 - added `addAllowOrder()` method
 - added `addAllowFilter()` method</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #361:
-- Removed `Cache` package
-- Replaced it with `cache/cache`</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-13T14:49:45+00:00 (commit #<span title="6d8574cc20c0213eed7dff3dfa9f387100f8bf63">6d8574c</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #376</pre>
             </div>
           </li>
         </ul>
