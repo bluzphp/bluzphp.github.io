@@ -68,7 +68,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Controller/Mapper/Rest.php.xhtml#line23">Source</a>
+            <a href="../source/Controller/Mapper/Rest.php.xhtml#line21">Source</a>
           </li>
         </ul>
       </nav>
@@ -92,8 +92,10 @@
                         </li><li>protected array <a href="#members">$data</a>;
                         </li><li>protected <span title="Bluz\Crud\AbstractCrud">AbstractCrud</span> <a href="#members">$crud</a>;
                         </li><li>protected array <a href="#members">$map</a>;
-                        </li></ul><ul class="none"><li>// methods</li><li>public mixed <a title="Bluz\Controller\Mapper\Rest" href="../classes/Bluz_Controller_Mapper_Rest/run.xhtml">run</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Controller\Mapper\AbstractMapper">AbstractMapper</span></li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/__construct.xhtml">__construct</a>()
+                        </li></ul><ul class="none"><li>// methods</li><li>protected void <a title="Bluz\Controller\Mapper\Rest" href="../classes/Bluz_Controller_Mapper_Rest/prepareRequest.xhtml">prepareRequest</a>()
+                    </li><li>protected array <a title="Bluz\Controller\Mapper\Rest" href="../classes/Bluz_Controller_Mapper_Rest/prepareParams.xhtml">prepareParams</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Controller\Mapper\AbstractMapper">AbstractMapper</span></li><li>protected abstract array <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/prepareParams.xhtml">prepareParams</a>()
+                        </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/__construct.xhtml">__construct</a>()
                         </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/addMap.xhtml">addMap</a>()
                         </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/head.xhtml">head</a>()
                         </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/get.xhtml">get</a>()
@@ -102,10 +104,9 @@
                         </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/put.xhtml">put</a>()
                         </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/delete.xhtml">delete</a>()
                         </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/options.xhtml">options</a>()
-                        </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/setCrud.xhtml">setCrud</a>()
-                        </li><li>public AbstractCrud <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/getCrud.xhtml">getCrud</a>()
-                        </li><li>public array <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/getPrimaryKey.xhtml">getPrimaryKey</a>()
-                        </li><li>public mixed <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/run.xhtml">run</a>()
+                        </li><li>public Controller <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/run.xhtml">run</a>()
+                        </li><li>protected void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/prepareRequest.xhtml">prepareRequest</a>()
+                        </li><li>protected mixed <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/dispatch.xhtml">dispatch</a>()
                         </li></ul>
 
             }<br/></div>
@@ -156,12 +157,23 @@
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
-          <h4>public</h4>
+          <h4>protected</h4>
           <ul>
-            <li id="run"><a title="Bluz\Controller\Mapper\Rest" href="../classes/Bluz_Controller_Mapper_Rest/run.xhtml">run()</a>
-                — Run REST controller</li>
+            <li id="prepareParams"><a title="Bluz\Controller\Mapper\Rest" href="../classes/Bluz_Controller_Mapper_Rest/prepareParams.xhtml">prepareParams()</a>
+                — Prepare params</li>
+            <li id="prepareRequest"><a title="Bluz\Controller\Mapper\Rest" href="../classes/Bluz_Controller_Mapper_Rest/prepareRequest.xhtml">prepareRequest()</a>
+                — Process request</li>
           </ul>
           <h3>Inherited from <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper.xhtml">Bluz\Controller\Mapper\AbstractMapper</a></h3>
+          <h4>protected</h4>
+          <ul>
+            <li id="dispatch"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/dispatch.xhtml">dispatch()</a>
+                — Dispatch REST or CRUD controller</li>
+            <li id="prepareParams"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/prepareParams.xhtml">prepareParams()</a>
+                — Prepare params</li>
+            <li id="prepareRequest"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/prepareRequest.xhtml">prepareRequest()</a>
+                — Prepare request for processing</li>
+          </ul>
           <h4>public</h4>
           <ul>
             <li id="addMap"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/addMap.xhtml">addMap()</a>
@@ -170,10 +182,6 @@
                 — Add mapping for DELETE method</li>
             <li id="get"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/get.xhtml">get()</a>
                 — Add mapping for GET method</li>
-            <li id="getCrud"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/getCrud.xhtml">getCrud()</a>
-                — Get crud instance</li>
-            <li id="getPrimaryKey"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/getPrimaryKey.xhtml">getPrimaryKey()</a>
-                — Return primary key</li>
             <li id="head"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/head.xhtml">head()</a>
                 — Add mapping for HEAD method</li>
             <li id="options"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/options.xhtml">options()</a>
@@ -185,13 +193,32 @@
             <li id="put"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/put.xhtml">put()</a>
                 — Add mapping for PUT method</li>
             <li id="run"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/run.xhtml">run()</a>
-                — Run REST controller</li>
-            <li id="setCrud"><a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/setCrud.xhtml">setCrud()</a>
-                — Set Crud</li>
+                — Run</li>
           </ul>
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-07-19T15:35:32+00:00 (commit #<span title="b3bd57fb8ca37cf5e0665bdf465fd3e15efc6e63">b3bd57f</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated AbstractMapper</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-19T15:33:23+00:00 (commit #<span title="2a51418e081cbab8e11f636f7ee449c50a6e5edd">2a51418</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Refactoring of Controller mappers
+Changed signature of constructor</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
@@ -233,35 +260,25 @@
             </div>
           </li>
           <li>
-            <h3>2016-11-02T15:48:27+00:00 (commit #<span title="53938d3484abdda52220c9b35c8aa8517170d3aa">53938d3</span>)</h3>
+            <h3>2016-11-21T16:25:13+00:00 (commit #<span title="f70d541e917420cc674520c38c4ec134977a2aec">f70d541</span>)</h3>
             <div>
               <p>
                         Author: kvasenko (kvasenko@ukr.net) /
                         Commiter: kvasenko (kvasenko@ukr.net)
                     </p>
-              <pre class="wrapped">Added view helper isInstalledModule</pre>
+              <pre class="wrapped">Removed define</pre>
             </div>
           </li>
           <li>
-            <h3>2016-10-11T11:30:42+00:00 (commit #<span title="d9b293a1384e30e803c6fa1bb5707524edbe89e7">d9b293a</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Updated PHPDoc</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-10-11T10:18:02+00:00 (commit #<span title="5d312f51c8f2df6849e0eac8d35c07aa91b90a56">5d312f5</span>)</h3>
+            <h3>2016-10-11T11:41:54+00:00 (commit #<span title="f04d4ec769b7a5c93ca89ab2d885b134b0e48ec0">f04d4ec</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #374 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #375 from AntonShevchuk/master
 
-Small update to PHP7 sugar</pre>
+Updated PHPDoc</pre>
             </div>
           </li>
         </ul>
