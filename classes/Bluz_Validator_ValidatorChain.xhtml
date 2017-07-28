@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Bluz\Validator\ValidatorChain</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Bluz_Validator">Bluz\Validator</a>
+          </li>
+          <li class="separator">ValidatorChain</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Validator/ValidatorChain.php.xhtml#line60">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Bluz\Validator\</small>ValidatorChain</h1>
+        <h4>Chain of Validators</h4>
+        <p>Chain can consists one or more validation rules</p>
+        <ul>
+          <li>Author: Anton Shevchuk</li>
+        </ul>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class ValidatorChain
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$description</a>;
+                    </li><li>protected array <a href="#members">$rules</a> =
+                        ;
+                    </li><li>protected  <a href="#members">$error</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__call.xhtml">__call</a>()
+                    </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/addRule.xhtml">addRule</a>()
+                    </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/callback.xhtml">callback</a>()
+                    </li><li>public bool <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/validate.xhtml">validate</a>()
+                    </li><li>public void <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/assert.xhtml">assert</a>()
+                    </li><li>public bool <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/isRequired.xhtml">isRequired</a>()
+                    </li><li>public null|string <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/getError.xhtml">getError</a>()
+                    </li><li>protected <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setError.xhtml">setError</a>()
+                    </li><li>public array <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/getDescription.xhtml">getDescription</a>()
+                    </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setDescription.xhtml">setDescription</a>()
+                    </li><li>public void <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__toString.xhtml">__toString</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="description"><strong>$description</strong>
+                —
+                string</li>
+            <li id="error"><strong>$error</strong>
+                —
+                string</li>
+            <li id="rules"><strong>$rules</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="setError"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setError.xhtml">setError()</a>
+                — Set error message for replace text from rule</li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="__call"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__call.xhtml">__call()</a>
+                — Magic call for create new rule</li>
+            <li id="__toString">
+              <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__toString.xhtml">__toString()</a>
+            </li>
+            <li id="addRule"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/addRule.xhtml">addRule()</a>
+                — Add Rule to ValidatorChain</li>
+            <li id="assert"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/assert.xhtml">assert()</a>
+                — Assert</li>
+            <li id="callback"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/callback.xhtml">callback()</a>
+                — Add Callback Rule to ValidatorChain</li>
+            <li id="getDescription"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/getDescription.xhtml">getDescription()</a>
+                — Get validation description</li>
+            <li id="getError"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/getError.xhtml">getError()</a>
+                — Get error message</li>
+            <li id="isRequired"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/isRequired.xhtml">isRequired()</a>
+                — Get required flag</li>
+            <li id="setDescription"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setDescription.xhtml">setDescription()</a>
+                — Set validation description</li>
+            <li id="validate"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/validate.xhtml">validate()</a>
+                — Validate chain of rules</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2017-07-28T08:10:34+00:00 (commit #<span title="f1280d37ad6b9eb8d0664f5f5f5b1c59bd925e0f">f1280d3</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small codestyle fix</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-27T08:39:36+00:00 (commit #<span title="26d6050690efb99cda86274c4c2d6cf927d0567e">26d6050</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `ValidatorChain::callback` method for wrap default behaviour</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-26T12:46:33+00:00 (commit #<span title="b81814de62434d48c9c59e7d9532594b8324994c">b81814d</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Validator refactoring</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.10.1 - Copyright (C) 2010 - 2017 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

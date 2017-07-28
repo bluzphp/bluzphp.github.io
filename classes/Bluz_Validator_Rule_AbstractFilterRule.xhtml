@@ -81,18 +81,17 @@
         <div class="synopsis">class AbstractFilterRule
                 extends <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule.xhtml">AbstractRule</a>
             {<br/><ul class="none"><li>// members</li><li>protected string <a href="#members">$additionalChars</a> =
-                        "";
-                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Validator\Rule\AbstractRule">AbstractRule</span></li><li>protected string <a href="#members">$template</a>;
+                        '';
+                    </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Validator\Rule\AbstractRule">AbstractRule</span></li><li>protected string <a href="#members">$description</a>;
                         </li></ul><ul class="none"><li>// methods</li><li>protected abstract bool <a title="Bluz\Validator\Rule\AbstractFilterRule" href="../classes/Bluz_Validator_Rule_AbstractFilterRule/validateClean.xhtml">validateClean</a>()
                     </li><li>public void <a title="Bluz\Validator\Rule\AbstractFilterRule" href="../classes/Bluz_Validator_Rule_AbstractFilterRule/__construct.xhtml">__construct</a>()
                     </li><li>protected string <a title="Bluz\Validator\Rule\AbstractFilterRule" href="../classes/Bluz_Validator_Rule_AbstractFilterRule/filter.xhtml">filter</a>()
                     </li><li>public bool <a title="Bluz\Validator\Rule\AbstractFilterRule" href="../classes/Bluz_Validator_Rule_AbstractFilterRule/validate.xhtml">validate</a>()
-                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Validator\Rule\AbstractRule">AbstractRule</span></li><li>public abstract bool <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/validate.xhtml">validate</a>()
-                        </li><li>public bool <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__invoke.xhtml">__invoke</a>()
-                        </li><li>public bool <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/assert.xhtml">assert</a>()
-                        </li><li>public void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/setTemplate.xhtml">setTemplate</a>()
-                        </li><li>public string <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/getTemplate.xhtml">getTemplate</a>()
-                        </li><li>public string <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__toString.xhtml">__toString</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Validator\Rule\AbstractRule">AbstractRule</span></li><li>public abstract void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/validate.xhtml">validate</a>()
+                        </li><li>public void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/getDescription.xhtml">getDescription</a>()
+                        </li><li>public void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/setDescription.xhtml">setDescription</a>()
+                        </li><li>public void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__invoke.xhtml">__invoke</a>()
+                        </li><li>public void <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__toString.xhtml">__toString</a>()
                         </li></ul>
 
             }<br/></div>
@@ -112,9 +111,9 @@
             <li id="additionalChars"><strong>$additionalChars</strong>
                 —
                 string</li>
-            <li id="template"><strong>$template</strong>
+            <li id="description"><strong>$description</strong>
                 —
-                string<br/><span class="indent">Template for error output   - {{name}} - name of field   - {{input}} - input value</span></li>
+                string<br/><span class="indent">Message for error output</span></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
@@ -136,22 +135,35 @@
           <h3>Inherited from <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule.xhtml">Bluz\Validator\Rule\AbstractRule</a></h3>
           <h4>public</h4>
           <ul>
-            <li id="__invoke"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__invoke.xhtml">__invoke()</a>
-                — Invoke</li>
-            <li id="__toString"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__toString.xhtml">__toString()</a>
-                — Cast to string</li>
-            <li id="assert"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/assert.xhtml">assert()</a>
-                — Assert</li>
-            <li id="getTemplate"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/getTemplate.xhtml">getTemplate()</a>
-                — Get error template</li>
-            <li id="setTemplate"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/setTemplate.xhtml">setTemplate()</a>
-                — Set error template</li>
-            <li id="validate"><a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/validate.xhtml">validate()</a>
-                — Check input data</li>
+            <li id="__invoke">
+              <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__invoke.xhtml">__invoke()</a>
+            </li>
+            <li id="__toString">
+              <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/__toString.xhtml">__toString()</a>
+            </li>
+            <li id="getDescription">
+              <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/getDescription.xhtml">getDescription()</a>
+            </li>
+            <li id="setDescription">
+              <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/setDescription.xhtml">setDescription()</a>
+            </li>
+            <li id="validate">
+              <a title="Bluz\Validator\Rule\AbstractRule" href="../classes/Bluz_Validator_Rule_AbstractRule/validate.xhtml">validate()</a>
+            </li>
           </ul>
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-07-25T11:04:43+00:00 (commit #<span title="629da2158a32d2be6c03ad0fcc318fb544c7acc7">629da21</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated rules</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
@@ -173,25 +185,37 @@
             </div>
           </li>
           <li>
-            <h3>2016-11-22T16:37:01+00:00 (commit #<span title="f68157f59c6e5538cff4cc47b2d92d89dc793e20">f68157f</span>)</h3>
+            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Syntax sugar</pre>
+              <pre class="wrapped">Fixed #361:
+- Removed `Cache` package
+- Replaced it with `cache/cache`</pre>
             </div>
           </li>
           <li>
-            <h3>2016-11-22T10:40:19+00:00 (commit #<span title="eea6670f8f3d8bfaf03cb43eb445f60dbab92b77">eea6670</span>)</h3>
+            <h3>2016-12-13T13:43:01+00:00 (commit #<span title="7ef42625ff7b22cf98b2ff7d8379d3b18704f5e5">7ef4262</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Http\StatusCode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-11-23T16:01:44+00:00 (commit #<span title="26d5da0765047b05d3e8941fac44dca1f8308d84">26d5da0</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #378 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #380 from AntonShevchuk/master
 
-Small refactoring of `Application`</pre>
+Removed unused Logger's calls</pre>
             </div>
           </li>
         </ul>

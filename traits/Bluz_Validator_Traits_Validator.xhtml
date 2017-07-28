@@ -65,7 +65,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Validator/Traits/Validator.php.xhtml#line38">Source</a>
+            <a href="../source/Validator/Traits/Validator.php.xhtml#line39">Source</a>
           </li>
         </ul>
       </nav>
@@ -78,31 +78,34 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">trait Validator
-            {<br/><ul class="none"><li>// members</li><li>protected <span title="Bluz\Validator\ValidatorBuilder">ValidatorBuilder</span> <a href="#members">$validatorBuilder</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>protected ValidatorBuilder <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/getValidatorBuilder.xhtml">getValidatorBuilder</a>()
-                    </li><li>protected Validator <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/addValidator.xhtml">addValidator</a>()
+            {<br/><ul class="none"><li>// members</li><li>private <span title="Bluz\Validator\ValidatorForm">ValidatorForm</span> <a href="#members">$validatorForm</a>;
+                    </li></ul><ul class="none"><li>// methods</li><li>private ValidatorForm <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/getValidatorForm.xhtml">getValidatorForm</a>()
+                    </li><li>protected <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/addValidator.xhtml">addValidator</a>()
                     </li><li>public bool <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/validate.xhtml">validate</a>()
-                    </li><li>public bool <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/assert.xhtml">assert</a>()
+                    </li><li>public void <a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/assert.xhtml">assert</a>()
                     </li></ul>
 
             }<br/></div>
         <h2 id="members">Members</h2>
         <div class="styled members">
-          <h4>protected</h4>
+          <h4>private</h4>
           <ul class="members">
-            <li id="validatorBuilder"><strong>$validatorBuilder</strong>
+            <li id="validatorForm"><strong>$validatorForm</strong>
                 —
-                <a title="Bluz\Validator\ValidatorBuilder" href="../traits/Bluz_Validator_ValidatorBuilder.xhtml">Bluz\Validator\ValidatorBuilder</a></li>
+                <a title="Bluz\Validator\ValidatorForm" href="../traits/Bluz_Validator_ValidatorForm.xhtml">Bluz\Validator\ValidatorForm</a></li>
           </ul>
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
+          <h4>private</h4>
+          <ul>
+            <li id="getValidatorForm"><a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/getValidatorForm.xhtml">getValidatorForm()</a>
+                — Get ValidatorBuilder</li>
+          </ul>
           <h4>protected</h4>
           <ul>
             <li id="addValidator"><a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/addValidator.xhtml">addValidator()</a>
-                — Add Validator for field</li>
-            <li id="getValidatorBuilder"><a title="Bluz\Validator\Traits\Validator" href="../traits/Bluz_Validator_Traits_Validator/getValidatorBuilder.xhtml">getValidatorBuilder()</a>
-                — Get ValidatorBuilder</li>
+                — Add ValidatorChain</li>
           </ul>
           <h4>public</h4>
           <ul>
@@ -114,6 +117,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-07-26T12:46:33+00:00 (commit #<span title="b81814de62434d48c9c59e7d9532594b8324994c">b81814d</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Validator refactoring</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
@@ -145,25 +158,37 @@
             </div>
           </li>
           <li>
-            <h3>2016-11-22T16:37:01+00:00 (commit #<span title="f68157f59c6e5538cff4cc47b2d92d89dc793e20">f68157f</span>)</h3>
+            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Syntax sugar</pre>
+              <pre class="wrapped">Fixed #361:
+- Removed `Cache` package
+- Replaced it with `cache/cache`</pre>
             </div>
           </li>
           <li>
-            <h3>2016-11-22T10:40:19+00:00 (commit #<span title="eea6670f8f3d8bfaf03cb43eb445f60dbab92b77">eea6670</span>)</h3>
+            <h3>2016-12-13T13:43:01+00:00 (commit #<span title="7ef42625ff7b22cf98b2ff7d8379d3b18704f5e5">7ef4262</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Http\StatusCode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-11-23T16:01:44+00:00 (commit #<span title="26d5da0765047b05d3e8941fac44dca1f8308d84">26d5da0</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #378 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #380 from AntonShevchuk/master
 
-Small refactoring of `Application`</pre>
+Removed unused Logger's calls</pre>
             </div>
           </li>
         </ul>

@@ -96,8 +96,7 @@
                         </li><li>protected  <a href="#members">$primary</a>;
                         </li><li>protected  <a href="#members">$sequence</a>;
                         </li><li>protected  <a href="#members">$rowClass</a>;
-                        </li></ul><ul class="none"><li>// methods</li><li>public AbstractRow <a title="Bluz\Auth\AbstractTable" href="../classes/Bluz_Auth_AbstractTable/getAuthRow.xhtml">getAuthRow</a>()
-                    </li><li>protected string <a title="Bluz\Auth\AbstractTable" href="../classes/Bluz_Auth_AbstractTable/generateSecret.xhtml">generateSecret</a>()
+                        </li></ul><ul class="none"><li>// methods</li><li>public static AbstractRow <a title="Bluz\Auth\AbstractTable" href="../classes/Bluz_Auth_AbstractTable/getAuthRow.xhtml">getAuthRow</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Db\Table">Table</span></li><li>public void <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/init.xhtml">init</a>()
                         </li><li>public static AbstractTable <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getInstance.xhtml">getInstance</a>()
                         </li><li>public Table <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/setSelectQuery.xhtml">setSelectQuery</a>()
@@ -214,11 +213,6 @@
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
-          <h4>protected</h4>
-          <ul>
-            <li id="generateSecret"><a title="Bluz\Auth\AbstractTable" href="../classes/Bluz_Auth_AbstractTable/generateSecret.xhtml">generateSecret()</a>
-                — Generate Secret token</li>
-          </ul>
           <h4>public</h4>
           <ul>
             <li id="getAuthRow"><a title="Bluz\Auth\AbstractTable" href="../classes/Bluz_Auth_AbstractTable/getAuthRow.xhtml">getAuthRow()</a>
@@ -276,6 +270,16 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-07-27T14:27:09+00:00 (commit #<span title="88b407683a898c40e68bc0a139301173e9c1e605">88b4076</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated Auth logic</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
               <p>
@@ -327,25 +331,37 @@ Fixed dynamic calls for static methods</pre>
             </div>
           </li>
           <li>
-            <h3>2016-11-22T16:37:01+00:00 (commit #<span title="f68157f59c6e5538cff4cc47b2d92d89dc793e20">f68157f</span>)</h3>
+            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Syntax sugar</pre>
+              <pre class="wrapped">Fixed #361:
+- Removed `Cache` package
+- Replaced it with `cache/cache`</pre>
             </div>
           </li>
           <li>
-            <h3>2016-11-22T10:40:19+00:00 (commit #<span title="eea6670f8f3d8bfaf03cb43eb445f60dbab92b77">eea6670</span>)</h3>
+            <h3>2016-12-13T13:43:01+00:00 (commit #<span title="7ef42625ff7b22cf98b2ff7d8379d3b18704f5e5">7ef4262</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton (AntonShevchuk@gmail.com) /
+                        Commiter: Anton (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Http\StatusCode</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2016-11-23T16:01:44+00:00 (commit #<span title="26d5da0765047b05d3e8941fac44dca1f8308d84">26d5da0</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #378 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #380 from AntonShevchuk/master
 
-Small refactoring of `Application`</pre>
+Removed unused Logger's calls</pre>
             </div>
           </li>
         </ul>
