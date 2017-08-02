@@ -87,7 +87,8 @@
             {<br/><ul class="none"><li>// constants</li><li>const ORDER_ASC = 'asc';</li><li>const ORDER_DESC = 'desc';</li><li>const FILTER_LIKE = 'like';</li><li>const FILTER_ENUM = 'enum';</li><li>const FILTER_EQ = 'eq';</li><li>const FILTER_NE = 'ne';</li><li>const FILTER_GT = 'gt';</li><li>const FILTER_GE = 'ge';</li><li>const FILTER_LT = 'lt';</li><li>const FILTER_LE = 'le';</li></ul><ul class="none"><li>// members</li><li>protected <span title="Bluz\Grid\Source\AbstractSource">AbstractSource</span> <a href="#members">$adapter</a>;
                     </li><li>protected <span title="Bluz\Grid\Data">Data</span> <a href="#members">$data</a>;
                     </li><li>protected  <a href="#members">$uid</a>;
-                    </li><li>protected  <a href="#members">$prefix</a>;
+                    </li><li>protected string <a href="#members">$prefix</a> =
+                        '';
                     </li><li>protected  <a href="#members">$module</a>;
                     </li><li>protected  <a href="#members">$controller</a>;
                     </li><li>protected array <a href="#members">$params</a> =
@@ -425,6 +426,26 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-08-01T10:21:18+00:00 (commit #<span title="9de2317f92478e3e63cde3f677a68ff1a3065542">9de2317</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-08-01T09:44:38+00:00 (commit #<span title="b01aa91fd86152f0b4fa6a73db7a885151c1a447">b01aa91</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Fixed codestyle</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
               <p>
@@ -540,37 +561,26 @@ Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
+            <h3>2016-12-15T10:53:43+00:00 (commit #<span title="7e34a8eba78715ff196995db978f40fefbe3c358">7e34a8e</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed #361:
-- Removed `Cache` package
-- Replaced it with `cache/cache`</pre>
+              <pre class="wrapped">Changed call method of `assert` methods from dynamic to static
+Fixed codestyle of tests</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-13T13:43:01+00:00 (commit #<span title="7ef42625ff7b22cf98b2ff7d8379d3b18704f5e5">7ef4262</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added Http\StatusCode</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-11-23T16:01:44+00:00 (commit #<span title="26d5da0765047b05d3e8941fac44dca1f8308d84">26d5da0</span>)</h3>
+            <h3>2016-12-14T17:01:39+00:00 (commit #<span title="36441b00f949b9d04caaa1b204f3da5e7c441fe5">36441b0</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #380 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #382 from AntonShevchuk/master
 
-Removed unused Logger's calls</pre>
+Fixed #361: Migrate to PSR-6</pre>
             </div>
           </li>
         </ul>

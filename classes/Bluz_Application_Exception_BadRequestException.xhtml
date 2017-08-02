@@ -84,6 +84,8 @@
                 extends <a title="Bluz\Application\Exception\ApplicationException" href="../classes/Bluz_Application_Exception_ApplicationException.xhtml">ApplicationException</a>
             {<br/><ul class="none"><li>// members</li><li>protected integer <a href="#members">$code</a> =
                         StatusCode::BAD_REQUEST;
+                    </li><li>protected string <a href="#members">$message</a> =
+                        'Bad Request';
                     </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\Common\Exception\CommonException">CommonException</span></li><li>protected integer <a href="#members">$code</a>;
                         </li></ul><ul class="none"><li>// Inherited members from <span title="Exception">Exception</span></li><li>protected  <a href="#members">$message</a>;
                         </li><li>protected  <a href="#members">$code</a>;
@@ -131,6 +133,9 @@
                 int<br/><span class="indent">The line where the exception was created</span></li>
             <li id="message"><strong>$message</strong>
                 —
+                string</li>
+            <li id="message"><strong>$message</strong>
+                —
                 string<br/><span class="indent">The exception message</span></li>
           </ul>
         </div>
@@ -160,6 +165,16 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-07-28T14:59:13+00:00 (commit #<span title="0eea628e63f2fed4c0f079d07f8c23ce243d2fc6">0eea628</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated exceptions</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
               <p>
@@ -180,47 +195,26 @@
             </div>
           </li>
           <li>
-            <h3>2016-12-14T16:31:29+00:00 (commit #<span title="838653c6de34267d69e2de3fa99e04bfb2580eb3">838653c</span>)</h3>
+            <h3>2016-12-15T10:53:43+00:00 (commit #<span title="7e34a8eba78715ff196995db978f40fefbe3c358">7e34a8e</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Fixed #361:
-- Removed `Cache` package
-- Replaced it with `cache/cache`</pre>
+              <pre class="wrapped">Changed call method of `assert` methods from dynamic to static
+Fixed codestyle of tests</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-13T14:49:45+00:00 (commit #<span title="6d8574cc20c0213eed7dff3dfa9f387100f8bf63">6d8574c</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Fixed #376</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-13T13:43:01+00:00 (commit #<span title="7ef42625ff7b22cf98b2ff7d8379d3b18704f5e5">7ef4262</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton (AntonShevchuk@gmail.com) /
-                        Commiter: Anton (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Added Http\StatusCode</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-11-23T16:01:44+00:00 (commit #<span title="26d5da0765047b05d3e8941fac44dca1f8308d84">26d5da0</span>)</h3>
+            <h3>2016-12-14T17:01:39+00:00 (commit #<span title="36441b00f949b9d04caaa1b204f3da5e7c441fe5">36441b0</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #380 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #382 from AntonShevchuk/master
 
-Removed unused Logger's calls</pre>
+Fixed #361: Migrate to PSR-6</pre>
             </div>
           </li>
         </ul>

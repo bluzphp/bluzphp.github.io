@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - Bluz\Auth\AbstractRowEntity::tryLogin</title>
+    <title>phpDox - Bluz\Validator\ValidatorChain::regexp</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -42,12 +42,12 @@
             <a href="../../classes.xhtml">Classes</a>
           </li>
           <li class="separator">
-            <a href="../../classes.xhtml#Bluz_Auth">Bluz\Auth</a>
+            <a href="../../classes.xhtml#Bluz_Validator">Bluz\Validator</a>
           </li>
           <li class="separator">
-            <a title="Bluz\Auth\AbstractRowEntity" href="../../classes/Bluz_Auth_AbstractRowEntity.xhtml">AbstractRowEntity</a>
+            <a title="Bluz\Validator\ValidatorChain" href="../../classes/Bluz_Validator_ValidatorChain.xhtml">ValidatorChain</a>
           </li>
-          <li class="separator">tryLogin</li>
+          <li class="separator">regexp</li>
         </ul>
       </div>
       <nav class="box">
@@ -59,40 +59,45 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="#throws">Throws</a>
-          </li>
-          <li>
-            <a href="../../source/Auth/AbstractRowEntity.php.xhtml#line28">Source</a>
+            <a href="../../source/Validator/ValidatorChain.php.xhtml#line130">Source</a>
           </li>
         </ul>
       </nav>
       <section>
-        <h1><small>Bluz\Auth\AbstractRowEntity::</small>tryLogin</h1>
-        <h4>Can entity login</h4>
+        <h1><small>Bluz\Validator\ValidatorChain::</small>regexp</h1>
+        <h4>Add Regexp Rule to ValidatorChain</h4>
         <p/>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function tryLogin()
+          <code>public function regexp(string
+        $expression,
+            [<a title="Bluz\Validator\string|null" href="../../classes/Bluz_Validator_string|null.xhtml">string|null</a>
+        $description = NULL] )
             </code>
         </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$expression</code>
+                —
+                string</dt>
+          <dd/>
+          <dt><code>$description</code>
+                —
+                object</dt>
+          <dd><br/><br/><br/>      </dd>
+        </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>void</dt>
+          <dt>ValidatorChain</dt>
           <dd><br/>
         </dd>
-        </dl>
-        <h2 id="throws">Errors/Exceptions</h2>
-        <dl class="styled">
-          <dt>
-            <code>
-              <a title="Bluz\Auth\AuthException" href="../../classes/Bluz_Auth_AuthException.xhtml">AuthException</a>
-            </code>
-          </dt>
-          <dd/>
         </dl>
       </section>
     </div>

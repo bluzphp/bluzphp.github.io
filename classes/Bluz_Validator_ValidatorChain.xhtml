@@ -65,7 +65,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Validator/ValidatorChain.php.xhtml#line60">Source</a>
+            <a href="../source/Validator/ValidatorChain.php.xhtml#line59">Source</a>
           </li>
         </ul>
       </nav>
@@ -85,6 +85,7 @@
                     </li></ul><ul class="none"><li>// methods</li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__call.xhtml">__call</a>()
                     </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/addRule.xhtml">addRule</a>()
                     </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/callback.xhtml">callback</a>()
+                    </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/regexp.xhtml">regexp</a>()
                     </li><li>public bool <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/validate.xhtml">validate</a>()
                     </li><li>public void <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/assert.xhtml">assert</a>()
                     </li><li>public bool <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/isRequired.xhtml">isRequired</a>()
@@ -92,6 +93,7 @@
                     </li><li>protected <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setError.xhtml">setError</a>()
                     </li><li>public array <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/getDescription.xhtml">getDescription</a>()
                     </li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setDescription.xhtml">setDescription</a>()
+                    </li><li>public bool <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__invoke.xhtml">__invoke</a>()
                     </li><li>public void <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__toString.xhtml">__toString</a>()
                     </li></ul>
 
@@ -122,6 +124,9 @@
           <ul>
             <li id="__call"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__call.xhtml">__call()</a>
                 — Magic call for create new rule</li>
+            <li id="__invoke">
+              <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__invoke.xhtml">__invoke()</a>
+            </li>
             <li id="__toString">
               <a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/__toString.xhtml">__toString()</a>
             </li>
@@ -137,6 +142,8 @@
                 — Get error message</li>
             <li id="isRequired"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/isRequired.xhtml">isRequired()</a>
                 — Get required flag</li>
+            <li id="regexp"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/regexp.xhtml">regexp()</a>
+                — Add Regexp Rule to ValidatorChain</li>
             <li id="setDescription"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/setDescription.xhtml">setDescription()</a>
                 — Set validation description</li>
             <li id="validate"><a title="Bluz\Validator\ValidatorChain" href="../classes/Bluz_Validator_ValidatorChain/validate.xhtml">validate()</a>
@@ -145,6 +152,26 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-08-02T09:00:53+00:00 (commit #<span title="9f6654b64071af6d00505140946936f9b732e9ea">9f6654b</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added test for regexp shorthand function</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-07-28T16:08:14+00:00 (commit #<span title="d6dcb78b43e99cda82c323b0381fa97ef0e51a64">d6dcb78</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added magic `__invoke` to ValidatorChain</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-07-28T08:10:34+00:00 (commit #<span title="f1280d37ad6b9eb8d0664f5f5f5b1c59bd925e0f">f1280d3</span>)</h3>
             <div>
