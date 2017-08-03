@@ -86,8 +86,9 @@
         <div class="synopsis">class Table
                 extends <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud.xhtml">AbstractCrud</a>
             {<br/><ul class="none"><li>// Inherited constants from <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud.xhtml">AbstractCrud</a></li><li>const <a href="#DEFAULT_LIMIT">DEFAULT_LIMIT</a> = 10;</li></ul><ul class="none"><li>// members</li><li>protected <span title="\Bluz\Db\Table">Table</span> <a href="#members">$table</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public Table <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/setTable.xhtml">setTable</a>()
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/setTable.xhtml">setTable</a>()
                     </li><li>public Table <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/getTable.xhtml">getTable</a>()
+                    </li><li>protected void <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/initTable.xhtml">initTable</a>()
                     </li><li>public array <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/getPrimaryKey.xhtml">getPrimaryKey</a>()
                     </li><li>public Row <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/readOne.xhtml">readOne</a>()
                     </li><li>public array|int|mixed <a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/readSet.xhtml">readSet</a>()
@@ -104,7 +105,6 @@
                         </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/updateSet.xhtml">updateSet</a>()
                         </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/deleteOne.xhtml">deleteOne</a>()
                         </li><li>public integer <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/deleteSet.xhtml">deleteSet</a>()
-                        </li><li>public array <a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getMethods.xhtml">getMethods</a>()
                         </li></ul>
 
             }<br/></div>
@@ -143,6 +143,11 @@
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="initTable"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/initTable.xhtml">initTable()</a>
+                — Init table instance for manipulation</li>
+          </ul>
           <h4>public</h4>
           <ul>
             <li id="createOne"><a title="Bluz\Crud\Table" href="../classes/Bluz_Crud_Table/createOne.xhtml">createOne()</a>
@@ -175,8 +180,6 @@
                 — Delete items</li>
             <li id="getInstance"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getInstance.xhtml">getInstance()</a>
                 — Get CRUD Instance</li>
-            <li id="getMethods"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getMethods.xhtml">getMethods()</a>
-                — Get realized methods</li>
             <li id="getPrimaryKey"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/getPrimaryKey.xhtml">getPrimaryKey()</a>
                 — Return primary key signature</li>
             <li id="readOne"><a title="Bluz\Crud\AbstractCrud" href="../classes/Bluz_Crud_AbstractCrud/readOne.xhtml">readOne()</a>
@@ -191,6 +194,17 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-08-03T14:11:40+00:00 (commit #<span title="15278f61a5c09b2afe678da6be007fc45c7b5c6b">15278f6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Renamed `Line` to `Str`
+Added `class_namespace` function</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-07-19T15:33:23+00:00 (commit #<span title="2a51418e081cbab8e11f636f7ee449c50a6e5edd">2a51418</span>)</h3>
             <div>
@@ -243,26 +257,26 @@ Changed signature of constructor</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-15T10:53:43+00:00 (commit #<span title="7e34a8eba78715ff196995db978f40fefbe3c358">7e34a8e</span>)</h3>
+            <h3>2016-12-15T12:41:34+00:00 (commit #<span title="c2520ccbc8a1176853e0928d31b7eb2033bbba14">c2520cc</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Changed call method of `assert` methods from dynamic to static
-Fixed codestyle of tests</pre>
+              <pre class="wrapped">Rename property `Db\Table::$table` to `Db\Table::$name`
+Fixed dynamic calls for static methods</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-14T17:01:39+00:00 (commit #<span title="36441b00f949b9d04caaa1b204f3da5e7c441fe5">36441b0</span>)</h3>
+            <h3>2016-12-15T11:23:02+00:00 (commit #<span title="3990ec5a0c198ae82e3a004eae597ea40e90876d">3990ec5</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #382 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #383 from AntonShevchuk/master
 
-Fixed #361: Migrate to PSR-6</pre>
+Updated `Proxy\Cache`</pre>
             </div>
           </li>
         </ul>

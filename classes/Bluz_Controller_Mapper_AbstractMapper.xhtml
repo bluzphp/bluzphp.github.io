@@ -94,15 +94,15 @@
                         ;
                     </li></ul><ul class="none"><li>// methods</li><li>protected abstract array <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/prepareParams.xhtml">prepareParams</a>()
                     </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/__construct.xhtml">__construct</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/addMap.xhtml">addMap</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/head.xhtml">head</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/get.xhtml">get</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/post.xhtml">post</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/patch.xhtml">patch</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/put.xhtml">put</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/delete.xhtml">delete</a>()
-                    </li><li>public void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/options.xhtml">options</a>()
-                    </li><li>public Controller <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/run.xhtml">run</a>()
+                    </li><li>public Link <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/addMap.xhtml">addMap</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/head.xhtml">head</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/get.xhtml">get</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/post.xhtml">post</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/patch.xhtml">patch</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/put.xhtml">put</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/delete.xhtml">delete</a>()
+                    </li><li>public <span title="Link">Link</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/options.xhtml">options</a>()
+                    </li><li>public <span title="Controller">Controller</span> <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/run.xhtml">run</a>()
                     </li><li>protected void <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/prepareRequest.xhtml">prepareRequest</a>()
                     </li><li>protected mixed <a title="Bluz\Controller\Mapper\AbstractMapper" href="../classes/Bluz_Controller_Mapper_AbstractMapper/dispatch.xhtml">dispatch</a>()
                     </li></ul>
@@ -123,7 +123,7 @@
                 array</li>
             <li id="map"><strong>$map</strong>
                 —
-                array<br/><span class="indent">[     METHOD =&gt; [         'module' =&gt; 'module',         'controller' =&gt; 'controller',         'acl' =&gt; 'privilege',     ], ]</span></li>
+                array<br/><span class="indent">[     METHOD =&gt; Link {         'module' =&gt; 'module',         'controller' =&gt; 'controller',         'acl' =&gt; 'privilege',     }, ]</span></li>
             <li id="method"><strong>$method</strong>
                 —
                 string</li>
@@ -182,6 +182,27 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-08-03T14:11:40+00:00 (commit #<span title="15278f61a5c09b2afe678da6be007fc45c7b5c6b">15278f6</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Renamed `Line` to `Str`
+Added `class_namespace` function</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-08-03T09:45:41+00:00 (commit #<span title="289cd08608ec5d48217e3f550a39195ff00af98c">289cd08</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Mapper\Link` class</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-08-02T10:22:44+00:00 (commit #<span title="ea84fc98029a06d25765a1c541a65dce3e24963a">ea84fc9</span>)</h3>
             <div>
@@ -254,26 +275,26 @@ Changed signature of constructor</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-15T10:53:43+00:00 (commit #<span title="7e34a8eba78715ff196995db978f40fefbe3c358">7e34a8e</span>)</h3>
+            <h3>2016-12-15T12:41:34+00:00 (commit #<span title="c2520ccbc8a1176853e0928d31b7eb2033bbba14">c2520cc</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Changed call method of `assert` methods from dynamic to static
-Fixed codestyle of tests</pre>
+              <pre class="wrapped">Rename property `Db\Table::$table` to `Db\Table::$name`
+Fixed dynamic calls for static methods</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-14T17:01:39+00:00 (commit #<span title="36441b00f949b9d04caaa1b204f3da5e7c441fe5">36441b0</span>)</h3>
+            <h3>2016-12-15T11:23:02+00:00 (commit #<span title="3990ec5a0c198ae82e3a004eae597ea40e90876d">3990ec5</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #382 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #383 from AntonShevchuk/master
 
-Fixed #361: Migrate to PSR-6</pre>
+Updated `Proxy\Cache`</pre>
             </div>
           </li>
         </ul>
