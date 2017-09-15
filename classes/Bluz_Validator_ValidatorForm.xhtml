@@ -56,6 +56,9 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -78,28 +81,37 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class ValidatorForm
+                implements
+                <a title="Bluz\Validator\ValidatorInterface" href="../interfaces/Bluz_Validator_ValidatorInterface.xhtml">ValidatorInterface</a>
             {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$validators</a> =
                         ;
-                    </li><li>protected array <a href="#members">$errors</a> =
-                        ;
+                    </li><li>protected <span title="Bluz\Validator\Exception\ValidatorFormException">ValidatorFormException</span> <a href="#members">$exception</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/add.xhtml">add</a>()
                     </li><li>public bool <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/validate.xhtml">validate</a>()
                     </li><li>protected bool <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/validateItem.xhtml">validateItem</a>()
-                    </li><li>public bool <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/assert.xhtml">assert</a>()
-                    </li><li>protected void <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/setError.xhtml">setError</a>()
-                    </li><li>protected void <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/resetErrors.xhtml">resetErrors</a>()
+                    </li><li>public void <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/assert.xhtml">assert</a>()
+                    </li><li>public bool <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/__invoke.xhtml">__invoke</a>()
                     </li><li>public array <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/getErrors.xhtml">getErrors</a>()
                     </li><li>public bool <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/hasErrors.xhtml">hasErrors</a>()
                     </li></ul>
 
             }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Implements</h4>
+          <ul>
+            <li>
+              <a title="Bluz\Validator\ValidatorInterface" href="../interfaces/Bluz_Validator_ValidatorInterface.xhtml">Bluz\Validator\ValidatorInterface</a>
+            </li>
+          </ul>
+        </div>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
           <ul class="members">
-            <li id="errors"><strong>$errors</strong>
+            <li id="exception"><strong>$exception</strong>
                 —
-                array<br/><span class="indent">list of validation errors</span></li>
+                <a title="Bluz\Validator\Exception\ValidatorFormException" href="../classes/Bluz_Validator_Exception_ValidatorFormException.xhtml">Bluz\Validator\Exception\ValidatorFormException</a><br/><span class="indent">Exception with list of validation errors</span></li>
             <li id="validators"><strong>$validators</strong>
                 —
                 array<br/><span class="indent">Stack of validators</span></li>
@@ -109,15 +121,14 @@
         <div class="styled">
           <h4>protected</h4>
           <ul>
-            <li id="resetErrors"><a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/resetErrors.xhtml">resetErrors()</a>
-                — Reset errors</li>
-            <li id="setError"><a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/setError.xhtml">setError()</a>
-                — Add Error by field name</li>
             <li id="validateItem"><a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/validateItem.xhtml">validateItem()</a>
                 — Validate chain of rules for single item</li>
           </ul>
           <h4>public</h4>
           <ul>
+            <li id="__invoke">
+              <a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/__invoke.xhtml">__invoke()</a>
+            </li>
             <li id="add"><a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/add.xhtml">add()</a>
                 — Add chain to form</li>
             <li id="assert"><a title="Bluz\Validator\ValidatorForm" href="../classes/Bluz_Validator_ValidatorForm/assert.xhtml">assert()</a>
@@ -132,6 +143,28 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-09-07T09:33:42+00:00 (commit #<span title="c35342a1fd26f1fe11b4131d9352c75d4a0981e1">c35342a</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small changes in Validator classes</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-09-06T08:56:24+00:00 (commit #<span title="f38d1ecbc4d8144db28d8c248c0537a80dd32d69">f38d1ec</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `ValidatorInterface`
+Added `ValidatorFormException`
+Added method `Validator::addRuleNamespace()`</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-08-03T14:39:04+00:00 (commit #<span title="0b47390b35f9520e71bf64a0781052e5a762dd32">0b47390</span>)</h3>
             <div>

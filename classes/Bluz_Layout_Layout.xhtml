@@ -59,9 +59,6 @@
             <a href="#hierarchy">Hierarchy</a>
           </li>
           <li>
-            <a href="#constants">Constants</a>
-          </li>
-          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -71,7 +68,7 @@
             <a href="#history">History</a>
           </li>
           <li>
-            <a href="../source/Layout/Layout.php.xhtml#line31">Source</a>
+            <a href="../source/Layout/Layout.php.xhtml#line33">Source</a>
           </li>
         </ul>
       </nav>
@@ -85,7 +82,7 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Layout
                 extends <a title="Bluz\View\View" href="../classes/Bluz_View_View.xhtml">View</a>
-            {<br/><ul class="none"><li>// constants</li><li>const POS_PREPEND = 'prepend';</li><li>const POS_REPLACE = 'replace';</li><li>const POS_APPEND = 'append';</li></ul><ul class="none"><li>// members</li><li>protected  <a href="#members">$content</a>;
+            {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$content</a>;
                     </li></ul><ul class="none"><li>// Inherited members from <span title="Bluz\View\View">View</span></li><li>protected  <a href="#members">$baseUrl</a>;
                         </li><li>protected  <a href="#members">$path</a>;
                         </li><li>protected array <a href="#members">$partialPath</a>;
@@ -144,29 +141,6 @@
             </li>
           </ul>
         </div>
-        <h2 id="constants">Constants</h2>
-        <table class="styled">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="POS_PREPEND">POS_PREPEND</td>
-              <td>'prepend'</td>
-            </tr>
-            <tr>
-              <td id="POS_REPLACE">POS_REPLACE</td>
-              <td>'replace'</td>
-            </tr>
-            <tr>
-              <td id="POS_APPEND">POS_APPEND</td>
-              <td>'append'</td>
-            </tr>
-          </tbody>
-        </table>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
@@ -319,6 +293,16 @@
         <h2 id="history">History</h2>
         <ul class="styled history">
           <li>
+            <h3>2017-08-31T09:15:41+00:00 (commit #<span title="88eb1ac8af48c00ad1a7c82fb72089dd510f4f82">88eb1ac</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added Layout helpers `TitleAppend` and `TitlePrepend`</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-06-30T08:36:40+00:00 (commit #<span title="2259ecffbe444d75455383b82580b196b5263980">2259ecf</span>)</h3>
             <div>
               <p>
@@ -373,47 +357,35 @@ Removed functional of `StyleBlock()` from `Style()` helper</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <h3>2016-12-26T16:46:33+00:00 (commit #<span title="5c9ab237196739035f264950317a3fc099feb504">5c9ab23</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Switch to strict mode</pre>
+              <pre class="wrapped">Updated exception message</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-26T16:21:41+00:00 (commit #<span title="1ee3f9f66ba91a9942649da98bbf47264853ed49">1ee3f9f</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Migrate to static helper storage</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-19T14:00:06+00:00 (commit #<span title="5c5530e10ca18ef36ae60b8b2a512996256168e0">5c5530e</span>)</h3>
+            <h3>2016-12-19T16:11:02+00:00 (commit #<span title="7ff8246071669b4ba940d5e1aa149f3536b20ff8">7ff8246</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added `Proxy\Request::getQuery`
-Added `Proxy\Request::getPost`
-Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
+              <pre class="wrapped">Refactoring of `setHelpersPath()` - removed support of string argument</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-15T14:45:06+00:00 (commit #<span title="d29a4bf9c441d0cb41de9f4b9e622b4119ed561d">d29a4bf</span>)</h3>
+            <h3>2016-12-19T15:04:29+00:00 (commit #<span title="1fdf1f587aa3ed0bd440c28b95d8fd0a4f3feec2">1fdf1f5</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #384 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #386 from AntonShevchuk/master
 
-Rename property `Db\Table::$table` to `Db\Table::$name`</pre>
+Small refactoring</pre>
             </div>
           </li>
         </ul>

@@ -56,7 +56,7 @@
             <a href="#synopsis">Synopsis</a>
           </li>
           <li>
-            <a href="#tasks">Tasks</a>
+            <a href="#members">Members</a>
           </li>
           <li>
             <a href="#methods">Methods</a>
@@ -78,31 +78,32 @@
         </ul>
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Validator
-            {<br/><ul class="none"><li>// methods</li><li>public static <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/create.xhtml">create</a>()
-                    </li><li>public static RuleInterface <a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/__callStatic.xhtml">__callStatic</a>()
+            {<br/><ul class="none"><li>// members</li><li>protected static array <a href="#members">$rulesNamespaces</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public static <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/create.xhtml">create</a>()
+                    </li><li>public static <span title="ValidatorChain">ValidatorChain</span> <a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/__callStatic.xhtml">__callStatic</a>()
                     </li><li>public static <span title="RuleInterface">RuleInterface</span> <a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/rule.xhtml">rule</a>()
+                    </li><li>public static void <a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/addRuleNamespace.xhtml">addRuleNamespace</a>()
                     </li></ul>
 
             }<br/></div>
-        <h2 id="tasks">Tasks</h2>
-        <table class="styled">
-          <thead>
-            <tr>
-              <th style="width:3em;">Line</th>
-              <th>Task</th>
-            </tr>
-          </thead>
-          <tr>
-            <td class="nummeric">97+</td>
-            <td>create extension point for custom rules</td>
-          </tr>
-        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="rulesNamespaces"><strong>$rulesNamespaces</strong>
+                —
+                array</li>
+          </ul>
+        </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
           <h4>public</h4>
           <ul>
             <li id="__callStatic"><a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/__callStatic.xhtml">__callStatic()</a>
                 — Magic static call for create instance of Validator</li>
+            <li id="addRuleNamespace"><a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/addRuleNamespace.xhtml">addRuleNamespace()</a>
+                — Add rules path</li>
             <li id="create"><a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/create.xhtml">create()</a>
                 — Create new instance if ValidatorChain</li>
             <li id="rule"><a title="Bluz\Validator\Validator" href="../classes/Bluz_Validator_Validator/rule.xhtml">rule()</a>
@@ -111,6 +112,38 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-09-07T09:33:42+00:00 (commit #<span title="c35342a1fd26f1fe11b4131d9352c75d4a0981e1">c35342a</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small changes in Validator classes</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-09-06T08:56:24+00:00 (commit #<span title="f38d1ecbc4d8144db28d8c248c0537a80dd32d69">f38d1ec</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `ValidatorInterface`
+Added `ValidatorFormException`
+Added method `Validator::addRuleNamespace()`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-09-01T14:13:56+00:00 (commit #<span title="6aca463e96e53aaec77c5f3f1affa738a8e0c8ba">6aca463</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Changed `Validator::%rule%` behaviour - not it return `ValidatorChain` instance</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-07-26T12:46:33+00:00 (commit #<span title="b81814de62434d48c9c59e7d9532594b8324994c">b81814d</span>)</h3>
             <div>
@@ -173,47 +206,35 @@
             </div>
           </li>
           <li>
-            <h3>2016-12-26T16:22:27+00:00 (commit #<span title="3b02ecfe5d380e027f64bc03ae2298d3dbdc4cfa">3b02ecf</span>)</h3>
+            <h3>2016-12-26T16:46:33+00:00 (commit #<span title="5c9ab237196739035f264950317a3fc099feb504">5c9ab23</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Switch to strict mode</pre>
+              <pre class="wrapped">Updated exception message</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-26T16:21:41+00:00 (commit #<span title="1ee3f9f66ba91a9942649da98bbf47264853ed49">1ee3f9f</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Migrate to static helper storage</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-19T14:00:06+00:00 (commit #<span title="5c5530e10ca18ef36ae60b8b2a512996256168e0">5c5530e</span>)</h3>
+            <h3>2016-12-19T16:11:02+00:00 (commit #<span title="7ff8246071669b4ba940d5e1aa149f3536b20ff8">7ff8246</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: Anton (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added `Proxy\Request::getQuery`
-Added `Proxy\Request::getPost`
-Refactoring of `Proxy\Request::getParam` and removed $_ENV from it</pre>
+              <pre class="wrapped">Refactoring of `setHelpersPath()` - removed support of string argument</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-15T14:45:06+00:00 (commit #<span title="d29a4bf9c441d0cb41de9f4b9e622b4119ed561d">d29a4bf</span>)</h3>
+            <h3>2016-12-19T15:04:29+00:00 (commit #<span title="1fdf1f587aa3ed0bd440c28b95d8fd0a4f3feec2">1fdf1f5</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #384 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #386 from AntonShevchuk/master
 
-Rename property `Db\Table::$table` to `Db\Table::$name`</pre>
+Small refactoring</pre>
             </div>
           </li>
         </ul>
