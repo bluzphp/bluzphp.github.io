@@ -82,6 +82,7 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Logger
             {<br/><ul class="none"><li>// methods</li><li>private static Instance|Nil <a title="Bluz\Proxy\Logger" href="../classes/Bluz_Proxy_Logger/initInstance.xhtml">initInstance</a>()
+                    </li><li>public static void <a title="Bluz\Proxy\Logger" href="../classes/Bluz_Proxy_Logger/exception.xhtml">exception</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Proxy\ProxyTrait">ProxyTrait</span></li><li>public static void <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/setInstance.xhtml">setInstance</a>()
                         </li><li>public static mixed <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait/__callStatic.xhtml">__callStatic</a>()
                         </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Singleton">Singleton</span></li><li>public static Logger <a title="Bluz\Common\Singleton" href="../traits/Bluz_Common_Singleton/getInstance.xhtml">getInstance</a>()
@@ -114,6 +115,11 @@
             <li id="initInstance"><a title="Bluz\Proxy\Logger" href="../classes/Bluz_Proxy_Logger/initInstance.xhtml">initInstance()</a>
                 — Init instance</li>
           </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="exception"><a title="Bluz\Proxy\Logger" href="../classes/Bluz_Proxy_Logger/exception.xhtml">exception()</a>
+                — exception</li>
+          </ul>
           <h3>Inherited from <a title="Bluz\Proxy\ProxyTrait" href="../traits/Bluz_Proxy_ProxyTrait.xhtml">Bluz\Proxy\ProxyTrait</a></h3>
           <h4>public</h4>
           <ul>
@@ -133,6 +139,16 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-10-27T09:46:51+00:00 (commit #<span title="a8ad1bf0b1baf285a368d5f3ebbfc9c0a74f2d80">a8ad1bf</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `Proxy\Logger::exception` method</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-08-30T14:59:17+00:00 (commit #<span title="034de7715652da9bc4a79e003e6bdac4c48e8fae">034de77</span>)</h3>
             <div>
@@ -177,45 +193,38 @@
             </div>
           </li>
           <li>
-            <h3>2017-02-15T15:39:31+00:00 (commit #<span title="ff78f6f800183e83c196721663e3e66299b88bf9">ff78f6f</span>)</h3>
+            <h3>2017-02-15T15:48:38+00:00 (commit #<span title="f9e2e5c11d1b667277b04833870eba2995d47900">f9e2e5c</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Updated travis configuration</pre>
+              <pre class="wrapped">Update node version for Travis CI</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-28T17:07:32+00:00 (commit #<span title="11545694afa6c44dccb97e68918b3f21d21fbc5a">1154569</span>)</h3>
+            <h3>2016-12-29T14:17:15+00:00 (commit #<span title="db0b103972489971c30d7bbe4f5e99816b3f9c72">db0b103</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added attributes to helper `Script` of `View`</pre>
+              <pre class="wrapped">Added `View` helper `ScriptBlock($code)`
+Removed functional of `ScriptBlock()` from `Script()` helper
+Added `View` helper `StyleBlock($code)`
+Removed functional of `StyleBlock()` from `Style()` helper</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-27T16:25:07+00:00 (commit #<span title="541216c922ffd9f86a0b6188928eab5e3d39ab93">541216c</span>)</h3>
-            <div>
-              <p>
-                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
-                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
-                    </p>
-              <pre class="wrapped">Removed HHVM from CI</pre>
-            </div>
-          </li>
-          <li>
-            <h3>2016-12-22T11:19:29+00:00 (commit #<span title="b4c066a6c1a5a77c730baa5c9b95be84137bb26d">b4c066a</span>)</h3>
+            <h3>2016-12-27T16:51:01+00:00 (commit #<span title="7a81764f2b487b7e5de16d3585cb34879f65c2e1">7a81764</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #392 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #393 from AntonShevchuk/master
 
-Fixed Controller\Reflection</pre>
+Switch to strict mode</pre>
             </div>
           </li>
         </ul>
