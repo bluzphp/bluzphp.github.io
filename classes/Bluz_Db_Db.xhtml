@@ -59,6 +59,9 @@
             <a href="#hierarchy">Hierarchy</a>
           </li>
           <li>
+            <a href="#tasks">Tasks</a>
+          </li>
+          <li>
             <a href="#members">Members</a>
           </li>
           <li>
@@ -86,12 +89,13 @@
                     </li><li>protected array <a href="#members">$attributes</a> =
                         ;
                     </li><li>protected <span title="\PDO">PDO</span> <a href="#members">$handler</a>;
-                    </li></ul><ul class="none"><li>// methods</li><li>public Db <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setConnect.xhtml">setConnect</a>()
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setConnect.xhtml">setConnect</a>()
                     </li><li>private void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/checkConnect.xhtml">checkConnect</a>()
-                    </li><li>public Db <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setAttributes.xhtml">setAttributes</a>()
-                    </li><li>public Db <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/connect.xhtml">connect</a>()
-                    </li><li>public PDO <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/handler.xhtml">handler</a>()
-                    </li><li>protected PDOStatement <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/prepare.xhtml">prepare</a>()
+                    </li><li>public void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/setAttributes.xhtml">setAttributes</a>()
+                    </li><li>public bool <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/connect.xhtml">connect</a>()
+                    </li><li>public void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/disconnect.xhtml">disconnect</a>()
+                    </li><li>public <span title="PDO">PDO</span> <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/handler.xhtml">handler</a>()
+                    </li><li>protected <span title="PDOStatement">PDOStatement</span> <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/prepare.xhtml">prepare</a>()
                     </li><li>public string <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/quote.xhtml">quote</a>()
                     </li><li>public string <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/quoteIdentifier.xhtml">quoteIdentifier</a>()
                     </li><li>public integer <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/query.xhtml">query</a>()
@@ -105,6 +109,7 @@
                     </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchColumn.xhtml">fetchColumn</a>()
                     </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchGroup.xhtml">fetchGroup</a>()
                     </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchColumnGroup.xhtml">fetchColumnGroup</a>()
+                    </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchUniqueGroup.xhtml">fetchUniqueGroup</a>()
                     </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchPairs.xhtml">fetchPairs</a>()
                     </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchObject.xhtml">fetchObject</a>()
                     </li><li>public array <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchObjects.xhtml">fetchObjects</a>()
@@ -112,7 +117,6 @@
                     </li><li>public mixed|bool <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/transaction.xhtml">transaction</a>()
                     </li><li>protected void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/ok.xhtml">ok</a>()
                     </li><li>protected void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/log.xhtml">log</a>()
-                    </li><li>public void <a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/disconnect.xhtml">disconnect</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="Bluz\Common\Options">Options</span></li><li>public mixed <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOption.xhtml">getOption</a>()
                         </li><li>public void <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/setOption.xhtml">setOption</a>()
                         </li><li>public array <a title="Bluz\Common\Options" href="../traits/Bluz_Common_Options/getOptions.xhtml">getOptions</a>()
@@ -130,6 +134,19 @@
             </li>
           </ul>
         </div>
+        <h2 id="tasks">Tasks</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th style="width:3em;">Line</th>
+              <th>Task</th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="nummeric">185+</td>
+            <td>Switch to PDO::activeQueryString() when it will be possible</td>
+          </tr>
+        </table>
         <h2 id="members">Members</h2>
         <div class="styled members">
           <h4>protected</h4>
@@ -192,6 +209,8 @@
                 — Returns an array of linked objects containing the result set</li>
             <li id="fetchRow"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchRow.xhtml">fetchRow()</a>
                 — Returns an array containing first row from the result set</li>
+            <li id="fetchUniqueGroup"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/fetchUniqueGroup.xhtml">fetchUniqueGroup()</a>
+                — Returns an array containing all of the result set rows</li>
             <li id="handler"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/handler.xhtml">handler()</a>
                 — Return PDO handler</li>
             <li id="insert"><a title="Bluz\Db\Db" href="../classes/Bluz_Db_Db/insert.xhtml">insert()</a>
@@ -233,6 +252,28 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-11-08T13:30:40+00:00 (commit #<span title="8610502bdb10cc80c1e991641eaf2996c83ee298">8610502</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Updated codestyle</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-11-07T12:29:29+00:00 (commit #<span title="2c5c5ce3fb787dfa23634ed8ac5a026e6575ba9a">2c5c5ce</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `Db::fetchUniqueGroup()`
+Added method `Table::getMeta()`
+Updated codestyle of tests</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-11-03T16:03:38+00:00 (commit #<span title="32848b780e5763bb738c6288f39792902960308f">32848b7</span>)</h3>
             <div>
@@ -296,38 +337,56 @@ Refactoring for all callable arguments</pre>
             </div>
           </li>
           <li>
-            <h3>2017-02-15T15:48:38+00:00 (commit #<span title="f9e2e5c11d1b667277b04833870eba2995d47900">f9e2e5c</span>)</h3>
+            <h3>2017-04-21T13:24:35+00:00 (commit #<span title="3b25a3df9d5f667597ed00cda44961b1f191a672">3b25a3d</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Update node version for Travis CI</pre>
+              <pre class="wrapped">Small update for codestyle</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-29T14:17:15+00:00 (commit #<span title="db0b103972489971c30d7bbe4f5e99816b3f9c72">db0b103</span>)</h3>
+            <h3>2017-02-15T16:09:44+00:00 (commit #<span title="0fc0c8b823dae3ec2310e41f8e370cbd4d91fd1e">0fc0c8b</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added `View` helper `ScriptBlock($code)`
-Removed functional of `ScriptBlock()` from `Script()` helper
-Added `View` helper `StyleBlock($code)`
-Removed functional of `StyleBlock()` from `Style()` helper</pre>
+              <pre class="wrapped">Updated coveralls config</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-27T16:51:01+00:00 (commit #<span title="7a81764f2b487b7e5de16d3585cb34879f65c2e1">7a81764</span>)</h3>
+            <h3>2017-02-13T10:14:18+00:00 (commit #<span title="43dbf5512330add6f2809006d6ecfc0b222fe50e">43dbf55</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Rollback to `getCount()` method</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-01-30T13:15:49+00:00 (commit #<span title="fd5d9434e12bb901dc26305c57166d5926f04152">fd5d943</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #393 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #395 from AntonShevchuk/master
 
-Switch to strict mode</pre>
+Added `AttachmentResponse`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-01-30T12:38:53+00:00 (commit #<span title="0ab8691acf18d8d7b4e73698c7d6cd1635c45f61">0ab8691</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `AttachmentResponse`
+Added `attachment($file)` helper for `Controller`</pre>
             </div>
           </li>
         </ul>

@@ -80,7 +80,7 @@
         <div class="synopsis">class Table
             {<br/><ul class="none"><li>// members</li><li>protected  <a href="#members">$name</a>;
                     </li><li>protected  <a href="#members">$model</a>;
-                    </li><li>protected array <a href="#members">$columns</a> =
+                    </li><li>protected array <a href="#members">$meta</a> =
                         ;
                     </li><li>protected string <a href="#members">$select</a> =
                         '';
@@ -95,6 +95,7 @@
                     </li><li>public array <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getPrimaryKey.xhtml">getPrimaryKey</a>()
                     </li><li>public string <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getName.xhtml">getName</a>()
                     </li><li>public string <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getModel.xhtml">getModel</a>()
+                    </li><li>public static array <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getMeta.xhtml">getMeta</a>()
                     </li><li>public static array <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getColumns.xhtml">getColumns</a>()
                     </li><li>public static array <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/filterColumns.xhtml">filterColumns</a>()
                     </li><li>public static array <a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/fetch.xhtml">fetch</a>()
@@ -118,7 +119,7 @@
         <div class="styled members">
           <h4>protected</h4>
           <ul class="members">
-            <li id="columns"><strong>$columns</strong>
+            <li id="meta"><strong>$meta</strong>
                 —
                 array</li>
             <li id="model"><strong>$model</strong>
@@ -171,9 +172,11 @@
             <li id="findWhere"><a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/findWhere.xhtml">findWhere()</a>
                 — Find rows by WHERE     // WHERE alias = 'foo'     Table::findWhere(['alias'=&gt;'foo']);     // WHERE alias = 'foo' OR 'alias' = 'bar'     Table::findWhere(['alias'=&gt;'foo'], ['alias'=&gt;'bar']);     // WHERE (alias = 'foo' AND userId = 2) OR ('alias' = 'bar' AND userId = 4)     Table::findWhere(['alias'=&gt;'foo', 'userId'=&gt; 2], ['alias'=&gt;'foo', 'userId'=&gt;4]);     // WHERE alias IN ('foo', 'bar')     Table::findWhere(['alias'=&gt; ['foo', 'bar']]);</li>
             <li id="getColumns"><a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getColumns.xhtml">getColumns()</a>
-                — Return information about tables columns</li>
+                — Return names of table columns</li>
             <li id="getInstance"><a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getInstance.xhtml">getInstance()</a>
                 — Get Table instance</li>
+            <li id="getMeta"><a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getMeta.xhtml">getMeta()</a>
+                — Return information about table columns</li>
             <li id="getModel"><a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getModel.xhtml">getModel()</a>
                 — Get model name</li>
             <li id="getName"><a title="Bluz\Db\Table" href="../classes/Bluz_Db_Table/getName.xhtml">getName()</a>
@@ -200,6 +203,18 @@
         </div>
         <h2 id="history">History</h2>
         <ul class="styled history">
+          <li>
+            <h3>2017-11-07T12:29:29+00:00 (commit #<span title="2c5c5ce3fb787dfa23634ed8ac5a026e6575ba9a">2c5c5ce</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added method `Db::fetchUniqueGroup()`
+Added method `Table::getMeta()`
+Updated codestyle of tests</pre>
+            </div>
+          </li>
           <li>
             <h3>2017-10-11T15:57:50+00:00 (commit #<span title="812be85b656a6759e0d582455b80cc1562dab687">812be85</span>)</h3>
             <div>
@@ -274,6 +289,16 @@ Added `str_trim_end` function</pre>
             </div>
           </li>
           <li>
+            <h3>2017-04-21T13:24:35+00:00 (commit #<span title="3b25a3df9d5f667597ed00cda44961b1f191a672">3b25a3d</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Small update for codestyle</pre>
+            </div>
+          </li>
+          <li>
             <h3>2017-04-12T09:45:17+00:00 (commit #<span title="e8463fb1fe5aa54cd2cbdc69a5be1f1dcbc2d935">e8463fb</span>)</h3>
             <div>
               <p>
@@ -284,38 +309,46 @@ Added `str_trim_end` function</pre>
             </div>
           </li>
           <li>
-            <h3>2017-02-15T15:48:38+00:00 (commit #<span title="f9e2e5c11d1b667277b04833870eba2995d47900">f9e2e5c</span>)</h3>
+            <h3>2017-02-15T16:09:44+00:00 (commit #<span title="0fc0c8b823dae3ec2310e41f8e370cbd4d91fd1e">0fc0c8b</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Update node version for Travis CI</pre>
+              <pre class="wrapped">Updated coveralls config</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-29T14:17:15+00:00 (commit #<span title="db0b103972489971c30d7bbe4f5e99816b3f9c72">db0b103</span>)</h3>
+            <h3>2017-02-13T10:14:18+00:00 (commit #<span title="43dbf5512330add6f2809006d6ecfc0b222fe50e">43dbf55</span>)</h3>
             <div>
               <p>
                         Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
                         Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Added `View` helper `ScriptBlock($code)`
-Removed functional of `ScriptBlock()` from `Script()` helper
-Added `View` helper `StyleBlock($code)`
-Removed functional of `StyleBlock()` from `Style()` helper</pre>
+              <pre class="wrapped">Rollback to `getCount()` method</pre>
             </div>
           </li>
           <li>
-            <h3>2016-12-27T16:51:01+00:00 (commit #<span title="7a81764f2b487b7e5de16d3585cb34879f65c2e1">7a81764</span>)</h3>
+            <h3>2017-01-30T13:15:49+00:00 (commit #<span title="fd5d9434e12bb901dc26305c57166d5926f04152">fd5d943</span>)</h3>
             <div>
               <p>
                         Author: Anton (AntonShevchuk@gmail.com) /
                         Commiter: GitHub (AntonShevchuk@gmail.com)
                     </p>
-              <pre class="wrapped">Merge pull request #393 from AntonShevchuk/master
+              <pre class="wrapped">Merge pull request #395 from AntonShevchuk/master
 
-Switch to strict mode</pre>
+Added `AttachmentResponse`</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2017-01-30T12:38:53+00:00 (commit #<span title="0ab8691acf18d8d7b4e73698c7d6cd1635c45f61">0ab8691</span>)</h3>
+            <div>
+              <p>
+                        Author: Anton Shevchuk (AntonShevchuk@gmail.com) /
+                        Commiter: Anton Shevchuk (AntonShevchuk@gmail.com)
+                    </p>
+              <pre class="wrapped">Added `AttachmentResponse`
+Added `attachment($file)` helper for `Controller`</pre>
             </div>
           </li>
         </ul>
